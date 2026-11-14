@@ -1,0 +1,125 @@
+site_name: 数学笔记 · MTH026 / MTH028
+site_description: MTH026 微积分与 MTH028 线性代数的讲义、期中复习、练习题与答题卡
+site_url: https://rainyboat1029.github.io/mth-notes/
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+copyright: 个人学习笔记，仅供自用
+
+theme:
+  name: material
+  language: zh
+  font: false
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - toc.follow
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+
+extra_css:
+  - javascripts/katex/katex.min.css
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/katex/katex.min.js
+  - javascripts/katex/auto-render.min.js
+  - javascripts/katex-init.js
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - def_list
+  - toc:
+      permalink: "¶"
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.arithmatex:
+      generic: true
+      smart_dollar: true
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+
+validation:
+  links:
+    not_found: info
+    absolute_links: info
+
+not_in_nav: |
+  /mth026/practice-*-questions.md
+  /mth026/practice-*-solutions.md
+  /mth028/practice-*-questions.md
+  /mth028/practice-*-solutions.md
+
+extra:
+  generator: false
+  social: []
+
+nav:
+  - 首页: index.md
+  - 微积分 MTH026:
+      - 课程概览: mth026/index.md
+      - "Lecture 1 · 函数与预备知识": mth026/lecture01.md
+      - "Lecture 2 · 极限概念与运算法则": mth026/lecture02.md
+      - "Lecture 3 · 无穷极限与三角极限": mth026/lecture03.md
+      - "Lecture 4 · 指数对数极限与连续性": mth026/lecture04.md
+      - "Lecture 5 · 导数与求导法则": mth026/lecture05.md
+      - "Lecture 6 · 隐微分与相关变化率": mth026/lecture06.md
+      - "Lecture 7 · 最值与凹凸性": mth026/lecture07.md
+      - "Lecture 8 · 优化与函数作图": mth026/lecture08.md
+      - "Lecture 9 · 中值定理与洛必达": mth026/lecture09.md
+      - 期中复习（L1–L6）: mth026/midterm-review.md
+      - 极限的严谨定义: mth026/concept-limits.md
+      - 练习:
+          - 基础卷 · Week 1–6: mth026/practice-basic.md
+          - 进阶卷 · 综合提高: mth026/practice-advanced.md
+  - 线性代数 MTH028:
+      - 课程概览: mth028/index.md
+      - "Lecture 1 · §1.1 线性方程组": mth028/lecture01.md
+      - "Lecture 2 · §1.2 行化简": mth028/lecture02.md
+      - "Lecture 3 · §1.3–1.4 向量与矩阵方程": mth028/lecture03.md
+      - "Lecture 4 · §1.5 解集": mth028/lecture04.md
+      - "Lecture 5 · §1.8 线性变换": mth028/lecture05.md
+      - "Lecture 6 · §2.1 矩阵运算": mth028/lecture06.md
+      - "Lecture 7 · §2.2 矩阵的逆": mth028/lecture07.md
+      - "Lecture 8 · §2.8 子空间": mth028/lecture08.md
+      - "Lecture 9 · §2.9 维数与秩": mth028/lecture09.md
+      - 期中复习（L1–L8）: mth028/midterm-review.md
+      - 练习:
+          - 基础卷 · Week 1–8: mth028/practice-basic.md
+          - 进阶卷 · 综合提高: mth028/practice-advanced.md
