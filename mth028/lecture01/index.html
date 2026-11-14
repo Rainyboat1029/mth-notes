@@ -1,0 +1,1894 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MTH026 微积分与 MTH028 线性代数的讲义、期中复习、练习题与答题卡">
+      
+      
+      
+        <link rel="canonical" href="https://rainyboat1029.github.io/mth-notes/mth028/lecture01/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../lecture02/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Lecture 1 · §1.1 线性方程组 - 数学笔记 · MTH026 / MTH028</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../javascripts/katex/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mth028-i-linear-algebra-i" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="数学笔记 · MTH026 / MTH028" class="md-header__button md-logo" aria-label="数学笔记 · MTH026 / MTH028" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            数学笔记 · MTH026 / MTH028
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lecture 1 · §1.1 线性方程组
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mth026/" class="md-tabs__link">
+          
+  
+  
+  微积分 MTH026
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  线性代数 MTH028
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="数学笔记 · MTH026 / MTH028" class="md-nav__button md-logo" aria-label="数学笔记 · MTH026 / MTH028" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    数学笔记 · MTH026 / MTH028
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微积分 MTH026
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    微积分 MTH026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/lecture01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 · 函数与预备知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/lecture02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 2 · 极限概念与运算法则
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/lecture03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 · 无穷极限与三角极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/lecture04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 4 · 指数对数极限与连续性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/lecture05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 5 · 导数与求导法则
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/lecture06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 6 · 隐微分与相关变化率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/lecture07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 7 · 最值与凹凸性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/lecture08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 8 · 优化与函数作图
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/lecture09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 · 中值定理与洛必达
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/midterm-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习（L1–L6）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/concept-limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    极限的严谨定义
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_13" id="__nav_2_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    练习
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/practice-basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础卷 · Week 1–6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/practice-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进阶卷 · 综合提高
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性代数 MTH028
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    线性代数 MTH028
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 · §1.1 线性方程组
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 · §1.1 线性方程组
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-1-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一部分：本节课知识详解 (Lecture 1 Summary)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一部分：本节课知识详解 (Lecture 1 Summary)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 动机与引入 (Motivation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-definitions-terminologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 定义与基本术语 (Definitions &amp; Terminologies)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-solutions-solution-sets-equivalence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 解、解集与等价性 (Solutions, Solution Sets &amp; Equivalence)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-existence-and-uniqueness-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 解的存在性与唯一性问题 (Existence and Uniqueness Questions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-matrix-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 矩阵表示 (Matrix Notation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-elementary-row-operations-ero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 初等行变换 (Elementary Row Operations, ERO)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 2 · §1.2 行化简
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 · §1.3–1.4 向量与矩阵方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 4 · §1.5 解集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 5 · §1.8 线性变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 6 · §2.1 矩阵运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 7 · §2.2 矩阵的逆
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 8 · §2.8 子空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 · §2.9 维数与秩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../midterm-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习（L1–L8）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    练习
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practice-basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础卷 · Week 1–8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practice-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进阶卷 · 综合提高
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-1-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一部分：本节课知识详解 (Lecture 1 Summary)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一部分：本节课知识详解 (Lecture 1 Summary)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 动机与引入 (Motivation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-definitions-terminologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 定义与基本术语 (Definitions &amp; Terminologies)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-solutions-solution-sets-equivalence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 解、解集与等价性 (Solutions, Solution Sets &amp; Equivalence)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-existence-and-uniqueness-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 解的存在性与唯一性问题 (Existence and Uniqueness Questions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-matrix-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 矩阵表示 (Matrix Notation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-elementary-row-operations-ero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 初等行变换 (Elementary Row Operations, ERO)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mth028-i-linear-algebra-i">MTH028 线性代数 I (Linear Algebra I) 学习笔记<a class="headerlink" href="#mth028-i-linear-algebra-i" title="Permanent link">¶</a></h1>
+<p><strong>课程主题</strong>：Section 1.1 线性方程组 (Systems of Linear Equations)<br />
+<strong>适用目的</strong>：自学、预习与复习  </p>
+<hr />
+<h2 id="lecture-1-summary">第一部分：本节课知识详解 (Lecture 1 Summary)<a class="headerlink" href="#lecture-1-summary" title="Permanent link">¶</a></h2>
+<h3 id="1-motivation">1. 动机与引入 (Motivation)<a class="headerlink" href="#1-motivation" title="Permanent link">¶</a></h3>
+<p>线性代数研究的核心对象之一是<strong>线性方程组 (Systems of Linear Equations)</strong>。我们可以从古代数学问题切入：</p>
+<ul>
+<li>
+<p><strong>经典例题（鸡兔同笼）</strong>：<br />
+  “今有雉兔同笼，上有三十五头，下有九十四足，问雉兔各几何？”<br />
+<strong>建立方程组</strong>：设雉（鸡）有 <span class="arithmatex">\(x\)</span> 只，兔有 <span class="arithmatex">\(y\)</span> 只：
+  $$
+  \begin{cases}
+  x + y = 35 \
+  2x + 4y = 94
+  \end{cases}
+  $$
+  求解得唯一解 <span class="arithmatex">\(x = 23, y = 12\)</span>。</p>
+</li>
+<li>
+<p><strong>变体问题 1（鸡鸭同笼 - 多解情况）</strong>：<br />
+  设鸡 <span class="arithmatex">\(x\)</span> 只，鸭 <span class="arithmatex">\(y\)</span> 只，共 35 个头，70 只脚：
+  $$
+  \begin{cases}
+  x + y = 35 \
+  2x + 2y = 70
+  \end{cases}
+  $$
+  化简后两式等价，存在多组解（如 <span class="arithmatex">\(x=0, y=35\)</span> 或 <span class="arithmatex">\(x=1, y=34\)</span> 等）。</p>
+</li>
+<li>
+<p><strong>变体问题 2（矛盾方程 - 无解情况）</strong>：<br />
+  若改为 35 个头，71 只脚：
+  $$
+  \begin{cases}
+  x + y = 35 \
+  2x + 2y = 71
+  \end{cases}
+  $$
+  由前式可得 <span class="arithmatex">\(2x + 2y = 70\)</span>，与 71 产生矛盾，因此<strong>无解 (No solution)</strong>。</p>
+</li>
+</ul>
+<hr />
+<hr />
+<h3 id="2-definitions-terminologies">2. 定义与基本术语 (Definitions &amp; Terminologies)<a class="headerlink" href="#2-definitions-terminologies" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p><strong>线性方程 (Linear Equation)</strong>：<br />
+  变量 <span class="arithmatex">\(x_1, x_2, \dots, x_n\)</span> 的线性方程是指可以写成如下形式的方程：
+  $<span class="arithmatex">\(a_1 x_1 + a_2 x_2 + \dots + a_n x_n = b\)</span>$
+  其中 <span class="arithmatex">\(b\)</span> 以及系数 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 均为已知实数。<br />
+<em>注意</em>：变量只能以一次幂形式出现，且不能包含变量之间的乘积、三角函数、根号或指数等非线性项。</p>
+</li>
+<li>
+<p><strong>线性方程组 (System of Linear Equations / Linear System)</strong>：<br />
+  由一个或多个包含相同变量的线性方程构成的集合。含有 <span class="arithmatex">\(m\)</span> 个方程、<span class="arithmatex">\(n\)</span> 个变量的代数通用形式为：
+  $$
+  \begin{cases}
+  a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n = b_1 \
+  a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n = b_2 \
+  \quad \vdots \
+  a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n = b_m
+  \end{cases}
+  $$
+  其中双下标 <span class="arithmatex">\(a_{ij}\)</span> 中，第一个下标 <span class="arithmatex">\(i\)</span> 表示方程的行号（第 <span class="arithmatex">\(i\)</span> 个方程），第二个下标 <span class="arithmatex">\(j\)</span> 表示变量的列号（第 <span class="arithmatex">\(j\)</span> 个变量）。</p>
+</li>
+</ul>
+<h4 id="which-systems-are-linear">【课件随堂练习】判断线性方程组 (Which Systems Are Linear?)<a class="headerlink" href="#which-systems-are-linear" title="Permanent link">¶</a></h4>
+<p><strong>题目</strong>：下列方程组中，哪些是线性方程组？<br />
+(a) 
+$$
+\begin{cases}
+x = 1 \
+y = 3
+\end{cases}
+$$<br />
+(b) 
+$$
+\begin{cases}
+x^2 + y = 1 \
+x + y = 3
+\end{cases}
+$$<br />
+(c) 
+$$
+\begin{cases}
+x + y - z = 1 \
+\cos(x + y) = 1
+\end{cases}
+$$<br />
+(d) <span class="arithmatex">\(x + y = 0\)</span>  </p>
+<p><strong>解析与解答</strong>：<br />
+<em> </em><em>(a)</em><em> 是线性方程组。每个方程中的变量都是一次的。<br />
+</em> <strong>(b)</strong> <strong>不是</strong>线性方程组。因为包含 <span class="arithmatex">\(x^2\)</span> 非线性项。<br />
+<em> </em><em>(c)</em><em> </em><em>不是</em><em>线性方程组。因为包含非线性三角函数项 <span class="arithmatex">\(\cos(x+y)\)</span>。<br />
+</em> <strong>(d)</strong> 是线性方程（单个方程组成的线性系统）。</p>
+<hr />
+<hr />
+<h3 id="3-solutions-solution-sets-equivalence">3. 解、解集与等价性 (Solutions, Solution Sets &amp; Equivalence)<a class="headerlink" href="#3-solutions-solution-sets-equivalence" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>解 (Solution)</strong>：<br />
+  使得方程组中每一个方程都成立的一组实数值列表 <span class="arithmatex">\((s_1, s_2, \dots, s_n)\)</span>。</li>
+<li><strong>解集 (Solution Set)</strong>：<br />
+  线性方程组所有可能解的集合。</li>
+<li><strong>等价线性方程组 (Equivalent Linear Systems)</strong>：<br />
+  如果两个线性方程组拥有<strong>完全相同的解集</strong>，则称它们是等价的。</li>
+</ul>
+<h4 id="n-2">几何解释 (<span class="arithmatex">\(n = 2\)</span> 维平面)<a class="headerlink" href="#n-2" title="Permanent link">¶</a></h4>
+<p>在二维平面 <span class="arithmatex">\(\mathbb{R}^2\)</span> 中，每一个二元一次方程 <span class="arithmatex">\(a_1 x_1 + a_2 x_2 = b\)</span> 均代表一条直线。二元线性方程组的解对应直线的交点：
+1. <strong>两直线相交于一点</strong> <span class="arithmatex">\(\implies\)</span> <strong>恰有一个解 (Exactly one solution)</strong>。
+2. <strong>两直线平行</strong> <span class="arithmatex">\(\implies\)</span> <strong>无解 (No solution)</strong>。
+3. <strong>两直线重合</strong> <span class="arithmatex">\(\implies\)</span> <strong>有无穷多个解 (Infinitely many solutions)</strong>。</p>
+<h4 id="number-of-solutions-consistency">解的数量与相容性总结 (Number of Solutions &amp; Consistency)<a class="headerlink" href="#number-of-solutions-consistency" title="Permanent link">¶</a></h4>
+<p>对于任意线性方程组，其解的情况只有以下三种可能：
+1. <strong>无解 (No solution)</strong> <span class="arithmatex">\(\implies\)</span> 称为<strong>不相容的 (Inconsistent)</strong>。
+2. <strong>恰有一个解 (Exactly one solution)</strong> <span class="arithmatex">\(\implies\)</span> 称为<strong>相容的 (Consistent)</strong>。
+3. <strong>无穷多个解 (Infinitely many solutions)</strong> <span class="arithmatex">\(\implies\)</span> 称为<strong>相容的 (Consistent)</strong>。</p>
+<p><em>特别提示</em>：一维简单线性方程 <span class="arithmatex">\(ax = b\)</span> 完全符合上述三种划分：
+* 若 <span class="arithmatex">\(a = 0, b \neq 0 \implies 0 = b\)</span>，无解（Inconsistent）。
+* 若 <span class="arithmatex">\(a \neq 0 \implies x = \frac{b}{a}\)</span>，唯一解（Consistent）。
+* 若 <span class="arithmatex">\(a = 0, b = 0 \implies 0 = 0\)</span>，无穷多解（Consistent）。</p>
+<hr />
+<hr />
+<h3 id="4-existence-and-uniqueness-questions">4. 解的存在性与唯一性问题 (Existence and Uniqueness Questions)<a class="headerlink" href="#4-existence-and-uniqueness-questions" title="Permanent link">¶</a></h3>
+<p>对任意一个线性方程组，我们有两个最根本的问题：
+1. <strong>存在性 (Existence)</strong>：该系统是否相容？（即是否至少存在一个解？）
+2. <strong>唯一性 (Uniqueness)</strong>：如果解存在，它是否是唯一的？</p>
+<p>解线性方程组的传统方法是<strong>高斯消元法 (Gaussian Elimination)</strong>，其核心思想是：利用方程变换，将原系统替换为一个<strong>更容易求解的等价系统</strong>。</p>
+<h4 id="_1">【课件随堂示例】高斯消元求解系统<a class="headerlink" href="#_1" title="Permanent link">¶</a></h4>
+<p>求解方程组：
+$$
+\begin{cases}
+x_1 - 2x_2 + x_3 = 0 \
+2x_2 - 8x_3 = 8 \
+5x_1 - 5x_3 = 10
+\end{cases}
+$$</p>
+<p><strong>求解过程</strong>：<br />
+将第三个方程减去第一个方程的 5 倍：
+$<span class="arithmatex">\((5x_1 - 5x_3) - 5(x_1 - 2x_2 + x_3) = 10 - 0 \implies 10x_2 - 10x_3 = 10 \implies x_2 - x_3 = 1\)</span>$
+利用第二个方程 <span class="arithmatex">\(x_2 - 4x_3 = 4\)</span>，两式相减得：
+$<span class="arithmatex">\(3x_3 = -3 \implies x_3 = -1\)</span>$
+代回求得 <span class="arithmatex">\(x_2 = 0\)</span>，<span class="arithmatex">\(x_1 = 1\)</span>。唯一解为 <span class="arithmatex">\((x_1, x_2, x_3) = (1, 0, -1)\)</span>。</p>
+<hr />
+<hr />
+<h3 id="5-matrix-notation">5. 矩阵表示 (Matrix Notation)<a class="headerlink" href="#5-matrix-notation" title="Permanent link">¶</a></h3>
+<p>为了精简表示变量较多时的方程组，我们将系数和常数记录在矩形阵列中，称为<strong>矩阵 (Matrix)</strong>。</p>
+<p>对于线性方程组：
+$$
+\begin{cases}
+x_1 - 2x_2 + x_3 = 0 \
+2x_2 - 8x_3 = 8 \
+5x_1 - 5x_3 = 10
+\end{cases}
+$$</p>
+<ul>
+<li><strong>系数矩阵 (Coefficient Matrix)</strong>：只包含变量前的系数。
+  $$
+  \begin{bmatrix}
+  1 &amp; -2 &amp; 1 \
+  0 &amp; 2 &amp; -8 \
+  5 &amp; 0 &amp; -5
+  \end{bmatrix}
+  $$</li>
+<li>
+<p><strong>增广矩阵 (Augmented Matrix)</strong>：将右侧常数项作为最后一列加入矩阵中。
+  $$
+  \begin{bmatrix}
+  1 &amp; -2 &amp; 1 &amp; 0 \
+  0 &amp; 2 &amp; -8 &amp; 8 \
+  5 &amp; 0 &amp; -5 &amp; 10
+  \end{bmatrix}
+  $$</p>
+</li>
+<li>
+<p><strong>矩阵的大小/阶数 (Size of a Matrix)</strong>：由行数 (Rows) <span class="arithmatex">\(m\)</span> 和列数 (Columns) <span class="arithmatex">\(n\)</span> 决定，记为 <span class="arithmatex">\(m \times n\)</span>（读作 "<span class="arithmatex">\(m\)</span> by <span class="arithmatex">\(n\)</span>"）。<br />
+  如上述系数矩阵大小为 <span class="arithmatex">\(3 \times 3\)</span>，增广矩阵大小为 <span class="arithmatex">\(3 \times 4\)</span>。</p>
+</li>
+<li><strong>矩阵元素 (Entries)</strong>：第 <span class="arithmatex">\(i\)</span> 行第 <span class="arithmatex">\(j\)</span> 列的元素记为 <span class="arithmatex">\((i, j)\)</span>-entry。例如上述增广矩阵中，(2, 4)-entry 为 8。</li>
+</ul>
+<hr />
+<hr />
+<h3 id="6-elementary-row-operations-ero">6. 初等行变换 (Elementary Row Operations, ERO)<a class="headerlink" href="#6-elementary-row-operations-ero" title="Permanent link">¶</a></h3>
+<p>消元法对方程组的操作完全对应于对增广矩阵进行的<strong>初等行变换</strong>。初等行变换共有三种类型：</p>
+<ol>
+<li><strong>倍加变换 / 替换 (Replacement)</strong>：将某一行的倍数加到另一行上。
+   $<span class="arithmatex">\(R_i \leftarrow R_i + c R_j \quad (i \neq j)\)</span>$</li>
+<li><strong>对换变换 (Interchange)</strong>：交换两行的位置。
+   $<span class="arithmatex">\(R_i \leftrightarrow R_j \quad (i \neq j)\)</span>$</li>
+<li><strong>倍乘变换 / 缩放 (Scaling)</strong>：用非零常数乘以某一行。
+   $<span class="arithmatex">\(R_i \leftarrow c R_i \quad (c \neq 0)\)</span>$</li>
+</ol>
+<h4 id="row-equivalence">行等价 (Row Equivalence) 与重要性质<a class="headerlink" href="#row-equivalence" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>行等价 (Row Equivalent)</strong>：如果矩阵 <span class="arithmatex">\(A\)</span> 可以通过一系列初等行变换转换为矩阵 <span class="arithmatex">\(B\)</span>，则称 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 行等价。</li>
+<li><strong>重要性质</strong>：</li>
+<li>所有初等行变换都是<strong>可逆的 (Reversible)</strong>。</li>
+<li>如果两个线性方程组的增广矩阵是行等价的，则这两个线性方程组具有相同的解集（即<strong>方程组等价</strong>）。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: 课程概览">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                课程概览
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../lecture02/" class="md-footer__link md-footer__link--next" aria-label="下一页: Lecture 2 · §1.2 行化简">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                Lecture 2 · §1.2 行化简
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      个人学习笔记，仅供自用
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.tracking", "search.suggest", "search.highlight", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/katex/katex.min.js"></script>
+      
+        <script src="../../javascripts/katex/auto-render.min.js"></script>
+      
+        <script src="../../javascripts/katex-init.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1888 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MTH026 微积分与 MTH028 线性代数的讲义、期中复习、练习题与答题卡">
+      
+      
+      
+        <link rel="canonical" href="https://rainyboat1029.github.io/mth-notes/mth026/lecture04/">
+      
+      
+        <link rel="prev" href="../lecture03/">
+      
+      
+        <link rel="next" href="../lecture05/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Lecture 4 · 指数对数极限与连续性 - 数学笔记 · MTH026 / MTH028</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../javascripts/katex/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-2-limits-continuity" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="数学笔记 · MTH026 / MTH028" class="md-header__button md-logo" aria-label="数学笔记 · MTH026 / MTH028" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            数学笔记 · MTH026 / MTH028
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lecture 4 · 指数对数极限与连续性
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  微积分 MTH026
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mth028/" class="md-tabs__link">
+          
+  
+  
+  线性代数 MTH028
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="数学笔记 · MTH026 / MTH028" class="md-nav__button md-logo" aria-label="数学笔记 · MTH026 / MTH028" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    数学笔记 · MTH026 / MTH028
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微积分 MTH026
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    微积分 MTH026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 · 函数与预备知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 2 · 极限概念与运算法则
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 · 无穷极限与三角极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 4 · 指数对数极限与连续性
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 4 · 指数对数极限与连续性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-4-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一部分：本节课知识详解 (Lecture 4 Summary)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一部分：本节课知识详解 (Lecture 4 Summary)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#26-limits-of-exponential-logarithmic-inverse-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Limits of Exponential, Logarithmic &amp; Inverse Functions (指数、对数与反函数极限)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-continuity-of-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Continuity of Functions (函数的连续性)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 5 · 导数与求导法则
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 6 · 隐微分与相关变化率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 7 · 最值与凹凸性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 8 · 优化与函数作图
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 · 中值定理与洛必达
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../midterm-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习（L1–L6）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concept-limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    极限的严谨定义
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_13" id="__nav_2_13_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    练习
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practice-basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础卷 · Week 1–6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practice-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进阶卷 · 综合提高
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性代数 MTH028
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    线性代数 MTH028
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 · §1.1 线性方程组
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 2 · §1.2 行化简
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 · §1.3–1.4 向量与矩阵方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 4 · §1.5 解集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 5 · §1.8 线性变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 6 · §2.1 矩阵运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 7 · §2.2 矩阵的逆
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 8 · §2.8 子空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 · §2.9 维数与秩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/midterm-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习（L1–L8）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    练习
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/practice-basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础卷 · Week 1–8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/practice-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进阶卷 · 综合提高
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-4-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一部分：本节课知识详解 (Lecture 4 Summary)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一部分：本节课知识详解 (Lecture 4 Summary)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#26-limits-of-exponential-logarithmic-inverse-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Limits of Exponential, Logarithmic &amp; Inverse Functions (指数、对数与反函数极限)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-continuity-of-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Continuity of Functions (函数的连续性)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-2-limits-continuity">Chapter 2 Limits &amp; Continuity: 指数与对数函数极限、函数连续性与介值定理 知识详解与例题全解<a class="headerlink" href="#chapter-2-limits-continuity" title="Permanent link">¶</a></h1>
+<h2 id="lecture-4-summary">第一部分：本节课知识详解 (Lecture 4 Summary)<a class="headerlink" href="#lecture-4-summary" title="Permanent link">¶</a></h2>
+<hr />
+<h3 id="26-limits-of-exponential-logarithmic-inverse-functions">2.6 Limits of Exponential, Logarithmic &amp; Inverse Functions (指数、对数与反函数极限)<a class="headerlink" href="#26-limits-of-exponential-logarithmic-inverse-functions" title="Permanent link">¶</a></h3>
+<h4 id="1-limits-of-exponential-functions">1. 指数函数的极限 (Limits of Exponential Functions)<a class="headerlink" href="#1-limits-of-exponential-functions" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>概念与性质 (Properties):</strong>
+  对于底数 <span class="arithmatex">\(a &gt; 0\)</span> 且 <span class="arithmatex">\(a \neq 1\)</span> 的指数函数 <span class="arithmatex">\(f(x) = a^x\)</span>：</li>
+<li><strong>直接代入法 (Substitution):</strong> 对任意实数 <span class="arithmatex">\(c\)</span>，均有 <span class="arithmatex">\(\lim_{x \to c} a^x = a^c\)</span>。</li>
+<li>
+<p><strong>趋于无穷时的极限趋势 (Limits at <span class="arithmatex">\(\pm\infty\)</span>):</strong></p>
+<ul>
+<li>当 <span class="arithmatex">\(a &gt; 1\)</span> 时（例如自然底数 <span class="arithmatex">\(e \approx 2.718\)</span> 或底数 <span class="arithmatex">\(2\)</span>）：
+   $<span class="arithmatex">\(\lim_{x \to \infty} a^x = \infty, \quad \lim_{x \to -\infty} a^x = 0\)</span>$</li>
+<li>当 <span class="arithmatex">\(0 &lt; a &lt; 1\)</span> 时（例如 <span class="arithmatex">\(a = 1/2\)</span>）：
+   $<span class="arithmatex">\(\lim_{x \to \infty} a^x = 0, \quad \lim_{x \to -\infty} a^x = \infty\)</span>$</li>
+</ul>
+</li>
+<li>
+<p><strong>核心基本极限 (Core Exponential Limits):</strong>
+  $<span class="arithmatex">\(\lim_{x \to \infty} e^x = \infty, \quad \lim_{x \to -\infty} e^x = 0\)</span>$
+  $<span class="arithmatex">\(\lim_{x \to \infty} \left(\frac{1}{2}\right)^x = 0, \quad \lim_{x \to -\infty} \left(\frac{1}{2}\right)^x = \infty\)</span>$</p>
+</li>
+</ul>
+<hr />
+<h4 id="2-limits-for-inverse-functions">2. 反函数的极限定理 (Limits for Inverse Functions)<a class="headerlink" href="#2-limits-for-inverse-functions" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>定理内容 (Theorem C):</strong>
+  若函数 <span class="arithmatex">\(f\)</span> 存在反函数 <span class="arithmatex">\(f^{-1}\)</span>，且在 <span class="arithmatex">\(x = a\)</span> 处的极限满足：
+  $<span class="arithmatex">\(\lim_{x \to a} f(x) = f(a) = c\)</span>$
+  则反函数 <span class="arithmatex">\(f^{-1}\)</span> 在 <span class="arithmatex">\(x = c\)</span> 处的极限满足：
+  $<span class="arithmatex">\(\lim_{x \to c} f^{-1}(x) = f^{-1}(c) = a\)</span>$</li>
+<li><strong>几何与逻辑直观 (Geometric Intuition):</strong>
+  反函数的图像关于直线 <span class="arithmatex">\(y = x\)</span> 对称，定义域与值域互换，因此极限在对应点处保持连续映射关系。例如若 <span class="arithmatex">\(\lim_{x \to 5} a^x = 8\)</span>，则必有 <span class="arithmatex">\(\lim_{x \to 8} \log_a x = 5\)</span>。</li>
+</ul>
+<hr />
+<h4 id="3-limits-of-logarithmic-functions">3. 对数函数的极限 (Limits of Logarithmic Functions)<a class="headerlink" href="#3-limits-of-logarithmic-functions" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>定理内容 (Theorem D):</strong>
+  对于对数函数 <span class="arithmatex">\(f(x) = \log_c x\)</span>（底数 <span class="arithmatex">\(c &gt; 0, c \neq 1\)</span>）：</li>
+<li><strong>内部点极限:</strong> 若 <span class="arithmatex">\(a &gt; 0\)</span>，则 <span class="arithmatex">\(\lim_{x \to a} \log_c x = \log_c a\)</span>。</li>
+<li><strong>无穷远处趋势 (当 <span class="arithmatex">\(c &gt; 1\)</span> 时):</strong>
+     $<span class="arithmatex">\(\lim_{x \to \infty} \log_c x = \infty, \quad \lim_{x \to 0^+} \log_c x = -\infty\)</span>$</li>
+</ul>
+<hr />
+<h4 id="continuous-compounding-model">🌟 课件应用例题：连续复利投资模型 (Continuous Compounding Model)<a class="headerlink" href="#continuous-compounding-model" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Problem:</strong> An investment of <span class="arithmatex">\(\$2000\)</span> yields <span class="arithmatex">\(8\%\)</span> interest per year compounded continuously. The value of the investment after <span class="arithmatex">\(t\)</span> years is given by <span class="arithmatex">\(A(t) = 2000 e^{0.08t}\)</span>.
+  (a) Find the value of the investment after <span class="arithmatex">\(5\)</span> years.
+  (b) Find the time required for the investment to double in value.</li>
+<li><strong>Process (解题步骤):</strong>
+  (a) Evaluate <span class="arithmatex">\(A(5)\)</span>:
+      $<span class="arithmatex">\(A(5) = 2000 e^{0.08 \times 5} = 2000 e^{0.4} \approx \$2983.60\)</span>$
+  (b) Set <span class="arithmatex">\(A(t_0) = 4000\)</span> and solve for <span class="arithmatex">\(t_0\)</span>:
+      $<span class="arithmatex">\(4000 = 2000 e^{0.08 t_0} \implies 2 = e^{0.08 t_0}\)</span>$
+      Take the natural logarithm on both sides:
+      $<span class="arithmatex">\(\ln 2 = \ln\left(e^{0.08 t_0}\right) = 0.08 t_0 \implies t_0 = \frac{\ln 2}{0.08} = \frac{25}{2} \ln 2 \approx 8.66 \text{ years}\)</span>$</li>
+<li><strong>中文详解:</strong> 
+  (a) 5 年后的资金终值直接将 <span class="arithmatex">\(t=5\)</span> 代入连续复利公式 <span class="arithmatex">\(A(t)\)</span> 计算得到约 <span class="arithmatex">\(\$2983.60\)</span>；
+  (b) 投资翻倍意味着终值达到 <span class="arithmatex">\(\$4000\)</span>，建立方程后两边取自然对数 <span class="arithmatex">\(\ln\)</span>，解得翻倍所需时间 <span class="arithmatex">\(t_0 = \frac{25}{2} \ln 2 \approx 8.66\)</span> 年。</li>
+</ul>
+<hr />
+<h3 id="27-continuity-of-functions">2.7 Continuity of Functions (函数的连续性)<a class="headerlink" href="#27-continuity-of-functions" title="Permanent link">¶</a></h3>
+<h4 id="1-definition-of-continuity">1. 连续性的直观与严格定义 (Definition of Continuity)<a class="headerlink" href="#1-definition-of-continuity" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>直观含义 (Intuitive Concept):</strong>
+  在物理与自然界中，连续变化的过程（如一天的气温变化 <span class="arithmatex">\(T(t)\)</span>）其图像是一条<strong>一笔画出、没有断裂</strong>的平滑曲线；而脉冲电压 <span class="arithmatex">\(V(t)\)</span> 在开关切换时会发生突变，对应图像上的<strong>断点 (Breaks)</strong>。</li>
+<li><strong>连续三要素测试 (Continuity Test):</strong>
+  函数 <span class="arithmatex">\(f(x)\)</span> 在点 <span class="arithmatex">\(x = c\)</span> 处连续 (<strong>continuous at <span class="arithmatex">\(c\)</span></strong>)，<strong>当且仅当</strong>满足以下三个条件：</li>
+<li><strong>极限存在:</strong> <span class="arithmatex">\(\lim_{x \to c} f(x)\)</span> 存在；</li>
+<li><strong>函数值有定义:</strong> <span class="arithmatex">\(f(c)\)</span> 在 <span class="arithmatex">\(c\)</span> 处有定义（即 <span class="arithmatex">\(c \in D(f)\)</span>）；</li>
+<li><strong>极限值等于函数值:</strong> <span class="arithmatex">\(\lim_{x \to c} f(x) = f(c)\)</span>。</li>
+</ul>
+<blockquote>
+<p>若上述三个条件中有<strong>任何一个</strong>不满足，则称函数 <span class="arithmatex">\(f(x)\)</span> 在点 <span class="arithmatex">\(x = c\)</span> 处<strong>不连续 (discontinuous)</strong>，<span class="arithmatex">\(c\)</span> 称为 <span class="arithmatex">\(f(x)\)</span> 的<strong>间断点 (Point of Discontinuity)</strong>。</p>
+</blockquote>
+<hr />
+<h4 id="1-to-make-a-function-continuous">🌟 课件例题 1：补全点使函数连续 (To Make a Function Continuous)<a class="headerlink" href="#1-to-make-a-function-continuous" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Problem:</strong> Let <span class="arithmatex">\(f(x) = \frac{x^2 - 4}{x - 2}\)</span> for <span class="arithmatex">\(x \neq 2\)</span>. How should <span class="arithmatex">\(f\)</span> be defined at <span class="arithmatex">\(x = 2\)</span> in order to make it continuous there?</li>
+<li><strong>Process (解题步骤):</strong>
+  Calculate the limit as <span class="arithmatex">\(x \to 2\)</span>:
+  $<span class="arithmatex">\(\lim_{x \to 2} \frac{x^2 - 4}{x - 2} = \lim_{x \to 2} \frac{(x - 2)(x + 2)}{x - 2} = \lim_{x \to 2} (x + 2) = 4\)</span>$
+  To achieve continuity at <span class="arithmatex">\(x = 2\)</span>, we must set <span class="arithmatex">\(f(2) = \lim_{x \to 2} f(x) = 4\)</span>.</li>
+<li><strong>中文详解:</strong> 
+  原函数在 <span class="arithmatex">\(x=2\)</span> 处无定义，但极限存在且等于 4。要使函数在 <span class="arithmatex">\(x=2\)</span> 处连续，只需补充定义 <span class="arithmatex">\(f(2) = 4\)</span> 即可填补该“无定义洞”。</li>
+</ul>
+<hr />
+<h4 id="2-classification-of-points-of-discontinuity">2. 间断点的分类 (Classification of Points of Discontinuity)<a class="headerlink" href="#2-classification-of-points-of-discontinuity" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>可去间断点 (Removable Discontinuity):</strong>
+  若极限 <span class="arithmatex">\(\lim_{x \to c} f(x)\)</span> 存在，但 <span class="arithmatex">\(f(c)\)</span> 无定义或 <span class="arithmatex">\(f(c) \neq \lim_{x \to c} f(x)\)</span>。可以通过重新定义 <span class="arithmatex">\(f(c) = \lim_{x \to c} f(x)\)</span> 来消除间断。</li>
+<li><strong>不可去间断点 (Nonremovable Discontinuity):</strong>
+  若极限 <span class="arithmatex">\(\lim_{x \to c} f(x)\)</span> 不存在（例如左右极限不相等形成的跳跃间断点，或趋于无穷的无穷间断点）。</li>
+</ul>
+<hr />
+<h4 id="2">🌟 课件例题 2：间断点的全分析与分类<a class="headerlink" href="#2" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Problem:</strong> Determine all points of discontinuity of <span class="arithmatex">\(f(x) = \frac{\sin x}{x(1 - x)}\)</span>, and classify each point as removable or nonremovable.</li>
+<li><strong>Process (解题步骤):</strong></li>
+<li>Identify candidate points where the denominator is zero: <span class="arithmatex">\(x = 0\)</span> and <span class="arithmatex">\(x = 1\)</span>.</li>
+<li>Analyze <span class="arithmatex">\(x = 0\)</span>:
+     $<span class="arithmatex">\(\lim_{x \to 0} \frac{\sin x}{x(1 - x)} = \left(\lim_{x \to 0} \frac{\sin x}{x}\right) \cdot \left(\lim_{x \to 0} \frac{1}{1 - x}\right) = 1 \cdot 1 = 1\)</span>$
+     Since the limit exists at <span class="arithmatex">\(x = 0\)</span>, <span class="arithmatex">\(x = 0\)</span> is a <strong>removable discontinuity</strong>.</li>
+<li>Analyze <span class="arithmatex">\(x = 1\)</span>:
+     As <span class="arithmatex">\(x \to 1^+\)</span>, <span class="arithmatex">\(\sin 1 &gt; 0\)</span>, <span class="arithmatex">\(x \to 1\)</span>, and <span class="arithmatex">\(1 - x \to 0^-\)</span>:
+     $<span class="arithmatex">\(\lim_{x \to 1^+} \frac{\sin x}{x(1 - x)} = -\infty\)</span>$
+     As <span class="arithmatex">\(x \to 1^-\)</span>, <span class="arithmatex">\(1 - x \to 0^+\)</span>:
+     $<span class="arithmatex">\(\lim_{x \to 1^-} \frac{\sin x}{x(1 - x)} = +\infty\)</span>$
+     Since the limit does not exist (infinite limit), <span class="arithmatex">\(x = 1\)</span> is a <strong>nonremovable discontinuity</strong>.</li>
+<li><strong>中文详解:</strong></li>
+<li>使分母为 0 的可疑点为 <span class="arithmatex">\(x=0\)</span> 和 <span class="arithmatex">\(x=1\)</span>。</li>
+<li>在 <span class="arithmatex">\(x=0\)</span> 处，拆分为第一重要极限 <span class="arithmatex">\(\lim_{x \to 0} \frac{\sin x}{x} = 1\)</span> 与连续因子 <span class="arithmatex">\(\frac{1}{1-x} \to 1\)</span> 的乘积，极限值为 1 存在，故 <span class="arithmatex">\(x=0\)</span> 为<strong>可去间断点</strong>；</li>
+<li>在 <span class="arithmatex">\(x=1\)</span> 处，左右极限分别为 <span class="arithmatex">\(+\infty\)</span> 与 <span class="arithmatex">\(-\infty\)</span>，极限不存在，故 <span class="arithmatex">\(x=1\)</span> 为<strong>不可去（无穷）间断点</strong>。</li>
+</ul>
+<hr />
+<h4 id="3-continuity-of-elementary-functions">3. 常见初等函数的连续性定理 (Continuity of Elementary Functions)<a class="headerlink" href="#3-continuity-of-elementary-functions" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>多项式函数 (Polynomials):</strong> 在全体实数 <span class="arithmatex">\(\mathbb{R}\)</span> 上无条件连续。</li>
+<li><strong>有理函数 (Rational Functions):</strong> 在其定义域内（即排除分母为 0 的所有点）处处连续。</li>
+<li><strong>绝对值与根式函数:</strong></li>
+<li>绝对值函数 <span class="arithmatex">\(|x|\)</span> 在 <span class="arithmatex">\(\mathbb{R}\)</span> 上连续；</li>
+<li>奇次根式 <span class="arithmatex">\(x^{1/n}\)</span> (<span class="arithmatex">\(n\)</span> 为奇数) 在 <span class="arithmatex">\(\mathbb{R}\)</span> 上连续；</li>
+<li>偶次根式 <span class="arithmatex">\(x^{1/n}\)</span> (<span class="arithmatex">\(n\)</span> 为偶数) 在所有正实数 <span class="arithmatex">\((0, \infty)\)</span> 上连续。</li>
+<li><strong>超越初等函数 (Transcendental Functions):</strong>
+   正弦、余弦、正切、余切、正割、余割、反三角函数、指数函数、对数函数在其<strong>定义域内部 (Interior of Domain)</strong> 均连续。</li>
+<li><strong>初等函数连续性基本定理:</strong>
+   <strong>一切初等函数在其自然定义域内都是连续的。</strong></li>
+</ol>
+<hr />
+<h4 id="4-composite-limit-theorem-variable-substitution">4. 复合函数的连续性与换元法 (Composite Limit Theorem &amp; Variable Substitution)<a class="headerlink" href="#4-composite-limit-theorem-variable-substitution" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>复合函数极限交换定理 (Theorem E):</strong>
+  若 <span class="arithmatex">\(\lim_{x \to c} g(x) = L\)</span>，且函数 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(u = L\)</span> 处连续，则：
+  $<span class="arithmatex">\(\lim_{x \to c} f(g(x)) = f\left(\lim_{x \to c} g(x)\right) = f(L)\)</span>$
+  <em>即：</em><em>对于连续函数，极限符号与函数作用符号可以自由交换位置。</em>**</li>
+</ul>
+<hr />
+<h4 id="3">🌟 课件例题 3：复合函数极限与换元计算<a class="headerlink" href="#3" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Problem:</strong> Evaluate the following limits:
+  (a) <span class="arithmatex">\(\lim_{x \to 0} \sin\left(\frac{\sin x}{x}\right)\)</span>
+  (b) <span class="arithmatex">\(\lim_{x \to 0} \frac{\ln(1+x)}{x}\)</span>
+  (c) <span class="arithmatex">\(\lim_{x \to 0} \frac{e^x - 1}{x}\)</span></li>
+<li><strong>Process (解题步骤):</strong>
+  (a) Since <span class="arithmatex">\(\lim_{x \to 0} \frac{\sin x}{x} = 1\)</span> and <span class="arithmatex">\(\sin u\)</span> is continuous at <span class="arithmatex">\(u = 1\)</span>:
+      $<span class="arithmatex">\(\lim_{x \to 0} \sin\left(\frac{\sin x}{x}\right) = \sin\left(\lim_{x \to 0} \frac{\sin x}{x}\right) = \sin 1\)</span>$
+  (b) Using logarithmic properties and the second important limit <span class="arithmatex">\(\lim_{x \to 0} (1+x)^{1/x} = e\)</span>:
+      $<span class="arithmatex">\(\lim_{x \to 0} \frac{\ln(1+x)}{x} = \lim_{x \to 0} \ln\left((1+x)^{1/x}\right) = \ln\left(\lim_{x \to 0} (1+x)^{1/x}\right) = \ln e = 1\)</span>$
+  (c) Let <span class="arithmatex">\(u = e^x - 1 \implies e^x = 1+u \implies x = \ln(1+u)\)</span>. As <span class="arithmatex">\(x \to 0\)</span>, <span class="arithmatex">\(u \to 0\)</span>:
+      $<span class="arithmatex">\(\lim_{x \to 0} \frac{e^x - 1}{x} = \lim_{u \to 0} \frac{u}{\ln(1+u)} = \lim_{u \to 0} \frac{1}{\frac{\ln(1+u)}{u}} = \frac{1}{1} = 1\)</span>$</li>
+<li><strong>中文详解:</strong>
+  (a) 利用外层正弦函数的连续性，将极限符号收入内部，得 <span class="arithmatex">\(\sin 1\)</span>；
+  (b) 将分母的 <span class="arithmatex">\(\frac{1}{x}\)</span> 提为对数真数的指数，结合第二重要极限 <span class="arithmatex">\(\lim_{x \to 0} (1+x)^{1/x} = e\)</span>，对数连续性得 <span class="arithmatex">\(\ln e = 1\)</span>；
+  (c) 采用换元法令 <span class="arithmatex">\(u = e^x - 1\)</span>，将分子分母转化为 <span class="arithmatex">\(\frac{u}{\ln(1+u)}\)</span>，利用 (b) 的结论直接求得极限为 1。</li>
+</ul>
+<hr />
+<h4 id="4-fxgx">🌟 课件例题 4：幂指函数 <span class="arithmatex">\(f(x)^{g(x)}\)</span> 的连续性与极限<a class="headerlink" href="#4-fxgx" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Problem:</strong> Evaluate <span class="arithmatex">\(\lim_{x \to 0} (1 + x)^{2/\sin x}\)</span>.</li>
+<li><strong>Process (解题步骤):</strong>
+  Rewrite the base and exponent:
+  $<span class="arithmatex">\(\lim_{x \to 0} (1 + x)^{2/\sin x} = \lim_{x \to 0} \left[(1 + x)^{1/x}\right]^{\frac{2x}{\sin x}}\)</span>$
+  Apply the Composite Limit Theorem:</li>
+<li>Inner limit: <span class="arithmatex">\(\lim_{x \to 0} (1 + x)^{1/x} = e\)</span></li>
+<li>Exponent limit: <span class="arithmatex">\(\lim_{x \to 0} \frac{2x}{\sin x} = 2 \cdot \lim_{x \to 0} \frac{x}{\sin x} = 2 \cdot 1 = 2\)</span>
+  Combine the limits:
+  $<span class="arithmatex">\(\lim_{x \to 0} (1 + x)^{2/\sin x} = e^2\)</span>$</li>
+<li><strong>中文详解:</strong> 
+  这是经典的 <span class="arithmatex">\(1^\infty\)</span> 型未定式。通过凑配第二重要极限结构 <span class="arithmatex">\((1+x)^{1/x}\)</span>，将指数拆分为 <span class="arithmatex">\(\frac{2x}{\sin x}\)</span>。利用连续性，底数趋于 <span class="arithmatex">\(e\)</span>，指数趋于 <span class="arithmatex">\(2\)</span>，最终计算结果为 <span class="arithmatex">\(e^2\)</span>。</li>
+</ul>
+<hr />
+<h4 id="5-continuity-on-intervals">5. 区间上的连续性 (Continuity on Intervals)<a class="headerlink" href="#5-continuity-on-intervals" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>单侧连续性 (One-Sided Continuity):</strong></li>
+<li><strong>右连续 (Right Continuous at <span class="arithmatex">\(a\)</span>):</strong> <span class="arithmatex">\(\lim_{x \to a^+} f(x) = f(a)\)</span>；</li>
+<li><strong>左连续 (Left Continuous at <span class="arithmatex">\(b\)</span>):</strong> <span class="arithmatex">\(\lim_{x \to b^-} f(x) = f(b)\)</span>。</li>
+<li><strong>区间连续性定义:</strong></li>
+<li>函数 <span class="arithmatex">\(f\)</span> 在<strong>开区间 <span class="arithmatex">\((a, b)\)</span></strong> 上连续，若它在开区间的每个点处均连续；</li>
+<li>函数 <span class="arithmatex">\(f\)</span> 在<strong>闭区间 <span class="arithmatex">\([a, b]\)</span></strong> 上连续，若它在 <span class="arithmatex">\((a, b)\)</span> 内处处连续，且在左端点 <span class="arithmatex">\(a\)</span> 处<strong>右连续</strong>，在右端点 <span class="arithmatex">\(b\)</span> 处<strong>左连续</strong>。</li>
+</ul>
+<hr />
+<h4 id="6">6. 闭区间上连续函数的全局性质：介值定理与零点定理<a class="headerlink" href="#6" title="Permanent link">¶</a></h4>
+<h5 id="intermediate-value-theorem-ivt"><strong>介值定理 (Intermediate Value Theorem, IVT)</strong><a class="headerlink" href="#intermediate-value-theorem-ivt" title="Permanent link">¶</a></h5>
+<ul>
+<li><strong>定理内容 (Theorem F):</strong>
+  设函数 <span class="arithmatex">\(f(x)\)</span> 在闭区间 <span class="arithmatex">\([a, b]\)</span> 上<strong>连续</strong>，且 <span class="arithmatex">\(W\)</span> 为介于 <span class="arithmatex">\(f(a)\)</span> 与 <span class="arithmatex">\(f(b)\)</span> 之间的任意实数。则在开区间 <span class="arithmatex">\((a, b)\)</span> 内<strong>至少存在一点 <span class="arithmatex">\(c\)</span></strong>，使得：
+  $<span class="arithmatex">\(f(c) = W\)</span>$</li>
+<li><strong>几何意义:</strong>
+  连续函数的图像是一条不间断的曲线。从水平线 <span class="arithmatex">\(y = f(a)\)</span> 连到 <span class="arithmatex">\(y = f(b)\)</span>，曲线必然会与中间的任意水平线 <span class="arithmatex">\(y = W\)</span> 至少相交一次。</li>
+</ul>
+<h5 id="zero-point-theorem"><strong>零点定理 (Zero Point Theorem)</strong><a class="headerlink" href="#zero-point-theorem" title="Permanent link">¶</a></h5>
+<ul>
+<li><strong>推论:</strong> 若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([a, b]\)</span> 上连续，且端点值异号（即 <span class="arithmatex">\(f(a) \cdot f(b) &lt; 0\)</span>），则方程 <span class="arithmatex">\(f(x) = 0\)</span> 在 <span class="arithmatex">\((a, b)\)</span> 内至少有一个实根 <span class="arithmatex">\(c\)</span>。</li>
+</ul>
+<hr />
+<h4 id="5">🌟 课件例题 5：介值定理证明超越方程根的存在性与二分法<a class="headerlink" href="#5" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Problem:</strong> Use the Intermediate Value Theorem to show that the equation <span class="arithmatex">\(x = \cos x\)</span> has a solution between <span class="arithmatex">\(x = 0\)</span> and <span class="arithmatex">\(x = \pi/2\)</span>.</li>
+<li><strong>Process (证明步骤):</strong></li>
+<li>Define a auxiliary function: Let <span class="arithmatex">\(f(x) = x - \cos x\)</span>, and set <span class="arithmatex">\(W = 0\)</span>.</li>
+<li>Check continuity: <span class="arithmatex">\(f(x)\)</span> is the difference of two elementary functions (<span class="arithmatex">\(y = x\)</span> and <span class="arithmatex">\(y = \cos x\)</span>), so <span class="arithmatex">\(f(x)\)</span> is continuous on the closed interval <span class="arithmatex">\([0, \pi/2]\)</span>.</li>
+<li>Evaluate end points:
+     $<span class="arithmatex">\(f(0) = 0 - \cos 0 = -1 &lt; 0\)</span>$
+     $<span class="arithmatex">\(f\left(\frac{\pi}{2}\right) = \frac{\pi}{2} - \cos\left(\frac{\pi}{2}\right) = \frac{\pi}{2} &gt; 0\)</span>$</li>
+<li>Apply IVT: Since <span class="arithmatex">\(W = 0\)</span> lies strictly between <span class="arithmatex">\(f(0) = -1\)</span> and <span class="arithmatex">\(f(\pi/2) = \pi/2\)</span>, by the Intermediate Value Theorem, there exists at least one <span class="arithmatex">\(c \in (0, \pi/2)\)</span> such that <span class="arithmatex">\(f(c) = 0\)</span>.</li>
+<li>
+<p>Conclusion: <span class="arithmatex">\(c - \cos c = 0 \implies c = \cos c\)</span>, so <span class="arithmatex">\(c\)</span> is a solution to <span class="arithmatex">\(x = \cos x\)</span>.</p>
+</li>
+<li>
+<p><strong>二分法延伸 (Bisection Method Remark):</strong>
+  进一步考察中点 <span class="arithmatex">\(x = \pi/4\)</span>：
+  $<span class="arithmatex">\(f\left(\frac{\pi}{4}\right) = \frac{\pi}{4} - \cos\left(\frac{\pi}{4}\right) = \frac{\pi}{4} - \frac{\sqrt{2}}{2} = \frac{\pi - 2\sqrt{2}}{4} \approx \frac{3.1416 - 2.8284}{4} &gt; 0\)</span>$
+  由于 <span class="arithmatex">\(f(0) &lt; 0\)</span> 且 <span class="arithmatex">\(f(\pi/4) &gt; 0\)</span>，根的范围被成功缩小至更精细的区间 <span class="arithmatex">\((0, \pi/4)\)</span>。这种不断折半区间逼近零点的方法称为<strong>二分法 (Bisection Method)</strong>。</p>
+</li>
+</ul>
+<hr />
+<h4 id="6-fixed-point-theorem">🌟 课件例题 6：不动点定理证明 (Fixed Point Theorem)<a class="headerlink" href="#6-fixed-point-theorem" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Problem:</strong> Prove that if <span class="arithmatex">\(f\)</span> is continuous on <span class="arithmatex">\([0, 1]\)</span> and satisfies <span class="arithmatex">\(0 \le f(x) \le 1\)</span> for all <span class="arithmatex">\(x \in [0, 1]\)</span>, then there exists a number <span class="arithmatex">\(c \in [0, 1]\)</span> such that <span class="arithmatex">\(f(c) = c\)</span>.</li>
+<li><strong>Process (证明步骤):</strong></li>
+<li>Define the auxiliary function <span class="arithmatex">\(g(x) = f(x) - x\)</span>.</li>
+<li>Since <span class="arithmatex">\(f(x)\)</span> and <span class="arithmatex">\(x\)</span> are continuous on <span class="arithmatex">\([0, 1]\)</span>, <span class="arithmatex">\(g(x)\)</span> is continuous on <span class="arithmatex">\([0, 1]\)</span>.</li>
+<li>Evaluate <span class="arithmatex">\(g(x)\)</span> at the boundaries:<ul>
+<li><span class="arithmatex">\(g(0) = f(0) - 0 = f(0) \ge 0\)</span> (since <span class="arithmatex">\(f(x) \ge 0\)</span>);</li>
+<li><span class="arithmatex">\(g(1) = f(1) - 1 \le 0\)</span> (since <span class="arithmatex">\(f(x) \le 1\)</span>).</li>
+</ul>
+</li>
+<li>Case analysis:<ul>
+<li>If <span class="arithmatex">\(g(0) = 0\)</span>, then <span class="arithmatex">\(f(0) = 0\)</span>, so <span class="arithmatex">\(c = 0\)</span> is the required number;</li>
+<li>If <span class="arithmatex">\(g(1) = 0\)</span>, then <span class="arithmatex">\(f(1) = 1\)</span>, so <span class="arithmatex">\(c = 1\)</span> is the required number;</li>
+<li>If <span class="arithmatex">\(g(0) &gt; 0\)</span> and <span class="arithmatex">\(g(1) &lt; 0\)</span>, then <span class="arithmatex">\(0\)</span> lies between <span class="arithmatex">\(g(0)\)</span> and <span class="arithmatex">\(g(1)\)</span>. By the Zero Point Theorem, there exists some <span class="arithmatex">\(c \in (0, 1)\)</span> such that <span class="arithmatex">\(g(c) = 0\)</span>.</li>
+</ul>
+</li>
+<li>
+<p>Thus <span class="arithmatex">\(f(c) - c = 0 \implies f(c) = c\)</span>.</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> 构造辅助函数 <span class="arithmatex">\(g(x) = f(x) - x\)</span>。利用已知条件 <span class="arithmatex">\(0 \le f(x) \le 1\)</span> 推出端点值 <span class="arithmatex">\(g(0) \ge 0\)</span> 且 <span class="arithmatex">\(g(1) \le 0\)</span>。如果端点取等号则直接得出不动点；若严格异号，则由零点定理可知区间内部必存在 <span class="arithmatex">\(c\)</span> 使得 <span class="arithmatex">\(g(c) = 0 \implies f(c) = c\)</span>。</p>
+</li>
+</ul>
+<hr />
+<h4 id="7-1infty-the-second-important-limit">7. 第二重要极限与 <span class="arithmatex">\(1^\infty\)</span> 型未定式 (The Second Important Limit)<a class="headerlink" href="#7-1infty-the-second-important-limit" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>第二重要极限标准型 (Standard Forms):</strong>
+  $<span class="arithmatex">\(\lim_{x \to \infty} \left(1 + \frac{1}{x}\right)^x = e, \quad \lim_{h \to 0} (1 + h)^{1/h} = e\)</span>$</li>
+<li><strong>复合换元推广定理 (Generalization via Variable Substitution):</strong></li>
+<li>若 <span class="arithmatex">\(\lim_{x \to c} u(x) = \infty\)</span>，则 <span class="arithmatex">\(\lim_{x \to c} \left(1 + \frac{1}{u(x)}\right)^{u(x)} = e\)</span>；</li>
+<li>若 <span class="arithmatex">\(\lim_{x \to c} u(x) = 0\)</span>（且 <span class="arithmatex">\(u(x) \neq 0\)</span>），则 <span class="arithmatex">\(\lim_{x \to c} \left(1 + u(x)\right)^{1/u(x)} = e\)</span>。</li>
+</ul>
+<hr />
+<h4 id="71infty">🌟 课件例题 7：<span class="arithmatex">\(1^\infty\)</span> 型极限经典综合例题<a class="headerlink" href="#71infty" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Problem:</strong> Evaluate <span class="arithmatex">\(\lim_{x \to 0} \left(x + e^{x/3}\right)^{3/x}\)</span>.</li>
+<li><strong>Process (解题步骤):</strong></li>
+<li>Identify the form: As <span class="arithmatex">\(x \to 0\)</span>, <span class="arithmatex">\(x + e^{x/3} \to 0 + 1 = 1\)</span>, and exponent <span class="arithmatex">\(\frac{3}{x} \to \infty\)</span>. This is a <span class="arithmatex">\(1^\infty\)</span> indeterminate form.</li>
+<li>Let <span class="arithmatex">\(u(x) = x + e^{x/3} - 1\)</span>. Note that as <span class="arithmatex">\(x \to 0\)</span>, <span class="arithmatex">\(u(x) \to 0\)</span>.</li>
+<li>Express the base as <span class="arithmatex">\(1 + u(x)\)</span>:
+     $<span class="arithmatex">\(\lim_{x \to 0} \left(x + e^{x/3}\right)^{3/x} = \lim_{x \to 0} \left(1 + u(x)\right)^{3/x}\)</span>$</li>
+<li>Supply the required exponent <span class="arithmatex">\(\frac{1}{u(x)}\)</span> for the second important limit:
+     $<span class="arithmatex">\(\lim_{x \to 0} \left(1 + u(x)\right)^{3/x} = \lim_{x \to 0} \left[\left(1 + u(x)\right)^{1/u(x)}\right]^{\frac{3 u(x)}{x}}\)</span>$</li>
+<li>Evaluate the inner limit:
+     $<span class="arithmatex">\(\lim_{x \to 0} \left(1 + u(x)\right)^{1/u(x)} = \lim_{u \to 0} (1 + u)^{1/u} = e\)</span>$</li>
+<li>Evaluate the exponent limit <span class="arithmatex">\(\lim_{x \to 0} \frac{3 u(x)}{x}\)</span>:
+     $<span class="arithmatex">\(\lim_{x \to 0} \frac{3\left(x + e^{x/3} - 1\right)}{x} = 3 \left(\lim_{x \to 0} \frac{x}{x} + \lim_{x \to 0} \frac{e^{x/3} - 1}{x}\right)\)</span>$
+     Let <span class="arithmatex">\(t = \frac{x}{3}\)</span>. As <span class="arithmatex">\(x \to 0\)</span>, <span class="arithmatex">\(t \to 0\)</span>:
+     $<span class="arithmatex">\(\lim_{x \to 0} \frac{e^{x/3} - 1}{x} = \lim_{t \to 0} \frac{e^t - 1}{3t} = \frac{1}{3} \cdot \lim_{t \to 0} \frac{e^t - 1}{t} = \frac{1}{3} \cdot 1 = \frac{1}{3}\)</span>$
+     So the exponent limit is:
+     $<span class="arithmatex">\(3 \left(1 + \frac{1}{3}\right) = 3 + 1 = 4\)</span>$</li>
+<li>
+<p>Combine the results:
+     $<span class="arithmatex">\(\lim_{x \to 0} \left(x + e^{x/3}\right)^{3/x} = e^4\)</span>$</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> 
+  这是非常经典的 <span class="arithmatex">\(1^\infty\)</span> 型未定式。
+  第一步：将底数写为 <span class="arithmatex">\(1 + u(x)\)</span> 的标准形式，其中 <span class="arithmatex">\(u(x) = x + e^{x/3} - 1 \to 0\)</span>；
+  第二步：强制凑出核心指数次方 <span class="arithmatex">\(\frac{1}{u(x)}\)</span>，使括号内底数转化为趋于 <span class="arithmatex">\(e\)</span> 的结构；
+  第三步：计算剩余指数部分 <span class="arithmatex">\(\lim_{x \to 0} \frac{3 u(x)}{x}\)</span>，将其拆分为 <span class="arithmatex">\(3\left(1 + \frac{e^{x/3}-1}{x}\right)\)</span>，利用换元 <span class="arithmatex">\(t = x/3\)</span> 计算出指数极限为 <span class="arithmatex">\(4\)</span>；
+  最终求得结果为 <span class="arithmatex">\(e^4\)</span>。</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../lecture03/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Lecture 3 · 无穷极限与三角极限">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                Lecture 3 · 无穷极限与三角极限
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../lecture05/" class="md-footer__link md-footer__link--next" aria-label="下一页: Lecture 5 · 导数与求导法则">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                Lecture 5 · 导数与求导法则
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      个人学习笔记，仅供自用
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.tracking", "search.suggest", "search.highlight", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/katex/katex.min.js"></script>
+      
+        <script src="../../javascripts/katex/auto-render.min.js"></script>
+      
+        <script src="../../javascripts/katex-init.js"></script>
+      
+    
+  </body>
+</html>

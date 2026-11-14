@@ -1,0 +1,2262 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MTH026 微积分与 MTH028 线性代数的讲义、期中复习、练习题与答题卡">
+      
+      
+      
+        <link rel="canonical" href="https://rainyboat1029.github.io/mth-notes/mth026/concept-limits/">
+      
+      
+        <link rel="prev" href="../midterm-review/">
+      
+      
+        <link rel="next" href="../practice-basic/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>极限的严谨定义 - 数学笔记 · MTH026 / MTH028</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../javascripts/katex/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="数学笔记 · MTH026 / MTH028" class="md-header__button md-logo" aria-label="数学笔记 · MTH026 / MTH028" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            数学笔记 · MTH026 / MTH028
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              极限的严谨定义
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  微积分 MTH026
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mth028/" class="md-tabs__link">
+          
+  
+  
+  线性代数 MTH028
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="数学笔记 · MTH026 / MTH028" class="md-nav__button md-logo" aria-label="数学笔记 · MTH026 / MTH028" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    数学笔记 · MTH026 / MTH028
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微积分 MTH026
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    微积分 MTH026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 · 函数与预备知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 2 · 极限概念与运算法则
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 · 无穷极限与三角极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 4 · 指数对数极限与连续性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 5 · 导数与求导法则
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 6 · 隐微分与相关变化率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 7 · 最值与凹凸性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 8 · 优化与函数作图
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 · 中值定理与洛必达
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../midterm-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习（L1–L6）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    极限的严谨定义
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    极限的严谨定义
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 预备知识：构建数学大厦的基石
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 预备知识：构建数学大厦的基石">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心函数性质对比
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心运算规则与高频公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 直观极限：理解“无限接近”的艺术
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 直观极限：理解“无限接近”的艺术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        现实原型：从平均到瞬时
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dne" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        极限不存在（DNE）的三种逻辑模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        认知陷阱：定义与极限的独立性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-varepsilon-delta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 严谨定义：\(\varepsilon-\delta\) 语言的逻辑重构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 严谨定义：\(\varepsilon-\delta\) 语言的逻辑重构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        严格定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        专家视角：逻辑图像化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lim_x-to-3-2x1-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实战模拟：证明 \(\lim_{x \to 3} (2x+1) = 7\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 极限计算的“瑞士军刀”：三大核心定理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 极限计算的“瑞士军刀”：三大核心定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-squeeze-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 夹逼准则 (\(Squeeze Theorem\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 重要极限与变形
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-x-to-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 等价无穷小替换 (当 \(x \to 0\) 时)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 连续性与间断点：函数的生命线
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 连续性与间断点：函数的生命线">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        连续判定清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        间断点的本质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        零点定理的实战应用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 导数入门：极限在变化率中的巅峰应用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 导数入门：极限在变化率中的巅峰应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        本质定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        直观联系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常用基本初等函数求导清册
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_13" id="__nav_2_13_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    练习
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practice-basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础卷 · Week 1–6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practice-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进阶卷 · 综合提高
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性代数 MTH028
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    线性代数 MTH028
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 · §1.1 线性方程组
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 2 · §1.2 行化简
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 · §1.3–1.4 向量与矩阵方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 4 · §1.5 解集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 5 · §1.8 线性变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 6 · §2.1 矩阵运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 7 · §2.2 矩阵的逆
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 8 · §2.8 子空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 · §2.9 维数与秩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/midterm-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习（L1–L8）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    练习
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/practice-basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础卷 · Week 1–8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/practice-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进阶卷 · 综合提高
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 预备知识：构建数学大厦的基石
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 预备知识：构建数学大厦的基石">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心函数性质对比
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心运算规则与高频公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 直观极限：理解“无限接近”的艺术
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 直观极限：理解“无限接近”的艺术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        现实原型：从平均到瞬时
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dne" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        极限不存在（DNE）的三种逻辑模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        认知陷阱：定义与极限的独立性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-varepsilon-delta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 严谨定义：\(\varepsilon-\delta\) 语言的逻辑重构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 严谨定义：\(\varepsilon-\delta\) 语言的逻辑重构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        严格定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        专家视角：逻辑图像化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lim_x-to-3-2x1-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实战模拟：证明 \(\lim_{x \to 3} (2x+1) = 7\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 极限计算的“瑞士军刀”：三大核心定理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 极限计算的“瑞士军刀”：三大核心定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-squeeze-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 夹逼准则 (\(Squeeze Theorem\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 重要极限与变形
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-x-to-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 等价无穷小替换 (当 \(x \to 0\) 时)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 连续性与间断点：函数的生命线
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 连续性与间断点：函数的生命线">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        连续判定清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        间断点的本质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        零点定理的实战应用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 导数入门：极限在变化率中的巅峰应用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 导数入门：极限在变化率中的巅峰应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        本质定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        直观联系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常用基本初等函数求导清册
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">核心概念解析：从“直观极限”到“严谨定义”的逻辑跨越<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p>欢迎来到大学数学的殿堂。作为一名长期研究衔接教育的专家，我深知新生在面对从高中的“直觉直观”向大学“严谨逻辑”转变时的阵痛。极限理论不仅是微积分的基石，更是这种逻辑跨越的第一个分水岭。本指南将协助你拆解逻辑障碍，构建严谨的数学思维框架。</p>
+<h2 id="1">1. 预备知识：构建数学大厦的基石<a class="headerlink" href="#1" title="Permanent link">¶</a></h2>
+<p>在探索动态变化之前，我们必须对静态的工具——函数——有极其精确的掌握。大学数学不再接受模糊的描述，每一个性质都有其逻辑底色。</p>
+<h3 id="_2">核心函数性质对比<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<p>下表梳理了函数性质的逻辑递进，请特别注意“反函数”存在的逻辑前提：</p>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>逻辑要点</th>
+<th>充要条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>函数的定义</strong></td>
+<td>定义域 D 内任一 x，通过法则 f 有唯一 y 对应</td>
+<td>映射的唯一性</td>
+</tr>
+<tr>
+<td><strong>单射函数</strong></td>
+<td>若 <span class="arithmatex">\(x_1 \neq x_2\)</span>，则 <span class="arithmatex">\(f(x_1) \neq f(x_2)\)</span></td>
+<td>每个 y 最多对应一个 x</td>
+</tr>
+<tr>
+<td><strong>反函数</strong></td>
+<td>f 为单射时，存在 <span class="arithmatex">\(f^{-1}\)</span> 使 y 唯一对应 x</td>
+<td><strong>单射（Injectivity）</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>注意：虽然 <span class="arithmatex">\(Source Context\)</span> 提到单调性是反函数存在的充要条件，但在严格逻辑中，单调性是连续函数存在反函数的充分条件，而“单射”才是逻辑上的本质要求。</em></p>
+<h3 id="_3">核心运算规则与高频公式<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<p>在后续计算中，指数、对数及三角变换是你的核心武器：</p>
+<ul>
+<li><strong>指数与对数性质</strong>：<span class="arithmatex">\(a^{x+y} = a^x a^y\)</span>；<span class="arithmatex">\(\log_a (xy) = \log_a x + \log_a y\)</span>；换底公式 <span class="arithmatex">\(\log_b a = \frac{\log_c a}{\log_c b}\)</span>。</li>
+<li><strong>和差化积公式</strong>：处理分式极限的高频工具。例如：<span class="arithmatex">\(\sin A + \sin B = 2\sin \frac{A+B}{2} \cos \frac{A-B}{2}\)</span>。</li>
+<li><strong>积化和差公式</strong>：<span class="arithmatex">\(\sin \alpha \cos \beta = \frac{1}{2}[\sin(\alpha+\beta) + \sin(\alpha-\beta)]\)</span>。</li>
+<li><strong>【高频工具】</strong>：<strong><span class="arithmatex">\(\sin^2 x + \cos^2 x = 1\)</span></strong>、<strong><span class="arithmatex">\(1 - \cos x = 2\sin^2 \frac{x}{2}\)</span></strong>（这是等价无穷小替换的前置核心变形）。</li>
+</ul>
+<p><strong>专家提示</strong>：掌握了这些静态函数工具，我们才能真正从静态的“点”出发，去窥探数学中动态变化的“趋势”之美。</p>
+<h2 id="2">2. 直观极限：理解“无限接近”的艺术<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
+<p>极限的诞生源于对“瞬时状态”的捕捉。</p>
+<h3 id="_4">现实原型：从平均到瞬时<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>平均速度</strong>：<span class="arithmatex">\(\frac{\Delta s}{\Delta t}\)</span>，描述一段时间内的“平均表现”。</li>
+<li><strong>瞬时速度</strong>：当时间间隔 <span class="arithmatex">\(\Delta t \to 0\)</span> 时的极限。它揭示了在某一特定时刻，事物变化的趋势。</li>
+</ul>
+<h3 id="dne">极限不存在（DNE）的三种逻辑模型<a class="headerlink" href="#dne" title="Permanent link">¶</a></h3>
+<p>根据 <span class="arithmatex">\(Source Context\)</span>，极限无法达成“稳定状态”通常有三种情况：</p>
+<ol>
+<li><strong>左右极限不一致</strong>：从左侧和右侧趋近的结果不同（如跳跃函数）。</li>
+<li><strong>趋于无穷</strong>：函数值失去控制（如 <span class="arithmatex">\(y = 1/x\)</span> 在 <span class="arithmatex">\(x \to 0\)</span> 时）。</li>
+<li><strong>震荡（<span class="arithmatex">\(Oscillation\)</span>）</strong>：函数在某点附近疯狂摆动。</li>
+<li><strong>深度辨析</strong>：比较 <span class="arithmatex">\(\lim_{x \to 0} \sin(1/x) 与 \lim_{x \to 0} \sin(10^{9999}x)\)</span>。后者虽然频率极高，但在 <span class="arithmatex">\(x \to 0\)</span> 时极限确实为 0；而前者在趋近 0 时震荡频率趋于无穷，无法锁定任何值，故极限不存在。</li>
+</ol>
+<h3 id="_5">认知陷阱：定义与极限的独立性<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<p>根据 Concepts Test，请牢记：<strong><span class="arithmatex">\(f(c)\)</span></strong> <strong>是否存在与</strong> <strong><span class="arithmatex">\(\lim_{x \to c} f(x)\)</span></strong> <strong>是否存在逻辑独立。</strong> 函数在某点可以没有定义，但只要它在趋近该点时有确定的趋势，极限就存在。</p>
+<p><strong>专家提示</strong>：虽然直观理解能够帮助我们建立感性认识，但“无限接近”这种文学化的词汇无法支撑起严密的论证，这就引出了令人生畏但又精妙绝伦的 <span class="arithmatex">\(\varepsilon-\delta\)</span> 定义。</p>
+<h2 id="3-varepsilon-delta">3. 严谨定义：<span class="arithmatex">\(\varepsilon-\delta\)</span> 语言的逻辑重构<a class="headerlink" href="#3-varepsilon-delta" title="Permanent link">¶</a></h2>
+<p>为了消除直觉的模糊性，数学家建立了一套“挑战-应战”的逻辑闭环。</p>
+<h3 id="_6">严格定义<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<p><strong>定义</strong>：设 <span class="arithmatex">\(\lim_{x \to c} f(x) = L\)</span>，意指对于<strong>任意给定</strong>的 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，总<strong>存在对应</strong>的 <span class="arithmatex">\(\delta &gt; 0\)</span>，使得当 <span class="arithmatex">\(0 &lt; |x - c| &lt; \delta\)</span> 时，必有 <span class="arithmatex">\(|f(x) - L| &lt; \varepsilon\)</span>。</p>
+<h3 id="_7">专家视角：逻辑图像化<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong><span class="arithmatex">\(\varepsilon\)</span></strong> <strong>（误差容忍度）</strong>：在 y 轴上划定一个以 L 为中心的“误差窗口”。</li>
+<li><strong><span class="arithmatex">\(\delta\)</span></strong> <strong>（控制精度）</strong>：在 x 轴上寻找一个以 c 为中心的“控制窗口”。</li>
+<li><strong>逻辑因果</strong>：必须<strong>先有</strong> <strong><span class="arithmatex">\(\varepsilon\)</span></strong> <strong>后有</strong> <strong><span class="arithmatex">\(\delta\)</span></strong>。如果你先确定了 <span class="arithmatex">\(\delta\)</span>，那么误差范围 <span class="arithmatex">\(\varepsilon\)</span> 就会被函数关系直接固定，这会导致“存在性”的证明变得毫无意义。我们必须证明：无论挑战者给出的误差 <span class="arithmatex">\(\varepsilon\)</span> 有多么苛刻，我们都能在自变量 x 的邻域内找到足够小的 <span class="arithmatex">\(\delta\)</span> 来满足要求。</li>
+</ul>
+<h3 id="lim_x-to-3-2x1-7">实战模拟：证明 <span class="arithmatex">\(\lim_{x \to 3} (2x+1) = 7\)</span><a class="headerlink" href="#lim_x-to-3-2x1-7" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>分析目标</strong>：使 <span class="arithmatex">\(|(2x+1) - 7| &lt; \varepsilon\)</span>。</li>
+<li><strong>建立关系</strong>：化简得 <span class="arithmatex">\(2|x - 3| &lt; \varepsilon，即 |x - 3| &lt; \frac{\varepsilon}{2}\)</span>。</li>
+<li><strong>选取策略</strong>：只要取 <span class="arithmatex">\(\delta = \frac{\varepsilon}{2}\)</span>（或任何小于此值的正数），就能保证当 x 进入控制窗口时，函数值误差必在 <span class="arithmatex">\(\varepsilon\)</span> 之内。</li>
+</ol>
+<p><strong>专家提示</strong>：一旦掌握了这套严谨的逻辑语言，我们就像拿到了通行证，可以借助强大的定理工具来快速解决复杂的计算问题。</p>
+<h2 id="4">4. 极限计算的“瑞士军刀”：三大核心定理<a class="headerlink" href="#4" title="Permanent link">¶</a></h2>
+<h3 id="a-squeeze-theorem">A. 夹逼准则 (<span class="arithmatex">\(Squeeze Theorem\)</span>)<a class="headerlink" href="#a-squeeze-theorem" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>逻辑图像</strong>：大函数和小函数如同两块挡板，共同向中间挤压目标函数。若左右两端极限相同，中间函数无处可逃，只能趋向同一结果。</li>
+<li><strong>适用场景</strong>：处理含有震荡因子或无法直接拆分的不定式。</li>
+</ul>
+<h3 id="b">B. 重要极限与变形<a class="headerlink" href="#b" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>核心公式</th>
+<th>衍生/推广结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\lim_{x \to 0} \frac{\sin x}{x} = 1\)</span></td>
+<td><span class="arithmatex">\(\lim_{x \to 0} \frac{\tan x}{x} = 1\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\lim_{x \to \infty} (1 + \frac{1}{x})^x = e\)</span></td>
+<td><strong><span class="arithmatex">\(\lim_{x \to \infty} (1 + \frac{a}{x})^x = e^a\)</span></strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="c-x-to-0">C. 等价无穷小替换 (当 <span class="arithmatex">\(x \to 0\)</span> 时)<a class="headerlink" href="#c-x-to-0" title="Permanent link">¶</a></h3>
+<ul>
+<li>常用的替换：<span class="arithmatex">\(x \sim \sin x \sim \tan x \sim \ln(1+x) \sim e^x - 1\)</span>。</li>
+<li>进阶替换：<span class="arithmatex">\(1 - \cos x \sim \frac{1}{2}x^2\)</span>。</li>
+</ul>
+<p><strong>【警告】</strong>：<strong>等价替换严禁在加减法中滥用！</strong></p>
+<ul>
+<li><strong>典型陷阱</strong>：计算 <span class="arithmatex">\(\lim_{x \to 0} \frac{\tan x - \sin x}{x^3}\)</span>。若直接替换为 <span class="arithmatex">\(x - x = 0\)</span>，则会丢失高阶无穷小项导致错误。根据 <span class="arithmatex">\(Source Context\)</span>，此类计算必须整体变形或使用泰勒公式。</li>
+</ul>
+<p><strong>专家提示</strong>：计算极限只是手段，其深层目的之一是为了判断函数在某点或某段区间内是否保持“生命线”的连续。</p>
+<h2 id="5">5. 连续性与间断点：函数的生命线<a class="headerlink" href="#5" title="Permanent link">¶</a></h2>
+<h3 id="_8">连续判定清单<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<p>判定函数在 c 点连续，必须依次勾选以下三个复选框：</p>
+<ul>
+<li>[ ] <strong><span class="arithmatex">\(f(c)\)</span></strong> <strong>有定义</strong>：点确实存在。</li>
+<li>[ ] <strong><span class="arithmatex">\(\lim_{x \to c} f(x)\)</span></strong> <strong>存在</strong>：左右趋近趋势一致。</li>
+<li>[ ] <strong>极限值 = 函数值</strong>：趋势点与实际点重合。</li>
+</ul>
+<h3 id="_9">间断点的本质<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>可去间断点</strong>：极限存在，但由于点没定义或位置不对留下“空洞”。</li>
+<li><strong>不可去间断点</strong>：极限根本不存在（如跳跃、无穷或无限震荡）。</li>
+</ul>
+<h3 id="_10">零点定理的实战应用<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
+<p><strong>案例证明</strong>：若 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上连续且 <span class="arithmatex">\(f(0) = f(1)\)</span>，证明 <span class="arithmatex">\(f(x) = f(x + 1/2)\)</span> 必有解。</p>
+<ul>
+<li><strong>策略</strong>：构造辅助函数 <span class="arithmatex">\(g(x) = f(x + 1/2) - f(x)\)</span>。</li>
+<li><strong>论证</strong>：</li>
+<li>计算 <span class="arithmatex">\(g(0) = f(1/2) - f(0)\)</span>。</li>
+<li>计算 <span class="arithmatex">\(g(1/2) = f(1) - f(1/2)\)</span> 。由于 <span class="arithmatex">\(f(1)=f(0)\)</span>，则 <span class="arithmatex">\(g(1/2) = f(0) - f(1/2) = -g(0)\)</span>。</li>
+<li>因为 <span class="arithmatex">\(g(0)\)</span> 与 <span class="arithmatex">\(g(1/2)\)</span> 符号相反（或均为 0），根据<strong>零点定理</strong>，在 <span class="arithmatex">\([0, 1/2]\)</span> 内必存在一点 c 使得 <span class="arithmatex">\(g(c) = 0\)</span>，即 <span class="arithmatex">\(f(c) = f(c + 1/2)\)</span>。</li>
+</ul>
+<p><strong>专家提示</strong>：连续性是可微性的前提条件。只有理解了极限的连续本质，我们才算真正跨入了微积分的大门。</p>
+<h2 id="6">6. 导数入门：极限在变化率中的巅峰应用<a class="headerlink" href="#6" title="Permanent link">¶</a></h2>
+<p>导数并非一个新发明，它是极限在特定物理/几何模型下的<strong>精确应用</strong>。</p>
+<h3 id="_11">本质定义<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<p>导数 <span class="arithmatex">\(f'(c)\)</span> 是增量比值的极限： <span class="arithmatex">\(f'(c) = \lim_{h \to 0} \frac{f(c+h)-f(c)}{h}\)</span> 如果该极限存在且有限，则称函数在 c 点<strong>可微</strong>（<span class="arithmatex">\(Differentiable\)</span>）。</p>
+<h3 id="_12">直观联系<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>几何上</strong>：代表曲线在点 <span class="arithmatex">\((c, f(c))\)</span> 处的<strong>切线斜率</strong>。</li>
+<li><strong>物理上</strong>：代表因变量对自变量的<strong>瞬时变化率</strong>。</li>
+</ul>
+<h3 id="_13">常用基本初等函数求导清册<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>(C)' = 0
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>(x^n)' = n * x^(n-1)
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>(sin x)' = cos x
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>(cos x)' = -sin x
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>(e^x)' = e^x
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>(a^x)' = a^x * ln a
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>(ln x)' = 1/x
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>(log_a x)' = 1 / (x * ln a)
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>(arctan x)' = 1 / (1 + x^2)
+</code></pre></div>
+<p><strong>专家总结</strong>：从直觉走向严谨的过程是痛苦的，它要求你放弃“大概如此”的幻想，转而追求“逻辑必然”。在即将开始的大学数学旅程中，请务必保持对逻辑严谨性的敬畏。祝你在微积分的世界里探索愉快！</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../midterm-review/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 期中复习（L1–L6）">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                期中复习（L1–L6）
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../practice-basic/" class="md-footer__link md-footer__link--next" aria-label="下一页: 基础卷 · Week 1–6">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                基础卷 · Week 1–6
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      个人学习笔记，仅供自用
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.tracking", "search.suggest", "search.highlight", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/katex/katex.min.js"></script>
+      
+        <script src="../../javascripts/katex/auto-render.min.js"></script>
+      
+        <script src="../../javascripts/katex-init.js"></script>
+      
+    
+  </body>
+</html>

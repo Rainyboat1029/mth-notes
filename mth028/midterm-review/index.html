@@ -1,0 +1,3209 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MTH026 微积分与 MTH028 线性代数的讲义、期中复习、练习题与答题卡">
+      
+      
+      
+        <link rel="canonical" href="https://rainyboat1029.github.io/mth-notes/mth028/midterm-review/">
+      
+      
+        <link rel="prev" href="../lecture09/">
+      
+      
+        <link rel="next" href="../practice-basic/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>期中复习（L1–L8） - 数学笔记 · MTH026 / MTH028</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../javascripts/katex/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mth028-linear-algebra-midterm-review-notes-lectures-181128" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="数学笔记 · MTH026 / MTH028" class="md-header__button md-logo" aria-label="数学笔记 · MTH026 / MTH028" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            数学笔记 · MTH026 / MTH028
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              期中复习（L1–L8）
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mth026/" class="md-tabs__link">
+          
+  
+  
+  微积分 MTH026
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  线性代数 MTH028
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="数学笔记 · MTH026 / MTH028" class="md-nav__button md-logo" aria-label="数学笔记 · MTH026 / MTH028" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    数学笔记 · MTH026 / MTH028
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微积分 MTH026
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    微积分 MTH026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/lecture01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 · 函数与预备知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/lecture02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 2 · 极限概念与运算法则
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/lecture03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 · 无穷极限与三角极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/lecture04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 4 · 指数对数极限与连续性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/lecture05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 5 · 导数与求导法则
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/lecture06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 6 · 隐微分与相关变化率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/lecture07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 7 · 最值与凹凸性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/lecture08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 8 · 优化与函数作图
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/lecture09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 · 中值定理与洛必达
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/midterm-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习（L1–L6）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/concept-limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    极限的严谨定义
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_13" id="__nav_2_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    练习
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/practice-basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础卷 · Week 1–6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth026/practice-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进阶卷 · 综合提高
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性代数 MTH028
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    线性代数 MTH028
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 · §1.1 线性方程组
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 2 · §1.2 行化简
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 · §1.3–1.4 向量与矩阵方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 4 · §1.5 解集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 5 · §1.8 线性变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 6 · §2.1 矩阵运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 7 · §2.2 矩阵的逆
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 8 · §2.8 子空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 · §2.9 维数与秩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习（L1–L8）
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习（L1–L8）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-terminology-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第零部分：核心术语速查表 (Key Terminology Table)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第零部分：核心术语速查表 (Key Terminology Table)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-systems-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.1 线性方程组与矩阵 (Systems &amp; Matrices)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-vectors-subspaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.2 向量与子空间 (Vectors &amp; Subspaces)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-transformations-matrix-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.3 线性变换与矩阵运算 (Transformations &amp; Matrix Algebra)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectures-12-1112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一部分：线性方程组与行化简 (Lectures 1–2: §1.1–1.2)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一部分：线性方程组与行化简 (Lectures 1–2: §1.1–1.2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-systems-of-linear-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Systems of Linear Equations（线性方程组）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-row-reduction-and-echelon-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Row Reduction and Echelon Forms（行化简与阶梯形）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectures-34-1314" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二部分：向量方程与矩阵方程 (Lectures 3–4: §1.3–1.4)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二部分：向量方程与矩阵方程 (Lectures 3–4: §1.3–1.4)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#13-vector-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Vector Equations（向量方程）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-the-matrix-equation-amathbfxmathbfb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 The Matrix Equation \(A\mathbf{x}=\mathbf{b}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectures-45-1517" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三部分：解集与线性无关 (Lectures 4–5: §1.5、§1.7)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第三部分：解集与线性无关 (Lectures 4–5: §1.5、§1.7)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#15-solution-sets-of-linear-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Solution Sets of Linear Systems（解集）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-linear-independence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Linear Independence（线性无关）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectures-56-1819" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四部分：线性变换 (Lectures 5–6: §1.8–1.9)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第四部分：线性变换 (Lectures 5–6: §1.8–1.9)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#18-introduction-to-linear-transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 Introduction to Linear Transformations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-the-matrix-of-a-linear-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9 The Matrix of a Linear Transformation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectures-67-2123" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第五部分：矩阵运算与逆矩阵 (Lectures 6–7: §2.1–2.3)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第五部分：矩阵运算与逆矩阵 (Lectures 6–7: §2.1–2.3)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-matrix-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Matrix Operations（矩阵运算）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-the-inverse-of-a-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 The Inverse of a Matrix（逆矩阵）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-characterizations-of-invertible-matricesimt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Characterizations of Invertible Matrices（IMT）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-8-28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第六部分：子空间与基 (Lecture 8: §2.8)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第六部分：子空间与基 (Lecture 8: §2.8)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#28-subspaces-of-mathbbrn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Subspaces of \(\mathbb{R}^n\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌟 典型例题精解（综合各 Lecture）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌟 典型例题精解（综合各 Lecture）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#112-hk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例 1（1.2 参数系统）\(h,k\) 取何值使系统有无穷多解
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-spanmathbfb1h3-operatornamespan101011123" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例 2（1.3 是否在 span）\(\mathbf{b}=(1,h,3)\) 何时属于 \(\operatorname{Span}\{(1,0,1),(0,1,1),(1,2,3)\}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-rref-leftbeginarrayccccc1-2033001-11endarrayright" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例 3（1.5 通解）RREF 为 \(\left[\begin{array}{cccc|c}1&amp;-2&amp;0&amp;3&amp;3\\0&amp;0&amp;1&amp;-1&amp;1\end{array}\right]\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#417-detbeginbmatrix14725836hendbmatrix0-h" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例 4（1.7 含参相关）\(\det\begin{bmatrix}1&amp;4&amp;7\\2&amp;5&amp;8\\3&amp;6&amp;h\end{bmatrix}=0\) 的 \(h\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#519-tmathbfe_112tmathbfe_234" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例 5（1.9 标准矩阵）已知 \(T(\mathbf{e}_1)=(1,2)\)、\(T(\mathbf{e}_2)=(3,4)\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622-abeginbmatrix1201endbmatrix-bbeginbmatrix1031endbmatrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例 6（2.2 乘积求逆）\(A=\begin{bmatrix}1&amp;2\\0&amp;1\end{bmatrix},\ B=\begin{bmatrix}1&amp;0\\3&amp;1\end{bmatrix}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722-e_1-r_1r_2e_2-2r_1-r_3e_3-r_2-frac14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例 7（2.2 初等矩阵复合）\(E_1\) 交换 \(R_1,R_2\)；\(E_2\) 把 \(-2R_1\) 加到 \(R_3\)；\(E_3\) 把 \(R_2\) 乘 \(\frac14\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#828-abeginbmatrix1-2100013endbmatrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例 8（2.8 零空间的基）\(A=\begin{bmatrix}1&amp;-2&amp;1&amp;0\\0&amp;0&amp;1&amp;3\end{bmatrix}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附录 A：考前 10 分钟速览
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="附录 A：考前 10 分钟速览">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A1. 判据一页纸
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A2. 必背公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A3. 十大易错点（含你自己踩过的）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a4-practice-quiz-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A4. 你 Practice Quiz 1 的四道错题回顾
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附录 B：复习时间分配建议（考前 3 天）
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    练习
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practice-basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础卷 · Week 1–8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practice-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进阶卷 · 综合提高
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-terminology-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第零部分：核心术语速查表 (Key Terminology Table)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第零部分：核心术语速查表 (Key Terminology Table)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-systems-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.1 线性方程组与矩阵 (Systems &amp; Matrices)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-vectors-subspaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.2 向量与子空间 (Vectors &amp; Subspaces)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-transformations-matrix-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.3 线性变换与矩阵运算 (Transformations &amp; Matrix Algebra)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectures-12-1112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一部分：线性方程组与行化简 (Lectures 1–2: §1.1–1.2)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一部分：线性方程组与行化简 (Lectures 1–2: §1.1–1.2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-systems-of-linear-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Systems of Linear Equations（线性方程组）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-row-reduction-and-echelon-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Row Reduction and Echelon Forms（行化简与阶梯形）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectures-34-1314" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二部分：向量方程与矩阵方程 (Lectures 3–4: §1.3–1.4)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二部分：向量方程与矩阵方程 (Lectures 3–4: §1.3–1.4)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#13-vector-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Vector Equations（向量方程）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-the-matrix-equation-amathbfxmathbfb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 The Matrix Equation \(A\mathbf{x}=\mathbf{b}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectures-45-1517" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三部分：解集与线性无关 (Lectures 4–5: §1.5、§1.7)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第三部分：解集与线性无关 (Lectures 4–5: §1.5、§1.7)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#15-solution-sets-of-linear-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Solution Sets of Linear Systems（解集）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-linear-independence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Linear Independence（线性无关）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectures-56-1819" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四部分：线性变换 (Lectures 5–6: §1.8–1.9)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第四部分：线性变换 (Lectures 5–6: §1.8–1.9)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#18-introduction-to-linear-transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 Introduction to Linear Transformations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-the-matrix-of-a-linear-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9 The Matrix of a Linear Transformation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectures-67-2123" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第五部分：矩阵运算与逆矩阵 (Lectures 6–7: §2.1–2.3)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第五部分：矩阵运算与逆矩阵 (Lectures 6–7: §2.1–2.3)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-matrix-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Matrix Operations（矩阵运算）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-the-inverse-of-a-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 The Inverse of a Matrix（逆矩阵）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-characterizations-of-invertible-matricesimt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Characterizations of Invertible Matrices（IMT）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-8-28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第六部分：子空间与基 (Lecture 8: §2.8)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第六部分：子空间与基 (Lecture 8: §2.8)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#28-subspaces-of-mathbbrn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Subspaces of \(\mathbb{R}^n\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌟 典型例题精解（综合各 Lecture）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌟 典型例题精解（综合各 Lecture）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#112-hk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例 1（1.2 参数系统）\(h,k\) 取何值使系统有无穷多解
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-spanmathbfb1h3-operatornamespan101011123" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例 2（1.3 是否在 span）\(\mathbf{b}=(1,h,3)\) 何时属于 \(\operatorname{Span}\{(1,0,1),(0,1,1),(1,2,3)\}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-rref-leftbeginarrayccccc1-2033001-11endarrayright" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例 3（1.5 通解）RREF 为 \(\left[\begin{array}{cccc|c}1&amp;-2&amp;0&amp;3&amp;3\\0&amp;0&amp;1&amp;-1&amp;1\end{array}\right]\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#417-detbeginbmatrix14725836hendbmatrix0-h" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例 4（1.7 含参相关）\(\det\begin{bmatrix}1&amp;4&amp;7\\2&amp;5&amp;8\\3&amp;6&amp;h\end{bmatrix}=0\) 的 \(h\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#519-tmathbfe_112tmathbfe_234" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例 5（1.9 标准矩阵）已知 \(T(\mathbf{e}_1)=(1,2)\)、\(T(\mathbf{e}_2)=(3,4)\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622-abeginbmatrix1201endbmatrix-bbeginbmatrix1031endbmatrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例 6（2.2 乘积求逆）\(A=\begin{bmatrix}1&amp;2\\0&amp;1\end{bmatrix},\ B=\begin{bmatrix}1&amp;0\\3&amp;1\end{bmatrix}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722-e_1-r_1r_2e_2-2r_1-r_3e_3-r_2-frac14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例 7（2.2 初等矩阵复合）\(E_1\) 交换 \(R_1,R_2\)；\(E_2\) 把 \(-2R_1\) 加到 \(R_3\)；\(E_3\) 把 \(R_2\) 乘 \(\frac14\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#828-abeginbmatrix1-2100013endbmatrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例 8（2.8 零空间的基）\(A=\begin{bmatrix}1&amp;-2&amp;1&amp;0\\0&amp;0&amp;1&amp;3\end{bmatrix}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附录 A：考前 10 分钟速览
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="附录 A：考前 10 分钟速览">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A1. 判据一页纸
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A2. 必背公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A3. 十大易错点（含你自己踩过的）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a4-practice-quiz-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A4. 你 Practice Quiz 1 的四道错题回顾
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附录 B：复习时间分配建议（考前 3 天）
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mth028-linear-algebra-midterm-review-notes-lectures-181128">MTH028 Linear Algebra 期中复习笔记 (Midterm Review Notes): Lectures 1–8（1.1–2.8）核心知识详解与典型例题<a class="headerlink" href="#mth028-linear-algebra-midterm-review-notes-lectures-181128" title="Permanent link">¶</a></h1>
+<blockquote>
+<p><strong>范围</strong>：Lecture 1–8，即 §1.1–1.9 与 §2.1–2.3、§2.8。Lecture 9（§2.9）不在本次期中范围。
+<strong>配套</strong>：《Week 1–8 练习册》50 题 + 解析册；《综合提高卷》20 题 + 解析册；两份交互答题卡。
+<strong>用法</strong>：先看第零部分术语表建立词汇，再按 Lecture 顺序过正文，最后用附录的「十大易错点」做考前自检。</p>
+</blockquote>
+<hr />
+<h2 id="key-terminology-table">第零部分：核心术语速查表 (Key Terminology Table)<a class="headerlink" href="#key-terminology-table" title="Permanent link">¶</a></h2>
+<h3 id="01-systems-matrices">0.1 线性方程组与矩阵 (Systems &amp; Matrices)<a class="headerlink" href="#01-systems-matrices" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>英文</th>
+<th>中文</th>
+<th>一句话解释</th>
+<th>关键判据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>linear equation</td>
+<td>线性方程</td>
+<td><span class="arithmatex">\(a_1x_1+\cdots+a_nx_n=b\)</span>，未知数只以一次幂单独出现</td>
+<td>出现根号/乘积/函数 ⇒ 不是线性</td>
+</tr>
+<tr>
+<td>system of linear equations</td>
+<td>线性方程组</td>
+<td>若干线性方程联立</td>
+<td>—</td>
+</tr>
+<tr>
+<td>solution / solution set</td>
+<td>解 / 解集</td>
+<td>同时满足所有方程的一组数 / 全部解的集合</td>
+<td>三种情形：无解、唯一解、无穷多解</td>
+</tr>
+<tr>
+<td>consistent / inconsistent</td>
+<td>相容 / 不相容</td>
+<td>至少有一个解 / 没有解</td>
+<td>阶梯形出现 <span class="arithmatex">\([0\cdots0\mid b],\ b\neq0\)</span> ⇒ 不相容</td>
+</tr>
+<tr>
+<td>equivalent systems</td>
+<td>等价方程组</td>
+<td>解集相同的两个方程组</td>
+<td>初等行变换保持解集</td>
+</tr>
+<tr>
+<td>augmented matrix</td>
+<td>增广矩阵</td>
+<td>系数矩阵右侧拼上常数列</td>
+<td>最后一行对应常数项</td>
+</tr>
+<tr>
+<td>coefficient matrix</td>
+<td>系数矩阵</td>
+<td>只含系数</td>
+<td>—</td>
+</tr>
+<tr>
+<td>elementary row operation</td>
+<td>初等行变换</td>
+<td>交换两行、某行乘非零常数、某行加另一行的倍数</td>
+<td>一次只动<strong>一行</strong>、用<strong>同一时刻</strong>的其他行</td>
+</tr>
+<tr>
+<td>row equivalent</td>
+<td>行等价</td>
+<td>可通过有限次初等行变换互相转化</td>
+<td>行等价 ⇒ 解集相同</td>
+</tr>
+<tr>
+<td>echelon form (REF)</td>
+<td>阶梯形</td>
+<td>零行在底、主元逐行右移、主元列下方全 0</td>
+<td>主元上方可以有非零元</td>
+</tr>
+<tr>
+<td>reduced echelon form (RREF)</td>
+<td>简化阶梯形</td>
+<td>REF + 主元全为 1 + 主元列其余（含上方）全为 0</td>
+<td>主元列"干净"</td>
+</tr>
+<tr>
+<td>pivot position / pivot column</td>
+<td>主元位置 / 主元列</td>
+<td>REF 中主元所在的位置 / 列</td>
+<td>行化简后数主元个数（= 非零行数）</td>
+</tr>
+<tr>
+<td>free variable</td>
+<td>自由变量</td>
+<td>非主元列对应的未知数</td>
+<td>个数 = 列数 − 主元个数</td>
+</tr>
+<tr>
+<td>parametric description</td>
+<td>参数表示</td>
+<td>用自由变量表示全部解</td>
+<td>见 §1.5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="02-vectors-subspaces">0.2 向量与子空间 (Vectors &amp; Subspaces)<a class="headerlink" href="#02-vectors-subspaces" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>英文</th>
+<th>中文</th>
+<th>一句话解释</th>
+<th>关键判据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>linear combination</td>
+<td>线性组合</td>
+<td><span class="arithmatex">\(c_1\mathbf{v}_1+\cdots+c_p\mathbf{v}_p\)</span></td>
+<td>系数可任取实数</td>
+</tr>
+<tr>
+<td>Span</td>
+<td>张成（空间）</td>
+<td>所有线性组合的集合</td>
+<td>含 <span class="arithmatex">\(\mathbf{0}\)</span>；对加法、数乘封闭</td>
+</tr>
+<tr>
+<td>linearly independent</td>
+<td>线性无关</td>
+<td>只有全零系数才能组合出 <span class="arithmatex">\(\mathbf{0}\)</span></td>
+<td>矩阵每列都有主元</td>
+</tr>
+<tr>
+<td>linearly dependent</td>
+<td>线性相关</td>
+<td>存在不全为零的系数组合出 <span class="arithmatex">\(\mathbf{0}\)</span></td>
+<td>有自由变量 / 某列是其余列的组合</td>
+</tr>
+<tr>
+<td>trivial / nontrivial solution</td>
+<td>平凡解 / 非平凡解</td>
+<td><span class="arithmatex">\(\mathbf{x}=\mathbf{0}\)</span> / <span class="arithmatex">\(\mathbf{x}\neq\mathbf{0}\)</span> 的齐次解</td>
+<td>齐次方程必有平凡解</td>
+</tr>
+<tr>
+<td>homogeneous / nonhomogeneous</td>
+<td>齐次 / 非齐次</td>
+<td>右端为 <span class="arithmatex">\(\mathbf{0}\)</span> / 不为 <span class="arithmatex">\(\mathbf{0}\)</span></td>
+<td>齐次必相容</td>
+</tr>
+<tr>
+<td>subspace</td>
+<td>子空间</td>
+<td>含 <span class="arithmatex">\(\mathbf{0}\)</span> 且对加法、数乘封闭的集合</td>
+<td>三条件缺一不可</td>
+</tr>
+<tr>
+<td>Nul <span class="arithmatex">\(A\)</span> (null space)</td>
+<td>零空间</td>
+<td><span class="arithmatex">\(\{\mathbf{x}:A\mathbf{x}=\mathbf{0}\}\)</span></td>
+<td>是 <span class="arithmatex">\(\mathbb{R}^n\)</span> 的子空间</td>
+</tr>
+<tr>
+<td>Col <span class="arithmatex">\(A\)</span> (column space)</td>
+<td>列空间</td>
+<td><span class="arithmatex">\(A\)</span> 各列的全部线性组合</td>
+<td>是 <span class="arithmatex">\(\mathbb{R}^m\)</span> 的子空间</td>
+</tr>
+<tr>
+<td>basis</td>
+<td>基</td>
+<td>既无关又张成的向量组</td>
+<td>基向量个数 = 维数</td>
+</tr>
+<tr>
+<td>dimension / nullity</td>
+<td>维数 / 零化度</td>
+<td>基中向量的个数 / <span class="arithmatex">\(\dim\operatorname{Nul}A\)</span></td>
+<td><span class="arithmatex">\(\dim\operatorname{Nul}A\)</span> = 非主元列的个数</td>
+</tr>
+</tbody>
+</table>
+<h3 id="03-transformations-matrix-algebra">0.3 线性变换与矩阵运算 (Transformations &amp; Matrix Algebra)<a class="headerlink" href="#03-transformations-matrix-algebra" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>英文</th>
+<th>中文</th>
+<th>一句话解释</th>
+<th>关键判据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>linear transformation</td>
+<td>线性变换</td>
+<td><span class="arithmatex">\(T(\mathbf{u}+\mathbf{v})=T(\mathbf{u})+T(\mathbf{v})\)</span>，<span class="arithmatex">\(T(c\mathbf{u})=cT(\mathbf{u})\)</span></td>
+<td>等价于 <span class="arithmatex">\(T(\mathbf{x})=A\mathbf{x}\)</span></td>
+</tr>
+<tr>
+<td>standard matrix</td>
+<td>标准矩阵</td>
+<td>第 <span class="arithmatex">\(j\)</span> 列是 <span class="arithmatex">\(T(\mathbf{e}_j)\)</span></td>
+<td>尺寸 <span class="arithmatex">\(m\times n\)</span></td>
+</tr>
+<tr>
+<td>one-to-one (injective)</td>
+<td>单射</td>
+<td><span class="arithmatex">\(T(\mathbf{u})=T(\mathbf{v})\Rightarrow\mathbf{u}=\mathbf{v}\)</span></td>
+<td>每列有主元；<span class="arithmatex">\(\operatorname{Nul}A=\{\mathbf{0}\}\)</span></td>
+</tr>
+<tr>
+<td>onto (surjective)</td>
+<td>满射</td>
+<td>值域 <span class="arithmatex">\(=\mathbb{R}^m\)</span></td>
+<td>每行有主元；列张成 <span class="arithmatex">\(\mathbb{R}^m\)</span></td>
+</tr>
+<tr>
+<td>elementary matrix</td>
+<td>初等矩阵</td>
+<td>对 <span class="arithmatex">\(I\)</span> 做一次初等行变换所得</td>
+<td><span class="arithmatex">\(E\)</span> 左乘 <span class="arithmatex">\(A\)</span> = 对 <span class="arithmatex">\(A\)</span> 做同样的行变换</td>
+</tr>
+<tr>
+<td>invertible / singular</td>
+<td>可逆 / 奇异</td>
+<td>存在 <span class="arithmatex">\(A^{-1}\)</span> 使 <span class="arithmatex">\(AA^{-1}=A^{-1}A=I\)</span> / 不存在</td>
+<td>可逆 ⇔ <span class="arithmatex">\(\det A\neq0\)</span> ⇔ <span class="arithmatex">\(A\sim I\)</span>（每列都有主元）</td>
+</tr>
+<tr>
+<td>transpose</td>
+<td>转置</td>
+<td>行列互换</td>
+<td><span class="arithmatex">\((AB)^{\mathsf T}=B^{\mathsf T}A^{\mathsf T}\)</span>，顺序反转</td>
+</tr>
+<tr>
+<td>Invertible Matrix Theorem (IMT)</td>
+<td>可逆矩阵定理</td>
+<td>一组关于"<span class="arithmatex">\(A\)</span> 可逆"的等价命题</td>
+<td>见 §2.3</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="lectures-12-1112">第一部分：线性方程组与行化简 (Lectures 1–2: §1.1–1.2)<a class="headerlink" href="#lectures-12-1112" title="Permanent link">¶</a></h2>
+<h3 id="11-systems-of-linear-equations">1.1 Systems of Linear Equations（线性方程组）<a class="headerlink" href="#11-systems-of-linear-equations" title="Permanent link">¶</a></h3>
+<p><strong>核心对象.</strong> 一个线性方程是 <span class="arithmatex">\(a_1x_1+a_2x_2+\cdots+a_nx_n=b\)</span>。方程组就是若干个这样的式子联立。解的三种可能：<strong>无解、唯一解、无穷多解</strong>——只有这三种，不存在"恰好两个解"。</p>
+<p><strong>为什么只有三种.</strong> 解集是 <span class="arithmatex">\(\mathbb{R}^n\)</span> 中的仿射集：要么空，要么单点，要么含一条直线/平面（无穷多点）。几何直观：两个平面相交成一条线，再加一个平面要么切出一点、要么重合、要么平行。</p>
+<p><strong>解法总纲（行化简）.</strong></p>
+<ol>
+<li>写出增广矩阵 <span class="arithmatex">\([A\ \mathbf{b}]\)</span>。</li>
+<li>用初等行变换化到 REF（够用时）或 RREF（求通解时）。</li>
+<li>读最后一行：若出现 <span class="arithmatex">\([0\ \cdots\ 0\ |\ c],\ c\neq0\)</span> ⇒ <strong>不相容</strong>。</li>
+<li>否则主元个数决定解的形态：主元数 = 未知数个数 ⇒ 唯一解；主元数 &lt; 未知数个数 ⇒ 无穷多解（自由变量个数 <span class="arithmatex">\(=n-\text{主元数}\)</span>）。</li>
+</ol>
+<p><strong>⚠ 陷阱.</strong> 只看主元个数不看矛盾行。<span class="arithmatex">\(2\)</span> 个主元 + 一个 <span class="arithmatex">\([0\ 0\ 0\mid5]\)</span> 的行是<strong>无解</strong>，不是"无穷多解"。</p>
+<h3 id="12-row-reduction-and-echelon-forms">1.2 Row Reduction and Echelon Forms（行化简与阶梯形）<a class="headerlink" href="#12-row-reduction-and-echelon-forms" title="Permanent link">¶</a></h3>
+<p><strong>初等行变换只有三种.</strong></p>
+<ol>
+<li>交换两行（<span class="arithmatex">\(R_i\leftrightarrow R_j\)</span>）；</li>
+<li>某行乘一个非零常数（<span class="arithmatex">\(R_i\leftarrow cR_i,\ c\neq0\)</span>）；</li>
+<li>某行加上另一行的倍数（<span class="arithmatex">\(R_i\leftarrow R_i+cR_j\)</span>）。</li>
+</ol>
+<p><strong>判定表（考试必考）.</strong></p>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>REF</th>
+<th>RREF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>零行全在底部</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>每个非零行首元（主元）比上一行更靠右</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>主元所在列、主元<strong>下方</strong>全为 0</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>每个主元 = 1</td>
+<td>✘</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>主元所在列、主元<strong>上方</strong>也为 0</td>
+<td>✘</td>
+<td>✔</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>只满足前三行的是 REF；五条全满足才是 RREF。<strong>典型失分</strong>：把"主元是 1、零行在底部"当成 RREF，忽略主元列上方的非零元。</p>
+</blockquote>
+<p><strong>存在唯一性定理（Theorem 2）.</strong> 阶梯形中主元个数为 <span class="arithmatex">\(r\)</span>、未知数个数为 <span class="arithmatex">\(n\)</span>：</p>
+<ul>
+<li>若某行是 <span class="arithmatex">\([0\ \cdots\ 0\ |\ c],\ c\neq0\)</span> ⇒ 无解；</li>
+<li>若 <span class="arithmatex">\(r=n\)</span> 且无矛盾行 ⇒ 唯一解；</li>
+<li>若 <span class="arithmatex">\(r&lt;n\)</span> 且无矛盾行 ⇒ 无穷多解。</li>
+</ul>
+<p><strong>解题模板（求通解）.</strong></p>
+<ol>
+<li>化 RREF；</li>
+<li>主元变量用自由变量表示；</li>
+<li>写 <span class="arithmatex">\(\mathbf{x}=\mathbf{p}+s_1\mathbf{v}_1+\cdots+s_k\mathbf{v}_k\)</span>：<span class="arithmatex">\(\mathbf{p}\)</span> 是自由变量全取 0 的特解，<span class="arithmatex">\(\mathbf{v}_i\)</span> 是第 <span class="arithmatex">\(i\)</span> 个自由变量取 1、其余取 0 的方向向量。</li>
+</ol>
+<hr />
+<h2 id="lectures-34-1314">第二部分：向量方程与矩阵方程 (Lectures 3–4: §1.3–1.4)<a class="headerlink" href="#lectures-34-1314" title="Permanent link">¶</a></h2>
+<h3 id="13-vector-equations">1.3 Vector Equations（向量方程）<a class="headerlink" href="#13-vector-equations" title="Permanent link">¶</a></h3>
+<p><strong>定义.</strong> <span class="arithmatex">\(\mathbf{b}\)</span> 是 <span class="arithmatex">\(\mathbf{a}_1,\dots,\mathbf{a}_p\)</span> 的<strong>线性组合</strong>，若存在 <span class="arithmatex">\(c_1,\dots,c_p\)</span> 使 <span class="arithmatex">\(\mathbf{b}=c_1\mathbf{a}_1+\cdots+c_p\mathbf{a}_p\)</span>。所有这样的组合构成 <span class="arithmatex">\(\operatorname{Span}\{\mathbf{a}_1,\dots,\mathbf{a}_p\}\)</span>。</p>
+<p><strong>核心等价链（贯穿全章）.</strong></p>
+<div class="arithmatex">\[\mathbf{b}\in\operatorname{Span}\{\mathbf{a}_1,\dots,\mathbf{a}_p\}\iff[A\ \mathbf{b}]\ \text{相容}\iff c_1\mathbf{a}_1+\cdots+c_p\mathbf{a}_p=\mathbf{b}\ \text{有解}\]</div>
+<p><strong>判断 <span class="arithmatex">\(\mathbf{b}\)</span> 是否在 span 中（考试标准流程）.</strong></p>
+<ol>
+<li>以 <span class="arithmatex">\(\mathbf{a}_i\)</span> 为列、<span class="arithmatex">\(\mathbf{b}\)</span> 为右端写增广矩阵；</li>
+<li>行化简；</li>
+<li>有矛盾行 ⇒ 不在；无矛盾行 ⇒ 在（并可写出系数）。</li>
+</ol>
+<p><strong>Span 的几何.</strong></p>
+<ul>
+<li>一个非零向量 ⇒ 过原点的直线；</li>
+<li>两个不共线向量 ⇒ 过原点的平面；</li>
+<li>含 <span class="arithmatex">\(\mathbf{0}\)</span> ⇒ span 一定含 <span class="arithmatex">\(\mathbf{0}\)</span>（这也是判"能不能张成"的快速筛）。</li>
+</ul>
+<p><strong>齐次方程.</strong> <span class="arithmatex">\(A\mathbf{x}=\mathbf{0}\)</span> 永远相容（<span class="arithmatex">\(\mathbf{x}=\mathbf{0}\)</span>）。参数形式 <span class="arithmatex">\(\mathbf{x}=s\mathbf{v}_1+t\mathbf{v}_2\)</span> 表示一个过原点的子空间。</p>
+<h3 id="14-the-matrix-equation-amathbfxmathbfb">1.4 The Matrix Equation <span class="arithmatex">\(A\mathbf{x}=\mathbf{b}\)</span><a class="headerlink" href="#14-the-matrix-equation-amathbfxmathbfb" title="Permanent link">¶</a></h3>
+<p><strong>乘法规则.</strong> <span class="arithmatex">\(A\mathbf{x}=\sum_j x_j\mathbf{a}_j\)</span>：<strong>右乘向量 = 各列按 <span class="arithmatex">\(x_j\)</span> 加权求和</strong>。这条把"矩阵方程"和"向量方程"焊在一起，几乎所有章节都靠它转换。</p>
+<p><strong>Theorem 3（三说法等价）.</strong> 对 <span class="arithmatex">\(m\times n\)</span> 矩阵 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(\mathbf{b}\in\mathbb{R}^m\)</span>：</p>
+<ol>
+<li><span class="arithmatex">\(A\mathbf{x}=\mathbf{b}\)</span> 有解；</li>
+<li><span class="arithmatex">\(\mathbf{b}\in\operatorname{Col}A\)</span>；</li>
+<li><span class="arithmatex">\(\mathbf{b}\)</span> 是 <span class="arithmatex">\(A\)</span> 各列的线性组合。</li>
+</ol>
+<p><strong>Theorem 4（列张成 <span class="arithmatex">\(\mathbb{R}^m\)</span>）.</strong> 下列等价：</p>
+<ol>
+<li><span class="arithmatex">\(A\)</span> 的各列张成 <span class="arithmatex">\(\mathbb{R}^m\)</span>；</li>
+<li>对每个 <span class="arithmatex">\(\mathbf{b}\in\mathbb{R}^m\)</span>，<span class="arithmatex">\(A\mathbf{x}=\mathbf{b}\)</span> 相容；</li>
+<li><span class="arithmatex">\(A\)</span> 的阶梯形每行都有主元（没有全零行）。</li>
+</ol>
+<blockquote>
+<p>注意区分：<strong>每行有主元</strong> ⇒ 满射、列张成 <span class="arithmatex">\(\mathbb{R}^m\)</span>；<strong>每列有主元</strong> ⇒ 单射、列无关。两者同时成立只有 <span class="arithmatex">\(m=n\)</span> 且每行每列都有主元时（即 <span class="arithmatex">\(A\sim I\)</span>）。</p>
+</blockquote>
+<hr />
+<h2 id="lectures-45-1517">第三部分：解集与线性无关 (Lectures 4–5: §1.5、§1.7)<a class="headerlink" href="#lectures-45-1517" title="Permanent link">¶</a></h2>
+<h3 id="15-solution-sets-of-linear-systems">1.5 Solution Sets of Linear Systems（解集）<a class="headerlink" href="#15-solution-sets-of-linear-systems" title="Permanent link">¶</a></h3>
+<p><strong>齐次方程的解集.</strong> <span class="arithmatex">\(A\mathbf{x}=\mathbf{0}\)</span> 的解集 <span class="arithmatex">\(\operatorname{Nul}A\)</span> 一定含 <span class="arithmatex">\(\mathbf{0}\)</span>，且对加法与数乘封闭 ⇒ 是子空间，写作 <span class="arithmatex">\(\operatorname{Span}\{\mathbf{v}_1,\dots,\mathbf{v}_k\}\)</span>，称为<strong>零空间</strong>。</p>
+<p><strong>非齐次方程的解集.</strong> 若 <span class="arithmatex">\(A\mathbf{x}=\mathbf{b}\)</span> 相容且 <span class="arithmatex">\(\mathbf{p}\)</span> 是一个特解，则</p>
+<div class="arithmatex">\[\{\mathbf{x}:A\mathbf{x}=\mathbf{b}\}=\mathbf{p}+\operatorname{Nul}A=\{\mathbf{p}+\mathbf{v}:\mathbf{v}\in\operatorname{Nul}A\}\]</div>
+<p>即"<strong>特解 + 齐次通解</strong>"。</p>
+<p><strong>几何描述（常考）.</strong></p>
+<table>
+<thead>
+<tr>
+<th>情形</th>
+<th>解集形状</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主元 <span class="arithmatex">\(n\)</span> 个（无自由变量）且相容</td>
+<td>单点</td>
+</tr>
+<tr>
+<td>主元 <span class="arithmatex">\(n-1\)</span> 个（1 个自由变量）且相容</td>
+<td>直线（<span class="arithmatex">\(\mathbf{b}\neq\mathbf{0}\)</span> 时不过原点）</td>
+</tr>
+<tr>
+<td>主元 <span class="arithmatex">\(n-2\)</span> 个（2 个自由变量）且相容</td>
+<td>平面</td>
+</tr>
+<tr>
+<td>不相容</td>
+<td>空集</td>
+</tr>
+</tbody>
+</table>
+<p><strong>⚠ 陷阱.</strong> <span class="arithmatex">\(\mathbf{b}\neq\mathbf{0}\)</span> 时解集<strong>不过原点</strong>——它是把 <span class="arithmatex">\(\operatorname{Nul}A\)</span> 整体平移 <span class="arithmatex">\(\mathbf{p}\)</span>。</p>
+<h3 id="17-linear-independence">1.7 Linear Independence（线性无关）<a class="headerlink" href="#17-linear-independence" title="Permanent link">¶</a></h3>
+<p><strong>定义.</strong> <span class="arithmatex">\(\{\mathbf{v}_1,\dots,\mathbf{v}_p\}\)</span> 线性无关 ⇔ <span class="arithmatex">\(c_1\mathbf{v}_1+\cdots+c_p\mathbf{v}_p=\mathbf{0}\)</span> 只有 <span class="arithmatex">\(c_1=\cdots=c_p=0\)</span>。否则称线性相关。</p>
+<p><strong>矩阵判据（最好用）.</strong> 以 <span class="arithmatex">\(\mathbf{v}_i\)</span> 为列得 <span class="arithmatex">\(A\)</span>：无关 ⇔ <span class="arithmatex">\(A\mathbf{x}=\mathbf{0}\)</span> 只有零解 ⇔ <strong>每列都有主元</strong>。</p>
+<p><strong>常用结论（直接背）.</strong></p>
+<ol>
+<li>含零向量的集合必相关。</li>
+<li>两个向量相关 ⇔ 一个是另一个的倍数。</li>
+<li><span class="arithmatex">\(\mathbb{R}^n\)</span> 中 <span class="arithmatex">\(p&gt;n\)</span> 个向量必相关。</li>
+<li>相关集合的<strong>超集</strong>仍相关；无关集合的<strong>子集</strong>仍无关。</li>
+<li>若 <span class="arithmatex">\(A\)</span> 各列无关，则 <span class="arithmatex">\(A\mathbf{x}=\mathbf{b}\)</span> 至多一个解（解唯一表示）。</li>
+</ol>
+<p><strong>⚠ 陷阱.</strong> "3 个向量在 <span class="arithmatex">\(\mathbb{R}^3\)</span> 中就一定无关" —— 错。数量和维数相等既不保证无关，也不保证张成。</p>
+<hr />
+<h2 id="lectures-56-1819">第四部分：线性变换 (Lectures 5–6: §1.8–1.9)<a class="headerlink" href="#lectures-56-1819" title="Permanent link">¶</a></h2>
+<h3 id="18-introduction-to-linear-transformations">1.8 Introduction to Linear Transformations<a class="headerlink" href="#18-introduction-to-linear-transformations" title="Permanent link">¶</a></h3>
+<p><strong>定义.</strong> <span class="arithmatex">\(T:\mathbb{R}^n\to\mathbb{R}^m\)</span> 是线性的 ⇔ 保持加法与数乘：</p>
+<div class="arithmatex">\[T(\mathbf{u}+\mathbf{v})=T(\mathbf{u})+T(\mathbf{v}),\qquad T(c\mathbf{u})=cT(\mathbf{u})\]</div>
+<p><strong>必考的推论.</strong> <span class="arithmatex">\(T(\mathbf{0})=\mathbf{0}\)</span>。任何把原点移走的映射（如 <span class="arithmatex">\(T(\mathbf{x})=\mathbf{x}+\mathbf{b},\ \mathbf{b}\neq\mathbf{0}\)</span>）都<strong>不是</strong>线性变换。</p>
+<p><strong>几何变换速查（<span class="arithmatex">\(\mathbb{R}^2\)</span>）.</strong></p>
+<table>
+<thead>
+<tr>
+<th>变换</th>
+<th>矩阵</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>逆时针旋转 <span class="arithmatex">\(\theta\)</span></td>
+<td><span class="arithmatex">\(\begin{bmatrix}\cos\theta&amp;-\sin\theta\\\sin\theta&amp;\cos\theta\end{bmatrix}\)</span></td>
+</tr>
+<tr>
+<td>关于 <span class="arithmatex">\(x\)</span> 轴反射</td>
+<td><span class="arithmatex">\(\begin{bmatrix}1&amp;0\\0&amp;-1\end{bmatrix}\)</span></td>
+</tr>
+<tr>
+<td>关于 <span class="arithmatex">\(y\)</span> 轴反射</td>
+<td><span class="arithmatex">\(\begin{bmatrix}-1&amp;0\\0&amp;1\end{bmatrix}\)</span></td>
+</tr>
+<tr>
+<td>关于 <span class="arithmatex">\(y=x\)</span> 反射</td>
+<td><span class="arithmatex">\(\begin{bmatrix}0&amp;1\\1&amp;0\end{bmatrix}\)</span></td>
+</tr>
+<tr>
+<td>关于 <span class="arithmatex">\(y=-x\)</span> 反射</td>
+<td><span class="arithmatex">\(\begin{bmatrix}0&amp;-1\\-1&amp;0\end{bmatrix}\)</span></td>
+</tr>
+<tr>
+<td>沿 <span class="arithmatex">\(x\)</span> 方向伸缩 <span class="arithmatex">\(k\)</span></td>
+<td><span class="arithmatex">\(\begin{bmatrix}k&amp;0\\0&amp;1\end{bmatrix}\)</span></td>
+</tr>
+<tr>
+<td>剪切（shear）</td>
+<td><span class="arithmatex">\(\begin{bmatrix}1&amp;k\\0&amp;1\end{bmatrix}\)</span></td>
+</tr>
+<tr>
+<td>投影到 <span class="arithmatex">\(x\)</span> 轴</td>
+<td><span class="arithmatex">\(\begin{bmatrix}1&amp;0\\0&amp;0\end{bmatrix}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="19-the-matrix-of-a-linear-transformation">1.9 The Matrix of a Linear Transformation<a class="headerlink" href="#19-the-matrix-of-a-linear-transformation" title="Permanent link">¶</a></h3>
+<p><strong>标准矩阵.</strong> 对线性变换 <span class="arithmatex">\(T:\mathbb{R}^n\to\mathbb{R}^m\)</span>，</p>
+<div class="arithmatex">\[A=[\,T(\mathbf{e}_1)\ \ T(\mathbf{e}_2)\ \ \cdots\ \ T(\mathbf{e}_n)\,]\]</div>
+<p>尺寸 <span class="arithmatex">\(m\times n\)</span>：<strong>行数 = 输出维数，列数 = 输入维数</strong>。</p>
+<p><strong>单射与满射（Theorem 11 / 12）.</strong></p>
+<table>
+<thead>
+<tr>
+<th>性质</th>
+<th>主元条件</th>
+<th>另一说法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单射 (one-to-one)</td>
+<td>每<strong>列</strong>有主元</td>
+<td><span class="arithmatex">\(\operatorname{Nul}A=\{\mathbf{0}\}\)</span></td>
+</tr>
+<tr>
+<td>满射 (onto)</td>
+<td>每<strong>行</strong>有主元</td>
+<td><span class="arithmatex">\(\operatorname{Col}A=\mathbb{R}^m\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>尺寸速判.</strong> <span class="arithmatex">\(m&gt;n\)</span>（输出维数更高）⇒ 不可能满射；<span class="arithmatex">\(m&lt;n\)</span> ⇒ 不可能单射；<span class="arithmatex">\(m=n\)</span> 时单射 ⇔ 满射 ⇔ 可逆。</p>
+<p><strong>⚠ 陷阱.</strong> 看题先看尺寸再看主元——很多题的答案靠尺寸就能排除一半选项。</p>
+<hr />
+<h2 id="lectures-67-2123">第五部分：矩阵运算与逆矩阵 (Lectures 6–7: §2.1–2.3)<a class="headerlink" href="#lectures-67-2123" title="Permanent link">¶</a></h2>
+<h3 id="21-matrix-operations">2.1 Matrix Operations（矩阵运算）<a class="headerlink" href="#21-matrix-operations" title="Permanent link">¶</a></h3>
+<p><strong>乘法.</strong> <span class="arithmatex">\((AB)_{ij}=\)</span> <span class="arithmatex">\(A\)</span> 的第 <span class="arithmatex">\(i\)</span> 行与 <span class="arithmatex">\(B\)</span> 的第 <span class="arithmatex">\(j\)</span> 列的点积。要求 <span class="arithmatex">\(A\)</span> 的列数 = <span class="arithmatex">\(B\)</span> 的行数；结果尺寸 <span class="arithmatex">\(=\)</span> (行数 of <span class="arithmatex">\(A\)</span>) × (列数 of <span class="arithmatex">\(B\)</span>)。</p>
+<p><strong>列视角（很常用）.</strong> <span class="arithmatex">\(AB\)</span> 的第 <span class="arithmatex">\(j\)</span> 列 <span class="arithmatex">\(=A\cdot(B\)</span> 的第 <span class="arithmatex">\(j\)</span> 列<span class="arithmatex">\()\)</span>。</p>
+<p><strong>性质.</strong></p>
+<ul>
+<li><span class="arithmatex">\(A(B+C)=AB+AC\)</span>，<span class="arithmatex">\((B+C)A=BA+CA\)</span> ✔</li>
+<li><span class="arithmatex">\(A(BC)=(AB)C\)</span> ✔</li>
+<li><span class="arithmatex">\(AB\neq BA\)</span> 一般成立 ✘（<strong>不交换</strong>）</li>
+<li><span class="arithmatex">\(AB=0\)</span> 不推出 <span class="arithmatex">\(A=0\)</span> 或 <span class="arithmatex">\(B=0\)</span> ✘（<strong>无零因子律</strong>）</li>
+<li><span class="arithmatex">\((A+B)^2=A^2+AB+BA+B^2\neq A^2+2AB+B^2\)</span>（除非 <span class="arithmatex">\(AB=BA\)</span>）</li>
+<li><span class="arithmatex">\((A^{\mathsf T})^{\mathsf T}=A\)</span>，<span class="arithmatex">\((A+B)^{\mathsf T}=A^{\mathsf T}+B^{\mathsf T}\)</span>，<span class="arithmatex">\((AB)^{\mathsf T}=B^{\mathsf T}A^{\mathsf T}\)</span> ← <strong>顺序反转</strong></li>
+</ul>
+<h3 id="22-the-inverse-of-a-matrix">2.2 The Inverse of a Matrix（逆矩阵）<a class="headerlink" href="#22-the-inverse-of-a-matrix" title="Permanent link">¶</a></h3>
+<p><strong>定义.</strong> <span class="arithmatex">\(A\)</span> 可逆 ⇔ 存在 <span class="arithmatex">\(n\times n\)</span> 的 <span class="arithmatex">\(B\)</span> 使 <span class="arithmatex">\(AB=BA=I\)</span>；此时 <span class="arithmatex">\(B=A^{-1}\)</span> 唯一。</p>
+<p><strong><span class="arithmatex">\(2\times2\)</span> 公式（必须背熟）.</strong></p>
+<div class="arithmatex">\[A=\begin{bmatrix}a&amp;b\\c&amp;d\end{bmatrix},\quad A^{-1}=\frac{1}{ad-bc}\begin{bmatrix}d&amp;-b\\-c&amp;a\end{bmatrix}\]</div>
+<p>口诀：<strong>主对角互换、副对角变号、除以行列式</strong>。</p>
+<p><strong>逆的性质.</strong></p>
+<div class="arithmatex">\[(A^{-1})^{-1}=A,\qquad (AB)^{-1}=B^{-1}A^{-1},\qquad (A^{\mathsf T})^{-1}=(A^{\mathsf T})^{-1}= (A^{-1})^{\mathsf T}\]</div>
+<p>（顺序反转是最高频失分点。）</p>
+<p><strong>求逆算法.</strong> <span class="arithmatex">\([A\ |\ I]\xrightarrow{\text{行变换}}[I\ |\ A^{-1}]\)</span>；若左边化不出 <span class="arithmatex">\(I\)</span>，则 <span class="arithmatex">\(A\)</span> 奇异。</p>
+<p><strong>初等矩阵.</strong> 对 <span class="arithmatex">\(I\)</span> 做一次行变换得 <span class="arithmatex">\(E\)</span>，则 <span class="arithmatex">\(EA\)</span> = 对 <span class="arithmatex">\(A\)</span> 做同样的行变换。每个初等矩阵都可逆，其逆是"反向操作"：</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>逆操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>交换 <span class="arithmatex">\(R_i,R_j\)</span></td>
+<td>再交换一次</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(R_i\leftarrow cR_i\)</span></td>
+<td><span class="arithmatex">\(R_i\leftarrow\frac1cR_i\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(R_i\leftarrow R_i+cR_j\)</span></td>
+<td><span class="arithmatex">\(R_i\leftarrow R_i-cR_j\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>乘积求逆顺序.</strong> <span class="arithmatex">\((E_1E_2E_3)^{-1}=E_3^{-1}E_2^{-1}E_1^{-1}\)</span>——<strong>从右往左</strong>逐个取逆。</p>
+<h3 id="23-characterizations-of-invertible-matricesimt">2.3 Characterizations of Invertible Matrices（IMT）<a class="headerlink" href="#23-characterizations-of-invertible-matricesimt" title="Permanent link">¶</a></h3>
+<p>对 <span class="arithmatex">\(n\times n\)</span> 矩阵 <span class="arithmatex">\(A\)</span>，下列命题<strong>全部等价</strong>（任一条成立则全部成立）：</p>
+<ol>
+<li><span class="arithmatex">\(A\)</span> 可逆；</li>
+<li><span class="arithmatex">\(A\)</span> 行等价于 <span class="arithmatex">\(I_n\)</span>；</li>
+<li><span class="arithmatex">\(A\)</span> 有 <span class="arithmatex">\(n\)</span> 个主元；</li>
+<li><span class="arithmatex">\(A\mathbf{x}=\mathbf{0}\)</span> 只有零解；</li>
+<li><span class="arithmatex">\(A\)</span> 的各列线性无关；</li>
+<li>对每个 <span class="arithmatex">\(\mathbf{b}\in\mathbb{R}^n\)</span>，<span class="arithmatex">\(A\mathbf{x}=\mathbf{b}\)</span> 有唯一解；</li>
+<li><span class="arithmatex">\(A\)</span> 的各列张成 <span class="arithmatex">\(\mathbb{R}^n\)</span>；</li>
+<li><span class="arithmatex">\(T(\mathbf{x})=A\mathbf{x}\)</span> 是单射；</li>
+<li><span class="arithmatex">\(T(\mathbf{x})=A\mathbf{x}\)</span> 是满射；</li>
+<li><span class="arithmatex">\(\det A\neq0\)</span>。</li>
+</ol>
+<p><strong>⚠ 高频错.</strong> 问"哪个<strong>不是</strong>等价条件"时，正确答案往往是 <span class="arithmatex">\(\det A=0\)</span>、列相关、<span class="arithmatex">\(\mathbf{b}\)</span> 不可达这一类<strong>否定式</strong>。</p>
+<hr />
+<h2 id="lecture-8-28">第六部分：子空间与基 (Lecture 8: §2.8)<a class="headerlink" href="#lecture-8-28" title="Permanent link">¶</a></h2>
+<h3 id="28-subspaces-of-mathbbrn">2.8 Subspaces of <span class="arithmatex">\(\mathbb{R}^n\)</span><a class="headerlink" href="#28-subspaces-of-mathbbrn" title="Permanent link">¶</a></h3>
+<p><strong>子空间三条件.</strong> <span class="arithmatex">\(H\subseteq\mathbb{R}^n\)</span> 是子空间 ⇔</p>
+<ol>
+<li><span class="arithmatex">\(\mathbf{0}\in H\)</span>；</li>
+<li><span class="arithmatex">\(\mathbf{u},\mathbf{v}\in H\Rightarrow\mathbf{u}+\mathbf{v}\in H\)</span>（加法封闭）；</li>
+<li><span class="arithmatex">\(\mathbf{u}\in H,\ c\in\mathbb{R}\Rightarrow c\mathbf{u}\in H\)</span>（数乘封闭）。</li>
+</ol>
+<p><strong>两类标准子空间.</strong></p>
+<ul>
+<li><span class="arithmatex">\(\operatorname{Nul}A=\{\mathbf{x}\in\mathbb{R}^n:A\mathbf{x}=\mathbf{0}\}\)</span>，住在 <span class="arithmatex">\(\mathbb{R}^n\)</span>（<span class="arithmatex">\(n\)</span> = 列数）；</li>
+<li><span class="arithmatex">\(\operatorname{Col}A=\operatorname{Span}\{\mathbf{a}_1,\dots,\mathbf{a}_n\}\)</span>，住在 <span class="arithmatex">\(\mathbb{R}^m\)</span>（<span class="arithmatex">\(m\)</span> = 行数）。</li>
+</ul>
+<p><strong>求基的标准流程.</strong></p>
+<table>
+<thead>
+<tr>
+<th>求什么</th>
+<th>怎么做</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\operatorname{Nul}A\)</span> 的基</td>
+<td>解 <span class="arithmatex">\(A\mathbf{x}=\mathbf{0}\)</span>，化 RREF，自由变量逐个取 1</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\operatorname{Col}A\)</span> 的基</td>
+<td>化简 <span class="arithmatex">\(A\)</span> 找<strong>主元列位置</strong>，回到<strong>原矩阵</strong>取这些列</td>
+</tr>
+</tbody>
+</table>
+<p><strong>⚠ 陷阱.</strong> 列空间的基<strong>不能</strong>取化简后矩阵的列（那属于行空间，不是列空间）。必须回到原矩阵。</p>
+<p><strong>基与维数.</strong></p>
+<ul>
+<li>基 = 线性无关 + 张成；</li>
+<li><span class="arithmatex">\(\dim V\)</span> = 基中向量个数（唯一）；</li>
+<li>主元个数 + 自由变量个数 = 列数 <span class="arithmatex">\(n\)</span>——两者正好把 <span class="arithmatex">\(n\)</span> 列分完。</li>
+</ul>
+<hr />
+<h2 id="lecture">🌟 典型例题精解（综合各 Lecture）<a class="headerlink" href="#lecture" title="Permanent link">¶</a></h2>
+<h3 id="112-hk">例 1（1.2 参数系统）<span class="arithmatex">\(h,k\)</span> 取何值使系统有无穷多解<a class="headerlink" href="#112-hk" title="Permanent link">¶</a></h3>
+<div class="arithmatex">\[\begin{cases}x_1+3x_2=1\\ 2x_1+hx_2=k\end{cases}\]</div>
+<p><strong>做法.</strong> <span class="arithmatex">\(R_2-2R_1\)</span>：<span class="arithmatex">\((h-6)x_2=k-2\)</span>。</p>
+<ul>
+<li><span class="arithmatex">\(h\neq6\)</span>：<span class="arithmatex">\(x_2=\dfrac{k-2}{h-6}\)</span>，唯一解；</li>
+<li><span class="arithmatex">\(h=6,\ k=2\)</span>：该行 <span class="arithmatex">\(0=0\)</span>，只剩一个方程、两个未知数 ⇒ <strong>无穷多解</strong>；</li>
+<li><span class="arithmatex">\(h=6,\ k\neq2\)</span>：<span class="arithmatex">\(0\neq0\)</span> ⇒ 无解。</li>
+</ul>
+<p><strong>要点.</strong> 先算"消元后剩下的系数"，再分别检验"<span class="arithmatex">\(0=0\)</span>"与"<span class="arithmatex">\(0=\text{非零}\)</span>"。</p>
+<h3 id="213-spanmathbfb1h3-operatornamespan101011123">例 2（1.3 是否在 span）<span class="arithmatex">\(\mathbf{b}=(1,h,3)\)</span> 何时属于 <span class="arithmatex">\(\operatorname{Span}\{(1,0,1),(0,1,1),(1,2,3)\}\)</span><a class="headerlink" href="#213-spanmathbfb1h3-operatornamespan101011123" title="Permanent link">¶</a></h3>
+<p><strong>做法.</strong> 设 <span class="arithmatex">\(\mathbf{b}=c_1\mathbf{v}_1+c_2\mathbf{v}_2+c_3\mathbf{v}_3\)</span>，比较分量：</p>
+<div class="arithmatex">\[c_1+c_3=1,\qquad c_2+2c_3=h,\qquad c_1+c_2+3c_3=3\]</div>
+<p>前两式代入第三式得 <span class="arithmatex">\(1+h=3\)</span>，故 <span class="arithmatex">\(h=2\)</span>。</p>
+<p><strong>要点.</strong> 三个未知系数的 span 题，通常消去两个系数后剩一个含参数的等式。</p>
+<h3 id="315-rref-leftbeginarrayccccc1-2033001-11endarrayright">例 3（1.5 通解）RREF 为 <span class="arithmatex">\(\left[\begin{array}{cccc|c}1&amp;-2&amp;0&amp;3&amp;3\\0&amp;0&amp;1&amp;-1&amp;1\end{array}\right]\)</span><a class="headerlink" href="#315-rref-leftbeginarrayccccc1-2033001-11endarrayright" title="Permanent link">¶</a></h3>
+<p><strong>做法.</strong> 主元列 1、3，自由变量 <span class="arithmatex">\(x_2,x_4\)</span>：</p>
+<div class="arithmatex">\[x_1=3+2x_2-3x_4,\qquad x_3=1+x_4\]</div>
+<p>特解 <span class="arithmatex">\((3,0,1,0)\)</span>；取 <span class="arithmatex">\(x_2=1,x_4=0\)</span> 得 <span class="arithmatex">\((2,1,0,0)\)</span>；取 <span class="arithmatex">\(x_2=0,x_4=1\)</span> 得 <span class="arithmatex">\((-3,0,1,1)\)</span>：</p>
+<div class="arithmatex">\[\mathbf{x}=(3,0,1,0)+s(2,1,0,0)+t(-3,0,1,1)\]</div>
+<p><strong>要点.</strong> 特解 = 自由变量全 0；每个自由变量单独取 1 得一个方向向量。</p>
+<h3 id="417-detbeginbmatrix14725836hendbmatrix0-h">例 4（1.7 含参相关）<span class="arithmatex">\(\det\begin{bmatrix}1&amp;4&amp;7\\2&amp;5&amp;8\\3&amp;6&amp;h\end{bmatrix}=0\)</span> 的 <span class="arithmatex">\(h\)</span><a class="headerlink" href="#417-detbeginbmatrix14725836hendbmatrix0-h" title="Permanent link">¶</a></h3>
+<p><strong>做法.</strong></p>
+<div class="arithmatex">\[\det=1(5h-48)-4(2h-24)+7(12-15)=5h-48-8h+96-21=-3h+27\]</div>
+<p><span class="arithmatex">\(-3h+27=0\Rightarrow h=9\)</span>。</p>
+<p><strong>要点.</strong> 三个向量相关 ⇔ 行列式为 0。展开时注意第二项的负号。</p>
+<h3 id="519-tmathbfe_112tmathbfe_234">例 5（1.9 标准矩阵）已知 <span class="arithmatex">\(T(\mathbf{e}_1)=(1,2)\)</span>、<span class="arithmatex">\(T(\mathbf{e}_2)=(3,4)\)</span><a class="headerlink" href="#519-tmathbfe_112tmathbfe_234" title="Permanent link">¶</a></h3>
+<p><strong>做法.</strong> 标准矩阵的列就是像：<span class="arithmatex">\(A=\begin{bmatrix}1&amp;3\\2&amp;4\end{bmatrix}\)</span>。</p>
+<p><strong>要点.</strong> 像按<strong>列</strong>排，不是按行排。写反就得到转置。</p>
+<h3 id="622-abeginbmatrix1201endbmatrix-bbeginbmatrix1031endbmatrix">例 6（2.2 乘积求逆）<span class="arithmatex">\(A=\begin{bmatrix}1&amp;2\\0&amp;1\end{bmatrix},\ B=\begin{bmatrix}1&amp;0\\3&amp;1\end{bmatrix}\)</span><a class="headerlink" href="#622-abeginbmatrix1201endbmatrix-bbeginbmatrix1031endbmatrix" title="Permanent link">¶</a></h3>
+<p><strong>做法.</strong> <span class="arithmatex">\(A^{-1}=\begin{bmatrix}1&amp;-2\\0&amp;1\end{bmatrix}\)</span>，<span class="arithmatex">\(B^{-1}=\begin{bmatrix}1&amp;0\\-3&amp;1\end{bmatrix}\)</span>，故</p>
+<div class="arithmatex">\[(AB)^{-1}=B^{-1}A^{-1}=\begin{bmatrix}1&amp;0\\-3&amp;1\end{bmatrix}\begin{bmatrix}1&amp;-2\\0&amp;1\end{bmatrix}=\begin{bmatrix}1&amp;-2\\-3&amp;7\end{bmatrix}\]</div>
+<p>验算：<span class="arithmatex">\(AB=\begin{bmatrix}7&amp;2\\3&amp;1\end{bmatrix}\)</span>，其逆确实是 <span class="arithmatex">\(\begin{bmatrix}1&amp;-2\\-3&amp;7\end{bmatrix}\)</span>。</p>
+<p><strong>要点.</strong> 顺序必须反转；算完用 <span class="arithmatex">\(AB\)</span> 直接求逆验一次最稳。</p>
+<h3 id="722-e_1-r_1r_2e_2-2r_1-r_3e_3-r_2-frac14">例 7（2.2 初等矩阵复合）<span class="arithmatex">\(E_1\)</span> 交换 <span class="arithmatex">\(R_1,R_2\)</span>；<span class="arithmatex">\(E_2\)</span> 把 <span class="arithmatex">\(-2R_1\)</span> 加到 <span class="arithmatex">\(R_3\)</span>；<span class="arithmatex">\(E_3\)</span> 把 <span class="arithmatex">\(R_2\)</span> 乘 <span class="arithmatex">\(\frac14\)</span><a class="headerlink" href="#722-e_1-r_1r_2e_2-2r_1-r_3e_3-r_2-frac14" title="Permanent link">¶</a></h3>
+<p><strong>做法.</strong> <span class="arithmatex">\((E_1E_2E_3)^{-1}=E_3^{-1}E_2^{-1}E_1^{-1}\)</span>：</p>
+<div class="arithmatex">\[E_3^{-1}:\ R_2\to4R_2,\quad E_2^{-1}:\ R_3\to R_3+2R_1,\quad E_1^{-1}=E_1\]</div>
+<p>按 <span class="arithmatex">\(E_3^{-1}E_2^{-1}E_1^{-1}\)</span> 从右往左作用到 <span class="arithmatex">\(I\)</span> 上：</p>
+<ol>
+<li><span class="arithmatex">\(I\cdot E_1^{-1}=E_1=\begin{bmatrix}0&amp;1&amp;0\\1&amp;0&amp;0\\0&amp;0&amp;1\end{bmatrix}\)</span>（交换 <span class="arithmatex">\(R_1,R_2\)</span>）；</li>
+<li>左乘 <span class="arithmatex">\(E_2^{-1}\)</span>：<span class="arithmatex">\(R_3\to(0,0,1)+2(0,1,0)=(0,2,1)\)</span>；</li>
+<li>左乘 <span class="arithmatex">\(E_3^{-1}\)</span>：<span class="arithmatex">\(R_2\to4R_2\)</span>。</li>
+</ol>
+<div class="arithmatex">\[\begin{bmatrix}0&amp;1&amp;0\\4&amp;0&amp;0\\0&amp;2&amp;1\end{bmatrix}\]</div>
+<p><strong>要点.</strong> 逆序 + 每种操作取"反向操作"，两个错都能靠 <span class="arithmatex">\(A\cdot A^{-1}=I\)</span> 验出来。</p>
+<h3 id="828-abeginbmatrix1-2100013endbmatrix">例 8（2.8 零空间的基）<span class="arithmatex">\(A=\begin{bmatrix}1&amp;-2&amp;1&amp;0\\0&amp;0&amp;1&amp;3\end{bmatrix}\)</span><a class="headerlink" href="#828-abeginbmatrix1-2100013endbmatrix" title="Permanent link">¶</a></h3>
+<p><strong>做法.</strong> <span class="arithmatex">\(R_1-R_2\)</span> 得 <span class="arithmatex">\(\begin{bmatrix}1&amp;-2&amp;0&amp;-3\\0&amp;0&amp;1&amp;3\end{bmatrix}\)</span>：</p>
+<div class="arithmatex">\[x_1=2x_2+3x_4,\qquad x_3=-3x_4\]</div>
+<p>取 <span class="arithmatex">\((x_2,x_4)=(1,0)\)</span> 得 <span class="arithmatex">\((2,1,0,0)\)</span>；取 <span class="arithmatex">\((0,1)\)</span> 得 <span class="arithmatex">\((3,0,-3,1)\)</span>。基为 <span class="arithmatex">\(\{(2,1,0,0),(3,0,-3,1)\}\)</span>。</p>
+<p><strong>要点.</strong> 自由变量的符号跟着方程走，<span class="arithmatex">\(x_3=-3x_4\)</span> 的负号最容易丢。</p>
+<hr />
+<h2 id="a-10">附录 A：考前 10 分钟速览<a class="headerlink" href="#a-10" title="Permanent link">¶</a></h2>
+<h3 id="a1">A1. 判据一页纸<a class="headerlink" href="#a1" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>问</th>
+<th>答</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>方程组有解？</td>
+<td>阶梯形无 <span class="arithmatex">\([0\cdots0\mid c],c\neq0\)</span></td>
+</tr>
+<tr>
+<td>唯一解？</td>
+<td>无矛盾行且主元数 = 未知数个数</td>
+</tr>
+<tr>
+<td>向量组无关？</td>
+<td>以它们为列的矩阵每列有主元</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\mathbf{b}\in\operatorname{Col}A\)</span>？</td>
+<td><span class="arithmatex">\([A\ \mathbf{b}]\)</span> 化简后最后一列没有新主元（主元个数与 <span class="arithmatex">\(A\)</span> 相同）</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(T\)</span> 单射？</td>
+<td>每列有主元 / <span class="arithmatex">\(\operatorname{Nul}A=\{\mathbf{0}\}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(T\)</span> 满射？</td>
+<td>每行有主元 / <span class="arithmatex">\(\operatorname{Col}A=\mathbb{R}^m\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(A\)</span> 可逆？</td>
+<td><span class="arithmatex">\(\det A\neq0\)</span> ⇔ 每列有主元 ⇔ <span class="arithmatex">\(A\sim I\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\dim\operatorname{Nul}A\)</span>？</td>
+<td>数非主元列：个数 = 列数 − 主元个数</td>
+</tr>
+</tbody>
+</table>
+<h3 id="a2">A2. 必背公式<a class="headerlink" href="#a2" title="Permanent link">¶</a></h3>
+<div class="arithmatex">\[A^{-1}=\frac{1}{ad-bc}\begin{bmatrix}d&amp;-b\\-c&amp;a\end{bmatrix}\qquad (AB)^{-1}=B^{-1}A^{-1}\qquad (AB)^{\mathsf T}=B^{\mathsf T}A^{\mathsf T}\]</div>
+<div class="arithmatex">\[R_\theta=\begin{bmatrix}\cos\theta&amp;-\sin\theta\\\sin\theta&amp;\cos\theta\end{bmatrix}\]</div>
+<h3 id="a3">A3. 十大易错点（含你自己踩过的）<a class="headerlink" href="#a3" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>抄错符号</strong>：把 <span class="arithmatex">\(-9\)</span> 抄成 <span class="arithmatex">\(9\)</span>、把 <span class="arithmatex">\(-13\)</span> 抄成 <span class="arithmatex">\(13\)</span>。→ 每步重抄一遍原矩阵，别凭记忆改。</li>
+<li><strong>乘积元素位置</strong>：<span class="arithmatex">\(AB\)</span> 的 <span class="arithmatex">\((i,j)\)</span> 是 <span class="arithmatex">\(A\)</span> 第 <span class="arithmatex">\(i\)</span> 行 · <span class="arithmatex">\(B\)</span> 第 <span class="arithmatex">\(j\)</span> 列，不是第 <span class="arithmatex">\(i\)</span> 列。</li>
+<li><strong>RREF 没消干净</strong>：主元列上方仍有非零元就还不是 RREF。</li>
+<li><strong>顺序反转</strong>：<span class="arithmatex">\((AB)^{-1}=B^{-1}A^{-1}\)</span>、<span class="arithmatex">\((AB)^{\mathsf T}=B^{\mathsf T}A^{\mathsf T}\)</span>。</li>
+<li><strong>列空间的基</strong>：取原矩阵的主元列，不是化简后的列。</li>
+<li><strong>解集过不过原点</strong>：<span class="arithmatex">\(\mathbf{b}\neq\mathbf{0}\)</span> 时不过原点。</li>
+<li><strong>自由变量数用错维度</strong>：自由变量个数 = 列数 − 主元个数（拿<strong>列数</strong>算，不是行数）。</li>
+<li><strong>单射/满射看错行</strong>：每行有主元 ⇒ 满射；每列有主元 ⇒ 单射。</li>
+<li><strong>行列式展开符号</strong>：第二项、第四项带负号。</li>
+<li><strong>"<span class="arithmatex">\(AB=0\)</span> 所以 <span class="arithmatex">\(A=0\)</span> 或 <span class="arithmatex">\(B=0\)</span>"</strong>：矩阵没有零因子律。</li>
+</ol>
+<h3 id="a4-practice-quiz-1">A4. 你 Practice Quiz 1 的四道错题回顾<a class="headerlink" href="#a4-practice-quiz-1" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>题</th>
+<th>错因</th>
+<th>纠正动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q8</td>
+<td>矩阵符号抄错（<span class="arithmatex">\(-9\)</span> 抄成 <span class="arithmatex">\(9\)</span>）</td>
+<td>每步从上一行重新抄，不要凭记忆</td>
+</tr>
+<tr>
+<td>Q9</td>
+<td>参数 <span class="arithmatex">\(k\)</span> 应为 <span class="arithmatex">\(-10\)</span></td>
+<td>含参题代回原方程验一次</td>
+</tr>
+<tr>
+<td>Q13</td>
+<td>乘积第二行算成 <span class="arithmatex">\(-13\)</span>（应为 <span class="arithmatex">\(-3\)</span>）</td>
+<td>逐元素点积，写全中间过程</td>
+</tr>
+<tr>
+<td>Q15</td>
+<td>RREF 里 <span class="arithmatex">\(3\)</span> 没消成 <span class="arithmatex">\(0\)</span></td>
+<td>化完 RREF 后回头检查每个主元列</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="b-3">附录 B：复习时间分配建议（考前 3 天）<a class="headerlink" href="#b-3" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>时段</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Day 1 上午</td>
+<td>第零、一、二部分（1.1–1.4）+ 练习册 L1–L3</td>
+</tr>
+<tr>
+<td>Day 1 下午</td>
+<td>第三部分（1.5、1.7）+ 练习册 L4</td>
+</tr>
+<tr>
+<td>Day 2 上午</td>
+<td>第四、五部分（1.8–2.2）+ 练习册 L5–L6</td>
+</tr>
+<tr>
+<td>Day 2 下午</td>
+<td>第六部分（2.3、2.8）+ 练习册 L7–L8</td>
+</tr>
+<tr>
+<td>Day 3 上午</td>
+<td>综合提高卷 20 题（限时 50 分钟）</td>
+</tr>
+<tr>
+<td>Day 3 下午</td>
+<td>错题二刷 + 附录 A 速览</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../lecture09/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Lecture 9 · §2.9 维数与秩">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                Lecture 9 · §2.9 维数与秩
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../practice-basic/" class="md-footer__link md-footer__link--next" aria-label="下一页: 基础卷 · Week 1–8">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                基础卷 · Week 1–8
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      个人学习笔记，仅供自用
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.tracking", "search.suggest", "search.highlight", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/katex/katex.min.js"></script>
+      
+        <script src="../../javascripts/katex/auto-render.min.js"></script>
+      
+        <script src="../../javascripts/katex-init.js"></script>
+      
+    
+  </body>
+</html>

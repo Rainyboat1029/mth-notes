@@ -1,0 +1,2053 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MTH026 微积分与 MTH028 线性代数的讲义、期中复习、练习题与答题卡">
+      
+      
+      
+        <link rel="canonical" href="https://rainyboat1029.github.io/mth-notes/mth026/lecture08/">
+      
+      
+        <link rel="prev" href="../lecture07/">
+      
+      
+        <link rel="next" href="../lecture09/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Lecture 8 · 优化与函数作图 - 数学笔记 · MTH026 / MTH028</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../javascripts/katex/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-4-applications-of-the-derivative" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="数学笔记 · MTH026 / MTH028" class="md-header__button md-logo" aria-label="数学笔记 · MTH026 / MTH028" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            数学笔记 · MTH026 / MTH028
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lecture 8 · 优化与函数作图
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  微积分 MTH026
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mth028/" class="md-tabs__link">
+          
+  
+  
+  线性代数 MTH028
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="数学笔记 · MTH026 / MTH028" class="md-nav__button md-logo" aria-label="数学笔记 · MTH026 / MTH028" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    数学笔记 · MTH026 / MTH028
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微积分 MTH026
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    微积分 MTH026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 · 函数与预备知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 2 · 极限概念与运算法则
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 · 无穷极限与三角极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 4 · 指数对数极限与连续性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 5 · 导数与求导法则
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 6 · 隐微分与相关变化率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 7 · 最值与凹凸性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 8 · 优化与函数作图
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 8 · 优化与函数作图
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-8-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一部分：本节课知识详解 (Lecture 8 Summary)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一部分：本节课知识详解 (Lecture 8 Summary)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#43-local-extrema-and-extrema-on-open-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Local Extrema and Extrema on Open Intervals (局部极值与开区间上的最值)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-practical-problems-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Practical Problems (Optimization / 优化问题)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-graphing-functions-using-calculus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5* Graphing Functions Using Calculus (用微积分作函数图像)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 · 中值定理与洛必达
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../midterm-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习（L1–L6）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concept-limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    极限的严谨定义
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_13" id="__nav_2_13_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    练习
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practice-basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础卷 · Week 1–6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practice-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进阶卷 · 综合提高
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性代数 MTH028
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    线性代数 MTH028
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 · §1.1 线性方程组
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 2 · §1.2 行化简
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 · §1.3–1.4 向量与矩阵方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 4 · §1.5 解集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 5 · §1.8 线性变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 6 · §2.1 矩阵运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 7 · §2.2 矩阵的逆
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 8 · §2.8 子空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 · §2.9 维数与秩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/midterm-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习（L1–L8）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    练习
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/practice-basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础卷 · Week 1–8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/practice-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进阶卷 · 综合提高
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-8-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一部分：本节课知识详解 (Lecture 8 Summary)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一部分：本节课知识详解 (Lecture 8 Summary)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#43-local-extrema-and-extrema-on-open-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Local Extrema and Extrema on Open Intervals (局部极值与开区间上的最值)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-practical-problems-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Practical Problems (Optimization / 优化问题)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-graphing-functions-using-calculus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5* Graphing Functions Using Calculus (用微积分作函数图像)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-4-applications-of-the-derivative">Chapter 4 Applications of the Derivative: 局部极值、优化问题与函数作图 知识详解与例题精解<a class="headerlink" href="#chapter-4-applications-of-the-derivative" title="Permanent link">¶</a></h1>
+<h2 id="lecture-8-summary">第一部分：本节课知识详解 (Lecture 8 Summary)<a class="headerlink" href="#lecture-8-summary" title="Permanent link">¶</a></h2>
+<h3 id="43-local-extrema-and-extrema-on-open-intervals">4.3 Local Extrema and Extrema on Open Intervals (局部极值与开区间上的最值)<a class="headerlink" href="#43-local-extrema-and-extrema-on-open-intervals" title="Permanent link">¶</a></h3>
+<h4 id="1-definition-of-local-extrema">1. 局部极值的定义 (Definition of Local Extrema)<a class="headerlink" href="#1-definition-of-local-extrema" title="Permanent link">¶</a></h4>
+<p>设 <span class="arithmatex">\(S\)</span> 为函数 <span class="arithmatex">\(f\)</span> 的定义域，且 <span class="arithmatex">\(c \in S\)</span>：</p>
+<ul>
+<li><strong>局部最大值 (Local Maximum Value):</strong> 若存在包含 <span class="arithmatex">\(c\)</span> 的开区间 <span class="arithmatex">\((a,b)\)</span>，使得对 <span class="arithmatex">\((a,b) \cap S\)</span> 中的所有 <span class="arithmatex">\(x\)</span> 都有 <span class="arithmatex">\(f(c) \ge f(x)\)</span>，则称 <span class="arithmatex">\(f(c)\)</span> 为 <span class="arithmatex">\(f\)</span> 的一个局部最大值。</li>
+<li><strong>局部最小值 (Local Minimum Value):</strong> 若存在包含 <span class="arithmatex">\(c\)</span> 的开区间 <span class="arithmatex">\((a,b)\)</span>，使得对 <span class="arithmatex">\((a,b) \cap S\)</span> 中的所有 <span class="arithmatex">\(x\)</span> 都有 <span class="arithmatex">\(f(c) \le f(x)\)</span>，则称 <span class="arithmatex">\(f(c)\)</span> 为 <span class="arithmatex">\(f\)</span> 的一个局部最小值。</li>
+<li><strong>局部极值 (Local Extreme Value):</strong> 局部最大值与局部最小值的统称。</li>
+<li><strong>全局最值 (Global Maximum / Minimum Value):</strong> 函数在集合 <span class="arithmatex">\(S\)</span> 上的最大值（若存在）称为全局最大值，最小值称为全局最小值。</li>
+<li><strong>两者关系 (Relationship):</strong> 全局最大值一定是局部最大值，全局最小值一定是局部最小值；反过来不成立——局部极值可能不止一个，且可能都不是全局最值。</li>
+<li><strong>端点处的局部极值:</strong> 若定义域区间 <span class="arithmatex">\(I\)</span> 的端点属于 <span class="arithmatex">\(S\)</span>，端点处也可能取得局部极值（此时只与端点单侧邻近的点比较）。</li>
+</ul>
+<h4 id="2-where-do-local-extreme-values-occur">2. 局部极值可能出现的位置 (Where Do Local Extreme Values Occur?)<a class="headerlink" href="#2-where-do-local-extreme-values-occur" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>临界点定理 (Critical Point Theorem / Theorem 4.1B):</strong> 设 <span class="arithmatex">\(f\)</span> 在包含点 <span class="arithmatex">\(c\)</span> 的区间 <span class="arithmatex">\(I\)</span> 上有定义。若 <span class="arithmatex">\(f(c)\)</span> 是极值，则 <span class="arithmatex">\(c\)</span> 必为<strong>临界点 (critical point)</strong>，即满足下列三者之一：</p>
+</li>
+<li>
+<p><span class="arithmatex">\(c\)</span> 是区间 <span class="arithmatex">\(I\)</span> 的<strong>端点 (end point)</strong>；</p>
+</li>
+<li><span class="arithmatex">\(c\)</span> 是<strong>驻点 (stationary point)</strong>，即 <span class="arithmatex">\(f'(c)=0\)</span>；</li>
+<li>
+<p><span class="arithmatex">\(c\)</span> 是<strong>奇点 (singular point)</strong>，即 <span class="arithmatex">\(f'(c)\)</span> 不存在。</p>
+</li>
+<li>
+<p><strong>Remark (要点):</strong> 局部极值点只能从“端点、驻点、奇点”这三类临界点中产生；但临界点<strong>不一定</strong>是极值点（例如 <span class="arithmatex">\(f(x)=x^3\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处 <span class="arithmatex">\(f'(0)=0\)</span>，却没有极值）。因此找到临界点后，还必须用一阶或二阶导数判别法确认。</p>
+</li>
+</ul>
+<h4 id="3-first-derivative-test-theorem-a">3. 一阶导数判别法 (First Derivative Test / Theorem A)<a class="headerlink" href="#3-first-derivative-test-theorem-a" title="Permanent link">¶</a></h4>
+<p>设 <span class="arithmatex">\(f\)</span> 在包含驻点或奇点 <span class="arithmatex">\(c\)</span> 的开区间 <span class="arithmatex">\((a,b)\)</span> 上连续（<span class="arithmatex">\(c\)</span> 可在 <span class="arithmatex">\((a,b)\)</span> 内，也可为端点）：</p>
+<ol>
+<li>若在 <span class="arithmatex">\((a,c)\)</span> 上 <span class="arithmatex">\(f'(x)&gt;0\)</span>，在 <span class="arithmatex">\((c,b)\)</span> 上 <span class="arithmatex">\(f'(x)&lt;0\)</span>，即 <span class="arithmatex">\(f'\)</span> 由正变负，则 <span class="arithmatex">\(f(c)\)</span> 为<strong>局部最大值</strong>；</li>
+<li>若在 <span class="arithmatex">\((a,c)\)</span> 上 <span class="arithmatex">\(f'(x)&lt;0\)</span>，在 <span class="arithmatex">\((c,b)\)</span> 上 <span class="arithmatex">\(f'(x)&gt;0\)</span>，即 <span class="arithmatex">\(f'\)</span> 由负变正，则 <span class="arithmatex">\(f(c)\)</span> 为<strong>局部最小值</strong>；</li>
+<li>
+<p>若 <span class="arithmatex">\(f'(x)\)</span> 在 <span class="arithmatex">\(c\)</span> 两侧保持同号，则 <span class="arithmatex">\(f(c)\)</span> <strong>不是</strong>局部极值。</p>
+</li>
+<li>
+<p><strong>记忆口诀:</strong> 左正右负得极大，左负右正得极小，两侧同号无极值。</p>
+</li>
+<li><strong>符号表 (Sign Chart):</strong> 在数轴上标出全部临界点，在每个区间内取一个测试点判断 <span class="arithmatex">\(f'\)</span> 的符号，再按“<span class="arithmatex">\(+ \to -\)</span> 极大、<span class="arithmatex">\(- \to +\)</span> 极小、同号无极值”读出结论。</li>
+</ol>
+<h4 id="lecture-examples-solutions">🌟 课件例题与详解 (Lecture Examples &amp; Solutions)<a class="headerlink" href="#lecture-examples-solutions" title="Permanent link">¶</a></h4>
+<h5 id="1">【课件例题 1】用一阶导数判别法求局部极值<a class="headerlink" href="#1" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Find the local extreme values of <span class="arithmatex">\(f(x)=\dfrac{1}{3}x^3-x^2-3x+4\)</span> on <span class="arithmatex">\((-\infty,\infty)\)</span>.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>Compute the derivative:
+     $<span class="arithmatex">\(f'(x)=x^2-2x-3=(x-3)(x+1)\)</span>$</li>
+<li>Find the critical points: <span class="arithmatex">\(f'(x)=0 \implies x=-1,\ 3\)</span>；<span class="arithmatex">\(f'\)</span> 处处存在，无奇点；定义域为 <span class="arithmatex">\(\mathbb{R}\)</span>，无端点。</li>
+<li>Determine the sign of <span class="arithmatex">\(f'(x)\)</span> on each interval:<ul>
+<li><span class="arithmatex">\(x&lt;-1\)</span>：<span class="arithmatex">\(f'(x)=(-)(-)=+\)</span>；</li>
+<li><span class="arithmatex">\(-1&lt;x&lt;3\)</span>：<span class="arithmatex">\(f'(x)=(-)(+)=-\)</span>；</li>
+<li><span class="arithmatex">\(x&gt;3\)</span>：<span class="arithmatex">\(f'(x)=(+)(+)=+\)</span>。</li>
+</ul>
+</li>
+<li>Apply the First Derivative Test:<ul>
+<li><span class="arithmatex">\(f'\)</span> 在 <span class="arithmatex">\(x=-1\)</span> 处由正变负 <span class="arithmatex">\(\implies f(-1)=\dfrac{17}{3}\)</span> 为局部最大值；</li>
+<li><span class="arithmatex">\(f'\)</span> 在 <span class="arithmatex">\(x=3\)</span> 处由负变正 <span class="arithmatex">\(\implies f(3)=-5\)</span> 为局部最小值。</li>
+</ul>
+</li>
+<li><strong>中文详解:</strong> 先求导并因式分解得到 <span class="arithmatex">\(f'(x)=(x-3)(x+1)\)</span>，临界点为 <span class="arithmatex">\(x=-1\)</span> 与 <span class="arithmatex">\(x=3\)</span>。用符号表判断：<span class="arithmatex">\(x=-1\)</span> 左侧导数为正、右侧为负，函数先增后减，故 <span class="arithmatex">\(f(-1)=\frac{17}{3}\)</span> 是局部最大值（山顶）；<span class="arithmatex">\(x=3\)</span> 左侧导数为负、右侧为正，函数先减后增，故 <span class="arithmatex">\(f(3)=-5\)</span> 是局部最小值（谷底）。注意本例中局部极大值 <span class="arithmatex">\(17/3\)</span> 反而大于局部极小值 <span class="arithmatex">\(-5\)</span>，这是“局部”二字的含义——只与附近点比较。</li>
+</ul>
+<hr />
+<h5 id="2">【课件例题 2】奇点处的局部极值<a class="headerlink" href="#2" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Find the local extreme values of <span class="arithmatex">\(f(x)=(\sin x)^{2/3}\)</span> on <span class="arithmatex">\(\left(-\dfrac{\pi}{6},\dfrac{2\pi}{3}\right)\)</span>.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>Differentiate using the chain rule:
+     $<span class="arithmatex">\(f'(x)=\frac{2}{3}(\sin x)^{-1/3}\cos x=\frac{2\cos x}{3\sqrt[3]{\sin x}}\)</span>$</li>
+<li>Find the critical points:<ul>
+<li><span class="arithmatex">\(x=0\)</span> 处 <span class="arithmatex">\(\sin 0=0\)</span>，<span class="arithmatex">\(f'(0)\)</span> 不存在 —— <strong>奇点 (singular point)</strong>；</li>
+<li><span class="arithmatex">\(x=\dfrac{\pi}{2}\)</span> 处 <span class="arithmatex">\(\cos\dfrac{\pi}{2}=0\)</span>，<span class="arithmatex">\(f'\left(\dfrac{\pi}{2}\right)=0\)</span> —— <strong>驻点 (stationary point)</strong>。</li>
+</ul>
+</li>
+<li>Determine the sign of <span class="arithmatex">\(f'(x)\)</span> on each subinterval:<ul>
+<li><span class="arithmatex">\(\left(-\dfrac{\pi}{6},0\right)\)</span>：<span class="arithmatex">\(\sin x&lt;0,\ \cos x&gt;0 \implies f'(x)&lt;0\)</span>；</li>
+<li><span class="arithmatex">\(\left(0,\dfrac{\pi}{2}\right)\)</span>：<span class="arithmatex">\(\sin x&gt;0,\ \cos x&gt;0 \implies f'(x)&gt;0\)</span>；</li>
+<li><span class="arithmatex">\(\left(\dfrac{\pi}{2},\dfrac{2\pi}{3}\right)\)</span>：<span class="arithmatex">\(\sin x&gt;0,\ \cos x&lt;0 \implies f'(x)&lt;0\)</span>。</li>
+</ul>
+</li>
+<li>Apply the First Derivative Test:<ul>
+<li><span class="arithmatex">\(f'\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处由负变正 <span class="arithmatex">\(\implies f(0)=0\)</span> 为局部最小值；</li>
+<li><span class="arithmatex">\(f'\)</span> 在 <span class="arithmatex">\(x=\dfrac{\pi}{2}\)</span> 处由正变负 <span class="arithmatex">\(\implies f\left(\dfrac{\pi}{2}\right)=1\)</span> 为局部最大值。</li>
+</ul>
+</li>
+<li><strong>中文详解:</strong> 本题的关键在于“奇点也能是极值点”。<span class="arithmatex">\(f'(x)=\frac{2\cos x}{3\sqrt[3]{\sin x}}\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处分母为零，导数不存在，但函数本身在 <span class="arithmatex">\(x=0\)</span> 处连续且取到最小值 <span class="arithmatex">\(0\)</span>。符号表显示 <span class="arithmatex">\(f'\)</span> 在 <span class="arithmatex">\(0\)</span> 左右由负变正，所以 <span class="arithmatex">\(x=0\)</span> 是局部极小点；在 <span class="arithmatex">\(\frac{\pi}{2}\)</span> 处导数由正变负，是局部极大点。由于区间是开区间，这两个局部极值恰好也是该区间上的全局最小值和全局最大值。这也说明：<strong>求极值不能只解 <span class="arithmatex">\(f'(x)=0\)</span>，还要检查导数不存在的点</strong>。</li>
+</ul>
+<h4 id="4-second-derivative-test-theorem-b">4. 二阶导数判别法 (Second Derivative Test / Theorem B)<a class="headerlink" href="#4-second-derivative-test-theorem-b" title="Permanent link">¶</a></h4>
+<p>设 <span class="arithmatex">\(f'\)</span> 与 <span class="arithmatex">\(f''\)</span> 在包含 <span class="arithmatex">\(c\)</span> 的开区间 <span class="arithmatex">\((a,b)\)</span> 内存在，且 <span class="arithmatex">\(f'(c)=0\)</span>：</p>
+<ol>
+<li>若 <span class="arithmatex">\(f''(c)&lt;0\)</span>，则 <span class="arithmatex">\(f(c)\)</span> 为<strong>局部最大值</strong>；</li>
+<li>
+<p>若 <span class="arithmatex">\(f''(c)&gt;0\)</span>，则 <span class="arithmatex">\(f(c)\)</span> 为<strong>局部最小值</strong>。</p>
+</li>
+<li>
+<p><strong>几何直观 (Geometric Intuition):</strong> 在驻点处切线水平。若曲线凹向下（<span class="arithmatex">\(f''&lt;0\)</span>，像倒扣的碗），则驻点是山顶；若曲线凹向上（<span class="arithmatex">\(f''&gt;0\)</span>，像正放的碗），则驻点是谷底。</p>
+</li>
+<li><strong>证明思路 (Proof Sketch):</strong> 由二阶导数定义
+  $<span class="arithmatex">\(f''(c)=\lim_{x\to c}\frac{f'(x)-f'(c)}{x-c}=\lim_{x\to c}\frac{f'(x)}{x-c}\)</span>$
+  若 <span class="arithmatex">\(f''(c)&lt;0\)</span>，则在 <span class="arithmatex">\(c\)</span> 的某去心邻域内 <span class="arithmatex">\(\dfrac{f'(x)}{x-c}&lt;0\)</span>：当 <span class="arithmatex">\(x&lt;c\)</span> 时 <span class="arithmatex">\(f'(x)&gt;0\)</span>，当 <span class="arithmatex">\(x&gt;c\)</span> 时 <span class="arithmatex">\(f'(x)&lt;0\)</span>，由一阶判别法知 <span class="arithmatex">\(f(c)\)</span> 为局部最大值。<span class="arithmatex">\(f''(c)&gt;0\)</span> 的情形同理。</li>
+<li><strong>失效情形 (Caution):</strong> 若 <span class="arithmatex">\(f''(c)=0\)</span>，二阶判别法<strong>失效</strong>，必须回到一阶判别法。例如 <span class="arithmatex">\(f(x)=x^3\)</span> 与 <span class="arithmatex">\(f(x)=x^4\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处都有 <span class="arithmatex">\(f'(0)=f''(0)=0\)</span>，但前者无极值、后者取极小值。</li>
+</ol>
+<h5 id="3">【课件例题 3】用二阶导数判别法求局部极值<a class="headerlink" href="#3" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Use the Second Derivative Test to find the local extreme values of <span class="arithmatex">\(f(x)=\dfrac{1}{3}x^3-x^2-3x+4\)</span>.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>First derivative and critical points (as in Example 1):
+     $<span class="arithmatex">\(f'(x)=x^2-2x-3=(x-3)(x+1) \implies x=-1,\ 3\)</span>$</li>
+<li>Second derivative:
+     $<span class="arithmatex">\(f''(x)=2x-2\)</span>$</li>
+<li>Evaluate <span class="arithmatex">\(f''\)</span> at each stationary point:<ul>
+<li><span class="arithmatex">\(f''(-1)=2(-1)-2=-4&lt;0 \implies f(-1)=\dfrac{17}{3}\)</span> 为局部最大值；</li>
+<li><span class="arithmatex">\(f''(3)=2(3)-2=4&gt;0 \implies f(3)=-5\)</span> 为局部最小值。</li>
+</ul>
+</li>
+<li><strong>中文详解:</strong> 与例题 1 相比，二阶导数法只需计算驻点处的 <span class="arithmatex">\(f''\)</span> 符号，不必做完整的符号表，速度更快。<span class="arithmatex">\(f''(-1)=-4&lt;0\)</span> 说明曲线在 <span class="arithmatex">\(x=-1\)</span> 附近凹向下，驻点处是山顶，故为局部极大；<span class="arithmatex">\(f''(3)=4&gt;0\)</span> 说明凹向上，故为局部极小。两种判别法结论完全一致。</li>
+</ul>
+<hr />
+<h5 id="4">【课件例题 4】二阶导数判别法失效的情形<a class="headerlink" href="#4" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Discuss the behavior of <span class="arithmatex">\(f(x)=x^3\)</span> and <span class="arithmatex">\(g(x)=x^4\)</span> at <span class="arithmatex">\(x=0\)</span> using the derivative tests.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>For <span class="arithmatex">\(f(x)=x^3\)</span>: <span class="arithmatex">\(f'(x)=3x^2\)</span>, <span class="arithmatex">\(f''(x)=6x\)</span>; <span class="arithmatex">\(f'(0)=0\)</span>, <span class="arithmatex">\(f''(0)=0\)</span>.<ul>
+<li>一阶判别法：<span class="arithmatex">\(f'(x)=3x^2&gt;0\)</span> 在 <span class="arithmatex">\(x=0\)</span> 两侧同号 <span class="arithmatex">\(\implies\)</span> <span class="arithmatex">\(x=0\)</span> 不是极值点（是驻点拐点）。</li>
+</ul>
+</li>
+<li>For <span class="arithmatex">\(g(x)=x^4\)</span>: <span class="arithmatex">\(g'(x)=4x^3\)</span>, <span class="arithmatex">\(g''(x)=12x^2\)</span>; <span class="arithmatex">\(g'(0)=0\)</span>, <span class="arithmatex">\(g''(0)=0\)</span>.<ul>
+<li>一阶判别法：<span class="arithmatex">\(g'\)</span> 在 <span class="arithmatex">\(x=0\)</span> 左侧为负、右侧为正 <span class="arithmatex">\(\implies g(0)=0\)</span> 为局部最小值。</li>
+</ul>
+</li>
+<li>Conclusion: <span class="arithmatex">\(f''(0)=0\)</span> 时二阶判别法不能下结论，必须用一阶判别法（或更高阶导数）继续判断。</li>
+<li><strong>中文详解:</strong> 两个函数在 <span class="arithmatex">\(x=0\)</span> 处都满足 <span class="arithmatex">\(f'(0)=0\)</span> 且 <span class="arithmatex">\(f''(0)=0\)</span>，但 <span class="arithmatex">\(x^3\)</span> 在原点两侧都单调递增（导数恒非负），故原点不是极值点；<span class="arithmatex">\(x^4\)</span> 在原点两侧先减后增，取到最小值 <span class="arithmatex">\(0\)</span>。这说明 <strong><span class="arithmatex">\(f''(c)=0\)</span> 只是“判别法失效”，不是“没有极值”</strong>，考试中遇到这种点一定要回到一阶导数符号表。</li>
+</ul>
+<h4 id="5-global-extrema-on-open-intervals">5. 开区间上的全局最值 (Global Extrema on Open Intervals)<a class="headerlink" href="#5-global-extrema-on-open-intervals" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>存在性 (Existence):</strong> 连续函数在<strong>开区间</strong>上不一定能取到最大值或最小值。例如 <span class="arithmatex">\(f(x)=\dfrac{1}{x}\)</span> 在 <span class="arithmatex">\((0,\infty)\)</span> 上既无最大值也无最小值；又如 <span class="arithmatex">\(f(x)=x\)</span> 在 <span class="arithmatex">\((0,1)\)</span> 上无最值。</li>
+<li><strong>分析思路 (Strategy):</strong> 先用一阶导数确定单调区间与局部极值，再考察区间端点处的<strong>单侧极限</strong>，判断函数值是否能“逼近但取不到”某个值。</li>
+<li><strong>推论 (Corollary):</strong> 若 <span class="arithmatex">\(f\)</span> 在开区间上可导，且该区间内<strong>只有一个驻点</strong> <span class="arithmatex">\(c\)</span>，并且 <span class="arithmatex">\(c\)</span> 是局部极值点，则 <span class="arithmatex">\(c\)</span> 必为全局极值点。</li>
+<li>“单峰” (single-peak) 情形 <span class="arithmatex">\(\implies\)</span> 全局最大值；</li>
+<li>“单谷” (single-valley) 情形 <span class="arithmatex">\(\implies\)</span> 全局最小值。</li>
+<li><strong>注意 (Caution):</strong> 推论要求“唯一驻点 <strong>且</strong> 该点确为局部极值”。仅有唯一驻点不够：<span class="arithmatex">\(f(x)=x^3\)</span> 在 <span class="arithmatex">\(\mathbb{R}\)</span> 上唯一驻点为 <span class="arithmatex">\(0\)</span>，但 <span class="arithmatex">\(0\)</span> 不是极值点，函数也没有全局最值。</li>
+</ul>
+<h5 id="5">【课件例题 5】开区间上的全局最值（高斯型函数）<a class="headerlink" href="#5" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Find the global maximum and minimum values of <span class="arithmatex">\(f(x)=e^{-x^2/2}\)</span> on <span class="arithmatex">\((-\infty,\infty)\)</span>, if they exist.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>Differentiate:
+     $<span class="arithmatex">\(f'(x)=-x\,e^{-x^2/2}\)</span>$
+     因 <span class="arithmatex">\(e^{-x^2/2}&gt;0\)</span> 恒成立，故 <span class="arithmatex">\(f'(x)=0 \iff x=0\)</span>。</li>
+<li>Determine monotonicity:<ul>
+<li><span class="arithmatex">\(x&lt;0\)</span>：<span class="arithmatex">\(f'(x)&gt;0\)</span>，<span class="arithmatex">\(f\)</span> 递增；</li>
+<li><span class="arithmatex">\(x&gt;0\)</span>：<span class="arithmatex">\(f'(x)&lt;0\)</span>，<span class="arithmatex">\(f\)</span> 递减。</li>
+</ul>
+</li>
+<li>First Derivative Test: <span class="arithmatex">\(f'\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处由正变负 <span class="arithmatex">\(\implies f(0)=1\)</span> 为局部最大值。由于 <span class="arithmatex">\(x=0\)</span> 是唯一驻点，由推论知它也是全局最大值。</li>
+<li>Check the behavior at infinity:
+     $<span class="arithmatex">\(\lim_{x\to\pm\infty}e^{-x^2/2}=0\)</span>$
+     但 <span class="arithmatex">\(e^{-x^2/2}&gt;0\)</span> 对一切 <span class="arithmatex">\(x\)</span> 成立，<span class="arithmatex">\(0\)</span> 永远取不到，故<strong>没有全局最小值</strong>（下确界为 <span class="arithmatex">\(0\)</span>）。</li>
+<li><strong>中文详解:</strong> <span class="arithmatex">\(f'(x)=-xe^{-x^2/2}\)</span> 的符号只由 <span class="arithmatex">\(-x\)</span> 决定：左侧为正、右侧为负，所以 <span class="arithmatex">\(x=0\)</span> 是唯一的“山顶”，且是全局最大值 <span class="arithmatex">\(1\)</span>。当 <span class="arithmatex">\(x\to\pm\infty\)</span> 时函数值趋于 <span class="arithmatex">\(0\)</span> 但恒大于 <span class="arithmatex">\(0\)</span>，因此最小值不存在，下确界为 <span class="arithmatex">\(0\)</span>。这是开区间最值问题的典型结论：<strong>最值可能“只趋近、不取到”</strong>。</li>
+</ul>
+<h4 id="6-two-standard-procedures">6. 求最值的两套标准流程 (Two Standard Procedures)<a class="headerlink" href="#6-two-standard-procedures" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">情形</th>
+<th style="text-align: left;">闭区间 <span class="arithmatex">\([a,b]\)</span> 上的连续函数</th>
+<th style="text-align: left;">开区间 <span class="arithmatex">\((a,b)\)</span> 上的可导函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">求 <span class="arithmatex">\(f'(x)\)</span>，解 <span class="arithmatex">\(f'(x)=0\)</span> 得驻点</td>
+<td style="text-align: left;">求 <span class="arithmatex">\(f'(x)\)</span>，解 <span class="arithmatex">\(f'(x)=0\)</span> 得驻点</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">找出区间内所有奇点（<span class="arithmatex">\(f'\)</span> 不存在处）</td>
+<td style="text-align: left;">找出区间内所有奇点</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">把端点 <span class="arithmatex">\(a,b\)</span> 也列为候选点</td>
+<td style="text-align: left;">端点不是候选点，改为计算 <span class="arithmatex">\(x\to a^+\)</span>、<span class="arithmatex">\(x\to b^-\)</span> 的极限</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">计算所有候选点的函数值</td>
+<td style="text-align: left;">用一阶或二阶判别法判断驻点/奇点的极值性</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">比较大小，最大者为全局最大，最小者为全局最小</td>
+<td style="text-align: left;">结合单调性与端点极限确定全局最值（或说明不存在）</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>要点:</strong> 闭区间用“候选点枚举 + 比较”；开区间用“单调性/极值 + 端点极限”。开区间上若唯一驻点且为局部极值，可直接由推论断言全局极值。</li>
+</ul>
+<hr />
+<h3 id="44-practical-problems-optimization">4.4 Practical Problems (Optimization / 优化问题)<a class="headerlink" href="#44-practical-problems-optimization" title="Permanent link">¶</a></h3>
+<h4 id="1-a-summary-of-the-method">1. 优化问题五步法 (A Summary of the Method)<a class="headerlink" href="#1-a-summary-of-the-method" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>画图设元 (Draw and label):</strong> 画出几何图形，用字母表示所有相关长度，并在图上标出已知量与未知量。</li>
+<li><strong>写出目标函数 (Objective function):</strong> 把要求最大/最小的量（面积、体积、成本等）写成变量的函数 <span class="arithmatex">\(F\)</span>。</li>
+<li><strong>消元化单变量 (Eliminate variables):</strong> 利用约束条件（如周长固定、相似三角形、勾股定理）把 <span class="arithmatex">\(F\)</span> 化为<strong>一个</strong>变量的函数，并根据几何意义写出定义域。</li>
+<li><strong>求临界点 (Find critical points):</strong> 在定义域内解 <span class="arithmatex">\(F'=0\)</span>，并检查 <span class="arithmatex">\(F'\)</span> 不存在的点与端点。</li>
+<li><strong>判别并作答 (Test and answer):</strong> 开区间用一阶/二阶判别法；闭区间比较各候选点函数值；最后回到实际问题，写清单位与所问的量。</li>
+</ol>
+<h4 id="2-modeling-tips">2. 建模要点 (Modeling Tips)<a class="headerlink" href="#2-modeling-tips" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>约束方程 vs 目标函数:</strong> 先写约束（如 <span class="arithmatex">\(2x+2y=100\)</span>、<span class="arithmatex">\(\frac{r}{h}=\frac{b}{a}\)</span>），再把它代入目标函数消元。</li>
+<li><strong>定义域来自几何:</strong> 长度非负、内接要求、盒子边长不能超过纸板尺寸的一半等，务必写清 <span class="arithmatex">\(x\)</span> 的范围。</li>
+<li><strong>端点检验:</strong> 若定义域是开区间，最优点在内部时用导数判别；若定义域是闭区间，还要比较端点值。</li>
+<li><strong>单位统一:</strong> 长度、面积、体积单位全程一致，答案注明单位。</li>
+</ul>
+<h4 id="lecture-examples-solutions_1">🌟 课件例题与详解 (Lecture Examples &amp; Solutions)<a class="headerlink" href="#lecture-examples-solutions_1" title="Permanent link">¶</a></h4>
+<h5 id="6">【课件例题 6】纸板做无盖盒（开区间 + 二阶导数检验）<a class="headerlink" href="#6" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> A rectangular box is to be made from a piece of cardboard 24 inches long and 9 inches wide by cutting out identical squares from the four corners and turning up the sides. Find the dimensions of the box of maximum volume. What is this volume?</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>Let <span class="arithmatex">\(x\)</span> be the side length of each cut-out square. Then the base is <span class="arithmatex">\((24-2x)\)</span> by <span class="arithmatex">\((9-2x)\)</span>, and the height is <span class="arithmatex">\(x\)</span>.</li>
+<li>The volume is
+     $<span class="arithmatex">\(V(x)=(24-2x)(9-2x)x,\qquad 0&lt;x&lt;\frac{9}{2}\)</span>$</li>
+<li>Expand and differentiate:
+     $<span class="arithmatex">\(V(x)=4x^3-66x^2+216x\)</span>$
+     $<span class="arithmatex">\(V'(x)=12x^2-132x+216=12(x^2-11x+18)=12(x-2)(x-9)\)</span>$</li>
+<li>Critical points: <span class="arithmatex">\(x=2\)</span> and <span class="arithmatex">\(x=9\)</span>；只有 <span class="arithmatex">\(x=2\)</span> 落在定义域 <span class="arithmatex">\(\left(0,\frac{9}{2}\right)\)</span> 内。</li>
+<li>Second Derivative Test:
+     $<span class="arithmatex">\(V''(x)=24x-132,\qquad V''(2)=48-132=-84&lt;0\)</span>$
+     故 <span class="arithmatex">\(x=2\)</span> 给出最大值。</li>
+<li>Compute:
+     $<span class="arithmatex">\(V(2)=(24-4)(9-4)(2)=20\cdot 5\cdot 2=200\)</span>$
+     盒子尺寸为 <span class="arithmatex">\(20\text{ in}\times 5\text{ in}\times 2\text{ in}\)</span>，最大体积为 <span class="arithmatex">\(200\text{ in}^3\)</span>。</li>
+<li><strong>中文详解:</strong> 四角剪去边长为 <span class="arithmatex">\(x\)</span> 的正方形后折起，底面为 <span class="arithmatex">\((24-2x)\times(9-2x)\)</span>，高为 <span class="arithmatex">\(x\)</span>，于是体积 <span class="arithmatex">\(V(x)=(24-2x)(9-2x)x\)</span>。求导得 <span class="arithmatex">\(V'(x)=12(x-2)(x-9)\)</span>，在 <span class="arithmatex">\((0,4.5)\)</span> 内唯一驻点为 <span class="arithmatex">\(x=2\)</span>。因为 <span class="arithmatex">\(V''(2)=-84&lt;0\)</span>，该驻点为极大值点；又定义域是开区间且两端 <span class="arithmatex">\(V\to 0\)</span>，故也是全局最大值。代入得体积 <span class="arithmatex">\(200\)</span> 立方英寸，盒子尺寸 <span class="arithmatex">\(20\times 5\times 2\)</span> 英寸。</li>
+</ul>
+<h5 id="7">【课件例题 7】圆锥内接圆柱（相似三角形约束）<a class="headerlink" href="#7" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> A cylinder is inscribed in a cone of base radius <span class="arithmatex">\(b\)</span> and height <span class="arithmatex">\(a\)</span>. Find the radius and height of the cylinder of maximum volume.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>Let <span class="arithmatex">\(r\)</span> and <span class="arithmatex">\(h\)</span> be the radius and height of the cylinder. By similar triangles (axial cross-section):
+     $<span class="arithmatex">\(\frac{a-h}{r}=\frac{a}{b}\implies h=a-\frac{a}{b}r,\qquad 0&lt;r&lt;b\)</span>$</li>
+<li>Volume of the cylinder:
+     $<span class="arithmatex">\(V(r)=\pi r^2h=\pi r^2\left(a-\frac{a}{b}r\right)=\pi ar^2-\frac{\pi a}{b}r^3\)</span>$</li>
+<li>Differentiate:
+     $<span class="arithmatex">\(V'(r)=2\pi ar-\frac{3\pi a}{b}r^2=\pi ar\left(2-\frac{3r}{b}\right)\)</span>$</li>
+<li>Critical points: <span class="arithmatex">\(r=0\)</span>（端点，舍去）与 <span class="arithmatex">\(r=\dfrac{2b}{3}\)</span>。</li>
+<li>Second Derivative Test:
+     $<span class="arithmatex">\(V''(r)=2\pi a-\frac{6\pi a}{b}r,\qquad V''\left(\frac{2b}{3}\right)=2\pi a-4\pi a=-2\pi a&lt;0\)</span>$
+     故 <span class="arithmatex">\(r=\dfrac{2b}{3}\)</span> 给出最大值。</li>
+<li>Then
+     $<span class="arithmatex">\(h=a-\frac{a}{b}\cdot\frac{2b}{3}=\frac{a}{3},\qquad V_{\max}=\pi\left(\frac{2b}{3}\right)^2\cdot\frac{a}{3}=\frac{4\pi ab^2}{27}\)</span>$</li>
+<li><strong>中文详解:</strong> 关键是用轴截面中的相似三角形把高 <span class="arithmatex">\(h\)</span> 用半径 <span class="arithmatex">\(r\)</span> 表示：<span class="arithmatex">\(\frac{a-h}{r}=\frac{a}{b}\)</span>，得 <span class="arithmatex">\(h=a-\frac{a}{b}r\)</span>。代入圆柱体积公式后得到只含 <span class="arithmatex">\(r\)</span> 的函数 <span class="arithmatex">\(V(r)=\pi ar^2-\frac{\pi a}{b}r^3\)</span>。求导得 <span class="arithmatex">\(V'(r)=\pi ar\left(2-\frac{3r}{b}\right)\)</span>，唯一内部驻点 <span class="arithmatex">\(r=\frac{2b}{3}\)</span>；由 <span class="arithmatex">\(V''&lt;0\)</span> 知为极大，结合端点 <span class="arithmatex">\(r\to 0\)</span> 与 <span class="arithmatex">\(r\to b\)</span> 时体积趋于 <span class="arithmatex">\(0\)</span>，它是全局最大。此时高为 <span class="arithmatex">\(\frac{a}{3}\)</span>，最大体积为 <span class="arithmatex">\(\frac{4\pi ab^2}{27}\)</span>。也可用闭区间 <span class="arithmatex">\([0,b]\)</span> 比较端点与驻点值，结论相同。</li>
+</ul>
+<h5 id="8">【课件例题 8】半圆内接矩形（闭区间比较法）<a class="headerlink" href="#8" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> A rectangle is inscribed in a semicircle of radius <span class="arithmatex">\(r\)</span> with its base on the diameter. Find the dimensions of the rectangle of maximum area.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>Place the semicircle as <span class="arithmatex">\(x^2+y^2=r^2\)</span>, <span class="arithmatex">\(y\ge 0\)</span>. Let the upper-right vertex be <span class="arithmatex">\((x,y)\)</span> with <span class="arithmatex">\(0\le x\le r\)</span>; then the rectangle has width <span class="arithmatex">\(2x\)</span> and height <span class="arithmatex">\(y=\sqrt{r^2-x^2}\)</span>.</li>
+<li>Area:
+     $<span class="arithmatex">\(A(x)=2x\sqrt{r^2-x^2},\qquad 0\le x\le r\)</span>$</li>
+<li>Differentiate (product/chain rule):
+     $<span class="arithmatex">\(A'(x)=2\sqrt{r^2-x^2}+2x\cdot\frac{-x}{\sqrt{r^2-x^2}}=\frac{2(r^2-x^2)-2x^2}{\sqrt{r^2-x^2}}=\frac{2(r^2-2x^2)}{\sqrt{r^2-x^2}}\)</span>$</li>
+<li>Critical points: <span class="arithmatex">\(A'(x)=0\implies x=\dfrac{r}{\sqrt{2}}\)</span>；端点 <span class="arithmatex">\(x=0\)</span> 与 <span class="arithmatex">\(x=r\)</span> 处 <span class="arithmatex">\(A=0\)</span>。</li>
+<li>Compare:
+     $<span class="arithmatex">\(A\left(\frac{r}{\sqrt{2}}\right)=2\cdot\frac{r}{\sqrt{2}}\cdot\sqrt{r^2-\frac{r^2}{2}}=2\cdot\frac{r}{\sqrt{2}}\cdot\frac{r}{\sqrt{2}}=r^2\)</span>$
+     故最大面积为 <span class="arithmatex">\(r^2\)</span>，此时宽 <span class="arithmatex">\(2x=\sqrt{2}\,r\)</span>，高 <span class="arithmatex">\(y=\dfrac{r}{\sqrt{2}}\)</span>。</li>
+<li><strong>中文详解:</strong> 设矩形右上顶点为 <span class="arithmatex">\((x,y)\)</span>，则宽为 <span class="arithmatex">\(2x\)</span>、高为 <span class="arithmatex">\(y=\sqrt{r^2-x^2}\)</span>，面积 <span class="arithmatex">\(A(x)=2x\sqrt{r^2-x^2}\)</span>，定义域是闭区间 <span class="arithmatex">\([0,r]\)</span>。求导并通分得 <span class="arithmatex">\(A'(x)=\frac{2(r^2-2x^2)}{\sqrt{r^2-x^2}}\)</span>，驻点 <span class="arithmatex">\(x=\frac{r}{\sqrt{2}}\)</span>。因为端点 <span class="arithmatex">\(x=0,r\)</span> 处面积为 <span class="arithmatex">\(0\)</span>，而驻点处 <span class="arithmatex">\(A=r^2&gt;0\)</span>，故驻点即为最大值点。最大矩形宽 <span class="arithmatex">\(\sqrt{2}r\)</span>、高 <span class="arithmatex">\(\frac{r}{\sqrt{2}}\)</span>，面积 <span class="arithmatex">\(r^2\)</span>。</li>
+</ul>
+<h4 id="3-self-study-further-exercises">3. Self-Study 补充例题 (Further Exercises)<a class="headerlink" href="#3-self-study-further-exercises" title="Permanent link">¶</a></h4>
+<h5 id="9">【课件例题 9】三次多项式的局部极值（二阶导数法）<a class="headerlink" href="#9" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Find the local extreme values of <span class="arithmatex">\(f(x)=x^3-3x^2+2\)</span>.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>
+<div class="arithmatex">\[f'(x)=3x^2-6x=3x(x-2)\implies x=0,\ 2\]</div>
+</li>
+<li>
+<div class="arithmatex">\[f''(x)=6x-6\]</div>
+</li>
+<li><span class="arithmatex">\(f''(0)=-6&lt;0\implies f(0)=2\)</span> 为局部最大值；
+     <span class="arithmatex">\(f''(2)=6&gt;0\implies f(2)=8-12+2=-2\)</span> 为局部最小值。</li>
+<li><strong>中文详解:</strong> 求导得 <span class="arithmatex">\(f'(x)=3x(x-2)\)</span>，驻点为 <span class="arithmatex">\(0\)</span> 与 <span class="arithmatex">\(2\)</span>。二阶导数 <span class="arithmatex">\(f''(x)=6x-6\)</span>：在 <span class="arithmatex">\(0\)</span> 处为 <span class="arithmatex">\(-6&lt;0\)</span>，故 <span class="arithmatex">\(f(0)=2\)</span> 是局部极大；在 <span class="arithmatex">\(2\)</span> 处为 <span class="arithmatex">\(6&gt;0\)</span>，故 <span class="arithmatex">\(f(2)=-2\)</span> 是局部极小。本题也可用一阶导数符号表验证。</li>
+</ul>
+<h5 id="10">【课件例题 10】椭圆内接最大矩形（显函数法与隐函数法）<a class="headerlink" href="#10" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Find the dimensions of the rectangle of maximum area inscribed in the ellipse <span class="arithmatex">\(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\)</span>.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>By symmetry, let the first-quadrant vertex be <span class="arithmatex">\((x,y)\)</span>; the rectangle has width <span class="arithmatex">\(2x\)</span> and height <span class="arithmatex">\(2y\)</span>, so
+     $<span class="arithmatex">\(A=4xy\)</span>$</li>
+<li><strong>Method 1 (explicit):</strong> From the ellipse equation,
+     $<span class="arithmatex">\(y=b\sqrt{1-\frac{x^2}{a^2}},\qquad 0\le x\le a\)</span>$
+     $<span class="arithmatex">\(A(x)=4bx\sqrt{1-\frac{x^2}{a^2}}\)</span>$
+     $<span class="arithmatex">\(A'(x)=4b\left[\sqrt{1-\frac{x^2}{a^2}}+x\cdot\frac{-x/a^2}{\sqrt{1-x^2/a^2}}\right]=\frac{4b\left(a^2-2x^2\right)}{a^2\sqrt{1-x^2/a^2}}\)</span>$
+     令 <span class="arithmatex">\(A'=0\)</span> 得 <span class="arithmatex">\(x=\dfrac{a}{\sqrt{2}}\)</span>，此时 <span class="arithmatex">\(y=\dfrac{b}{\sqrt{2}}\)</span>。</li>
+<li><strong>Method 2 (implicit):</strong> Differentiate the constraint implicitly:
+     $<span class="arithmatex">\(\frac{2x}{a^2}+\frac{2y}{b^2}y'=0\implies y'=-\frac{b^2x}{a^2y}\)</span>$
+     Set <span class="arithmatex">\(\dfrac{dA}{dx}=4y+4xy'=0\)</span>:
+     $<span class="arithmatex">\(4y+4x\left(-\frac{b^2x}{a^2y}\right)=0\implies a^2y^2=b^2x^2\implies \frac{x^2}{a^2}=\frac{y^2}{b^2}\)</span>$
+     Combined with the ellipse equation, <span class="arithmatex">\(\dfrac{x^2}{a^2}=\dfrac{y^2}{b^2}=\dfrac12\)</span>.</li>
+<li>Hence
+     $<span class="arithmatex">\(x=\frac{a}{\sqrt{2}},\quad y=\frac{b}{\sqrt{2}};\qquad \text{dimensions } \sqrt{2}a\times\sqrt{2}b,\quad A_{\max}=4\cdot\frac{a}{\sqrt{2}}\cdot\frac{b}{\sqrt{2}}=2ab\)</span>$</li>
+<li>Endpoints <span class="arithmatex">\(x=0\)</span> and <span class="arithmatex">\(x=a\)</span> give <span class="arithmatex">\(A=0\)</span>, so the critical point is the global maximum.</li>
+<li><strong>中文详解:</strong> 方法一直接由椭圆方程解出 <span class="arithmatex">\(y=b\sqrt{1-x^2/a^2}\)</span>，代入 <span class="arithmatex">\(A=4xy\)</span> 得单变量函数，求导后分子为 <span class="arithmatex">\(4b(a^2-2x^2)\)</span>，驻点 <span class="arithmatex">\(x=\frac{a}{\sqrt{2}}\)</span>，对应 <span class="arithmatex">\(y=\frac{b}{\sqrt{2}}\)</span>。方法二对约束方程隐求导得 <span class="arithmatex">\(y'=-\frac{b^2x}{a^2y}\)</span>，再令 <span class="arithmatex">\(\frac{dA}{dx}=4y+4xy'=0\)</span>，化简得 <span class="arithmatex">\(a^2y^2=b^2x^2\)</span>，即 <span class="arithmatex">\(\frac{x^2}{a^2}=\frac{y^2}{b^2}\)</span>。结合椭圆方程得两者都等于 <span class="arithmatex">\(\frac12\)</span>。两种方法结论一致：最大矩形边长为 <span class="arithmatex">\(\sqrt{2}a\)</span> 与 <span class="arithmatex">\(\sqrt{2}b\)</span>，最大面积 <span class="arithmatex">\(2ab\)</span>。</li>
+</ul>
+<hr />
+<h3 id="45-graphing-functions-using-calculus">4.5* Graphing Functions Using Calculus (用微积分作函数图像)<a class="headerlink" href="#45-graphing-functions-using-calculus" title="Permanent link">¶</a></h3>
+<h4 id="1-general-procedure">1. 作图四步法 (General Procedure)<a class="headerlink" href="#1-general-procedure" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Step 1 预分析 (Pre-calculus analysis):</strong></li>
+<li>定义域 (domain) 与值域 (range)；</li>
+<li>对称性 (symmetry)：偶函数 <span class="arithmatex">\(f(-x)=f(x)\)</span> 关于 <span class="arithmatex">\(y\)</span> 轴对称，奇函数 <span class="arithmatex">\(f(-x)=-f(x)\)</span> 关于原点对称；</li>
+<li>截距 (intercepts)：令 <span class="arithmatex">\(y=0\)</span> 求 <span class="arithmatex">\(x\)</span> 截距，令 <span class="arithmatex">\(x=0\)</span> 求 <span class="arithmatex">\(y\)</span> 截距。</li>
+<li><strong>Step 2 微积分分析 (Calculus analysis):</strong></li>
+<li>用 <span class="arithmatex">\(f'\)</span> 求临界点、单调区间、局部极值；</li>
+<li>用 <span class="arithmatex">\(f''\)</span> 求凹凸区间与拐点 (inflection points)；</li>
+<li>求渐近线 (asymptotes)。</li>
+<li><strong>Step 3 描点 (Plot key points):</strong> 标出临界点、拐点、截距以及若干辅助点。</li>
+<li><strong>Step 4 连线 (Sketch):</strong> 按单调性与凹凸性，用光滑曲线连接各关键点，注意渐近线附近的行为。</li>
+</ul>
+<h4 id="2-asymptotes">2. 渐近线 (Asymptotes)<a class="headerlink" href="#2-asymptotes" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>水平渐近线 (Horizontal Asymptote):</strong> 若 <span class="arithmatex">\(\lim_{x\to+\infty}f(x)=L\)</span> 或 <span class="arithmatex">\(\lim_{x\to-\infty}f(x)=L\)</span>，则 <span class="arithmatex">\(y=L\)</span> 是水平渐近线。</li>
+<li><strong>垂直渐近线 (Vertical Asymptote):</strong> 若 <span class="arithmatex">\(\lim_{x\to a^+}f(x)=\pm\infty\)</span> 或 <span class="arithmatex">\(\lim_{x\to a^-}f(x)=\pm\infty\)</span>，则 <span class="arithmatex">\(x=a\)</span> 是垂直渐近线。对有理函数，分母的零点（分子不同时为零）是垂直渐近线的候选点。</li>
+<li><strong>斜渐近线 (Slant Asymptote):</strong> 若 <span class="arithmatex">\(f(x)-(mx+c)\to 0\)</span>（<span class="arithmatex">\(x\to\pm\infty\)</span>），则 <span class="arithmatex">\(y=mx+c\)</span> 为斜渐近线；当分子次数比分母恰好多 <span class="arithmatex">\(1\)</span> 时出现。</li>
+</ul>
+<h4 id="lecture-examples-solutions_2">🌟 课件例题与详解 (Lecture Examples &amp; Solutions)<a class="headerlink" href="#lecture-examples-solutions_2" title="Permanent link">¶</a></h4>
+<h5 id="11">【课件例题 11】有理函数的完整分析<a class="headerlink" href="#11" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> For <span class="arithmatex">\(f(x)=\dfrac{x^2}{x^2+1}\)</span>, <span class="arithmatex">\(-\infty&lt;x&lt;\infty\)</span>, find:
+(1a) the intervals on which <span class="arithmatex">\(f\)</span> is increasing and decreasing;
+(1b) the local and global extreme values;
+(2a) the intervals of upward and downward concavity;
+(2b) the inflection points;
+(3) all asymptotes; then sketch the graph.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>Rewrite the function to simplify differentiation:
+     $<span class="arithmatex">\(f(x)=\frac{x^2}{x^2+1}=1-\frac{1}{x^2+1}\)</span>$</li>
+<li>First derivative:
+     $<span class="arithmatex">\(f'(x)=\frac{2x}{(x^2+1)^2}\)</span>$
+     <span class="arithmatex">\(f'(x)=0\iff x=0\)</span>；<span class="arithmatex">\(f'\)</span> 处处存在，无奇点。</li>
+<li><strong>(1a) Monotonicity:</strong><ul>
+<li><span class="arithmatex">\(x&lt;0\)</span>：<span class="arithmatex">\(f'(x)&lt;0\implies f\)</span> 递减；</li>
+<li><span class="arithmatex">\(x&gt;0\)</span>：<span class="arithmatex">\(f'(x)&gt;0\implies f\)</span> 递增。
+ 故 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\((-\infty,0]\)</span> 上递减，在 <span class="arithmatex">\([0,\infty)\)</span> 上递增。</li>
+</ul>
+</li>
+<li><strong>(1b) Extreme values:</strong> 由一阶判别法，<span class="arithmatex">\(x=0\)</span> 为局部极小点，<span class="arithmatex">\(f(0)=0\)</span>。由于 <span class="arithmatex">\(x=0\)</span> 是唯一驻点且为极小点，<span class="arithmatex">\(f(0)=0\)</span> 也是全局最小值。又
+     $<span class="arithmatex">\(\lim_{x\to\pm\infty}\frac{x^2}{x^2+1}=1\)</span>$
+     但 <span class="arithmatex">\(\dfrac{x^2}{x^2+1}&lt;1\)</span> 恒成立（分母比分子大 <span class="arithmatex">\(1\)</span>），<span class="arithmatex">\(1\)</span> 取不到，故<strong>没有全局最大值</strong>，值域为 <span class="arithmatex">\([0,1)\)</span>。</li>
+<li>Second derivative:
+     $<span class="arithmatex">\(f''(x)=\frac{2(x^2+1)^2-2x\cdot 2(x^2+1)\cdot 2x}{(x^2+1)^4}=\frac{2(x^2+1)-8x^2}{(x^2+1)^3}=\frac{2(1-3x^2)}{(x^2+1)^3}\)</span>$</li>
+<li><strong>(2a) Concavity:</strong> <span class="arithmatex">\(f''(x)=0\iff x=\pm\dfrac{1}{\sqrt{3}}\)</span>。<ul>
+<li><span class="arithmatex">\(\left(-\infty,-\dfrac{1}{\sqrt{3}}\right)\)</span>：<span class="arithmatex">\(1-3x^2&lt;0\implies f''&lt;0\)</span>，凹向下 (CD)；</li>
+<li><span class="arithmatex">\(\left(-\dfrac{1}{\sqrt{3}},\dfrac{1}{\sqrt{3}}\right)\)</span>：<span class="arithmatex">\(1-3x^2&gt;0\implies f''&gt;0\)</span>，凹向上 (CU)；</li>
+<li><span class="arithmatex">\(\left(\dfrac{1}{\sqrt{3}},\infty\right)\)</span>：<span class="arithmatex">\(1-3x^2&lt;0\implies f''&lt;0\)</span>，凹向下 (CD)。</li>
+</ul>
+</li>
+<li><strong>(2b) Inflection points:</strong> <span class="arithmatex">\(f''\)</span> 在 <span class="arithmatex">\(x=\pm\dfrac{1}{\sqrt{3}}\)</span> 两侧变号，且
+     $<span class="arithmatex">\(f\left(\pm\frac{1}{\sqrt{3}}\right)=\frac{1/3}{1+1/3}=\frac{1}{4}\)</span>$
+     故拐点为 <span class="arithmatex">\(\left(-\dfrac{1}{\sqrt{3}},\dfrac{1}{4}\right)\)</span> 与 <span class="arithmatex">\(\left(\dfrac{1}{\sqrt{3}},\dfrac{1}{4}\right)\)</span>。</li>
+<li><strong>(3) Asymptotes:</strong><ul>
+<li>水平渐近线：<span class="arithmatex">\(\lim_{x\to\pm\infty}f(x)=1\implies y=1\)</span>；</li>
+<li>垂直渐近线：分母 <span class="arithmatex">\(x^2+1\neq 0\)</span>，无垂直渐近线；</li>
+<li>无斜渐近线（已有水平渐近线）。</li>
+</ul>
+</li>
+<li>
+<p><strong>Sign table:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">区间</th>
+<th style="text-align: center;"><span class="arithmatex">\((-\infty,-\frac{1}{\sqrt{3}})\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(-\frac{1}{\sqrt{3}}\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\((-\frac{1}{\sqrt{3}},0)\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(0\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\((0,\frac{1}{\sqrt{3}})\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(\frac{1}{\sqrt{3}}\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\((\frac{1}{\sqrt{3}},\infty)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(f'(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(f''(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(f(x)\)</span></td>
+<td style="text-align: center;">递减、凹下</td>
+<td style="text-align: center;">拐点</td>
+<td style="text-align: center;">递减、凹上</td>
+<td style="text-align: center;">极小值 <span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;">递增、凹上</td>
+<td style="text-align: center;">拐点</td>
+<td style="text-align: center;">递增、凹下</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Sketch:</strong> 曲线关于 <span class="arithmatex">\(y\)</span> 轴对称（偶函数），过原点 <span class="arithmatex">\((0,0)\)</span>，在 <span class="arithmatex">\(x=0\)</span> 处取最小值 <span class="arithmatex">\(0\)</span>，向两侧递增并分别以 <span class="arithmatex">\(y=1\)</span> 为水平渐近线；在 <span class="arithmatex">\(x=\pm\frac{1}{\sqrt{3}}\)</span> 处由凹下变凹上、再由凹上变凹下，拐点高度均为 <span class="arithmatex">\(\frac14\)</span>。</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> 先把函数改写为 <span class="arithmatex">\(1-\frac{1}{x^2+1}\)</span>，求导更方便。<span class="arithmatex">\(f'(x)=\frac{2x}{(x^2+1)^2}\)</span>，符号只由 <span class="arithmatex">\(x\)</span> 决定：左负右正，故 <span class="arithmatex">\(x=0\)</span> 是全局最小点，最小值为 <span class="arithmatex">\(0\)</span>。由于 <span class="arithmatex">\(\frac{x^2}{x^2+1}&lt;1\)</span> 恒成立且极限为 <span class="arithmatex">\(1\)</span>，函数没有最大值，值域 <span class="arithmatex">\([0,1)\)</span>。二阶导数 <span class="arithmatex">\(f''(x)=\frac{2(1-3x^2)}{(x^2+1)^3}\)</span> 的零点为 <span class="arithmatex">\(\pm\frac{1}{\sqrt{3}}\)</span>：中间区间 <span class="arithmatex">\(f''&gt;0\)</span>（凹向上），两侧 <span class="arithmatex">\(f''&lt;0\)</span>（凹向下），故有两个拐点，纵坐标均为 <span class="arithmatex">\(\frac14\)</span>。渐近线方面，<span class="arithmatex">\(\lim_{x\to\pm\infty}f=1\)</span> 给出水平渐近线 <span class="arithmatex">\(y=1\)</span>，分母恒正故无垂直渐近线。整条曲线关于 <span class="arithmatex">\(y\)</span> 轴对称，最低点在原点，两侧分别从 <span class="arithmatex">\(0\)</span> 单调上升到接近 <span class="arithmatex">\(1\)</span>。</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../lecture07/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Lecture 7 · 最值与凹凸性">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                Lecture 7 · 最值与凹凸性
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../lecture09/" class="md-footer__link md-footer__link--next" aria-label="下一页: Lecture 9 · 中值定理与洛必达">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                Lecture 9 · 中值定理与洛必达
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      个人学习笔记，仅供自用
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.tracking", "search.suggest", "search.highlight", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/katex/katex.min.js"></script>
+      
+        <script src="../../javascripts/katex/auto-render.min.js"></script>
+      
+        <script src="../../javascripts/katex-init.js"></script>
+      
+    
+  </body>
+</html>

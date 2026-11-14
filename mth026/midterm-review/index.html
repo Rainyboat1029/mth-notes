@@ -1,0 +1,3848 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MTH026 微积分与 MTH028 线性代数的讲义、期中复习、练习题与答题卡">
+      
+      
+      
+        <link rel="canonical" href="https://rainyboat1029.github.io/mth-notes/mth026/midterm-review/">
+      
+      
+        <link rel="prev" href="../lecture09/">
+      
+      
+        <link rel="next" href="../concept-limits/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>期中复习（L1–L6） - 数学笔记 · MTH026 / MTH028</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../javascripts/katex/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mth026-calculus-midterm-review-notes-lectures-16" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="数学笔记 · MTH026 / MTH028" class="md-header__button md-logo" aria-label="数学笔记 · MTH026 / MTH028" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            数学笔记 · MTH026 / MTH028
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              期中复习（L1–L6）
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  微积分 MTH026
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mth028/" class="md-tabs__link">
+          
+  
+  
+  线性代数 MTH028
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="数学笔记 · MTH026 / MTH028" class="md-nav__button md-logo" aria-label="数学笔记 · MTH026 / MTH028" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    数学笔记 · MTH026 / MTH028
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微积分 MTH026
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    微积分 MTH026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 · 函数与预备知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 2 · 极限概念与运算法则
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 · 无穷极限与三角极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 4 · 指数对数极限与连续性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 5 · 导数与求导法则
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 6 · 隐微分与相关变化率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 7 · 最值与凹凸性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 8 · 优化与函数作图
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 · 中值定理与洛必达
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习（L1–L6）
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习（L1–L6）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-terminology-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第零部分：核心术语速查表 (Key Terminology Table)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第零部分：核心术语速查表 (Key Terminology Table)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-chapter-1-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.1 函数与预备知识 (Chapter 1: Functions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-chapter-2-limits-and-continuity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.2 极限与连续 (Chapter 2: Limits and Continuity)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-chapter-3-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.3 导数与相关变化率 (Chapter 3: Derivatives)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-1-1519" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一部分：函数与预备知识 (Lecture 1: §1.5–1.9)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一部分：函数与预备知识 (Lecture 1: §1.5–1.9)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#15-functions-and-their-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Functions and Their Graphs (函数及其图像)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-operations-on-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Operations on Functions (函数的运算)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-exponential-and-logarithmic-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Exponential and Logarithmic Functions (指数与对数函数)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-the-trigonometric-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 The Trigonometric Functions (三角函数)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-the-inverse-trigonometric-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9 The Inverse Trigonometric Functions (反三角函数)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-examples-from-assignments-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌟 典型例题精解 (Typical Examples from Assignments 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectures-24-212327" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二部分：极限与连续 (Lectures 2–4: §2.1、2.3–2.7)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二部分：极限与连续 (Lectures 2–4: §2.1、2.3–2.7)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-introduction-to-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Introduction to Limits (极限引论与直观概念)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-limit-theorems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Limit Theorems (极限定理与计算法则)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-limits-at-infinity-infinite-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Limits at Infinity; Infinite Limits (无穷远处的极限与无穷极限)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-limits-involving-trigonometric-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Limits Involving Trigonometric Functions (三角函数极限)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-limits-of-exponential-logarithmic-inverse-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Limits of Exponential, Logarithmic &amp; Inverse Functions (指数、对数与反函数极限)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-continuity-of-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Continuity of Functions (函数的连续性)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-examples-from-assignments-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌟 典型例题精解 (Typical Examples from Assignments 2–4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectures-56-31310" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三部分：导数 (Lectures 5–6: §3.1–3.10)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第三部分：导数 (Lectures 5–6: §3.1–3.10)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-two-problems-with-one-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Two Problems with One Theme (切线问题与瞬时速度)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-the-derivative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 The Derivative (导数的定义与性质)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-rules-for-finding-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Rules for Finding Derivatives (求导法则)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-derivatives-of-trigonometric-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Derivatives of Trigonometric Functions (三角函数导数)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-the-chain-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 The Chain Rule (链式法则)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-higher-order-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Higher-Order Derivatives (高阶导数)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-implicit-differentiation-logarithmic-differentiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 Implicit Differentiation &amp; Logarithmic Differentiation (隐函数求导与对数求导)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-related-rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8 Related Rates (相关变化率)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-derivatives-of-exponential-and-logarithmic-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.9 Derivatives of Exponential and Logarithmic Functions (指数与对数函数导数)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-derivatives-of-inverse-trigonometric-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.10 Derivatives of Inverse Trigonometric Functions (反三角函数导数)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-examples-from-assignments-56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌟 典型例题精解 (Typical Examples from Assignments 5–6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-formula-sheet-traps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附录：考前 10 分钟速览 (Formula Sheet &amp; Traps)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="附录：考前 10 分钟速览 (Formula Sheet &amp; Traps)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 高频极限
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 求导公式总表
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 十大易错点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concept-limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    极限的严谨定义
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_13" id="__nav_2_13_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    练习
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practice-basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础卷 · Week 1–6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practice-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进阶卷 · 综合提高
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性代数 MTH028
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    线性代数 MTH028
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 · §1.1 线性方程组
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 2 · §1.2 行化简
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 · §1.3–1.4 向量与矩阵方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 4 · §1.5 解集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 5 · §1.8 线性变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 6 · §2.1 矩阵运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 7 · §2.2 矩阵的逆
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 8 · §2.8 子空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 · §2.9 维数与秩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/midterm-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习（L1–L8）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    练习
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/practice-basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础卷 · Week 1–8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/practice-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进阶卷 · 综合提高
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-terminology-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第零部分：核心术语速查表 (Key Terminology Table)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第零部分：核心术语速查表 (Key Terminology Table)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-chapter-1-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.1 函数与预备知识 (Chapter 1: Functions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-chapter-2-limits-and-continuity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.2 极限与连续 (Chapter 2: Limits and Continuity)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-chapter-3-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.3 导数与相关变化率 (Chapter 3: Derivatives)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-1-1519" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一部分：函数与预备知识 (Lecture 1: §1.5–1.9)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一部分：函数与预备知识 (Lecture 1: §1.5–1.9)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#15-functions-and-their-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Functions and Their Graphs (函数及其图像)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-operations-on-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Operations on Functions (函数的运算)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-exponential-and-logarithmic-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Exponential and Logarithmic Functions (指数与对数函数)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-the-trigonometric-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 The Trigonometric Functions (三角函数)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-the-inverse-trigonometric-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9 The Inverse Trigonometric Functions (反三角函数)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-examples-from-assignments-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌟 典型例题精解 (Typical Examples from Assignments 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectures-24-212327" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二部分：极限与连续 (Lectures 2–4: §2.1、2.3–2.7)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二部分：极限与连续 (Lectures 2–4: §2.1、2.3–2.7)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-introduction-to-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Introduction to Limits (极限引论与直观概念)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-limit-theorems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Limit Theorems (极限定理与计算法则)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-limits-at-infinity-infinite-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Limits at Infinity; Infinite Limits (无穷远处的极限与无穷极限)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-limits-involving-trigonometric-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Limits Involving Trigonometric Functions (三角函数极限)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-limits-of-exponential-logarithmic-inverse-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Limits of Exponential, Logarithmic &amp; Inverse Functions (指数、对数与反函数极限)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-continuity-of-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Continuity of Functions (函数的连续性)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-examples-from-assignments-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌟 典型例题精解 (Typical Examples from Assignments 2–4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectures-56-31310" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三部分：导数 (Lectures 5–6: §3.1–3.10)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第三部分：导数 (Lectures 5–6: §3.1–3.10)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-two-problems-with-one-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Two Problems with One Theme (切线问题与瞬时速度)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-the-derivative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 The Derivative (导数的定义与性质)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-rules-for-finding-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Rules for Finding Derivatives (求导法则)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-derivatives-of-trigonometric-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Derivatives of Trigonometric Functions (三角函数导数)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-the-chain-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 The Chain Rule (链式法则)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-higher-order-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Higher-Order Derivatives (高阶导数)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-implicit-differentiation-logarithmic-differentiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 Implicit Differentiation &amp; Logarithmic Differentiation (隐函数求导与对数求导)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-related-rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8 Related Rates (相关变化率)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-derivatives-of-exponential-and-logarithmic-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.9 Derivatives of Exponential and Logarithmic Functions (指数与对数函数导数)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-derivatives-of-inverse-trigonometric-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.10 Derivatives of Inverse Trigonometric Functions (反三角函数导数)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-examples-from-assignments-56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌟 典型例题精解 (Typical Examples from Assignments 5–6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-formula-sheet-traps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附录：考前 10 分钟速览 (Formula Sheet &amp; Traps)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="附录：考前 10 分钟速览 (Formula Sheet &amp; Traps)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. 高频极限
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 求导公式总表
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. 十大易错点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mth026-calculus-midterm-review-notes-lectures-16">MTH026 Calculus 期中复习笔记 (Midterm Review Notes): Lectures 1–6 核心知识详解与典型例题<a class="headerlink" href="#mth026-calculus-midterm-review-notes-lectures-16" title="Permanent link">¶</a></h1>
+<blockquote>
+<p>覆盖范围：Lecture 1（§1.5–1.9 函数与预备知识）、Lecture 2（§2.1、2.3 极限）、Lecture 3（§2.4、2.5 无穷极限与三角极限）、Lecture 4（§2.6、2.7 指数对数极限、连续性与介值定理）、Lecture 5（§3.1–3.6 导数与求导法则）、Lecture 6（§3.9、3.10、3.7、3.8 指数对数与反三角导数、隐微分、对数求导、相关变化率）。</p>
+<p>使用建议：先背<strong>第零部分</strong>的术语表（期中选择题与计算题都直接考英文术语）；再按章节过定义、定理与公式；最后看每章末的<strong>典型例题</strong>（全部取自 Assignment 1–6 的同型题）。</p>
+</blockquote>
+<hr />
+<h2 id="key-terminology-table">第零部分：核心术语速查表 (Key Terminology Table)<a class="headerlink" href="#key-terminology-table" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>表中「公式/考点」一列为考前必须能默写的结论或易错点。</p>
+</blockquote>
+<h3 id="01-chapter-1-functions">0.1 函数与预备知识 (Chapter 1: Functions)<a class="headerlink" href="#01-chapter-1-functions" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">English Term</th>
+<th style="text-align: left;">中文</th>
+<th style="text-align: left;">含义 / 公式 / 考点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">function</td>
+<td style="text-align: left;">函数</td>
+<td style="text-align: left;">对定义域内每个 <span class="arithmatex">\(x\)</span> 指定<strong>唯一</strong>的 <span class="arithmatex">\(y\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">independent / dependent variable</td>
+<td style="text-align: left;">自变量 / 因变量</td>
+<td style="text-align: left;">输入 <span class="arithmatex">\(x\)</span> / 输出 <span class="arithmatex">\(y\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">domain</td>
+<td style="text-align: left;">定义域</td>
+<td style="text-align: left;">记作 <span class="arithmatex">\(D(f)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">range</td>
+<td style="text-align: left;">值域</td>
+<td style="text-align: left;"><span class="arithmatex">\(R(f)=\{y:y=f(x),\ x\in D(f)\}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">natural domain</td>
+<td style="text-align: left;">自然定义域</td>
+<td style="text-align: left;">使表达式有意义的<strong>最大</strong>实数集：分母 <span class="arithmatex">\(\neq 0\)</span>、偶次根号内 <span class="arithmatex">\(\ge 0\)</span>、对数真数 <span class="arithmatex">\(&gt;0\)</span>、<span class="arithmatex">\(\arcsin/\arccos\)</span> 内 <span class="arithmatex">\(\in[-1,1]\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">piecewise-defined function</td>
+<td style="text-align: left;">分段函数</td>
+<td style="text-align: left;">不同区间用不同表达式，常用 <span class="arithmatex">\([\ ]\)</span> 取整</td>
+</tr>
+<tr>
+<td style="text-align: left;">absolute value function</td>
+<td style="text-align: left;">绝对值函数</td>
+<td style="text-align: left;"><span class="arithmatex">\(\lvert x\rvert\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">signum function</td>
+<td style="text-align: left;">符号函数</td>
+<td style="text-align: left;"><span class="arithmatex">\(\operatorname{sgn} x\)</span>，取 <span class="arithmatex">\(-1,0,1\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">greatest integer function / floor</td>
+<td style="text-align: left;">取整函数（下取整）</td>
+<td style="text-align: left;"><span class="arithmatex">\([x]=\lfloor x\rfloor=\max\{n\in\mathbb{Z}:n\le x\}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">composition</td>
+<td style="text-align: left;">复合函数</td>
+<td style="text-align: left;"><span class="arithmatex">\((g\circ f)(x)=g(f(x))\)</span>；定义域要求 <span class="arithmatex">\(x\in D(f)\)</span> 且 <span class="arithmatex">\(f(x)\in D(g)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">decomposition</td>
+<td style="text-align: left;">复合函数分解</td>
+<td style="text-align: left;">由外而内层层剥离</td>
+</tr>
+<tr>
+<td style="text-align: left;">one-to-one (1-1) function</td>
+<td style="text-align: left;">一对一函数</td>
+<td style="text-align: left;"><span class="arithmatex">\(x_1\ne x_2\Rightarrow f(x_1)\ne f(x_2)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">horizontal line test</td>
+<td style="text-align: left;">水平线测试</td>
+<td style="text-align: left;">判断是否 1-1（从而有反函数）</td>
+</tr>
+<tr>
+<td style="text-align: left;">vertical line test</td>
+<td style="text-align: left;">垂直线测试</td>
+<td style="text-align: left;">判断图像是否为函数</td>
+</tr>
+<tr>
+<td style="text-align: left;">inverse function</td>
+<td style="text-align: left;">反函数</td>
+<td style="text-align: left;"><span class="arithmatex">\(f^{-1}\)</span>；<span class="arithmatex">\(D(f^{-1})=R(f)\)</span>，图像关于 <span class="arithmatex">\(y=x\)</span> 对称</td>
+</tr>
+<tr>
+<td style="text-align: left;">cancellation equations</td>
+<td style="text-align: left;">抵消方程</td>
+<td style="text-align: left;"><span class="arithmatex">\(f^{-1}(f(x))=x\)</span>，<span class="arithmatex">\(f(f^{-1}(y))=y\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">odd / even function</td>
+<td style="text-align: left;">奇 / 偶函数</td>
+<td style="text-align: left;"><span class="arithmatex">\(f(-x)=-f(x)\)</span> / <span class="arithmatex">\(f(-x)=f(x)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">exponential function</td>
+<td style="text-align: left;">指数函数</td>
+<td style="text-align: left;"><span class="arithmatex">\(a^x\ (a&gt;0,a\ne1)\)</span>；定义域 <span class="arithmatex">\(\mathbb{R}\)</span>，值域 <span class="arithmatex">\((0,\infty)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">base</td>
+<td style="text-align: left;">底数</td>
+<td style="text-align: left;"><span class="arithmatex">\(a\)</span>；<span class="arithmatex">\(e\approx2.71828\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">logarithmic function</td>
+<td style="text-align: left;">对数函数</td>
+<td style="text-align: left;"><span class="arithmatex">\(\log_a x\)</span> 是 <span class="arithmatex">\(a^x\)</span> 的反函数；定义域 <span class="arithmatex">\((0,\infty)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">natural logarithm</td>
+<td style="text-align: left;">自然对数</td>
+<td style="text-align: left;"><span class="arithmatex">\(\ln x=\log_e x\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">common logarithm</td>
+<td style="text-align: left;">常用对数</td>
+<td style="text-align: left;"><span class="arithmatex">\(\log_{10}x=\lg x\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">change of base formula</td>
+<td style="text-align: left;">换底公式</td>
+<td style="text-align: left;"><span class="arithmatex">\(\log_a b=\dfrac{\ln b}{\ln a}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">trigonometric functions</td>
+<td style="text-align: left;">三角函数</td>
+<td style="text-align: left;"><span class="arithmatex">\(\sin,\cos,\tan,\cot,\sec,\csc\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">secant / cosecant</td>
+<td style="text-align: left;">正割 / 余割</td>
+<td style="text-align: left;"><span class="arithmatex">\(\sec x=1/\cos x\)</span>，<span class="arithmatex">\(\csc x=1/\sin x\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">unit circle</td>
+<td style="text-align: left;">单位圆</td>
+<td style="text-align: left;">定义三角函数与判断符号（ASTC）</td>
+</tr>
+<tr>
+<td style="text-align: left;">radian</td>
+<td style="text-align: left;">弧度</td>
+<td style="text-align: left;">三角极限只有在弧度制下才成立 <span class="arithmatex">\(\lim_{t\to0}\frac{\sin t}{t}=1\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Pythagorean identities</td>
+<td style="text-align: left;">勾股恒等式</td>
+<td style="text-align: left;"><span class="arithmatex">\(\sin^2x+\cos^2x=1\)</span>；<span class="arithmatex">\(1+\tan^2x=\sec^2x\)</span>；<span class="arithmatex">\(1+\cot^2x=\csc^2x\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">double-angle identities</td>
+<td style="text-align: left;">倍角公式</td>
+<td style="text-align: left;"><span class="arithmatex">\(\sin2x=2\sin x\cos x\)</span>；<span class="arithmatex">\(\cos2x=2\cos^2x-1=1-2\sin^2x\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">inverse trigonometric functions</td>
+<td style="text-align: left;">反三角函数</td>
+<td style="text-align: left;"><span class="arithmatex">\(\arcsin,\arccos,\arctan\)</span>（主值分支）</td>
+</tr>
+<tr>
+<td style="text-align: left;">principal value</td>
+<td style="text-align: left;">主值</td>
+<td style="text-align: left;"><span class="arithmatex">\(\arcsin\)</span> 取 <span class="arithmatex">\([-\pi/2,\pi/2]\)</span>，<span class="arithmatex">\(\arccos\)</span> 取 <span class="arithmatex">\([0,\pi]\)</span>，<span class="arithmatex">\(\arctan\)</span> 取 <span class="arithmatex">\((-\pi/2,\pi/2)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">restricted domain</td>
+<td style="text-align: left;">限制定义域</td>
+<td style="text-align: left;">为得到反函数而把 <span class="arithmatex">\(\sin/\cos/\tan\)</span> 限制在主值区间</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="02-chapter-2-limits-and-continuity">0.2 极限与连续 (Chapter 2: Limits and Continuity)<a class="headerlink" href="#02-chapter-2-limits-and-continuity" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">English Term</th>
+<th style="text-align: left;">中文</th>
+<th style="text-align: left;">含义 / 公式 / 考点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">limit</td>
+<td style="text-align: left;">极限</td>
+<td style="text-align: left;"><span class="arithmatex">\(\lim_{x\to c}f(x)=L\)</span>：<span class="arithmatex">\(x\)</span> 靠近 <span class="arithmatex">\(c\)</span>（但 <span class="arithmatex">\(x\ne c\)</span>）时 <span class="arithmatex">\(f(x)\)</span> 任意接近 <span class="arithmatex">\(L\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">one-sided limit</td>
+<td style="text-align: left;">单侧极限</td>
+<td style="text-align: left;">左极限 <span class="arithmatex">\(\lim_{x\to c^-}\)</span>，右极限 <span class="arithmatex">\(\lim_{x\to c^+}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">two-sided limit</td>
+<td style="text-align: left;">双侧极限</td>
+<td style="text-align: left;">存在 <span class="arithmatex">\(\iff\)</span> 左右极限存在且相等（Theorem A）</td>
+</tr>
+<tr>
+<td style="text-align: left;">does not exist (DNE)</td>
+<td style="text-align: left;">极限不存在</td>
+<td style="text-align: left;">三种情形：左右不同、趋于无穷、无限振荡（如 <span class="arithmatex">\(\sin(1/x)\)</span>）</td>
+</tr>
+<tr>
+<td style="text-align: left;">indeterminate form</td>
+<td style="text-align: left;">未定式</td>
+<td style="text-align: left;">常见 <span class="arithmatex">\(0/0\)</span>、<span class="arithmatex">\(\infty/\infty\)</span>、<span class="arithmatex">\(1^\infty\)</span>、<span class="arithmatex">\(0\cdot\infty\)</span>、<span class="arithmatex">\(\infty-\infty\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">main limit theorem</td>
+<td style="text-align: left;">主极限定理</td>
+<td style="text-align: left;">和差积商、乘幂、开方的极限等于极限的相应运算（分母极限 <span class="arithmatex">\(\ne0\)</span>）</td>
+</tr>
+<tr>
+<td style="text-align: left;">substitution theorem</td>
+<td style="text-align: left;">直接代入定理</td>
+<td style="text-align: left;">多项式、有理函数、根式、三角函数在定义点处 <span class="arithmatex">\(\lim_{x\to c}f(x)=f(c)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">cancellation theorem</td>
+<td style="text-align: left;">消去定理</td>
+<td style="text-align: left;">去心邻域内 <span class="arithmatex">\(f=g\)</span> <span class="arithmatex">\(\Rightarrow\)</span> 极限相同；用于 <span class="arithmatex">\(0/0\)</span> 约分</td>
+</tr>
+<tr>
+<td style="text-align: left;">rationalization</td>
+<td style="text-align: left;">有理化</td>
+<td style="text-align: left;">含根号的 <span class="arithmatex">\(0/0\)</span> 或 <span class="arithmatex">\(\infty-\infty\)</span>，乘共轭式</td>
+</tr>
+<tr>
+<td style="text-align: left;">sign-preserving property</td>
+<td style="text-align: left;">保号性</td>
+<td style="text-align: left;">若 <span class="arithmatex">\(\lim_{x\to c}f(x)=L&gt;0\)</span>，则在 <span class="arithmatex">\(c\)</span> 附近 <span class="arithmatex">\(f(x)&gt;0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">squeeze theorem</td>
+<td style="text-align: left;">夹逼定理</td>
+<td style="text-align: left;"><span class="arithmatex">\(g\le f\le h\)</span> 且 <span class="arithmatex">\(\lim g=\lim h=L\Rightarrow\lim f=L\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">limit at infinity</td>
+<td style="text-align: left;">无穷远处极限</td>
+<td style="text-align: left;"><span class="arithmatex">\(\lim_{x\to\pm\infty}f(x)\)</span>；同除以分母最高次幂</td>
+</tr>
+<tr>
+<td style="text-align: left;">infinite limit</td>
+<td style="text-align: left;">无穷极限</td>
+<td style="text-align: left;"><span class="arithmatex">\(\lim_{x\to c}f(x)=\pm\infty\)</span>；注意左右符号</td>
+</tr>
+<tr>
+<td style="text-align: left;">horizontal asymptote</td>
+<td style="text-align: left;">水平渐近线</td>
+<td style="text-align: left;"><span class="arithmatex">\(\lim_{x\to\pm\infty}f(x)=L\Rightarrow y=L\)</span>（最多两条）</td>
+</tr>
+<tr>
+<td style="text-align: left;">vertical asymptote</td>
+<td style="text-align: left;">垂直渐近线</td>
+<td style="text-align: left;">单侧极限为 <span class="arithmatex">\(\pm\infty\)</span> 处 <span class="arithmatex">\(x=c\)</span>；先约去公因式再找</td>
+</tr>
+<tr>
+<td style="text-align: left;">sequence</td>
+<td style="text-align: left;">数列</td>
+<td style="text-align: left;"><span class="arithmatex">\(n\to\infty\)</span> 时用同样方法；夹逼、主极限定理均适用</td>
+</tr>
+<tr>
+<td style="text-align: left;">continuity at a point</td>
+<td style="text-align: left;">点连续</td>
+<td style="text-align: left;">三条件：<span class="arithmatex">\(f(c)\)</span> 有定义；<span class="arithmatex">\(\lim_{x\to c}f(x)\)</span> 存在；二者相等</td>
+</tr>
+<tr>
+<td style="text-align: left;">removable discontinuity</td>
+<td style="text-align: left;">可去间断点</td>
+<td style="text-align: left;">极限存在但 <span class="arithmatex">\(\ne f(c)\)</span> 或 <span class="arithmatex">\(f(c)\)</span> 未定义（补定义即可连续）</td>
+</tr>
+<tr>
+<td style="text-align: left;">jump discontinuity</td>
+<td style="text-align: left;">跳跃间断点</td>
+<td style="text-align: left;">左右极限都存在但不相等</td>
+</tr>
+<tr>
+<td style="text-align: left;">infinite discontinuity</td>
+<td style="text-align: left;">无穷间断点</td>
+<td style="text-align: left;">单侧或双侧极限为 <span class="arithmatex">\(\pm\infty\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">oscillating discontinuity</td>
+<td style="text-align: left;">振荡间断点</td>
+<td style="text-align: left;">如 <span class="arithmatex">\(\sin(1/x)\)</span> 在 <span class="arithmatex">\(0\)</span> 处</td>
+</tr>
+<tr>
+<td style="text-align: left;">elementary function</td>
+<td style="text-align: left;">初等函数</td>
+<td style="text-align: left;">基本初等函数经有限次四则运算与复合而成；在其定义域上连续</td>
+</tr>
+<tr>
+<td style="text-align: left;">composite limit theorem</td>
+<td style="text-align: left;">复合极限定理</td>
+<td style="text-align: left;"><span class="arithmatex">\(\lim g=L\)</span> 且 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(L\)</span> 连续 <span class="arithmatex">\(\Rightarrow\lim f(g(x))=f(L)\)</span>（Theorem E）</td>
+</tr>
+<tr>
+<td style="text-align: left;">continuity on an interval</td>
+<td style="text-align: left;">区间上连续</td>
+<td style="text-align: left;">开区间每点连续；闭区间端点要求单侧连续</td>
+</tr>
+<tr>
+<td style="text-align: left;">Intermediate Value Theorem (IVT)</td>
+<td style="text-align: left;">介值定理</td>
+<td style="text-align: left;"><span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 连续，<span class="arithmatex">\(N\)</span> 介于 <span class="arithmatex">\(f(a),f(b)\)</span> 之间 <span class="arithmatex">\(\Rightarrow\exists c\in(a,b),f(c)=N\)</span>（Theorem F）</td>
+</tr>
+<tr>
+<td style="text-align: left;">zero point theorem</td>
+<td style="text-align: left;">零点定理</td>
+<td style="text-align: left;">IVT 取 <span class="arithmatex">\(N=0\)</span>：<span class="arithmatex">\(f(a)f(b)&lt;0\Rightarrow\)</span> 区间内有根</td>
+</tr>
+<tr>
+<td style="text-align: left;">bisection method</td>
+<td style="text-align: left;">二分法</td>
+<td style="text-align: left;">反复取中点、判号，逼近根</td>
+</tr>
+<tr>
+<td style="text-align: left;">fixed point</td>
+<td style="text-align: left;">不动点</td>
+<td style="text-align: left;"><span class="arithmatex">\(f(c)=c\)</span>；令 <span class="arithmatex">\(g(x)=f(x)-x\)</span> 用零点定理</td>
+</tr>
+<tr>
+<td style="text-align: left;">continuous compounding</td>
+<td style="text-align: left;">连续复利</td>
+<td style="text-align: left;"><span class="arithmatex">\(A(t)=Pe^{rt}\)</span>；分期复利 <span class="arithmatex">\(A=P(1+r/n)^{nt}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">first important limit</td>
+<td style="text-align: left;">第一重要极限</td>
+<td style="text-align: left;"><span class="arithmatex">\(\lim_{t\to0}\dfrac{\sin t}{t}=1\)</span>（弧度制）</td>
+</tr>
+<tr>
+<td style="text-align: left;">second important limit</td>
+<td style="text-align: left;">第二重要极限</td>
+<td style="text-align: left;"><span class="arithmatex">\(\lim_{x\to\infty}\left(1+\frac1x\right)^x=e\)</span>，<span class="arithmatex">\(\lim_{h\to0}(1+h)^{1/h}=e\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="03-chapter-3-derivatives">0.3 导数与相关变化率 (Chapter 3: Derivatives)<a class="headerlink" href="#03-chapter-3-derivatives" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">English Term</th>
+<th style="text-align: left;">中文</th>
+<th style="text-align: left;">含义 / 公式 / 考点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">secant line</td>
+<td style="text-align: left;">割线</td>
+<td style="text-align: left;">过 <span class="arithmatex">\((c,f(c))\)</span> 与 <span class="arithmatex">\((c+h,f(c+h))\)</span>，斜率 <span class="arithmatex">\(\dfrac{f(c+h)-f(c)}{h}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">tangent line</td>
+<td style="text-align: left;">切线</td>
+<td style="text-align: left;">割线斜率的极限；方程 <span class="arithmatex">\(y-f(c)=f'(c)(x-c)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">difference quotient</td>
+<td style="text-align: left;">差商</td>
+<td style="text-align: left;"><span class="arithmatex">\(\dfrac{f(x)-f(c)}{x-c}\)</span> 或 <span class="arithmatex">\(\dfrac{f(c+h)-f(c)}{h}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">average velocity</td>
+<td style="text-align: left;">平均速度</td>
+<td style="text-align: left;"><span class="arithmatex">\(\dfrac{\Delta s}{\Delta t}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">instantaneous velocity</td>
+<td style="text-align: left;">瞬时速度</td>
+<td style="text-align: left;"><span class="arithmatex">\(v(t)=s'(t)=\lim_{\Delta t\to0}\dfrac{\Delta s}{\Delta t}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">derivative</td>
+<td style="text-align: left;">导数</td>
+<td style="text-align: left;"><span class="arithmatex">\(f'(c)=\lim_{h\to0}\dfrac{f(c+h)-f(c)}{h}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">differentiable</td>
+<td style="text-align: left;">可导</td>
+<td style="text-align: left;">该极限存在；可导 <span class="arithmatex">\(\Rightarrow\)</span> 连续，反之不成立</td>
+</tr>
+<tr>
+<td style="text-align: left;">Leibniz notation</td>
+<td style="text-align: left;">莱布尼茨记号</td>
+<td style="text-align: left;"><span class="arithmatex">\(\dfrac{dy}{dx}\)</span>，<span class="arithmatex">\(\left.\dfrac{dy}{dx}\right\rvert_{x=c}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">differentiation operator</td>
+<td style="text-align: left;">微分算子</td>
+<td style="text-align: left;"><span class="arithmatex">\(D_x\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">power rule</td>
+<td style="text-align: left;">幂法则</td>
+<td style="text-align: left;"><span class="arithmatex">\((x^r)'=rx^{r-1}\)</span>（<span class="arithmatex">\(r\)</span> 为任意实数，必要时 <span class="arithmatex">\(x&gt;0\)</span>）</td>
+</tr>
+<tr>
+<td style="text-align: left;">constant / identity rule</td>
+<td style="text-align: left;">常数 / 恒等法则</td>
+<td style="text-align: left;"><span class="arithmatex">\((c)'=0\)</span>，<span class="arithmatex">\((x)'=1\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">linearity</td>
+<td style="text-align: left;">线性性质</td>
+<td style="text-align: left;"><span class="arithmatex">\((af\pm bg)'=af'\pm bg'\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">product rule</td>
+<td style="text-align: left;">乘积法则</td>
+<td style="text-align: left;"><span class="arithmatex">\((fg)'=f'g+fg'\)</span>（<strong>不是</strong> <span class="arithmatex">\(f'g'\)</span>）</td>
+</tr>
+<tr>
+<td style="text-align: left;">quotient rule</td>
+<td style="text-align: left;">商法则</td>
+<td style="text-align: left;"><span class="arithmatex">\(\left(\dfrac fg\right)'=\dfrac{f'g-fg'}{g^2}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">chain rule</td>
+<td style="text-align: left;">链式法则</td>
+<td style="text-align: left;"><span class="arithmatex">\(\dfrac{dy}{dx}=\dfrac{dy}{du}\cdot\dfrac{du}{dx}\)</span>；<span class="arithmatex">\((f(g(x)))'=f'(g(x))g'(x)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">higher-order derivative</td>
+<td style="text-align: left;">高阶导数</td>
+<td style="text-align: left;"><span class="arithmatex">\(f'',f''',f^{(n)}\)</span>；<span class="arithmatex">\(s''(t)=a(t)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">acceleration</td>
+<td style="text-align: left;">加速度</td>
+<td style="text-align: left;"><span class="arithmatex">\(a(t)=v'(t)=s''(t)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">inverse function theorem (IFT)</td>
+<td style="text-align: left;">反函数求导定理</td>
+<td style="text-align: left;"><span class="arithmatex">\((f^{-1})'(y)=\dfrac{1}{f'(x)}\)</span>，其中 <span class="arithmatex">\(y=f(x)\)</span> 且 <span class="arithmatex">\(f'(x)\ne0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">implicit function</td>
+<td style="text-align: left;">隐函数</td>
+<td style="text-align: left;"><span class="arithmatex">\(F(x,y)=0\)</span> 形式，<span class="arithmatex">\(y\)</span> 未显式解出</td>
+</tr>
+<tr>
+<td style="text-align: left;">explicit function</td>
+<td style="text-align: left;">显函数</td>
+<td style="text-align: left;"><span class="arithmatex">\(y=f(x)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">implicit differentiation</td>
+<td style="text-align: left;">隐函数求导</td>
+<td style="text-align: left;">两边对 <span class="arithmatex">\(x\)</span> 求导，<span class="arithmatex">\(y\)</span> 视为 <span class="arithmatex">\(y(x)\)</span>，每项含 <span class="arithmatex">\(y\)</span> 处乘 <span class="arithmatex">\(y'\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">logarithmic differentiation</td>
+<td style="text-align: left;">对数求导法</td>
+<td style="text-align: left;">两边取 <span class="arithmatex">\(\ln\)</span> 化简再求导；适用于 <span class="arithmatex">\(f(x)^{g(x)}\)</span> 或多项乘除、根式</td>
+</tr>
+<tr>
+<td style="text-align: left;">related rates</td>
+<td style="text-align: left;">相关变化率</td>
+<td style="text-align: left;">各变量对 <span class="arithmatex">\(t\)</span> 求导，链式法则联系 <span class="arithmatex">\(\frac{dV}{dt}\)</span>、<span class="arithmatex">\(\frac{dr}{dt}\)</span> 等</td>
+</tr>
+<tr>
+<td style="text-align: left;">rate of change</td>
+<td style="text-align: left;">变化率</td>
+<td style="text-align: left;">导数即瞬时变化率</td>
+</tr>
+<tr>
+<td style="text-align: left;">corner / cusp / vertical tangent</td>
+<td style="text-align: left;">角点 / 尖点 / 竖直切线</td>
+<td style="text-align: left;">不可导的三种几何形态（如 <span class="arithmatex">\(\lvert x\rvert\)</span>、<span class="arithmatex">\(x^{2/3}\)</span>、<span class="arithmatex">\(\sqrt[3]{x}\)</span> 在 <span class="arithmatex">\(0\)</span> 处）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="lecture-1-1519">第一部分：函数与预备知识 (Lecture 1: §1.5–1.9)<a class="headerlink" href="#lecture-1-1519" title="Permanent link">¶</a></h2>
+<h3 id="15-functions-and-their-graphs">1.5 Functions and Their Graphs (函数及其图像)<a class="headerlink" href="#15-functions-and-their-graphs" title="Permanent link">¶</a></h3>
+<h4 id="1-definition-domain-range">1. 函数、定义域与值域 (Definition, Domain &amp; Range)<a class="headerlink" href="#1-definition-domain-range" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>函数 (Function):</strong> 从集合 <span class="arithmatex">\(D\)</span> 到 <span class="arithmatex">\(\mathbb{R}\)</span> 的对应法则，对每个 <span class="arithmatex">\(x\in D\)</span> 指定<strong>唯一</strong>的 <span class="arithmatex">\(y\)</span>。</p>
+</li>
+<li>
+<p><strong>定义域 (Domain):</strong> <span class="arithmatex">\(D(f)\)</span>，自变量允许取值的集合。</p>
+</li>
+<li>
+<p><strong>值域 (Range):</strong> <span class="arithmatex">\(R(f)=\{y:y=f(x),\ x\in D(f)\}\)</span>。</p>
+</li>
+<li>
+<p><strong>自然定义域 (Natural Domain):</strong> 未特别声明时，使表达式有意义的全体实数。</p>
+</li>
+</ul>
+<p><strong>求自然定义域的四条检查（必背）：</strong>
+1. 分母 <span class="arithmatex">\(\ne0\)</span>；
+2. 偶次根号内 <span class="arithmatex">\(\ge0\)</span>（奇次根号无限制）；
+3. 对数真数 <span class="arithmatex">\(&gt;0\)</span>，底数 <span class="arithmatex">\(&gt;0\)</span> 且 <span class="arithmatex">\(\ne1\)</span>；
+4. <span class="arithmatex">\(\arcsin u\)</span>、<span class="arithmatex">\(\arccos u\)</span> 要求 <span class="arithmatex">\(-1\le u\le1\)</span>；<span class="arithmatex">\(\tan x\)</span> 要求 <span class="arithmatex">\(\cos x\ne0\)</span>。</p>
+<h4 id="2-piecewise-defined-functions">2. 分段函数 (Piecewise-Defined Functions)<a class="headerlink" href="#2-piecewise-defined-functions" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>绝对值函数:</strong> <span class="arithmatex">\(\lvert x\rvert=\begin{cases}x,&amp;x\ge0\\-x,&amp;x&lt;0\end{cases}\)</span></p>
+</li>
+<li>
+<p><strong>符号函数:</strong> <span class="arithmatex">\(\operatorname{sgn}x=\begin{cases}1,&amp;x&gt;0\\0,&amp;x=0\\-1,&amp;x&lt;0\end{cases}\)</span></p>
+</li>
+<li>
+<p><strong>取整函数:</strong> <span class="arithmatex">\([x]=\lfloor x\rfloor\)</span> = 不超过 <span class="arithmatex">\(x\)</span> 的最大整数。例：<span class="arithmatex">\([2.7]=2\)</span>，<span class="arithmatex">\([-1.2]=-2\)</span>。</p>
+</li>
+<li>
+<p><strong>小数部分:</strong> <span class="arithmatex">\(x-[x]\in[0,1)\)</span>（Assignment 2 中的 <span class="arithmatex">\(f(x)=x-[[x]]\)</span> 即此类）。</p>
+</li>
+</ul>
+<hr />
+<h3 id="16-operations-on-functions">1.6 Operations on Functions (函数的运算)<a class="headerlink" href="#16-operations-on-functions" title="Permanent link">¶</a></h3>
+<h4 id="1-algebraic-operations-composition">1. 四则运算与复合 (Algebraic Operations &amp; Composition)<a class="headerlink" href="#1-algebraic-operations-composition" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p>四则运算在 <span class="arithmatex">\(D(f)\cap D(g)\)</span> 上进行；除法还需 <span class="arithmatex">\(g(x)\ne0\)</span>。</p>
+</li>
+<li>
+<p><strong>复合:</strong> <span class="arithmatex">\((g\circ f)(x)=g(f(x))\)</span>，运算顺序<strong>由内而外</strong>。</p>
+</li>
+<li>
+<p><strong>复合函数定义域:</strong> <span class="arithmatex">\(D(g\circ f)=\{x:x\in D(f)\ \text{且}\ f(x)\in D(g)\}\)</span>。</p>
+</li>
+<li>
+<p>例：<span class="arithmatex">\(f(x)=\sqrt{x}\)</span>，<span class="arithmatex">\(g(x)=\ln x\)</span>，则 <span class="arithmatex">\((g\circ f)(x)=\ln\sqrt{x}\)</span> 要求 <span class="arithmatex">\(x&gt;0\)</span>，而不是 <span class="arithmatex">\(x\ge0\)</span>。</p>
+</li>
+<li>
+<p><strong>分解:</strong> 由外而内。例 <span class="arithmatex">\(F(x)=\sec^3(3\sqrt{x})\)</span>：最内 <span class="arithmatex">\(h(x)=3\sqrt{x}\)</span>，中间 <span class="arithmatex">\(g(x)=\sec x\)</span>，最外 <span class="arithmatex">\(f(x)=x^3\)</span>。</p>
+</li>
+</ul>
+<h4 id="2-one-to-one-functions-inverses">2. 一对一函数与反函数 (One-to-One Functions &amp; Inverses)<a class="headerlink" href="#2-one-to-one-functions-inverses" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>一对一 (1-1):</strong> <span class="arithmatex">\(x_1\ne x_2\Rightarrow f(x_1)\ne f(x_2)\)</span>。</p>
+</li>
+<li>
+<p><strong>水平线测试 (Horizontal Line Test):</strong> 任一水平线与图像至多一个交点 <span class="arithmatex">\(\iff\)</span> 1-1 <span class="arithmatex">\(\iff\)</span> 存在反函数。</p>
+</li>
+<li>
+<p><strong>垂直线测试 (Vertical Line Test):</strong> 任一垂直线与图像至多一个交点 <span class="arithmatex">\(\iff\)</span> 图像表示函数。</p>
+</li>
+<li>
+<p><strong>求反函数三步:</strong> ① 写 <span class="arithmatex">\(y=f(x)\)</span> 解出 <span class="arithmatex">\(x\)</span>；② 交换 <span class="arithmatex">\(x,y\)</span>；③ 用原函数值域确定反函数定义域。</p>
+</li>
+<li>
+<p><strong>关键性质:</strong> <span class="arithmatex">\(D(f^{-1})=R(f)\)</span>，<span class="arithmatex">\(R(f^{-1})=D(f)\)</span>，图像关于 <span class="arithmatex">\(y=x\)</span> 对称。</p>
+</li>
+<li>
+<p><strong>抵消方程 (Cancellation Equations):</strong> <span class="arithmatex">\(f^{-1}(f(x))=x\)</span>（<span class="arithmatex">\(x\in D(f)\)</span>），<span class="arithmatex">\(f(f^{-1}(y))=y\)</span>（<span class="arithmatex">\(y\in R(f)\)</span>）。</p>
+</li>
+<li>
+<p><strong>警告:</strong> <span class="arithmatex">\(f^{-1}(x)\ne\dfrac{1}{f(x)}\)</span>。</p>
+</li>
+<li>
+<p><strong>单调函数必为 1-1:</strong> 严格递增/递减函数一定存在反函数（Lecture 6 会用导数判断）。</p>
+</li>
+</ul>
+<h4 id="3-parity">3. 奇偶性 (Parity)<a class="headerlink" href="#3-parity" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>偶函数:</strong> <span class="arithmatex">\(f(-x)=f(x)\)</span>，图像关于 <span class="arithmatex">\(y\)</span> 轴对称。</p>
+</li>
+<li>
+<p><strong>奇函数:</strong> <span class="arithmatex">\(f(-x)=-f(x)\)</span>，图像关于原点对称。</p>
+</li>
+<li>
+<p><strong>奇偶分解:</strong> 定义在对称区间上的任意函数可写成
+  $<span class="arithmatex">\(f(x)=\underbrace{\frac{f(x)+f(-x)}{2}}_{\text{偶部}}+\underbrace{\frac{f(x)-f(-x)}{2}}_{\text{奇部}}\)</span>$
+  Assignment 1 中 <span class="arithmatex">\(2^x=\frac{2^x+2^{-x}}{2}+\frac{2^x-2^{-x}}{2}\)</span> 即此结论。</p>
+</li>
+</ul>
+<hr />
+<h3 id="17-exponential-and-logarithmic-functions">1.7 Exponential and Logarithmic Functions (指数与对数函数)<a class="headerlink" href="#17-exponential-and-logarithmic-functions" title="Permanent link">¶</a></h3>
+<h4 id="1-exponential-functions">1. 指数函数 (Exponential Functions)<a class="headerlink" href="#1-exponential-functions" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><span class="arithmatex">\(f(x)=a^x\)</span>，<span class="arithmatex">\(a&gt;0,a\ne1\)</span>；定义域 <span class="arithmatex">\(\mathbb{R}\)</span>，值域 <span class="arithmatex">\((0,\infty)\)</span>，恒过 <span class="arithmatex">\((0,1)\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(a&gt;1\)</span> 时递增；<span class="arithmatex">\(0&lt;a&lt;1\)</span> 时递减。</p>
+</li>
+<li>
+<p>运算律：<span class="arithmatex">\(a^{x+y}=a^xa^y\)</span>，<span class="arithmatex">\((a^x)^y=a^{xy}\)</span>，<span class="arithmatex">\(a^{-x}=\dfrac{1}{a^x}\)</span>，<span class="arithmatex">\(a^0=1\)</span>。</p>
+</li>
+</ul>
+<h4 id="2-logarithmic-functions">2. 对数函数 (Logarithmic Functions)<a class="headerlink" href="#2-logarithmic-functions" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><span class="arithmatex">\(f(x)=\log_a x\)</span> 是 <span class="arithmatex">\(a^x\)</span> 的反函数；定义域 <span class="arithmatex">\((0,\infty)\)</span>，值域 <span class="arithmatex">\(\mathbb{R}\)</span>，过 <span class="arithmatex">\((1,0)\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\log_a(xy)=\log_ax+\log_ay\)</span>，<span class="arithmatex">\(\log_a\dfrac xy=\log_ax-\log_ay\)</span>，<span class="arithmatex">\(\log_a x^r=r\log_ax\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\log_a a=1\)</span>，<span class="arithmatex">\(\log_a1=0\)</span>，<span class="arithmatex">\(a^{\log_a x}=x\)</span>。</p>
+</li>
+<li>
+<p><strong>换底公式:</strong> <span class="arithmatex">\(\log_a b=\dfrac{\ln b}{\ln a}\)</span>。</p>
+</li>
+<li>
+<p>自然对数 <span class="arithmatex">\(\ln x=\log_e x\)</span>，满足 <span class="arithmatex">\(\ln e=1\)</span>，<span class="arithmatex">\(e^{\ln x}=x\ (x&gt;0)\)</span>，<span class="arithmatex">\(\ln(e^x)=x\)</span>。</p>
+</li>
+</ul>
+<hr />
+<h3 id="18-the-trigonometric-functions">1.8 The Trigonometric Functions (三角函数)<a class="headerlink" href="#18-the-trigonometric-functions" title="Permanent link">¶</a></h3>
+<h4 id="1-definitions">1. 定义与基本关系 (Definitions)<a class="headerlink" href="#1-definitions" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p>直角三角形：<span class="arithmatex">\(\sin\theta=\dfrac{\text{opposite}}{\text{hypotenuse}}\)</span>，<span class="arithmatex">\(\cos\theta=\dfrac{\text{adjacent}}{\text{hypotenuse}}\)</span>，<span class="arithmatex">\(\tan\theta=\dfrac{\text{opposite}}{\text{adjacent}}\)</span>。</p>
+</li>
+<li>
+<p>单位圆：角 <span class="arithmatex">\(\theta\)</span> 终边与单位圆交点 <span class="arithmatex">\((\cos\theta,\sin\theta)\)</span>。</p>
+</li>
+<li>
+<p>倒数关系：<span class="arithmatex">\(\sec\theta=\dfrac{1}{\cos\theta}\)</span>，<span class="arithmatex">\(\csc\theta=\dfrac{1}{\sin\theta}\)</span>，<span class="arithmatex">\(\cot\theta=\dfrac{\cos\theta}{\sin\theta}\)</span>。</p>
+</li>
+<li>
+<p>定义域：<span class="arithmatex">\(\tan,\sec\)</span> 排除 <span class="arithmatex">\(\theta=\frac{\pi}{2}+k\pi\)</span>；<span class="arithmatex">\(\cot,\csc\)</span> 排除 <span class="arithmatex">\(\theta=k\pi\)</span>。</p>
+</li>
+</ul>
+<h4 id="2-identities">2. 核心恒等式 (Identities)<a class="headerlink" href="#2-identities" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>勾股恒等式:</strong> <span class="arithmatex">\(\sin^2\theta+\cos^2\theta=1\)</span>；<span class="arithmatex">\(1+\tan^2\theta=\sec^2\theta\)</span>；<span class="arithmatex">\(1+\cot^2\theta=\csc^2\theta\)</span>。</p>
+</li>
+<li>
+<p><strong>倍角公式:</strong> <span class="arithmatex">\(\sin2\theta=2\sin\theta\cos\theta\)</span>；<span class="arithmatex">\(\cos2\theta=\cos^2\theta-\sin^2\theta=2\cos^2\theta-1=1-2\sin^2\theta\)</span>。</p>
+</li>
+<li>
+<p>商数关系：<span class="arithmatex">\(\tan\theta=\dfrac{\sin\theta}{\cos\theta}\)</span>。</p>
+</li>
+</ul>
+<h4 id="3">3. 特殊角函数值（必背）<a class="headerlink" href="#3" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><span class="arithmatex">\(\theta\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(0\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(\dfrac{\pi}{6}\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(\dfrac{\pi}{4}\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(\dfrac{\pi}{3}\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(\dfrac{\pi}{2}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\sin\theta\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac12\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac{\sqrt2}{2}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac{\sqrt3}{2}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\cos\theta\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac{\sqrt3}{2}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac{\sqrt2}{2}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac12\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\tan\theta\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac{\sqrt3}{3}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\sqrt3\)</span></td>
+<td style="text-align: center;">不存在</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="19-the-inverse-trigonometric-functions">1.9 The Inverse Trigonometric Functions (反三角函数)<a class="headerlink" href="#19-the-inverse-trigonometric-functions" title="Permanent link">¶</a></h3>
+<h4 id="1">1. 三个反三角函数的主值区间（必背）<a class="headerlink" href="#1" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">函数</th>
+<th style="text-align: center;">定义域</th>
+<th style="text-align: center;">值域（主值区间）</th>
+<th style="text-align: center;">单调性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(y=\arcsin x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\([-1,1]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\left[-\dfrac{\pi}{2},\dfrac{\pi}{2}\right]\)</span></td>
+<td style="text-align: center;">递增</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(y=\arccos x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\([-1,1]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\([0,\pi]\)</span></td>
+<td style="text-align: center;">递减</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(y=\arctan x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\((-\infty,\infty)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\left(-\dfrac{\pi}{2},\dfrac{\pi}{2}\right)\)</span></td>
+<td style="text-align: center;">递增</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>常用值：<span class="arithmatex">\(\arcsin\frac12=\frac{\pi}{6}\)</span>，<span class="arithmatex">\(\arccos\frac12=\frac{\pi}{3}\)</span>，<span class="arithmatex">\(\arctan1=\frac{\pi}{4}\)</span>，<span class="arithmatex">\(\arccos(-1)=\pi\)</span>，<span class="arithmatex">\(\arctan0=0\)</span>。</p>
+</li>
+<li>
+<p>对称性：<span class="arithmatex">\(\arcsin(-x)=-\arcsin x\)</span>，<span class="arithmatex">\(\arccos(-x)=\pi-\arccos x\)</span>，<span class="arithmatex">\(\arctan(-x)=-\arctan x\)</span>。</p>
+</li>
+</ul>
+<h4 id="2-cancellation-formulas-pitfalls">2. 抵消公式及其陷阱 (Cancellation Formulas &amp; Pitfalls)<a class="headerlink" href="#2-cancellation-formulas-pitfalls" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>外层是三角函数、内层是反三角（恒成立）:</strong>
+  $<span class="arithmatex">\(\sin(\arcsin x)=x\ (x\in[-1,1]),\quad \cos(\arccos x)=x,\quad \tan(\arctan x)=x\)</span>$</p>
+</li>
+<li>
+<p><strong>外层是反三角、内层是三角（只在主值区间成立）:</strong>
+  $<span class="arithmatex">\(\arcsin(\sin\theta)=\theta\ \text{仅当}\ \theta\in\left[-\frac{\pi}{2},\frac{\pi}{2}\right]\)</span>$
+  $<span class="arithmatex">\(\arccos(\cos\theta)=\theta\ \text{仅当}\ \theta\in[0,\pi],\qquad \arctan(\tan\theta)=\theta\ \text{仅当}\ \theta\in\left(-\frac{\pi}{2},\frac{\pi}{2}\right)\)</span>$
+  超出主值区间时，先用周期性/对称性化到主值区间。例：<span class="arithmatex">\(\arcsin\left(\sin\frac{9\pi}{7}\right)\)</span> 不能直接等于 <span class="arithmatex">\(\frac{9\pi}{7}\)</span>。</p>
+</li>
+<li>
+<p><strong>用直角三角形求复合值:</strong> 令 <span class="arithmatex">\(\theta=\arctan x\)</span>，则 <span class="arithmatex">\(\tan\theta=x\)</span>，斜边 <span class="arithmatex">\(\sqrt{1+x^2}\)</span>，故
+  $<span class="arithmatex">\(\sin(\arctan x)=\frac{x}{\sqrt{1+x^2}},\quad \cos(\arctan x)=\frac{1}{\sqrt{1+x^2}}\)</span>$
+  同理 <span class="arithmatex">\(\sin(\arccos x)=\sqrt{1-x^2}\)</span>，<span class="arithmatex">\(\tan(\arcsin x)=\dfrac{x}{\sqrt{1-x^2}}\)</span>。</p>
+</li>
+</ul>
+<hr />
+<h3 id="typical-examples-from-assignments-1">🌟 典型例题精解 (Typical Examples from Assignments 1)<a class="headerlink" href="#typical-examples-from-assignments-1" title="Permanent link">¶</a></h3>
+<h5 id="1assignment-1-15">【例题 1】差商的计算（Assignment 1, §1.5）<a class="headerlink" href="#1assignment-1-15" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> For <span class="arithmatex">\(F(x)=x^3+3x\)</span>, evaluate <span class="arithmatex">\(\dfrac{F(2+h)-F(2)}{h}\)</span>.</p>
+<p><strong>Process (解题步骤):</strong></p>
+<div class="arithmatex">\[F(2+h)=(2+h)^3+3(2+h)=h^3+6h^2+15h+14$$
+$$F(2)=8+6=14$$
+$$\frac{F(2+h)-F(2)}{h}=\frac{h^3+6h^2+15h}{h}=h^2+6h+15\]</div>
+<p><strong>中文详解:</strong> 展开 <span class="arithmatex">\((2+h)^3\)</span> 时用二项式定理；减去 <span class="arithmatex">\(F(2)\)</span> 后分子每项都含 <span class="arithmatex">\(h\)</span>，约分即可。此类差商是第 3 章导数定义的前身。</p>
+<h5 id="2assignment-1-15">【例题 2】求自然定义域（Assignment 1, §1.5）<a class="headerlink" href="#2assignment-1-15" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Find the natural domain of <span class="arithmatex">\(g(x)=\dfrac{\sec x}{x^2}\)</span>.</p>
+<p><strong>Process (解题步骤):</strong></p>
+<p>分母 <span class="arithmatex">\(x^2\ne0\Rightarrow x\ne0\)</span>；<span class="arithmatex">\(\sec x=\dfrac{1}{\cos x}\)</span> 要求 <span class="arithmatex">\(\cos x\ne0\Rightarrow x\ne\dfrac{\pi}{2}+k\pi\)</span>。
+$<span class="arithmatex">\(\text{Domain}=\left\{x\in\mathbb{R}:x\ne0,\ x\ne\frac{\pi}{2}+k\pi,\ k\in\mathbb{Z}\right\}\)</span>$</p>
+<p><strong>中文详解:</strong> 两个限制取交集：分母不为零、正割有意义。注意 <span class="arithmatex">\(\sec\)</span> 的限制来自 <span class="arithmatex">\(\cos x=0\)</span>。</p>
+<h5 id="3assignment-1-16">【例题 3】求反函数及其定义域（Assignment 1, §1.6）<a class="headerlink" href="#3assignment-1-16" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Find the inverse of <span class="arithmatex">\(f(x)=\dfrac{1-\sqrt{x}}{1+\sqrt{x}}\)</span> and the domain of <span class="arithmatex">\(f^{-1}\)</span>.</p>
+<p><strong>Process (解题步骤):</strong></p>
+<ol>
+<li>求值域：<span class="arithmatex">\(f(x)=-1+\dfrac{2}{1+\sqrt{x}}\)</span>，由 <span class="arithmatex">\(1+\sqrt{x}\ge1\)</span> 得 <span class="arithmatex">\(0&lt;\dfrac{2}{1+\sqrt{x}}\le2\)</span>，故 <span class="arithmatex">\(-1&lt;f(x)\le1\)</span>，即 <span class="arithmatex">\(D(f^{-1})=(-1,1]\)</span>。</li>
+<li>解出 <span class="arithmatex">\(x\)</span>：<span class="arithmatex">\(y(1+\sqrt{x})=1-\sqrt{x}\Rightarrow\sqrt{x}=\dfrac{1-y}{1+y}\Rightarrow x=\left(\dfrac{1-y}{1+y}\right)^2\)</span>。</li>
+<li>交换 <span class="arithmatex">\(x,y\)</span>：<span class="arithmatex">\(f^{-1}(x)=\left(\dfrac{1-x}{1+x}\right)^2\)</span>，<span class="arithmatex">\(x\in(-1,1]\)</span>。</li>
+</ol>
+<p><strong>中文详解:</strong> 反函数的定义域 = 原函数的值域，必须先求值域；开方时注意 <span class="arithmatex">\(\frac{1-y}{1+y}\ge0\)</span> 的范围。</p>
+<h5 id="4assignment-1-19">【例题 4】反三角复合求值（Assignment 1, §1.9）<a class="headerlink" href="#4assignment-1-19" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Evaluate <span class="arithmatex">\(\sin(2\arctan2)\)</span> without a calculator.</p>
+<p><strong>Process (解题步骤):</strong></p>
+<p>令 <span class="arithmatex">\(\theta=\arctan2\)</span>，则 <span class="arithmatex">\(\tan\theta=2\)</span>，<span class="arithmatex">\(\theta\in\left(0,\frac{\pi}{2}\right)\)</span>。
+由 <span class="arithmatex">\(1+\tan^2\theta=\sec^2\theta=5\)</span> 得 <span class="arithmatex">\(\cos\theta=\dfrac{1}{\sqrt5}\)</span>，<span class="arithmatex">\(\sin\theta=\dfrac{2}{\sqrt5}\)</span>。
+$<span class="arithmatex">\(\sin2\theta=2\sin\theta\cos\theta=2\cdot\frac{2}{\sqrt5}\cdot\frac{1}{\sqrt5}=\frac45\)</span>$</p>
+<p><strong>中文详解:</strong> 设辅助角 <span class="arithmatex">\(\theta\)</span>，把反三角转化为直角三角形边长比；再用倍角公式。</p>
+<hr />
+<h2 id="lectures-24-212327">第二部分：极限与连续 (Lectures 2–4: §2.1、2.3–2.7)<a class="headerlink" href="#lectures-24-212327" title="Permanent link">¶</a></h2>
+<h3 id="21-introduction-to-limits">2.1 Introduction to Limits (极限引论与直观概念)<a class="headerlink" href="#21-introduction-to-limits" title="Permanent link">¶</a></h3>
+<h4 id="1-intuitive-definition">1. 极限的直观定义 (Intuitive Definition)<a class="headerlink" href="#1-intuitive-definition" title="Permanent link">¶</a></h4>
+<p>$<span class="arithmatex">\(\lim_{x\to c}f(x)=L\)</span>$
+表示：当 <span class="arithmatex">\(x\)</span> 充分接近 <span class="arithmatex">\(c\)</span>（但 <span class="arithmatex">\(x\ne c\)</span>）时，<span class="arithmatex">\(f(x)\)</span> 可以任意接近 <span class="arithmatex">\(L\)</span>。</p>
+<ul>
+<li>
+<p>极限只关心 <span class="arithmatex">\(x\to c\)</span> 时 <span class="arithmatex">\(f\)</span> 的趋势，<strong>与 <span class="arithmatex">\(f(c)\)</span> 是否有定义、等于多少无关</strong>。</p>
+</li>
+<li>
+<p>三大引例：瞬时速度、圆面积（多边形逼近）、弧长（折线逼近）。</p>
+</li>
+</ul>
+<h4 id="2-dne">2. 极限不存在的三种情形 (DNE)<a class="headerlink" href="#2-dne" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>左右极限不同:</strong> 如 <span class="arithmatex">\(f(x)=\operatorname{sgn}x\)</span> 在 <span class="arithmatex">\(0\)</span> 处（左 <span class="arithmatex">\(-1\)</span>，右 <span class="arithmatex">\(1\)</span>）。</li>
+<li><strong>函数值无限增大:</strong> <span class="arithmatex">\(\lim_{x\to0}\dfrac{1}{x^2}=+\infty\)</span>（不是有限数）。</li>
+<li><strong>无限振荡:</strong> <span class="arithmatex">\(\lim_{x\to0}\sin\dfrac1x\)</span> 不存在。</li>
+</ol>
+<h4 id="3-one-sided-limits">3. 单侧极限与双侧极限 (One-Sided Limits)<a class="headerlink" href="#3-one-sided-limits" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><span class="arithmatex">\(\lim_{x\to c^-}f(x)\)</span>：从左侧逼近；<span class="arithmatex">\(\lim_{x\to c^+}f(x)\)</span>：从右侧逼近。</p>
+</li>
+<li>
+<p><strong>Theorem A（双侧极限存在准则）:</strong>
+  $<span class="arithmatex">\(\lim_{x\to c}f(x)=L\iff\lim_{x\to c^-}f(x)=\lim_{x\to c^+}f(x)=L\)</span>$
+  这是处理分段函数、绝对值、取整函数在分界点处极限的标准工具。</p>
+</li>
+</ul>
+<h4 id="4-calculator-pitfall">4. 计算器的陷阱 (Calculator Pitfall)<a class="headerlink" href="#4-calculator-pitfall" title="Permanent link">¶</a></h4>
+<ul>
+<li>用计算器代小数列表可能因<strong>舍入误差 (rounding error)</strong> 给出错误结论（如 <span class="arithmatex">\(x\to0\)</span> 时 <span class="arithmatex">\(x^2-10^{-4}\cos x\)</span> 被误判为 <span class="arithmatex">\(0\)</span>）；必须用代数定理严格计算。</li>
+</ul>
+<hr />
+<h3 id="23-limit-theorems">2.3 Limit Theorems (极限定理与计算法则)<a class="headerlink" href="#23-limit-theorems" title="Permanent link">¶</a></h3>
+<h4 id="1-main-limit-theorem-theorem-23a">1. 主极限定理 (Main Limit Theorem / Theorem 2.3A)<a class="headerlink" href="#1-main-limit-theorem-theorem-23a" title="Permanent link">¶</a></h4>
+<p>若 <span class="arithmatex">\(\lim_{x\to c}f(x)=L\)</span>，<span class="arithmatex">\(\lim_{x\to c}g(x)=M\)</span>，则：
+$<span class="arithmatex">\(\lim(f\pm g)=L\pm M,\quad \lim(fg)=LM,\quad \lim\frac fg=\frac LM\ (M\ne0)\)</span>$
+$<span class="arithmatex">\(\lim f(x)^r=L^r,\quad \lim\sqrt[n]{f(x)}=\sqrt[n]{L}\quad(\text{在定义范围内})\)</span>$</p>
+<h4 id="2-substitution-theorem-theorem-23b">2. 直接代入定理 (Substitution Theorem / Theorem 2.3B)<a class="headerlink" href="#2-substitution-theorem-theorem-23b" title="Permanent link">¶</a></h4>
+<p>若 <span class="arithmatex">\(f\)</span> 是多项式、有理函数、根式函数或三角函数，且 <span class="arithmatex">\(c\in D(f)\)</span>，则
+$<span class="arithmatex">\(\lim_{x\to c}f(x)=f(c)\)</span>$</p>
+<ul>
+<li>有理函数在分母为 <span class="arithmatex">\(0\)</span> 处不能直接代入；三角函数的代入点必须在其定义域内。</li>
+</ul>
+<h4 id="3-00-cancellation-theorem-theorem-23c">3. <span class="arithmatex">\(0/0\)</span> 型与消去定理 (Cancellation Theorem / Theorem 2.3C)<a class="headerlink" href="#3-00-cancellation-theorem-theorem-23c" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p>若在 <span class="arithmatex">\(c\)</span> 的某去心邻域内 <span class="arithmatex">\(f(x)=g(x)\)</span> 且 <span class="arithmatex">\(\lim g\)</span> 存在，则 <span class="arithmatex">\(\lim f=\lim g\)</span>。</p>
+</li>
+<li>
+<p><strong><span class="arithmatex">\(0/0\)</span> 的标准处理:</strong> 因式分解并约去公因式；含根号时<strong>有理化</strong>（乘共轭）；复杂分式先通分；含 <span class="arithmatex">\([x]\)</span> 时用夹逼并结合取整性质。</p>
+</li>
+</ul>
+<h4 id="4-sign-preserving-property">4. 保号性 (Sign-Preserving Property)<a class="headerlink" href="#4-sign-preserving-property" title="Permanent link">¶</a></h4>
+<p>若 <span class="arithmatex">\(\lim_{x\to c}f(x)=L&gt;0\)</span>，则存在 <span class="arithmatex">\(c\)</span> 的去心邻域，在其中 <span class="arithmatex">\(f(x)&gt;0\)</span>。反之 <span class="arithmatex">\(L&lt;0\)</span> 同理；用于证明不等式与判断无穷极限的符号。</p>
+<h4 id="5-squeeze-theorem-theorem-23d">5. 夹逼定理 (Squeeze Theorem / Theorem 2.3D)<a class="headerlink" href="#5-squeeze-theorem-theorem-23d" title="Permanent link">¶</a></h4>
+<p>若在 <span class="arithmatex">\(c\)</span> 的去心邻域内 <span class="arithmatex">\(g(x)\le f(x)\le h(x)\)</span>，且
+$<span class="arithmatex">\(\lim_{x\to c}g(x)=\lim_{x\to c}h(x)=L,\)</span>$
+则 <span class="arithmatex">\(\lim_{x\to c}f(x)=L\)</span>。常用于 <span class="arithmatex">\(x\cos\frac1x\)</span>、<span class="arithmatex">\(\frac{\sin x}{x}\)</span>（<span class="arithmatex">\(x\to\infty\)</span>）、含取整函数等。</p>
+<hr />
+<h3 id="24-limits-at-infinity-infinite-limits">2.4 Limits at Infinity; Infinite Limits (无穷远处的极限与无穷极限)<a class="headerlink" href="#24-limits-at-infinity-infinite-limits" title="Permanent link">¶</a></h3>
+<h4 id="1_1">1. 无穷远处求极限的标准方法<a class="headerlink" href="#1_1" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p>有理函数：分子分母<strong>同除以分母的最高次幂</strong>。</p>
+</li>
+<li>
+<p>含根号：注意 <span class="arithmatex">\(\sqrt{x^2}=\lvert x\rvert\)</span>；当 <span class="arithmatex">\(x\to-\infty\)</span> 时 <span class="arithmatex">\(\sqrt{x^2}=-x\)</span>。</p>
+</li>
+<li>
+<p><strong>有理函数末端行为（速判）:</strong>
+  | 次数关系 | 极限 | 渐近线 |
+  | :--- | :---: | :--- |
+  | <span class="arithmatex">\(\deg P&lt;\deg Q\)</span> | <span class="arithmatex">\(0\)</span> | <span class="arithmatex">\(y=0\)</span> |
+  | <span class="arithmatex">\(\deg P=\deg Q\)</span> | 首项系数之比 | <span class="arithmatex">\(y=\frac{a_n}{b_n}\)</span> |
+  | <span class="arithmatex">\(\deg P=\deg Q+1\)</span> | <span class="arithmatex">\(\pm\infty\)</span> | 斜渐近线（多项式除法） |
+  | <span class="arithmatex">\(\deg P&gt;\deg Q+1\)</span> | <span class="arithmatex">\(\pm\infty\)</span> | 无水平/斜渐近线 |</p>
+</li>
+<li>
+<p>数列极限（<span class="arithmatex">\(n\to\infty\)</span>）同法，且主极限定理、夹逼定理对数列同样成立。</p>
+</li>
+</ul>
+<h4 id="2-infinite-limits">2. 无穷极限 (Infinite Limits)<a class="headerlink" href="#2-infinite-limits" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p>记号 <span class="arithmatex">\(\lim_{x\to c}f(x)=+\infty\)</span> 表示函数值无限增大，<strong>极限本身不存在</strong>（但信息更强）。</p>
+</li>
+<li>
+<p>判断 <span class="arithmatex">\(\dfrac{1}{0}\)</span> 型：看分母从哪侧趋于 <span class="arithmatex">\(0\)</span>、分子符号。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\lim_{x\to0^+}\dfrac1x=+\infty\)</span>，<span class="arithmatex">\(\lim_{x\to0^-}\dfrac1x=-\infty\)</span>。</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(\lim f=L\ne0\)</span>，<span class="arithmatex">\(\lim g=0\)</span> 且 <span class="arithmatex">\(g\)</span> 在附近保持同号，则 <span class="arithmatex">\(\lim\dfrac fg=\pm\infty\)</span>（符号由 <span class="arithmatex">\(L\)</span> 与 <span class="arithmatex">\(g\)</span> 的符号决定）。</p>
+</li>
+</ul>
+<h4 id="3-asymptotes">3. 渐近线 (Asymptotes)<a class="headerlink" href="#3-asymptotes" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>水平渐近线 (HA):</strong> <span class="arithmatex">\(\lim_{x\to+\infty}f(x)=L\)</span> 或 <span class="arithmatex">\(\lim_{x\to-\infty}f(x)=L\)</span> <span class="arithmatex">\(\Rightarrow y=L\)</span>。最多两条。</p>
+</li>
+<li>
+<p><strong>垂直渐近线 (VA):</strong> <span class="arithmatex">\(\lim_{x\to c^\pm}f(x)=\pm\infty\)</span> <span class="arithmatex">\(\Rightarrow x=c\)</span>。</p>
+</li>
+<li>
+<p>有理函数：先约去分子分母公因式，剩下使分母为 <span class="arithmatex">\(0\)</span> 的点才是 VA（约掉的点是可去间断点）。</p>
+</li>
+<li>
+<p><strong>陷阱:</strong> <span class="arithmatex">\(y=\dfrac{\sin x}{x}\)</span> 在 <span class="arithmatex">\(x=0\)</span> 处极限为 <span class="arithmatex">\(1\ne\pm\infty\)</span>，故 <span class="arithmatex">\(x=0\)</span> <strong>不是</strong> VA；只有 <span class="arithmatex">\(y=0\)</span> 一条 HA。</p>
+</li>
+</ul>
+<hr />
+<h3 id="25-limits-involving-trigonometric-functions">2.5 Limits Involving Trigonometric Functions (三角函数极限)<a class="headerlink" href="#25-limits-involving-trigonometric-functions" title="Permanent link">¶</a></h3>
+<h4 id="1_2">1. 三角函数的直接代入<a class="headerlink" href="#1_2" title="Permanent link">¶</a></h4>
+<p>在其定义域内，<span class="arithmatex">\(\lim_{x\to c}\sin x=\sin c\)</span>，<span class="arithmatex">\(\lim\cos x=\cos c\)</span>，<span class="arithmatex">\(\lim\tan x=\tan c\)</span>（<span class="arithmatex">\(\cos c\ne0\)</span>）。</p>
+<h4 id="2-theorem-b1">2. 第一重要极限 (Theorem B1)<a class="headerlink" href="#2-theorem-b1" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[\lim_{t\to0}\frac{\sin t}{t}=1\quad(\text{弧度制})$$
+**推广：**
+$$\lim_{t\to0}\frac{\sin(at)}{bt}=\frac ab,\qquad \lim_{t\to0}\frac{\tan t}{t}=1,\qquad \lim_{t\to0}\frac{1-\cos t}{t}=0,\qquad \lim_{t\to0}\frac{1-\cos t}{t^2}=\frac12\]</div>
+<ul>
+<li>
+<p><span class="arithmatex">\(1-\cos t\)</span> 的处理：乘共轭 <span class="arithmatex">\(1+\cos t\)</span>，化为 <span class="arithmatex">\(\dfrac{\sin^2t}{t(1+\cos t)}\)</span>。</p>
+</li>
+<li>
+<p>几何证明用面积夹逼：<span class="arithmatex">\(\cos t\le\dfrac{\sin t}{t}\le\dfrac{1}{\cos t}\)</span>（<span class="arithmatex">\(0&lt;t&lt;\pi/2\)</span>），两端 →1。</p>
+</li>
+</ul>
+<h4 id="3_1">3. 无穷小 × 有界（夹逼推论）<a class="headerlink" href="#3_1" title="Permanent link">¶</a></h4>
+<p>若 <span class="arithmatex">\(\lim_{x\to c}f(x)=0\)</span> 且 <span class="arithmatex">\(g\)</span> 在附近有界，则 <span class="arithmatex">\(\lim f(x)g(x)=0\)</span>。</p>
+<ul>
+<li>例：<span class="arithmatex">\(\lim_{x\to0}x\cos\frac1x=0\)</span>；<span class="arithmatex">\(\lim_{x\to\infty}\dfrac{\sin x}{x}=0\)</span>；<span class="arithmatex">\(\lim_{x\to\infty}\dfrac{\cos x}{x}=0\)</span>。</li>
+</ul>
+<h4 id="4">4. 易错点<a class="headerlink" href="#4" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><span class="arithmatex">\(\lim_{t\to0}\frac{\sin t}{t}=1\)</span> 只在 <span class="arithmatex">\(t\to0\)</span> 且<strong>弧度制</strong>下成立；<span class="arithmatex">\(x\to\infty\)</span> 时 <span class="arithmatex">\(\frac{\sin x}{x}\to0\)</span>，二者不可混用。</p>
+</li>
+<li>
+<p>极限存在 <span class="arithmatex">\(\ne\)</span> 函数值存在；<span class="arithmatex">\(\frac{\sin x}{x}\)</span> 在 <span class="arithmatex">\(0\)</span> 处无定义但极限为 <span class="arithmatex">\(1\)</span>（可去间断点）。</p>
+</li>
+</ul>
+<hr />
+<h3 id="26-limits-of-exponential-logarithmic-inverse-functions">2.6 Limits of Exponential, Logarithmic &amp; Inverse Functions (指数、对数与反函数极限)<a class="headerlink" href="#26-limits-of-exponential-logarithmic-inverse-functions" title="Permanent link">¶</a></h3>
+<h4 id="1_3">1. 指数函数的极限<a class="headerlink" href="#1_3" title="Permanent link">¶</a></h4>
+<p>$<span class="arithmatex">\(\lim_{x\to\infty}e^x=+\infty,\qquad \lim_{x\to-\infty}e^x=0\)</span>$
+对 <span class="arithmatex">\(a&gt;1\)</span>：<span class="arithmatex">\(\lim_{x\to\infty}a^x=+\infty\)</span>，<span class="arithmatex">\(\lim_{x\to-\infty}a^x=0\)</span>；对 <span class="arithmatex">\(0&lt;a&lt;1\)</span> 方向相反。</p>
+<h4 id="2-theorem-c">2. 反函数极限定理 (Theorem C)<a class="headerlink" href="#2-theorem-c" title="Permanent link">¶</a></h4>
+<p>若 <span class="arithmatex">\(\lim_{x\to a}f(x)=f(a)=c\)</span>（即 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(a\)</span> 连续），则 <span class="arithmatex">\(\lim_{x\to c}f^{-1}(x)=f^{-1}(c)=a\)</span>。</p>
+<ul>
+<li>直观：反函数图像关于 <span class="arithmatex">\(y=x\)</span> 对称，定义域与值域互换。</li>
+</ul>
+<h4 id="3-theorem-d">3. 对数函数的极限 (Theorem D)<a class="headerlink" href="#3-theorem-d" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><span class="arithmatex">\(a&gt;0\)</span>：<span class="arithmatex">\(\lim_{x\to a}\log_c x=\log_c a\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(c&gt;1\)</span> 时：<span class="arithmatex">\(\lim_{x\to\infty}\log_c x=+\infty\)</span>，<span class="arithmatex">\(\lim_{x\to0^+}\log_c x=-\infty\)</span>。</p>
+</li>
+<li>
+<p>复合形式：<span class="arithmatex">\(\lim\ln u(x)=\ln(\lim u(x))\)</span>，前提是 <span class="arithmatex">\(\lim u(x)&gt;0\)</span>（对数在正数处连续）。</p>
+</li>
+</ul>
+<h4 id="4-continuous-compounding">4. 连续复利 (Continuous Compounding)<a class="headerlink" href="#4-continuous-compounding" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[A(t)=Pe^{rt}\quad(\text{连续复利}),\qquad A=P\left(1+\frac rn\right)^{nt}\quad(\text{每年 }n\text{ 次复利})\]</div>
+<ul>
+<li>例：<span class="arithmatex">\(P=400\)</span>，<span class="arithmatex">\(r=4\%\)</span>，<span class="arithmatex">\(t=2\)</span>：</li>
+<li>每年复利：<span class="arithmatex">\(400(1.04)^2=432.64\)</span>；</li>
+<li>每月复利：<span class="arithmatex">\(400\left(1+\frac{0.04}{12}\right)^{24}\approx433.26\)</span>；</li>
+<li>连续复利：<span class="arithmatex">\(400e^{0.08}\approx433.31\)</span>。</li>
+</ul>
+<hr />
+<h3 id="27-continuity-of-functions">2.7 Continuity of Functions (函数的连续性)<a class="headerlink" href="#27-continuity-of-functions" title="Permanent link">¶</a></h3>
+<h4 id="1_4">1. 点连续的三条件（必背）<a class="headerlink" href="#1_4" title="Permanent link">¶</a></h4>
+<p><span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(x=c\)</span> 连续 <span class="arithmatex">\(\iff\)</span>
+1. <span class="arithmatex">\(f(c)\)</span> 有定义；
+2. <span class="arithmatex">\(\lim_{x\to c}f(x)\)</span> 存在；
+3. <span class="arithmatex">\(\lim_{x\to c}f(x)=f(c)\)</span>。</p>
+<p><strong>区间连续:</strong> 开区间内每点连续；闭区间 <span class="arithmatex">\([a,b]\)</span> 还要求 <span class="arithmatex">\(\lim_{x\to a^+}f(x)=f(a)\)</span>、<span class="arithmatex">\(\lim_{x\to b^-}f(x)=f(b)\)</span>。</p>
+<h4 id="2-classification-of-discontinuities">2. 间断点分类 (Classification of Discontinuities)<a class="headerlink" href="#2-classification-of-discontinuities" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">类型</th>
+<th style="text-align: left;">特征</th>
+<th style="text-align: left;">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">可去间断点 (removable)</td>
+<td style="text-align: left;">极限存在，但 <span class="arithmatex">\(f(c)\)</span> 未定义或 <span class="arithmatex">\(\ne\)</span> 极限</td>
+<td style="text-align: left;"><span class="arithmatex">\(\frac{\sin x}{x}\)</span> 在 <span class="arithmatex">\(0\)</span> 处；<span class="arithmatex">\(\frac{x^2-4}{x-2}\)</span> 在 <span class="arithmatex">\(2\)</span> 处</td>
+</tr>
+<tr>
+<td style="text-align: left;">跳跃间断点 (jump)</td>
+<td style="text-align: left;">左右极限都存在但不相等</td>
+<td style="text-align: left;"><span class="arithmatex">\(\operatorname{sgn}x\)</span> 在 <span class="arithmatex">\(0\)</span> 处</td>
+</tr>
+<tr>
+<td style="text-align: left;">无穷间断点 (infinite)</td>
+<td style="text-align: left;">单侧/双侧极限为 <span class="arithmatex">\(\pm\infty\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\frac1x\)</span> 在 <span class="arithmatex">\(0\)</span> 处</td>
+</tr>
+<tr>
+<td style="text-align: left;">振荡间断点 (oscillating)</td>
+<td style="text-align: left;">极限因振荡不存在</td>
+<td style="text-align: left;"><span class="arithmatex">\(\sin\frac1x\)</span> 在 <span class="arithmatex">\(0\)</span> 处</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>补定义使连续:</strong> 若 <span class="arithmatex">\(\lim_{x\to c}f(x)=L\)</span> 存在，令 <span class="arithmatex">\(f(c)=L\)</span> 即可（可去间断点）。</p>
+</li>
+<li>
+<p><strong>非可去（nonremovable）:</strong> 跳跃、无穷、振荡三类。</p>
+</li>
+</ul>
+<h4 id="3_2">3. 初等函数与复合函数的连续性<a class="headerlink" href="#3_2" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p>多项式、有理函数、根式、指数、对数、三角、反三角函数在其<strong>定义域</strong>上连续。</p>
+</li>
+<li>
+<p><strong>复合极限定理 (Theorem E):</strong> 若 <span class="arithmatex">\(\lim_{x\to c}g(x)=L\)</span> 且 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(L\)</span> 处连续，则
+  $<span class="arithmatex">\(\lim_{x\to c}f(g(x))=f\left(\lim_{x\to c}g(x)\right)=f(L)\)</span>$
+  例：<span class="arithmatex">\(\lim_{x\to0}\sin\left(\dfrac{\sin x}{x}\right)=\sin1\)</span>；<span class="arithmatex">\(\lim_{x\to0}\ln\dfrac{\sin x}{x}=\ln1=0\)</span>。</p>
+</li>
+<li>
+<p><strong>幂指函数 <span class="arithmatex">\(f(x)^{g(x)}\)</span>:</strong> 若 <span class="arithmatex">\(f,g\)</span> 连续且 <span class="arithmatex">\(f(x)&gt;0\)</span>，则 <span class="arithmatex">\(f^g=e^{g\ln f}\)</span> 连续。</p>
+</li>
+</ul>
+<h4 id="4-1infty">4. 第二重要极限与 <span class="arithmatex">\(1^\infty\)</span> 型<a class="headerlink" href="#4-1infty" title="Permanent link">¶</a></h4>
+<p>$<span class="arithmatex">\(\lim_{x\to\infty}\left(1+\frac1x\right)^x=e,\qquad \lim_{h\to0}(1+h)^{1/h}=e\)</span>$
+<strong>推广:</strong> 若 <span class="arithmatex">\(\lim u=0\)</span>（<span class="arithmatex">\(u\ne0\)</span>），则 <span class="arithmatex">\(\lim(1+u)^{1/u}=e\)</span>。</p>
+<p><strong><span class="arithmatex">\(1^\infty\)</span> 型速算公式（必背）:</strong> 若 <span class="arithmatex">\(f(x)\to1\)</span>，<span class="arithmatex">\(g(x)\to\infty\)</span>，则
+$<span class="arithmatex">\(\lim f(x)^{g(x)}=e^{\lim g(x)[f(x)-1]}\)</span>$
+<strong>常用结论:</strong> <span class="arithmatex">\(\lim_{x\to0}(1+ax)^{b/x}=e^{ab}\)</span>。</p>
+<h4 id="5">5. 闭区间连续函数的性质：介值定理与零点定理<a class="headerlink" href="#5" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>介值定理 (IVT / Theorem F):</strong> <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 连续，<span class="arithmatex">\(N\)</span> 是介于 <span class="arithmatex">\(f(a)\)</span> 与 <span class="arithmatex">\(f(b)\)</span> 之间的任意数，则存在 <span class="arithmatex">\(c\in(a,b)\)</span> 使 <span class="arithmatex">\(f(c)=N\)</span>。</p>
+</li>
+<li>
+<p><strong>零点定理 (Zero Point Theorem):</strong> 若 <span class="arithmatex">\(f(a)\)</span> 与 <span class="arithmatex">\(f(b)\)</span> <strong>异号</strong>，则存在 <span class="arithmatex">\(c\in(a,b)\)</span> 使 <span class="arithmatex">\(f(c)=0\)</span>。</p>
+</li>
+<li>
+<p><strong>二分法 (Bisection):</strong> 反复取中点并判断符号，把根所在区间减半，可逼近根。</p>
+</li>
+<li>
+<p><strong>不动点 (Fixed Point):</strong> 证明 <span class="arithmatex">\(f(c)=c\)</span>，构造 <span class="arithmatex">\(g(x)=f(x)-x\)</span>，对 <span class="arithmatex">\(g\)</span> 用零点定理。</p>
+</li>
+</ul>
+<hr />
+<h3 id="typical-examples-from-assignments-24">🌟 典型例题精解 (Typical Examples from Assignments 2–4)<a class="headerlink" href="#typical-examples-from-assignments-24" title="Permanent link">¶</a></h3>
+<h5 id="500-assignment-2-23">【例题 5】<span class="arithmatex">\(0/0\)</span> 型含根号极限（Assignment 2, §2.3）<a class="headerlink" href="#500-assignment-2-23" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Evaluate <span class="arithmatex">\(\displaystyle\lim_{x\to0}\frac{\sqrt{3+x}-\sqrt{3-x}}{x}\)</span>.</p>
+<p><strong>Process (解题步骤):</strong></p>
+<p>有理化分子，乘共轭式 <span class="arithmatex">\(\sqrt{3+x}+\sqrt{3-x}\)</span>：
+$<span class="arithmatex">\(\frac{\sqrt{3+x}-\sqrt{3-x}}{x}\cdot\frac{\sqrt{3+x}+\sqrt{3-x}}{\sqrt{3+x}+\sqrt{3-x}}=\frac{(3+x)-(3-x)}{x\left(\sqrt{3+x}+\sqrt{3-x}\right)}=\frac{2x}{x\left(\sqrt{3+x}+\sqrt{3-x}\right)}\)</span>$
+约去 <span class="arithmatex">\(x\)</span> 后令 <span class="arithmatex">\(x\to0\)</span>：
+$<span class="arithmatex">\(\frac{2}{\sqrt3+\sqrt3}=\frac{1}{\sqrt3}\)</span>$</p>
+<p><strong>中文详解:</strong> <span class="arithmatex">\(0/0\)</span> 型含根号差，先乘共轭有理化，约去公因子 <span class="arithmatex">\(x\)</span> 后再代入；这是 §2.3 与 §2.4 中反复使用的标准手法。</p>
+<h5 id="6assignment-3-24">【例题 6】根式差的无穷极限（Assignment 3, §2.4）<a class="headerlink" href="#6assignment-3-24" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Evaluate <span class="arithmatex">\(\displaystyle\lim_{x\to\infty}\left(\sqrt{x^2+x}-\sqrt{x^2-x}\right)\)</span>.</p>
+<p><strong>Process (解题步骤):</strong></p>
+<div class="arithmatex">\[\sqrt{x^2+x}-\sqrt{x^2-x}=\frac{(x^2+x)-(x^2-x)}{\sqrt{x^2+x}+\sqrt{x^2-x}}=\frac{2x}{\sqrt{x^2+x}+\sqrt{x^2-x}}$$
+分子分母同除以 $x&gt;0$：
+$$=\frac{2}{\sqrt{1+\frac1x}+\sqrt{1-\frac1x}}\to\frac{2}{1+1}=1\]</div>
+<p><strong>中文详解:</strong> <span class="arithmatex">\(\infty-\infty\)</span> 型先有理化；除以 <span class="arithmatex">\(x\)</span> 时注意 <span class="arithmatex">\(x&gt;0\)</span>，<span class="arithmatex">\(\sqrt{x^2}=x\)</span>。</p>
+<h5 id="7assignment-3-24">【例题 7】有理函数的渐近线（Assignment 3, §2.4）<a class="headerlink" href="#7assignment-3-24" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Find all horizontal and vertical asymptotes of <span class="arithmatex">\(f(x)=\dfrac{x}{1-x^2}\)</span>.</p>
+<p><strong>Process (解题步骤):</strong></p>
+<ul>
+<li>
+<p>HA：<span class="arithmatex">\(\lim_{x\to\pm\infty}\dfrac{x}{1-x^2}=0\)</span>，故 <span class="arithmatex">\(y=0\)</span>。</p>
+</li>
+<li>
+<p>VA：分母 <span class="arithmatex">\(1-x^2=(1-x)(1+x)=0\Rightarrow x=\pm1\)</span>，分子在 <span class="arithmatex">\(x=\pm1\)</span> 处不为 <span class="arithmatex">\(0\)</span>，且单侧极限为 <span class="arithmatex">\(\pm\infty\)</span>，故 <span class="arithmatex">\(x=1\)</span> 与 <span class="arithmatex">\(x=-1\)</span> 都是 VA。</p>
+</li>
+</ul>
+<p><strong>中文详解:</strong> 先看末端行为定 HA；再找分母零点（且不能约去）定 VA。</p>
+<h5 id="8assignment-3-25">【例题 8】三角极限（Assignment 3, §2.5）<a class="headerlink" href="#8assignment-3-25" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Evaluate <span class="arithmatex">\(\displaystyle\lim_{x\to0}\frac{\tan4x}{\sin5x}\)</span>.</p>
+<p><strong>Process (解题步骤):</strong></p>
+<div class="arithmatex">\[\frac{\tan4x}{\sin5x}=\frac{\tan4x}{4x}\cdot\frac{5x}{\sin5x}\cdot\frac{4x}{5x}\to1\cdot1\cdot\frac45=\frac45\]</div>
+<p><strong>中文详解:</strong> 凑第一重要极限的结构 <span class="arithmatex">\(\frac{\tan u}{u}\to1\)</span>、<span class="arithmatex">\(\frac{\sin v}{v}\to1\)</span>，系数按比例留下。</p>
+<h5 id="91infty-assignment-4-26">【例题 9】<span class="arithmatex">\(1^\infty\)</span> 型极限（Assignment 4, §2.6）<a class="headerlink" href="#91infty-assignment-4-26" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Evaluate <span class="arithmatex">\(\displaystyle\lim_{x\to\infty}\left(\frac{2x+3}{2x+1}\right)^{3x+1}\)</span>.</p>
+<p><strong>Process (解题步骤):</strong></p>
+<p>底数 <span class="arithmatex">\(=\dfrac{2x+3}{2x+1}=1+\dfrac{2}{2x+1}=1+u\)</span>，其中 <span class="arithmatex">\(u=\dfrac{2}{2x+1}\to0\)</span>。
+用速算公式：
+$<span class="arithmatex">\(\lim g(x)[f(x)-1]=\lim(3x+1)\cdot\frac{2}{2x+1}=3\)</span>$
+故原式 <span class="arithmatex">\(=e^3\)</span>。</p>
+<p><strong>中文详解:</strong> <span class="arithmatex">\(1^\infty\)</span> 型先写成 <span class="arithmatex">\(1+u\)</span>，再用 <span class="arithmatex">\(e^{\lim g u}\)</span>；不要直接对底数取极限。</p>
+<h5 id="10assignment-4-27">【例题 10】求参数使函数处处连续（Assignment 4, §2.7）<a class="headerlink" href="#10assignment-4-27" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Find <span class="arithmatex">\(a,b\)</span> such that
+$<span class="arithmatex">\(f(x)=\begin{cases}\dfrac{x^2-1}{x-1},&amp;x&lt;1\\ ax^2-bx+4,&amp;1\le x&lt;3\\ 2x-a+2b,&amp;x\ge3\end{cases}\)</span>$
+is continuous everywhere.</p>
+<p><strong>Process (解题步骤):</strong></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(x=1\)</span>：<span class="arithmatex">\(\lim_{x\to1^-}\dfrac{x^2-1}{x-1}=\lim(x+1)=2\)</span>；<span class="arithmatex">\(f(1)=a-b+4\)</span>。故 <span class="arithmatex">\(a-b+4=2\Rightarrow a-b=-2\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(x=3\)</span>：<span class="arithmatex">\(\lim_{x\to3^-}=9a-3b+4\)</span>；<span class="arithmatex">\(\lim_{x\to3^+}=6-a+2b\)</span>。故 <span class="arithmatex">\(9a-3b+4=6-a+2b\Rightarrow10a-5b=2\Rightarrow2a-b=\dfrac25\)</span>。</p>
+</li>
+<li>
+<p>联立解得 <span class="arithmatex">\(a=\dfrac{12}{5}\)</span>，<span class="arithmatex">\(b=\dfrac{22}{5}\)</span>。</p>
+</li>
+</ul>
+<p><strong>中文详解:</strong> 分段点连续 <span class="arithmatex">\(\iff\)</span> 左极限 <span class="arithmatex">\(=\)</span> 右极限 <span class="arithmatex">\(=\)</span> 函数值；两个分界点各给一个方程。</p>
+<h5 id="11assignment-4-27">【例题 11】介值定理证明根的存在（Assignment 4, §2.7）<a class="headerlink" href="#11assignment-4-27" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Show that <span class="arithmatex">\(x^4+3x-2=0\)</span> has a real solution between <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(1\)</span>.</p>
+<p><strong>Process (解题步骤):</strong></p>
+<p>令 <span class="arithmatex">\(f(x)=x^4+3x-2\)</span>，在 <span class="arithmatex">\([0,1]\)</span> 上连续。
+$<span class="arithmatex">\(f(0)=-2&lt;0,\qquad f(1)=1+3-2=2&gt;0\)</span>$
+由零点定理，存在 <span class="arithmatex">\(c\in(0,1)\)</span> 使 <span class="arithmatex">\(f(c)=0\)</span>。</p>
+<p><strong>中文详解:</strong> 证明根存在只需：构造连续函数、算两端点、验证异号；不需要解出根。</p>
+<hr />
+<h2 id="lectures-56-31310">第三部分：导数 (Lectures 5–6: §3.1–3.10)<a class="headerlink" href="#lectures-56-31310" title="Permanent link">¶</a></h2>
+<h3 id="31-two-problems-with-one-theme">3.1 Two Problems with One Theme (切线问题与瞬时速度)<a class="headerlink" href="#31-two-problems-with-one-theme" title="Permanent link">¶</a></h3>
+<h4 id="1-tangent-line-problem">1. 切线斜率 (Tangent Line Problem)<a class="headerlink" href="#1-tangent-line-problem" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p>割线斜率（过 <span class="arithmatex">\(c\)</span> 与 <span class="arithmatex">\(c+h\)</span>）：<span class="arithmatex">\(m_{\text{sec}}=\dfrac{f(c+h)-f(c)}{h}\)</span>。</p>
+</li>
+<li>
+<p>切线斜率：<span class="arithmatex">\(m_{\tan}=\displaystyle\lim_{h\to0}\frac{f(c+h)-f(c)}{h}\)</span>（也可写 <span class="arithmatex">\(\lim_{x\to c}\frac{f(x)-f(c)}{x-c}\)</span>）。</p>
+</li>
+<li>
+<p>切线方程：<span class="arithmatex">\(y-f(c)=m_{\tan}(x-c)\)</span>。</p>
+</li>
+</ul>
+<h4 id="2-instantaneous-velocity">2. 瞬时速度 (Instantaneous Velocity)<a class="headerlink" href="#2-instantaneous-velocity" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p>平均速度：<span class="arithmatex">\(\dfrac{\Delta s}{\Delta t}=\dfrac{s(t+\Delta t)-s(t)}{\Delta t}\)</span>。</p>
+</li>
+<li>
+<p>瞬时速度：<span class="arithmatex">\(v(t)=\displaystyle\lim_{\Delta t\to0}\frac{\Delta s}{\Delta t}\)</span>。</p>
+</li>
+<li>
+<p>两者本质相同：都是“函数改变量 / 自变量改变量”的极限。</p>
+</li>
+</ul>
+<hr />
+<h3 id="32-the-derivative">3.2 The Derivative (导数的定义与性质)<a class="headerlink" href="#32-the-derivative" title="Permanent link">¶</a></h3>
+<h4 id="1-definition">1. 定义 (Definition)<a class="headerlink" href="#1-definition" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[f'(c)=\lim_{h\to0}\frac{f(c+h)-f(c)}{h}=\lim_{x\to c}\frac{f(x)-f(c)}{x-c}\]</div>
+<ul>
+<li>
+<p>导数存在称 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(c\)</span> <strong>可导 (differentiable)</strong>。</p>
+</li>
+<li>
+<p><strong>记号:</strong> <span class="arithmatex">\(f'(x)\)</span>，<span class="arithmatex">\(y'\)</span>，<span class="arithmatex">\(\dfrac{dy}{dx}\)</span>，<span class="arithmatex">\(\dfrac{d}{dx}f(x)\)</span>，<span class="arithmatex">\(D_xf(x)\)</span>；<span class="arithmatex">\(f'(c)=\left.\dfrac{dy}{dx}\right|_{x=c}\)</span>。</p>
+</li>
+</ul>
+<h4 id="2-differentiability-implies-continuity">2. 可导与连续 (Differentiability Implies Continuity)<a class="headerlink" href="#2-differentiability-implies-continuity" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>定理:</strong> 若 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(c\)</span> 可导，则 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(c\)</span> 连续。</p>
+</li>
+<li>
+<p><strong>证明要点:</strong>
+  $<span class="arithmatex">\(f(x)-f(c)=\frac{f(x)-f(c)}{x-c}(x-c)\to f'(c)\cdot0=0\quad(x\to c)\)</span>$</p>
+</li>
+<li>
+<p><strong>逆命题不成立:</strong> <span class="arithmatex">\(f(x)=\lvert x\rvert\)</span> 在 <span class="arithmatex">\(0\)</span> 处连续但不可导（左导 <span class="arithmatex">\(-1\)</span>，右导 <span class="arithmatex">\(1\)</span>）。</p>
+</li>
+<li>
+<p><strong>不可导的四种情形:</strong></p>
+</li>
+<li><strong>角点 (corner):</strong> 左右导数存在但不相等，如 <span class="arithmatex">\(\lvert x\rvert\)</span> 在 <span class="arithmatex">\(0\)</span>；</li>
+<li><strong>尖点 (cusp):</strong> 导数趋于 <span class="arithmatex">\(\pm\infty\)</span> 且两侧符号相反，如 <span class="arithmatex">\(x^{2/3}\)</span> 在 <span class="arithmatex">\(0\)</span>；</li>
+<li><strong>竖直切线:</strong> 如 <span class="arithmatex">\(\sqrt[3]{x}\)</span> 在 <span class="arithmatex">\(0\)</span>（导数 <span class="arithmatex">\(\to+\infty\)</span>）；</li>
+<li><strong>间断点:</strong> 不连续必不可导。</li>
+</ul>
+<hr />
+<h3 id="33-rules-for-finding-derivatives">3.3 Rules for Finding Derivatives (求导法则)<a class="headerlink" href="#33-rules-for-finding-derivatives" title="Permanent link">¶</a></h3>
+<h4 id="1_5">1. 基本法则<a class="headerlink" href="#1_5" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[(c)'=0,\qquad (x)'=1,\qquad (x^r)'=rx^{r-1}\quad(r\in\mathbb{R})\]</div>
+<ul>
+<li>幂法则对负指数、分数指数同样成立（在定义域内）。</li>
+</ul>
+<h4 id="2-linearity">2. 线性性质 (Linearity)<a class="headerlink" href="#2-linearity" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[(af(x)\pm bg(x))'=af'(x)\pm bg'(x)\]</div>
+<h4 id="3-product-quotient-rules">3. 乘积与商法则 (Product &amp; Quotient Rules)<a class="headerlink" href="#3-product-quotient-rules" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[(fg)'=f'g+fg'\qquad\left(\frac fg\right)'=\frac{f'g-fg'}{g^2}\]</div>
+<ul>
+<li>常见错误：<span class="arithmatex">\((fg)'\ne f'g'\)</span>；商的分子顺序不能颠倒。</li>
+</ul>
+<hr />
+<h3 id="34-derivatives-of-trigonometric-functions">3.4 Derivatives of Trigonometric Functions (三角函数导数)<a class="headerlink" href="#34-derivatives-of-trigonometric-functions" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">函数</th>
+<th style="text-align: center;">导数</th>
+<th style="text-align: center;">函数</th>
+<th style="text-align: center;">导数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\sin x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\cos x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\cos x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\sin x\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\tan x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\sec^2x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\cot x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\csc^2x\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\sec x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\sec x\tan x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\csc x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\csc x\cot x\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong><span class="arithmatex">\(\sin x\)</span> 导数的证明:</strong> 用和角公式
+  $<span class="arithmatex">\(\frac{\sin(x+h)-\sin x}{h}=\sin x\cdot\frac{\cos h-1}{h}+\cos x\cdot\frac{\sin h}{h}\to\cos x\)</span>$
+  其中用到 <span class="arithmatex">\(\frac{\sin h}{h}\to1\)</span>、<span class="arithmatex">\(\frac{1-\cos h}{h}\to0\)</span>。</p>
+</li>
+<li>
+<p>链式法则版本：<span class="arithmatex">\((\sin u)'=\cos u\cdot u'\)</span>，<span class="arithmatex">\((\cos u)'=-\sin u\cdot u'\)</span>，等等。</p>
+</li>
+</ul>
+<hr />
+<h3 id="35-the-chain-rule">3.5 The Chain Rule (链式法则)<a class="headerlink" href="#35-the-chain-rule" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p><strong>定理:</strong> 若 <span class="arithmatex">\(g\)</span> 在 <span class="arithmatex">\(x\)</span> 可导、<span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(u=g(x)\)</span> 可导，则
+  $<span class="arithmatex">\(\frac{d}{dx}f(g(x))=f'(g(x))\,g'(x)\)</span>$</p>
+</li>
+<li>
+<p><strong>多层:</strong> <span class="arithmatex">\(\dfrac{d}{dx}f(g(h(x)))=f'(g(h(x)))\cdot g'(h(x))\cdot h'(x)\)</span>。</p>
+</li>
+<li>
+<p><strong>口诀:</strong> 外层导数（内层保持不变）<span class="arithmatex">\(\times\)</span> 内层导数，逐层乘到最内层。</p>
+</li>
+<li>
+<p>例：<span class="arithmatex">\(\left((4+2x^2)^7\right)'=7(4+2x^2)^6\cdot4x\)</span>；<span class="arithmatex">\((\tan^3x)'=3\tan^2x\cdot\sec^2x\)</span>；<span class="arithmatex">\(\left(\sin\sqrt{x}\right)'=\cos\sqrt{x}\cdot\dfrac{1}{2\sqrt{x}}\)</span>。</p>
+</li>
+</ul>
+<hr />
+<h3 id="36-higher-order-derivatives">3.6 Higher-Order Derivatives (高阶导数)<a class="headerlink" href="#36-higher-order-derivatives" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>记号：<span class="arithmatex">\(f''(x)=\dfrac{d^2y}{dx^2}\)</span>，<span class="arithmatex">\(f'''(x)\)</span>，<span class="arithmatex">\(f^{(n)}(x)\)</span>。</p>
+</li>
+<li>
+<p><strong>物理意义:</strong> <span class="arithmatex">\(s(t)\)</span> 位置，<span class="arithmatex">\(v(t)=s'(t)\)</span> 速度，<span class="arithmatex">\(a(t)=v'(t)=s''(t)\)</span> 加速度。</p>
+</li>
+<li>
+<p><strong>常用结论:</strong> <span class="arithmatex">\(n\)</span> 次多项式的 <span class="arithmatex">\(n+1\)</span> 阶导数为 <span class="arithmatex">\(0\)</span>；<span class="arithmatex">\((\sin x)^{(n)}=\sin\left(x+\frac{n\pi}{2}\right)\)</span>，<span class="arithmatex">\((\cos x)^{(n)}=\cos\left(x+\frac{n\pi}{2}\right)\)</span>，<span class="arithmatex">\((e^x)^{(n)}=e^x\)</span>。</p>
+</li>
+</ul>
+<hr />
+<h3 id="37-implicit-differentiation-logarithmic-differentiation">3.7 Implicit Differentiation &amp; Logarithmic Differentiation (隐函数求导与对数求导)<a class="headerlink" href="#37-implicit-differentiation-logarithmic-differentiation" title="Permanent link">¶</a></h3>
+<h4 id="1_6">1. 隐函数求导五步<a class="headerlink" href="#1_6" title="Permanent link">¶</a></h4>
+<ol>
+<li>方程两边对 <span class="arithmatex">\(x\)</span> 求导；</li>
+<li>把 <span class="arithmatex">\(y\)</span> 看作 <span class="arithmatex">\(y(x)\)</span>，每遇到含 <span class="arithmatex">\(y\)</span> 的项就用链式法则乘 <span class="arithmatex">\(y'\)</span>（如 <span class="arithmatex">\((y^2)'=2yy'\)</span>，<span class="arithmatex">\((\sqrt y)'=\frac{y'}{2\sqrt y}\)</span>）；</li>
+<li>把含 <span class="arithmatex">\(y'\)</span> 的项移到一边；</li>
+<li>提取 <span class="arithmatex">\(y'\)</span> 并解出；</li>
+<li>若求某点切线，先代点求 <span class="arithmatex">\(y'\)</span>，再用点斜式。</li>
+</ol>
+<h4 id="2-logarithmic-differentiation">2. 对数求导法 (Logarithmic Differentiation)<a class="headerlink" href="#2-logarithmic-differentiation" title="Permanent link">¶</a></h4>
+<p><strong>适用:</strong> 幂指函数 <span class="arithmatex">\(f(x)^{g(x)}\)</span>；多个因子乘除、开方的复杂表达式。</p>
+<p><strong>步骤:</strong>
+1. 两边取自然对数，用对数性质把乘除化为加减、指数化为系数；
+2. 两边对 <span class="arithmatex">\(x\)</span> 隐式求导；
+3. 解出 <span class="arithmatex">\(y'\)</span>，最后把 <span class="arithmatex">\(y\)</span> 乘回（<span class="arithmatex">\(y'=y\cdot(\ln y)'\)</span>）。</p>
+<ul>
+<li>
+<p>例：<span class="arithmatex">\(y=x^x\ (x&gt;0)\)</span>：<span class="arithmatex">\(\ln y=x\ln x\Rightarrow\dfrac{y'}{y}=\ln x+1\Rightarrow y'=x^x(\ln x+1)\)</span>。</p>
+</li>
+<li>
+<p>例：<span class="arithmatex">\(y=(x^2+1)^{\sin x}\)</span>：<span class="arithmatex">\(\ln y=\sin x\ln(x^2+1)\)</span>，<span class="arithmatex">\(\dfrac{y'}{y}=\cos x\ln(x^2+1)+\dfrac{2x\sin x}{x^2+1}\)</span>。</p>
+</li>
+</ul>
+<hr />
+<h3 id="38-related-rates">3.8 Related Rates (相关变化率)<a class="headerlink" href="#38-related-rates" title="Permanent link">¶</a></h3>
+<h4 id="1_7">1. 五步法<a class="headerlink" href="#1_7" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>画图</strong>并标出变量（长度、体积、角度等）；</li>
+<li><strong>定义变量</strong>，写清已知变化率与所求变化率（对时间 <span class="arithmatex">\(t\)</span> 的导数）；</li>
+<li><strong>建立关系方程</strong>（勾股定理、相似三角形、体积/面积公式、三角函数）；</li>
+<li><strong>两边对 <span class="arithmatex">\(t\)</span> 求导</strong>（链式法则）；</li>
+<li><strong>代入瞬时数值</strong>求解；注意单位与符号（增加/减少）。</li>
+</ol>
+<h4 id="2">2. 三个经典模型<a class="headerlink" href="#2" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>勾股模型:</strong> 气球高度 <span class="arithmatex">\(h\)</span>、水平距离固定 <span class="arithmatex">\(150\)</span>，斜边 <span class="arithmatex">\(s\)</span>：<span class="arithmatex">\(s^2=h^2+150^2\Rightarrow s\dfrac{ds}{dt}=h\dfrac{dh}{dt}\)</span>。</p>
+</li>
+<li>
+<p><strong>相似三角形（圆锥注水）:</strong> <span class="arithmatex">\(\dfrac{r}{h}=\dfrac{R}{H}\)</span>，<span class="arithmatex">\(V=\dfrac13\pi r^2h=\dfrac{\pi R^2}{3H^2}h^3\)</span>，故 <span class="arithmatex">\(\dfrac{dV}{dt}=\dfrac{\pi R^2}{H^2}h^2\dfrac{dh}{dt}\)</span>。</p>
+</li>
+<li>
+<p><strong>三角模型:</strong> 仰角 <span class="arithmatex">\(\theta\)</span>，<span class="arithmatex">\(\tan\theta=\dfrac{h}{x}\)</span>，两边对 <span class="arithmatex">\(t\)</span> 求导得 <span class="arithmatex">\(\sec^2\theta\dfrac{d\theta}{dt}=\dfrac{x\frac{dh}{dt}-h\frac{dx}{dt}}{x^2}\)</span>。</p>
+</li>
+</ul>
+<hr />
+<h3 id="39-derivatives-of-exponential-and-logarithmic-functions">3.9 Derivatives of Exponential and Logarithmic Functions (指数与对数函数导数)<a class="headerlink" href="#39-derivatives-of-exponential-and-logarithmic-functions" title="Permanent link">¶</a></h3>
+<h4 id="1_8">1. 单调性与反函数存在性<a class="headerlink" href="#1_8" title="Permanent link">¶</a></h4>
+<ul>
+<li>若 <span class="arithmatex">\(f\)</span> 在区间 <span class="arithmatex">\(I\)</span> 上连续、内部可导且 <span class="arithmatex">\(f'(x)&gt;0\)</span>（或 <span class="arithmatex">\(&lt;0\)</span>），则 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(I\)</span> 上严格单调，从而存在反函数 <span class="arithmatex">\(f^{-1}\)</span>。</li>
+</ul>
+<h4 id="2-inverse-function-theorem">2. 反函数求导定理 (Inverse Function Theorem)<a class="headerlink" href="#2-inverse-function-theorem" title="Permanent link">¶</a></h4>
+<p>若 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(x\)</span> 处可导且 <span class="arithmatex">\(f'(x)\ne0\)</span>，<span class="arithmatex">\(y=f(x)\)</span>，则
+$<span class="arithmatex">\((f^{-1})'(y)=\frac{1}{f'(x)}=\frac{1}{f'(f^{-1}(y))}\)</span>$</p>
+<ul>
+<li>几何直观：<span class="arithmatex">\(f^{-1}\)</span> 的图像是 <span class="arithmatex">\(f\)</span> 关于 <span class="arithmatex">\(y=x\)</span> 的镜像，斜率互为倒数。</li>
+</ul>
+<h4 id="3_3">3. 求导公式（必背）<a class="headerlink" href="#3_3" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[(\ln x)'=\frac1x,\qquad (e^x)'=e^x,\qquad (\log_a x)'=\frac{1}{x\ln a},\qquad (a^x)'=a^x\ln a$$
+**链式版本:**
+$$(\ln u)'=\frac{u'}{u},\qquad (e^u)'=e^u u',\qquad (a^u)'=a^u\ln a\cdot u'\]</div>
+<hr />
+<h3 id="310-derivatives-of-inverse-trigonometric-functions">3.10 Derivatives of Inverse Trigonometric Functions (反三角函数导数)<a class="headerlink" href="#310-derivatives-of-inverse-trigonometric-functions" title="Permanent link">¶</a></h3>
+<p>$<span class="arithmatex">\((\arcsin x)'=\frac{1}{\sqrt{1-x^2}}\ (-1&lt;x&lt;1),\qquad (\arccos x)'=-\frac{1}{\sqrt{1-x^2}}\)</span>$
+$<span class="arithmatex">\((\arctan x)'=\frac{1}{1+x^2}\ (x\in\mathbb{R})\)</span>$
+<strong>链式版本:</strong> <span class="arithmatex">\((\arcsin u)'=\dfrac{u'}{\sqrt{1-u^2}}\)</span>，<span class="arithmatex">\((\arccos u)'=-\dfrac{u'}{\sqrt{1-u^2}}\)</span>，<span class="arithmatex">\((\arctan u)'=\dfrac{u'}{1+u^2}\)</span>。</p>
+<ul>
+<li><strong><span class="arithmatex">\(\arcsin\)</span> 导数证明:</strong> 令 <span class="arithmatex">\(y=\arcsin x\)</span>，则 <span class="arithmatex">\(x=\sin y\)</span>，<span class="arithmatex">\(y\in(-\pi/2,\pi/2)\)</span>。由 IFT，
+  $<span class="arithmatex">\(\frac{dy}{dx}=\frac{1}{\cos y}=\frac{1}{\sqrt{1-\sin^2y}}=\frac{1}{\sqrt{1-x^2}}\)</span>$
+  其中 <span class="arithmatex">\(\cos y&gt;0\)</span> 保证了取正根。</li>
+</ul>
+<hr />
+<h3 id="typical-examples-from-assignments-56">🌟 典型例题精解 (Typical Examples from Assignments 5–6)<a class="headerlink" href="#typical-examples-from-assignments-56" title="Permanent link">¶</a></h3>
+<h5 id="12assignment-5-32">【例题 12】用定义求导数（Assignment 5, §3.2）<a class="headerlink" href="#12assignment-5-32" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Use the definition to find <span class="arithmatex">\(f'(x)\)</span> for <span class="arithmatex">\(f(x)=x^3+3x\)</span>.</p>
+<p><strong>Process (解题步骤):</strong></p>
+<p>$<span class="arithmatex">\(\frac{f(x+h)-f(x)}{h}=\frac{(x+h)^3+3(x+h)-x^3-3x}{h}=\frac{3x^2h+3xh^2+h^3+3h}{h}=3x^2+3xh+h^2+3\)</span>$
+令 <span class="arithmatex">\(h\to0\)</span>：<span class="arithmatex">\(f'(x)=3x^2+3\)</span>。</p>
+<p><strong>中文详解:</strong> 展开后约去 <span class="arithmatex">\(h\)</span>，再令 <span class="arithmatex">\(h\to0\)</span>；这是“导数定义题”的标准流程。</p>
+<h5 id="13assignment-5-36">【例题 13】高阶导数（Assignment 5, §3.6）<a class="headerlink" href="#13assignment-5-36" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Find <span class="arithmatex">\(D^{11}(80x^{10}-6x^9+3)\)</span>.</p>
+<p><strong>Process (解题步骤):</strong></p>
+<p>多项式次数为 <span class="arithmatex">\(10\)</span>，故 <span class="arithmatex">\(11\)</span> 阶导数为 <span class="arithmatex">\(0\)</span>：
+$<span class="arithmatex">\(D^{11}(80x^{10}-6x^9+3)=0\)</span>$</p>
+<p><strong>中文详解:</strong> <span class="arithmatex">\(n\)</span> 次多项式的 <span class="arithmatex">\(n+1\)</span> 阶导数恒为 <span class="arithmatex">\(0\)</span>，无需逐阶计算。</p>
+<h5 id="14assignment-6-39">【例题 14】反函数求导定理（Assignment 6, §3.9）<a class="headerlink" href="#14assignment-6-39" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Let <span class="arithmatex">\(f(x)=3x^5+x-2\)</span> with <span class="arithmatex">\(f(1)=2\)</span>. Find <span class="arithmatex">\((f^{-1})'(2)\)</span>.</p>
+<p><strong>Process (解题步骤):</strong></p>
+<p><span class="arithmatex">\(f(1)=2\Rightarrow f^{-1}(2)=1\)</span>；<span class="arithmatex">\(f'(x)=15x^4+1\)</span>，故 <span class="arithmatex">\(f'(1)=16\)</span>。
+$<span class="arithmatex">\((f^{-1})'(2)=\frac{1}{f'(f^{-1}(2))}=\frac{1}{f'(1)}=\frac{1}{16}\)</span>$</p>
+<p><strong>中文详解:</strong> 先由 <span class="arithmatex">\(f(1)=2\)</span> 找到对应点，再对原函数求导取倒数；不要试图解出 <span class="arithmatex">\(f^{-1}\)</span>。</p>
+<h5 id="15assignment-6-37">【例题 15】隐函数求切线（Assignment 6, §3.7）<a class="headerlink" href="#15assignment-6-37" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Find the tangent line to <span class="arithmatex">\(\sqrt y+xy^2=5\)</span> at <span class="arithmatex">\((4,1)\)</span>.</p>
+<p><strong>Process (解题步骤):</strong></p>
+<p>两边对 <span class="arithmatex">\(x\)</span> 求导：
+$<span class="arithmatex">\(\frac{y'}{2\sqrt y}+y^2+2xyy'=0\)</span>$
+代入 <span class="arithmatex">\((x,y)=(4,1)\)</span>：
+$<span class="arithmatex">\(\frac{y'}{2}+1+8y'=0\Rightarrow\frac{17}{2}y'=-1\Rightarrow y'=-\frac{2}{17}\)</span>$
+切线：<span class="arithmatex">\(y-1=-\dfrac{2}{17}(x-4)\)</span>，即 <span class="arithmatex">\(2x+17y=25\)</span>。</p>
+<p><strong>中文详解:</strong> 隐函数求导后先代点求斜率，再写点斜式；含 <span class="arithmatex">\(y^2\)</span> 的项要用乘积法则。</p>
+<h5 id="16assignment-6-37">【例题 16】对数求导法（Assignment 6, §3.7）<a class="headerlink" href="#16assignment-6-37" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Find <span class="arithmatex">\(y'\)</span> for <span class="arithmatex">\(y=(x^4+1)^{\sin x}\)</span>.</p>
+<p><strong>Process (解题步骤):</strong></p>
+<p>两边取对数：
+$<span class="arithmatex">\(\ln y=\sin x\ln(x^4+1)\)</span>$
+两边对 <span class="arithmatex">\(x\)</span> 求导：
+$<span class="arithmatex">\(\frac{y'}{y}=\cos x\ln(x^4+1)+\sin x\cdot\frac{4x^3}{x^4+1}\)</span>$
+故
+$<span class="arithmatex">\(y'=(x^4+1)^{\sin x}\left[\cos x\ln(x^4+1)+\frac{4x^3\sin x}{x^4+1}\right]\)</span>$</p>
+<p><strong>中文详解:</strong> 底数与指数都含 <span class="arithmatex">\(x\)</span>，必须用对数求导；最后别忘了乘回 <span class="arithmatex">\(y\)</span>。</p>
+<h5 id="17assignment-6-38">【例题 17】相关变化率（Assignment 6, §3.8）<a class="headerlink" href="#17assignment-6-38" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Each edge of a cube increases at <span class="arithmatex">\(3\)</span> in/s. How fast is the volume increasing when the edge is <span class="arithmatex">\(12\)</span> in?</p>
+<p><strong>Process (解题步骤):</strong></p>
+<p><span class="arithmatex">\(V=s^3\)</span>，两边对 <span class="arithmatex">\(t\)</span> 求导：
+$<span class="arithmatex">\(\frac{dV}{dt}=3s^2\frac{ds}{dt}\)</span>$
+代入 <span class="arithmatex">\(s=12\)</span>，<span class="arithmatex">\(\dfrac{ds}{dt}=3\)</span>：
+$<span class="arithmatex">\(\frac{dV}{dt}=3(12)^2(3)=1296\ \text{in}^3/\text{s}\)</span>$</p>
+<p><strong>中文详解:</strong> 先建立几何关系，再对时间求导；单位保持一致。</p>
+<hr />
+<h2 id="10-formula-sheet-traps">附录：考前 10 分钟速览 (Formula Sheet &amp; Traps)<a class="headerlink" href="#10-formula-sheet-traps" title="Permanent link">¶</a></h2>
+<h3 id="a">A. 高频极限<a class="headerlink" href="#a" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">极限</th>
+<th style="text-align: center;">值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\lim_{x\to0}\dfrac{\sin x}{x}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\lim_{x\to0}\dfrac{\tan x}{x}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\lim_{x\to0}\dfrac{1-\cos x}{x}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\lim_{x\to0}\dfrac{1-\cos x}{x^2}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac12\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\lim_{x\to0}\dfrac{\sin ax}{bx}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac ab\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\lim_{x\to\infty}\dfrac{\sin x}{x}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\lim_{x\to0}(1+x)^{1/x}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(e\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\lim_{x\to\infty}\left(1+\dfrac1x\right)^x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(e\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\lim_{x\to0}\dfrac{e^x-1}{x}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\lim_{x\to0}\dfrac{\ln(1+x)}{x}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\lim_{x\to0}x\cos\dfrac1x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="b">B. 求导公式总表<a class="headerlink" href="#b" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">函数</th>
+<th style="text-align: center;">导数</th>
+<th style="text-align: center;">函数</th>
+<th style="text-align: center;">导数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(x^r\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(rx^{r-1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(e^x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(e^x\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(a^x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(a^x\ln a\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ln x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac1x\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\log_a x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac{1}{x\ln a}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\sin x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\cos x\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\cos x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\sin x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\tan x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\sec^2x\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\cot x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\csc^2x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\sec x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\sec x\tan x\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\csc x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\csc x\cot x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\arcsin x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac{1}{\sqrt{1-x^2}}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\arccos x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\dfrac{1}{\sqrt{1-x^2}}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\arctan x\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dfrac{1}{1+x^2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="c">C. 十大易错点<a class="headerlink" href="#c" title="Permanent link">¶</a></h3>
+<ol>
+<li><span class="arithmatex">\(f^{-1}(x)\ne\dfrac{1}{f(x)}\)</span>。</li>
+<li><span class="arithmatex">\(\arcsin(\sin x)=x\)</span> 只在 <span class="arithmatex">\(x\in[-\pi/2,\pi/2]\)</span>；<span class="arithmatex">\(\arccos(\cos x)=x\)</span> 只在 <span class="arithmatex">\([0,\pi]\)</span>。</li>
+<li><span class="arithmatex">\(\lim_{x\to c}f(x)\)</span> 与 <span class="arithmatex">\(f(c)\)</span> 无关；求极限先看能否直接代入。</li>
+<li><span class="arithmatex">\(0/0\)</span> 型必须约分或有理化，不能“分母为零所以极限不存在”。</li>
+<li><span class="arithmatex">\(\sqrt{x^2}=\lvert x\rvert\)</span>；<span class="arithmatex">\(x\to-\infty\)</span> 时开方要变号。</li>
+<li>分母为零不一定是垂直渐近线（先约分；如 <span class="arithmatex">\(\frac{\sin x}{x}\)</span> 在 <span class="arithmatex">\(0\)</span> 处）。</li>
+<li>可导 <span class="arithmatex">\(\Rightarrow\)</span> 连续，连续 <span class="arithmatex">\(\nRightarrow\)</span> 可导（<span class="arithmatex">\(\lvert x\rvert\)</span> 在 <span class="arithmatex">\(0\)</span> 处）。</li>
+<li><span class="arithmatex">\(1^\infty\)</span> 型不能把底数直接当 <span class="arithmatex">\(1\)</span>；用 <span class="arithmatex">\(e^{\lim g(f-1)}\)</span>。</li>
+<li>隐函数求导中 <span class="arithmatex">\(y\)</span> 是 <span class="arithmatex">\(x\)</span> 的函数，<span class="arithmatex">\((y^2)'=2yy'\)</span>，漏乘 <span class="arithmatex">\(y'\)</span> 是常见失分点。</li>
+<li>相关变化率中“增加/减少”的符号、单位（in/s、cm³/min）要与题目一致。</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../lecture09/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Lecture 9 · 中值定理与洛必达">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                Lecture 9 · 中值定理与洛必达
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../concept-limits/" class="md-footer__link md-footer__link--next" aria-label="下一页: 极限的严谨定义">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                极限的严谨定义
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      个人学习笔记，仅供自用
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.tracking", "search.suggest", "search.highlight", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/katex/katex.min.js"></script>
+      
+        <script src="../../javascripts/katex/auto-render.min.js"></script>
+      
+        <script src="../../javascripts/katex-init.js"></script>
+      
+    
+  </body>
+</html>

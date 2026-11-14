@@ -1,0 +1,2066 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MTH026 微积分与 MTH028 线性代数的讲义、期中复习、练习题与答题卡">
+      
+      
+      
+        <link rel="canonical" href="https://rainyboat1029.github.io/mth-notes/mth026/practice-advanced-questions/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>MTH026 Calculus I · Week 1–6 综合提高卷 (Advanced Integrated Set) - 数学笔记 · MTH026 / MTH028</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../javascripts/katex/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mth026-calculus-i-week-16-advanced-integrated-set" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="数学笔记 · MTH026 / MTH028" class="md-header__button md-logo" aria-label="数学笔记 · MTH026 / MTH028" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            数学笔记 · MTH026 / MTH028
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MTH026 Calculus I · Week 1–6 综合提高卷 (Advanced Integrated Set)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  微积分 MTH026
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mth028/" class="md-tabs__link">
+          
+  
+  
+  线性代数 MTH028
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="数学笔记 · MTH026 / MTH028" class="md-nav__button md-logo" aria-label="数学笔记 · MTH026 / MTH028" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    数学笔记 · MTH026 / MTH028
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微积分 MTH026
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    微积分 MTH026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 · 函数与预备知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 2 · 极限概念与运算法则
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 · 无穷极限与三角极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 4 · 指数对数极限与连续性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 5 · 导数与求导法则
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 6 · 隐微分与相关变化率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 7 · 最值与凹凸性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 8 · 优化与函数作图
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 · 中值定理与洛必达
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../midterm-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习（L1–L6）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concept-limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    极限的严谨定义
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_13" id="__nav_2_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    练习
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practice-basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础卷 · Week 1–6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practice-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进阶卷 · 综合提高
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性代数 MTH028
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    线性代数 MTH028
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 · §1.1 线性方程组
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 2 · §1.2 行化简
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 · §1.3–1.4 向量与矩阵方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 4 · §1.5 解集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 5 · §1.8 线性变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 6 · §2.1 矩阵运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 7 · §2.2 矩阵的逆
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 8 · §2.8 子空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 · §2.9 维数与秩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/midterm-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习（L1–L8）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    练习
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/practice-basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础卷 · Week 1–8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/practice-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进阶卷 · 综合提高
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#week-1-functions-inverse-and-trigonometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Week 1 · Functions, Inverse and Trigonometry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 1 · Functions, Inverse and Trigonometry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x1-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X1-01 定义域（对数与根式取交）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x1-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X1-02 反函数与值域
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x1-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X1-03 反三角回主值（余角）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x1-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X1-04 反三角与三角复合
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x1-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X1-05 差商型极限
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-2-limits-and-limit-theorems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Week 2 · Limits and Limit Theorems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 2 · Limits and Limit Theorems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x2-01-00" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X2-01 反求参数（\(0/0\) 型）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x2-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X2-02 有理化反求参数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-3-infinite-limits-and-trig-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Week 3 · Infinite Limits and Trig Limits
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 3 · Infinite Limits and Trig Limits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x3-01-infty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X3-01 根式差在 \(+\infty\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x3-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X3-02 负无穷根式必须变号
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-4-exponential-limits-continuity-and-ivt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Week 4 · Exponential Limits, Continuity and IVT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 4 · Exponential Limits, Continuity and IVT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x4-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X4-01 分段函数可导
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x4-02-1infty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X4-02 \(1^{\infty}\) 型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x4-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X4-03 指数增量与三角极限
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x4-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X4-04 三次方程有三个实根
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-5-derivatives-and-differentiation-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Week 5 · Derivatives and Differentiation Rules
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 5 · Derivatives and Differentiation Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x5-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X5-01 导数定义与夹逼
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x5-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X5-02 切线
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x5-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X5-03 乘积法则与链式法则（高阶）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-6-implicit-inverse-logarithmic-and-related-rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Week 6 · Implicit, Inverse, Logarithmic and Related Rates
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 6 · Implicit, Inverse, Logarithmic and Related Rates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x6-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X6-01 隐函数求导
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x6-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X6-02 反函数的二阶导数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x6-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X6-03 对数求导法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x6-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X6-04 相关变化率
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mth026-calculus-i-week-16-advanced-integrated-set">MTH026 Calculus I · Week 1–6 综合提高卷 (Advanced Integrated Set)<a class="headerlink" href="#mth026-calculus-i-week-16-advanced-integrated-set" title="Permanent link">¶</a></h1>
+<blockquote>
+<p><strong>20 题 · 英文题干 · 五选一 · 跨周综合</strong>
+难度高于《Week 1–6 练习册》：每题 2–4 步，多数把两个知识点串在一起。专门补练习册和 LM Core 样卷的缺口——反三角回主值、有理化反求参数、负无穷根式变号、分段可导、<span class="arithmatex">\(1^{\infty}\)</span> 型、IVT 配合极值、导数定义、反函数二阶导、对数求导、相关变化率。
+使用方法：先整卷限时 60 分钟做完，再对照《综合卷解析册》；解析册开头有 20 题答案速查表。</p>
+</blockquote>
+<p><strong>覆盖范围</strong></p>
+<table>
+<thead>
+<tr>
+<th>周次</th>
+<th>题号</th>
+<th>综合的考点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Week 1</td>
+<td>X1-01 … X1-05</td>
+<td>定义域（对数+根式）、反函数与值域、反三角回主值、三角复合、差商型极限</td>
+</tr>
+<tr>
+<td>Week 2</td>
+<td>X2-01 … X2-02</td>
+<td><span class="arithmatex">\(0/0\)</span> 反求参数、有理化反求参数</td>
+</tr>
+<tr>
+<td>Week 3</td>
+<td>X3-01 … X3-02</td>
+<td>根式差在 <span class="arithmatex">\(+\infty\)</span>、$\sqrt{x^{2}}=</td>
+</tr>
+<tr>
+<td>Week 4</td>
+<td>X4-01 … X4-04</td>
+<td>分段可导、<span class="arithmatex">\(1^{\infty}\)</span>、指数增量+三角极限、IVT 与极值</td>
+</tr>
+<tr>
+<td>Week 5</td>
+<td>X5-01 … X5-03</td>
+<td>导数定义与夹逼、切线、乘积+链式高阶导</td>
+</tr>
+<tr>
+<td>Week 6</td>
+<td>X6-01 … X6-04</td>
+<td>隐函数、反函数二阶导、对数求导、相关变化率</td>
+</tr>
+</tbody>
+</table>
+<p><strong>作答格式</strong>：每题在 <code>Answer / 作答：(　　　)</code> 中写选项字母；解析册按题号 X1-01 … X6-04 对应。</p>
+<hr />
+<h2 id="week-1-functions-inverse-and-trigonometry">Week 1 · Functions, Inverse and Trigonometry<a class="headerlink" href="#week-1-functions-inverse-and-trigonometry" title="Permanent link">¶</a></h2>
+<h3 id="x1-01">X1-01 定义域（对数与根式取交）<a class="headerlink" href="#x1-01" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · 分式对数的真数用符号表解；根号与对数各得一个区间，最后取交集，端点逐一看是否可取。</em></p>
+<p>Find the natural domain of <span class="arithmatex">\(f(x)=\ln\dfrac{x-1}{x+2}+\sqrt{9-x^{2}}\)</span>.</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\([-3,\,-2)\cup(1,\,3]\)</span></li>
+<li>B. <span class="arithmatex">\((-3,\,-2)\cup(1,\,3)\)</span></li>
+<li>C. <span class="arithmatex">\([-3,\,-2]\cup[1,\,3]\)</span></li>
+<li>D. <span class="arithmatex">\((-\infty,\,-2)\cup(1,\,\infty)\)</span></li>
+<li>E. <span class="arithmatex">\([-3,\,3]\)</span></li>
+</ul>
+<p>Answer / 作答：(　　　)　·　解析见 X1-01</p>
+<hr />
+<h3 id="x1-02">X1-02 反函数与值域<a class="headerlink" href="#x1-02" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · 把 <span class="arithmatex">\(e^{x}\)</span> 当成一个未知量整体解出来；反函数的定义域就是原函数的值域，用 <span class="arithmatex">\(x\to\pm\infty\)</span> 的两端极限确定。</em></p>
+<p>Let <span class="arithmatex">\(f(x)=\dfrac{e^{x}-1}{e^{x}+1}\)</span>. Find <span class="arithmatex">\(f^{-1}(x)\)</span> and its domain.</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\(\ln\dfrac{1-x}{1+x}\)</span>，定义域 <span class="arithmatex">\((-1,\,1)\)</span></li>
+<li>B. <span class="arithmatex">\(\ln\dfrac{1+x}{1-x}\)</span>，定义域 <span class="arithmatex">\((0,\,\infty)\)</span></li>
+<li>C. <span class="arithmatex">\(\ln\dfrac{1+x}{1-x}\)</span>，定义域 <span class="arithmatex">\((-1,\,1)\)</span></li>
+<li>D. <span class="arithmatex">\(\ln\dfrac{x-1}{x+1}\)</span>，定义域 <span class="arithmatex">\(|x|&gt;1\)</span></li>
+<li>E. <span class="arithmatex">\(\ln\dfrac{1+x}{1-x}\)</span>，定义域 <span class="arithmatex">\([-1,\,1]\)</span></li>
+</ul>
+<p>Answer / 作答：(　　　)　·　解析见 X1-02</p>
+<hr />
+<h3 id="x1-03">X1-03 反三角回主值（余角）<a class="headerlink" href="#x1-03" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · 先看弧度落在哪个象限，把 <span class="arithmatex">\(\sin\)</span> 换成 <span class="arithmatex">\(\cos\!\left(\frac{\pi}{2}-\theta\right)\)</span>，保证最终角落在 <span class="arithmatex">\(\arccos\)</span> 的值域 <span class="arithmatex">\([0,\pi]\)</span> 里。</em></p>
+<p>Evaluate <span class="arithmatex">\(\arccos\left(\sin\dfrac{11\pi}{10}\right)\)</span>.</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\(\dfrac{11\pi}{10}\)</span></li>
+<li>B. <span class="arithmatex">\(\dfrac{3\pi}{5}\)</span></li>
+<li>C. <span class="arithmatex">\(-\dfrac{\pi}{10}\)</span></li>
+<li>D. <span class="arithmatex">\(\dfrac{\pi}{10}\)</span></li>
+<li>E. <span class="arithmatex">\(\dfrac{7\pi}{10}\)</span></li>
+</ul>
+<p>Answer / 作答：(　　　)　·　解析见 X1-03</p>
+<hr />
+<h3 id="x1-04">X1-04 反三角与三角复合<a class="headerlink" href="#x1-04" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · 令 <span class="arithmatex">\(\theta=\arctan(\cdot)\)</span> 画直角三角形；<span class="arithmatex">\(\arctan\)</span> 的值域是 <span class="arithmatex">\(\left(-\frac{\pi}{2},\frac{\pi}{2}\right)\)</span>，在那里 <span class="arithmatex">\(\cos\theta&gt;0\)</span>。</em></p>
+<p>Evaluate <span class="arithmatex">\(\cos\left(\arctan\left(-\dfrac{4}{3}\right)\right)\)</span> without using a calculator.</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\(-\dfrac{4}{5}\)</span></li>
+<li>B. <span class="arithmatex">\(-\dfrac{3}{5}\)</span></li>
+<li>C. <span class="arithmatex">\(\dfrac{4}{5}\)</span></li>
+<li>D. <span class="arithmatex">\(\dfrac{3}{5}\)</span></li>
+<li>E. <span class="arithmatex">\(\dfrac{5}{4}\)</span></li>
+</ul>
+<p>Answer / 作答：(　　　)　·　解析见 X1-04</p>
+<hr />
+<h3 id="x1-05">X1-05 差商型极限<a class="headerlink" href="#x1-05" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · 二项式展开只保留到 <span class="arithmatex">\(h^{2}\)</span> 项；也可以认出它是 <span class="arithmatex">\(f(x)=x^{5}\)</span> 在 <span class="arithmatex">\(x=1\)</span> 处的二阶导数的一半。</em></p>
+<p>Evaluate <span class="arithmatex">\(\displaystyle\lim_{h\to 0}\frac{(1+h)^{5}-1-5h}{h^{2}}\)</span>.</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\(10\)</span></li>
+<li>B. <span class="arithmatex">\(5\)</span></li>
+<li>C. <span class="arithmatex">\(20\)</span></li>
+<li>D. <span class="arithmatex">\(0\)</span></li>
+<li>E. 不存在（DNE）</li>
+</ul>
+<p>Answer / 作答：(　　　)　·　解析见 X1-05</p>
+<hr />
+<h2 id="week-2-limits-and-limit-theorems">Week 2 · Limits and Limit Theorems<a class="headerlink" href="#week-2-limits-and-limit-theorems" title="Permanent link">¶</a></h2>
+<h3 id="x2-01-00">X2-01 反求参数（<span class="arithmatex">\(0/0\)</span> 型）<a class="headerlink" href="#x2-01-00" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · 分母趋于 0 而极限存在 ⇒ 分子也必须趋于 0，这是第一个方程；再把分子因式分解成 <span class="arithmatex">\((x-2)(x+c)\)</span>，商式在 <span class="arithmatex">\(x=2\)</span> 的值就是极限。</em></p>
+<p>If <span class="arithmatex">\(\displaystyle\lim_{x\to 2}\frac{x^{2}+ax+b}{x-2}=5\)</span>, find <span class="arithmatex">\(a+b\)</span>.</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\(-1\)</span></li>
+<li>B. <span class="arithmatex">\(-5\)</span></li>
+<li>C. <span class="arithmatex">\(1\)</span></li>
+<li>D. <span class="arithmatex">\(5\)</span></li>
+<li>E. <span class="arithmatex">\(-7\)</span></li>
+</ul>
+<p>Answer / 作答：(　　　)　· 解析见 X2-01</p>
+<hr />
+<h3 id="x2-02">X2-02 有理化反求参数<a class="headerlink" href="#x2-02" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · 分子乘共轭 <span class="arithmatex">\(\sqrt{1+kx}+1\)</span> 后约掉 <span class="arithmatex">\(x\)</span>，剩下的极限是 <span class="arithmatex">\(\frac{k}{2}\)</span>。</em></p>
+<p>If <span class="arithmatex">\(\displaystyle\lim_{x\to 0}\frac{\sqrt{1+kx}-1}{x}=3\)</span>, find <span class="arithmatex">\(k\)</span>.</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\(\dfrac{3}{2}\)</span></li>
+<li>B. <span class="arithmatex">\(3\)</span></li>
+<li>C. <span class="arithmatex">\(12\)</span></li>
+<li>D. <span class="arithmatex">\(-6\)</span></li>
+<li>E. <span class="arithmatex">\(6\)</span></li>
+</ul>
+<p>Answer / 作答：(　　　)　· 解析见 X2-02</p>
+<hr />
+<h2 id="week-3-infinite-limits-and-trig-limits">Week 3 · Infinite Limits and Trig Limits<a class="headerlink" href="#week-3-infinite-limits-and-trig-limits" title="Permanent link">¶</a></h2>
+<h3 id="x3-01-infty">X3-01 根式差在 <span class="arithmatex">\(+\infty\)</span><a class="headerlink" href="#x3-01-infty" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · 有理化，或分子分母同除 <span class="arithmatex">\(x\)</span>；最终极限是最高次系数之比的一半。</em></p>
+<p>Evaluate <span class="arithmatex">\(\displaystyle\lim_{x\to\infty}\left(\sqrt{x^{2}+6x}-x\right)\)</span>.</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\(0\)</span></li>
+<li>B. <span class="arithmatex">\(6\)</span></li>
+<li>C. <span class="arithmatex">\(3\)</span></li>
+<li>D. <span class="arithmatex">\(\dfrac{3}{2}\)</span></li>
+<li>E. <span class="arithmatex">\(+\infty\)</span></li>
+</ul>
+<p>Answer / 作答：(　　　)　· 解析见 X3-01</p>
+<hr />
+<h3 id="x3-02">X3-02 负无穷根式必须变号<a class="headerlink" href="#x3-02" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · <span class="arithmatex">\(x\to-\infty\)</span> 时 <span class="arithmatex">\(\sqrt{4x^{2}+5x+1}=-2x\sqrt{1+\frac{5}{4x}+\frac{1}{4x^{2}}}\)</span>，负号不能丢。</em></p>
+<p>Evaluate <span class="arithmatex">\(\displaystyle\lim_{x\to-\infty}\left(\sqrt{4x^{2}+5x+1}+2x\right)\)</span>.</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\(\dfrac{5}{4}\)</span></li>
+<li>B. <span class="arithmatex">\(-\dfrac{5}{2}\)</span></li>
+<li>C. <span class="arithmatex">\(+\infty\)</span></li>
+<li>D. <span class="arithmatex">\(-\dfrac{5}{4}\)</span></li>
+<li>E. <span class="arithmatex">\(0\)</span></li>
+</ul>
+<p>Answer / 作答：(　　　)　· 解析见 X3-02</p>
+<hr />
+<h2 id="week-4-exponential-limits-continuity-and-ivt">Week 4 · Exponential Limits, Continuity and IVT<a class="headerlink" href="#week-4-exponential-limits-continuity-and-ivt" title="Permanent link">¶</a></h2>
+<h3 id="x4-01">X4-01 分段函数可导<a class="headerlink" href="#x4-01" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · 可导必连续：先让左右函数值在 <span class="arithmatex">\(x=1\)</span> 相等；再让左右导数相等。两个方程解两个参数。</em></p>
+<p>Let <span class="arithmatex">\(f(x)=\begin{cases}x^{2}+ax+b,&amp;x\le 1,\\[2pt] 3x+1,&amp;x&gt;1.\end{cases}\)</span> If <span class="arithmatex">\(f\)</span> is differentiable at <span class="arithmatex">\(x=1\)</span>, find <span class="arithmatex">\(a+b\)</span>.</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\(3\)</span></li>
+<li>B. <span class="arithmatex">\(-1\)</span></li>
+<li>C. <span class="arithmatex">\(1\)</span></li>
+<li>D. <span class="arithmatex">\(5\)</span></li>
+<li>E. <span class="arithmatex">\(2\)</span></li>
+</ul>
+<p>Answer / 作答：(　　　)　· 解析见 X4-01</p>
+<hr />
+<h3 id="x4-02-1infty">X4-02 <span class="arithmatex">\(1^{\infty}\)</span> 型<a class="headerlink" href="#x4-02-1infty" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · 先把括号化成 <span class="arithmatex">\(1+\frac{4}{x-1}\)</span>，再用 <span class="arithmatex">\(\lim_{u\to 0}(1+u)^{1/u}=e\)</span>；指数上的 <span class="arithmatex">\(x\)</span> 要跟着换元。</em></p>
+<p>Evaluate <span class="arithmatex">\(\displaystyle\lim_{x\to\infty}\left(\frac{x+3}{x-1}\right)^{2x}\)</span>.</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\(e^{4}\)</span></li>
+<li>B. <span class="arithmatex">\(e^{6}\)</span></li>
+<li>C. <span class="arithmatex">\(e^{2}\)</span></li>
+<li>D. <span class="arithmatex">\(1\)</span></li>
+<li>E. <span class="arithmatex">\(e^{8}\)</span></li>
+</ul>
+<p>Answer / 作答：(　　　)　· 解析见 X4-02</p>
+<hr />
+<h3 id="x4-03">X4-03 指数增量与三角极限<a class="headerlink" href="#x4-03" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · 拆成三个标准块的乘积：<span class="arithmatex">\(\frac{e^{6x}-1}{6x}\)</span>、<span class="arithmatex">\(\frac{3x}{\sin 3x}\)</span> 和常数。</em></p>
+<p>Evaluate <span class="arithmatex">\(\displaystyle\lim_{x\to 0}\frac{e^{6x}-1}{\sin 3x}\)</span>.</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\(6\)</span></li>
+<li>B. <span class="arithmatex">\(2\)</span></li>
+<li>C. <span class="arithmatex">\(3\)</span></li>
+<li>D. <span class="arithmatex">\(0\)</span></li>
+<li>E. <span class="arithmatex">\(\dfrac{1}{2}\)</span></li>
+</ul>
+<p>Answer / 作答：(　　　)　· 解析见 X4-03</p>
+<hr />
+<h3 id="x4-04">X4-04 三次方程有三个实根<a class="headerlink" href="#x4-04" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · 求导找两个驻点，算出局部极大值和局部极小值；三个实根 ⇔ 极大值 <span class="arithmatex">\(&gt;0&gt;\)</span> 极小值。</em></p>
+<p>For which values of <span class="arithmatex">\(k\)</span> does the equation <span class="arithmatex">\(x^{3}-3x+k=0\)</span> have three distinct real roots?</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\(-2&lt;k&lt;2\)</span></li>
+<li>B. <span class="arithmatex">\(-1&lt;k&lt;1\)</span></li>
+<li>C. <span class="arithmatex">\(k&lt;-2\)</span> 或 <span class="arithmatex">\(k&gt;2\)</span></li>
+<li>D. <span class="arithmatex">\(0&lt;k&lt;2\)</span></li>
+<li>E. 任意实数 <span class="arithmatex">\(k\)</span></li>
+</ul>
+<p>Answer / 作答：(　　　)　· 解析见 X4-04</p>
+<hr />
+<h2 id="week-5-derivatives-and-differentiation-rules">Week 5 · Derivatives and Differentiation Rules<a class="headerlink" href="#week-5-derivatives-and-differentiation-rules" title="Permanent link">¶</a></h2>
+<h3 id="x5-01">X5-01 导数定义与夹逼<a class="headerlink" href="#x5-01" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · 在 <span class="arithmatex">\(x=0\)</span> 处只能用定义：<span class="arithmatex">\(f'(0)=\lim_{h\to0}\frac{f(h)-f(0)}{h}\)</span>，然后对 <span class="arithmatex">\(h\sin\frac{1}{h}\)</span> 用夹逼。</em></p>
+<p>Let <span class="arithmatex">\(f(x)=\begin{cases}x^{2}\sin\dfrac{1}{x},&amp;x\neq 0,\\[2pt] 0,&amp;x=0.\end{cases}\)</span> Find <span class="arithmatex">\(f'(0)\)</span>.</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\(1\)</span></li>
+<li>B. 不存在</li>
+<li>C. <span class="arithmatex">\(0\)</span></li>
+<li>D. <span class="arithmatex">\(\dfrac{1}{2}\)</span></li>
+<li>E. <span class="arithmatex">\(+\infty\)</span></li>
+</ul>
+<p>Answer / 作答：(　　　)　· 解析见 X5-01</p>
+<hr />
+<h3 id="x5-02">X5-02 切线<a class="headerlink" href="#x5-02" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · 直线 <span class="arithmatex">\(y=x+b\)</span> 的斜率是 1，所以切点满足 <span class="arithmatex">\(\frac{1}{x}=1\)</span>；求出切点后回代求 <span class="arithmatex">\(b\)</span>。</em></p>
+<p>The line <span class="arithmatex">\(y=x+b\)</span> is tangent to the curve <span class="arithmatex">\(y=\ln x\)</span>. Find <span class="arithmatex">\(b\)</span>.</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\(0\)</span></li>
+<li>B. <span class="arithmatex">\(1\)</span></li>
+<li>C. <span class="arithmatex">\(-2\)</span></li>
+<li>D. <span class="arithmatex">\(-1\)</span></li>
+<li>E. <span class="arithmatex">\(e\)</span></li>
+</ul>
+<p>Answer / 作答：(　　　)　· 解析见 X5-02</p>
+<hr />
+<h3 id="x5-03">X5-03 乘积法则与链式法则（高阶）<a class="headerlink" href="#x5-03" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · 先乘积法则再对 <span class="arithmatex">\(e^{2x}\)</span> 用链式；求二阶时把 <span class="arithmatex">\(e^{2x}\)</span> 提出来能少犯错。</em></p>
+<p>Let <span class="arithmatex">\(f(x)=x^{2}e^{2x}\)</span>. Find <span class="arithmatex">\(f''(0)\)</span>.</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\(0\)</span></li>
+<li>B. <span class="arithmatex">\(2\)</span></li>
+<li>C. <span class="arithmatex">\(4\)</span></li>
+<li>D. <span class="arithmatex">\(6\)</span></li>
+<li>E. <span class="arithmatex">\(8\)</span></li>
+</ul>
+<p>Answer / 作答：(　　　)　· 解析见 X5-03</p>
+<hr />
+<h2 id="week-6-implicit-inverse-logarithmic-and-related-rates">Week 6 · Implicit, Inverse, Logarithmic and Related Rates<a class="headerlink" href="#week-6-implicit-inverse-logarithmic-and-related-rates" title="Permanent link">¶</a></h2>
+<h3 id="x6-01">X6-01 隐函数求导<a class="headerlink" href="#x6-01" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · 两边对 <span class="arithmatex">\(x\)</span> 求导，<span class="arithmatex">\(e^{xy}\)</span> 要用链式法则产生 <span class="arithmatex">\((y+xy')\)</span>；最后代点。</em></p>
+<p>If <span class="arithmatex">\(e^{xy}=x+y\)</span>, find <span class="arithmatex">\(\dfrac{dy}{dx}\)</span> at the point <span class="arithmatex">\((0,\,1)\)</span>.</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\(1\)</span></li>
+<li>B. <span class="arithmatex">\(-1\)</span></li>
+<li>C. <span class="arithmatex">\(e\)</span></li>
+<li>D. <span class="arithmatex">\(2\)</span></li>
+<li>E. <span class="arithmatex">\(0\)</span></li>
+</ul>
+<p>Answer / 作答：(　　　)　· 解析见 X6-01</p>
+<hr />
+<h3 id="x6-02">X6-02 反函数的二阶导数<a class="headerlink" href="#x6-02" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · 先由 <span class="arithmatex">\(f(1)=1\)</span> 得 <span class="arithmatex">\(g(1)=1\)</span>；再用 <span class="arithmatex">\(g'(x)=\frac{1}{f'(g(x))}\)</span> 推出 <span class="arithmatex">\(g''(x)=-\frac{f''(g(x))}{[f'(g(x))]^{3}}\)</span>。</em></p>
+<p>Let <span class="arithmatex">\(f(x)=x^{3}+x-1\)</span> and <span class="arithmatex">\(g=f^{-1}\)</span>. Find <span class="arithmatex">\(g''(1)\)</span>.</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\(-\dfrac{1}{4}\)</span></li>
+<li>B. <span class="arithmatex">\(\dfrac{1}{4}\)</span></li>
+<li>C. <span class="arithmatex">\(-\dfrac{3}{32}\)</span></li>
+<li>D. <span class="arithmatex">\(-\dfrac{3}{16}\)</span></li>
+<li>E. <span class="arithmatex">\(\dfrac{3}{32}\)</span></li>
+</ul>
+<p>Answer / 作答：(　　　)　· 解析见 X6-02</p>
+<hr />
+<h3 id="x6-03">X6-03 对数求导法<a class="headerlink" href="#x6-03" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · 两边取 <span class="arithmatex">\(\ln\)</span> 得 <span class="arithmatex">\(\ln y=(\ln x)^{2}\)</span>，再隐式求导，最后把 <span class="arithmatex">\(y=x^{\ln x}\)</span> 代回去。</em></p>
+<p>Let <span class="arithmatex">\(y=x^{\ln x}\)</span> for <span class="arithmatex">\(x&gt;0\)</span>. Find <span class="arithmatex">\(\left.\dfrac{dy}{dx}\right|_{x=e}\)</span>.</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\(2\)</span></li>
+<li>B. <span class="arithmatex">\(e\)</span></li>
+<li>C. <span class="arithmatex">\(\dfrac{2}{e}\)</span></li>
+<li>D. <span class="arithmatex">\(1\)</span></li>
+<li>E. <span class="arithmatex">\(2e\)</span></li>
+</ul>
+<p>Answer / 作答：(　　　)　· 解析见 X6-03</p>
+<hr />
+<h3 id="x6-04">X6-04 相关变化率<a class="headerlink" href="#x6-04" title="Permanent link">¶</a></h3>
+<p><em>做题技巧 · 设底端距墙 <span class="arithmatex">\(x\)</span>、顶端高 <span class="arithmatex">\(y\)</span>，约束是 <span class="arithmatex">\(x^{2}+y^{2}=10^{2}\)</span>；对 <span class="arithmatex">\(t\)</span> 求导后代入 <span class="arithmatex">\(x=6,\ \frac{dx}{dt}=1\)</span>。</em></p>
+<p>A 10 ft ladder leans against a vertical wall. Its bottom slides away from the wall at <span class="arithmatex">\(1\ \text{ft/s}\)</span>. How fast is the top of the ladder sliding down when the bottom is <span class="arithmatex">\(6\ \text{ft}\)</span> from the wall?</p>
+<p><strong>SELECT ONE</strong></p>
+<ul>
+<li>A. <span class="arithmatex">\(\dfrac{4}{3}\ \text{ft/s}\)</span></li>
+<li>B. <span class="arithmatex">\(\dfrac{5}{8}\ \text{ft/s}\)</span></li>
+<li>C. <span class="arithmatex">\(\dfrac{1}{2}\ \text{ft/s}\)</span></li>
+<li>D. <span class="arithmatex">\(\dfrac{3}{4}\ \text{ft/s}\)</span></li>
+<li>E. <span class="arithmatex">\(1\ \text{ft/s}\)</span></li>
+</ul>
+<p>Answer / 作答：(　　　)　· 解析见 X6-04</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      个人学习笔记，仅供自用
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.tracking", "search.suggest", "search.highlight", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/katex/katex.min.js"></script>
+      
+        <script src="../../javascripts/katex/auto-render.min.js"></script>
+      
+        <script src="../../javascripts/katex-init.js"></script>
+      
+    
+  </body>
+</html>
