@@ -1,0 +1,2250 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MTH026 微积分与 MTH028 线性代数的讲义、期中复习、练习题与答题卡">
+      
+      
+      
+        <link rel="canonical" href="https://rainyboat1029.github.io/mth-notes/mth026/lecture10/">
+      
+      
+        <link rel="prev" href="../lecture09/">
+      
+      
+        <link rel="next" href="../midterm-review/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Lecture 10 · 反导数与定积分 - 数学笔记 · MTH026 / MTH028</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../javascripts/katex/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-5-integrals" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="数学笔记 · MTH026 / MTH028" class="md-header__button md-logo" aria-label="数学笔记 · MTH026 / MTH028" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            数学笔记 · MTH026 / MTH028
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lecture 10 · 反导数与定积分
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  微积分 MTH026
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mth028/" class="md-tabs__link">
+          
+  
+  
+  线性代数 MTH028
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="数学笔记 · MTH026 / MTH028" class="md-nav__button md-logo" aria-label="数学笔记 · MTH026 / MTH028" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    数学笔记 · MTH026 / MTH028
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微积分 MTH026
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    微积分 MTH026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 · 函数与预备知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 2 · 极限概念与运算法则
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 · 无穷极限与三角极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 4 · 指数对数极限与连续性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 5 · 导数与求导法则
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 6 · 隐微分与相关变化率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 7 · 最值与凹凸性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 8 · 优化与函数作图
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 · 中值定理与洛必达
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 10 · 反导数与定积分
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 10 · 反导数与定积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-10-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一部分：本节课知识详解 (Lecture 10 Summary)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一部分：本节课知识详解 (Lecture 10 Summary)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#410-antiderivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10 Antiderivatives (反导数与不定积分)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#51-introduction-to-area" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Introduction to Area (面积的引入)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-the-definite-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 The Definite Integral (定积分)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../midterm-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习（L1–L6）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concept-limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    极限的严谨定义
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_14" id="__nav_2_14_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    练习
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practice-basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础卷 · Week 1–6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practice-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进阶卷 · 综合提高
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性代数 MTH028
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    线性代数 MTH028
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 · §1.1 线性方程组
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 2 · §1.2 行化简
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 · §1.3–1.4 向量与矩阵方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 4 · §1.5 解集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 5 · §1.8 线性变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 6 · §2.1 矩阵运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 7 · §2.2 矩阵的逆
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 8 · §2.8 子空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/lecture09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 · §2.9 维数与秩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/midterm-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中复习（L1–L8）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    练习
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/practice-basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础卷 · Week 1–8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mth028/practice-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进阶卷 · 综合提高
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-10-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一部分：本节课知识详解 (Lecture 10 Summary)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一部分：本节课知识详解 (Lecture 10 Summary)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#410-antiderivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10 Antiderivatives (反导数与不定积分)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#51-introduction-to-area" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Introduction to Area (面积的引入)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-the-definite-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 The Definite Integral (定积分)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-5-integrals">Chapter 5 Integrals: 反导数与定积分 知识详解与例题精解<a class="headerlink" href="#chapter-5-integrals" title="Permanent link">¶</a></h1>
+<h2 id="lecture-10-summary">第一部分：本节课知识详解 (Lecture 10 Summary)<a class="headerlink" href="#lecture-10-summary" title="Permanent link">¶</a></h2>
+<h3 id="410-antiderivatives">4.10 Antiderivatives (反导数与不定积分)<a class="headerlink" href="#410-antiderivatives" title="Permanent link">¶</a></h3>
+<h4 id="1-definition-of-an-antiderivative">1. 反导数的定义 (Definition of an Antiderivative)<a class="headerlink" href="#1-definition-of-an-antiderivative" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>定义:</strong> 若对区间 <span class="arithmatex">\(I\)</span> 上的每一个 <span class="arithmatex">\(x\)</span>，都有
+  $<span class="arithmatex">\(F'(x)=f(x)\)</span>$
+  则称 <span class="arithmatex">\(F\)</span> 是 <span class="arithmatex">\(f\)</span> 在区间 <span class="arithmatex">\(I\)</span> 上的一个<strong>反导数 (antiderivative)</strong>。</li>
+<li><strong>三个基本问题 (Three Questions):</strong></li>
+<li><strong>存在性 (Existence):</strong> 哪些函数有反导数？——<strong>每一个连续函数都有反导数</strong>（证明见 §5.3）。</li>
+<li><strong>唯一性 (Uniqueness):</strong> 反导数唯一吗？——<strong>不唯一</strong>：只要有一个反导数，就有无穷多个。</li>
+<li><strong>一般形式 (Forms):</strong> 所有反导数长什么样？——若 <span class="arithmatex">\(F\)</span> 是 <span class="arithmatex">\(f\)</span> 的一个反导数，则 <span class="arithmatex">\(F(x)+C\)</span>（<span class="arithmatex">\(C\)</span> 为任意常数）给出 <span class="arithmatex">\(f\)</span> 的<strong>全部</strong>反导数。</li>
+<li><strong>为什么相差常数 (Why "+C"):</strong> 由 §4.6 Theorem B，导数相同的两个函数只相差一个常数。因为 <span class="arithmatex">\((F+C)'=F'=f\)</span>，所以 <span class="arithmatex">\(F+C\)</span> 仍是反导数；反过来，若 <span class="arithmatex">\(G'=f=F'\)</span>，则 <span class="arithmatex">\((G-F)'=0\)</span>，故 <span class="arithmatex">\(G-F\)</span> 为常数。</li>
+</ul>
+<h4 id="2-notation-for-indefinite-integrals">2. 不定积分的记号 (Notation for Indefinite Integrals)<a class="headerlink" href="#2-notation-for-indefinite-integrals" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>定义:</strong> <span class="arithmatex">\(f\)</span> 的<strong>全体反导数</strong>称为 <span class="arithmatex">\(f\)</span> 的<strong>一般反导数 (general antiderivative)</strong> 或<strong>不定积分 (indefinite integral)</strong>，记作
+  $<span class="arithmatex">\(\int f(x)\,dx\)</span>$
+  其中 <span class="arithmatex">\(\int\)</span> 是<strong>积分号 (integral sign)</strong>，<span class="arithmatex">\(f(x)\)</span> 是<strong>被积函数 (integrand)</strong>，<span class="arithmatex">\(x\)</span> 是<strong>积分变量 (variable of integration)</strong>。</li>
+<li><strong>术语:</strong> "求反导数"也叫"<strong>积分 (integrate)</strong>"；<span class="arithmatex">\(\int\cdots dx\)</span> 表示<strong>关于 <span class="arithmatex">\(x\)</span></strong> 求反导数。</li>
+<li><strong>互为逆运算 (Inverse Operations):</strong>
+  $<span class="arithmatex">\(D_x\int f(x)\,dx=f(x),\qquad \int D_xF(x)\,dx=F(x)+C\)</span>$
+  即"先积分再求导"还原被积函数；"先求导再积分"还原原函数但必须补 <span class="arithmatex">\(+C\)</span>。</li>
+</ul>
+<h4 id="3-power-rule-basic-formulas">3. 幂函数法则与基本积分公式 (Power Rule &amp; Basic Formulas)<a class="headerlink" href="#3-power-rule-basic-formulas" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Theorem A（幂法则 Power Rule）:</strong> 若 <span class="arithmatex">\(r\)</span> 是任意实数且 <span class="arithmatex">\(r\neq-1\)</span>，则
+  $<span class="arithmatex">\(\int x^{r}\,dx=\frac{x^{r+1}}{r+1}+C\)</span>$
+  <strong>证明:</strong> 对右端求导，
+  $<span class="arithmatex">\(D_x\left(\frac{x^{r+1}}{r+1}+C\right)=\frac{1}{r+1}(r+1)x^{r}=x^{r}\)</span>$
+  恰为被积函数。<span class="arithmatex">\(\blacksquare\)</span></li>
+<li><strong>为什么必须 <span class="arithmatex">\(r\neq-1\)</span>:</strong> 当 <span class="arithmatex">\(r=-1\)</span> 时公式分母为 <span class="arithmatex">\(0\)</span>；此时 <span class="arithmatex">\(\int\frac{1}{x}dx=\ln|x|+C\)</span>（见本节第 7 部分）。</li>
+<li><strong>Theorem B（基本积分公式 Basic Formulas）:</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>公式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(1)</td>
+<td><span class="arithmatex">\(\displaystyle\int dx=x+C\)</span></td>
+<td>常函数 <span class="arithmatex">\(1\)</span> 的反导数</td>
+</tr>
+<tr>
+<td>(2)</td>
+<td><span class="arithmatex">\(\displaystyle\int x^{n}dx=\frac{x^{n+1}}{n+1}+C\)</span></td>
+<td><span class="arithmatex">\(n\neq-1\)</span>，幂法则</td>
+</tr>
+<tr>
+<td>(3)</td>
+<td>$\displaystyle\int\frac{1}{x}dx=\ln</td>
+<td>x</td>
+</tr>
+<tr>
+<td>(4)</td>
+<td><span class="arithmatex">\(\displaystyle\int\sin x\,dx=-\cos x+C\)</span></td>
+<td>三角函数</td>
+</tr>
+<tr>
+<td>(5)</td>
+<td><span class="arithmatex">\(\displaystyle\int\cos x\,dx=\sin x+C\)</span></td>
+<td>三角函数</td>
+</tr>
+<tr>
+<td>(6)</td>
+<td><span class="arithmatex">\(\displaystyle\int e^{x}dx=e^{x}+C\)</span></td>
+<td>指数函数</td>
+</tr>
+<tr>
+<td>(7)</td>
+<td><span class="arithmatex">\(\displaystyle\int a^{x}dx=\frac{a^{x}}{\ln a}+C\)</span></td>
+<td><span class="arithmatex">\(a&gt;0,\ a\neq1\)</span></td>
+</tr>
+<tr>
+<td>(8)</td>
+<td><span class="arithmatex">\(\displaystyle\int\frac{dx}{\sqrt{1-x^{2}}}=\sin^{-1}x+C\)</span></td>
+<td>反三角</td>
+</tr>
+<tr>
+<td>(9)</td>
+<td><span class="arithmatex">\(\displaystyle\int\frac{dx}{1+x^{2}}=\tan^{-1}x+C\)</span></td>
+<td>反三角</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>记号约定:</strong> <span class="arithmatex">\(\int 1\,dx\)</span> 常简写为 <span class="arithmatex">\(\int dx\)</span>；<span class="arithmatex">\(\int\frac{1}{x}dx\)</span> 常简写为 <span class="arithmatex">\(\int\frac{dx}{x}\)</span>。</li>
+</ul>
+<h4 id="4-linearity-of-the-indefinite-integral">4. 积分的线性性质 (Linearity of the Indefinite Integral)<a class="headerlink" href="#4-linearity-of-the-indefinite-integral" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Theorem C（线性性质）:</strong> 设 <span class="arithmatex">\(f\)</span>、<span class="arithmatex">\(g\)</span> 都有反导数，<span class="arithmatex">\(k\)</span> 为常数，则
+  $<span class="arithmatex">\(\int k f(x)\,dx=k\int f(x)\,dx,\qquad \int\big[f(x)\pm g(x)\big]\,dx=\int f(x)\,dx\pm\int g(x)\,dx\)</span>$
+  <strong>证明:</strong> 对右端求导即可：<span class="arithmatex">\(D_x\left(k\int f\,dx\right)=kf(x)\)</span>，<span class="arithmatex">\(D_x\left(\int f\,dx\pm\int g\,dx\right)=f(x)\pm g(x)\)</span>。<span class="arithmatex">\(\blacksquare\)</span></li>
+<li><strong>重要提醒:</strong> 积分<strong>没有</strong>乘积法则和商法则！一般地
+  $<span class="arithmatex">\(\int f(x)g(x)\,dx\neq\left(\int f(x)\,dx\right)\left(\int g(x)\,dx\right)\)</span>$
+  乘积形式的积分要靠换元（本节第 5、6 部分）或分部积分（后续章节）处理。</li>
+<li><strong>合并常数:</strong> 逐项积分会冒出多个任意常数 <span class="arithmatex">\(C_1,C_2,\dots\)</span>，习惯上把它们合并成一个 <span class="arithmatex">\(C\)</span>，因为常数之和仍是常数。</li>
+</ul>
+<h4 id="lecture-examples-solutions">🌟 课件例题与详解 (Lecture Examples &amp; Solutions)<a class="headerlink" href="#lecture-examples-solutions" title="Permanent link">¶</a></h4>
+<h5 id="1">【课件例题 1】由导数反推函数族（含图像）<a class="headerlink" href="#1" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Find an antiderivative of <span class="arithmatex">\(f(x)=4x^{3}\)</span> on <span class="arithmatex">\((-\infty,\infty)\)</span>, and write down the general antiderivative.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>猜测哪个函数的导数等于 <span class="arithmatex">\(4x^{3}\)</span>：
+     $<span class="arithmatex">\(D_x\left(x^{4}\right)=4x^{3}\)</span>$</li>
+<li>所以一个反导数是
+     $<span class="arithmatex">\(F(x)=x^{4}\)</span>$</li>
+<li>
+<p>一般反导数为
+     $<span class="arithmatex">\(\int 4x^{3}\,dx=x^{4}+C\)</span>$</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> 反导数就是"倒着做求导"。因为 <span class="arithmatex">\(x^{4}\)</span> 求导恰好得到 <span class="arithmatex">\(4x^{3}\)</span>，所以 <span class="arithmatex">\(F(x)=x^{4}\)</span> 是一个反导数。把图像上下平移得到 <span class="arithmatex">\(x^{4}+6\)</span>、<span class="arithmatex">\(x^{4}\)</span>、<span class="arithmatex">\(x^{4}-4\)</span> 等无穷多条曲线，它们在同一个 <span class="arithmatex">\(x\)</span> 处的<strong>切线斜率完全相同</strong>（都是 <span class="arithmatex">\(4x^{3}\)</span>），这正是"反导数不唯一、但彼此只差常数"的几何解释。考试中写完 <span class="arithmatex">\(F(x)\)</span> 后一定要补 <span class="arithmatex">\(+C\)</span>，否则只是"一个"反导数而不是全体。</p>
+</li>
+</ul>
+<h5 id="2">【课件例题 2】幂法则处理分数指数<a class="headerlink" href="#2" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Find the general antiderivative of <span class="arithmatex">\(f(x)=x^{4/3}\)</span>.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>这里 <span class="arithmatex">\(r=\dfrac{4}{3}\neq-1\)</span>，直接用幂法则：
+     $<span class="arithmatex">\(\int x^{4/3}\,dx=\frac{x^{7/3}}{1+\frac{4}{3}}+C\)</span>$</li>
+<li>
+<p>化简分母 <span class="arithmatex">\(1+\frac{4}{3}=\frac{7}{3}\)</span>：
+     $<span class="arithmatex">\(\int x^{4/3}\,dx=\frac{3}{7}x^{7/3}+C\)</span>$</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> 幂法则的公式是 <span class="arithmatex">\(\frac{x^{r+1}}{r+1}\)</span>，关键是先把 <span class="arithmatex">\(r+1\)</span> 算对：<span class="arithmatex">\(r=\frac43\)</span> 时 <span class="arithmatex">\(r+1=\frac73\)</span>，除以 <span class="arithmatex">\(\frac73\)</span> 等于乘以 <span class="arithmatex">\(\frac37\)</span>。<strong>常见错误</strong>是把结果写成 <span class="arithmatex">\(\frac{x^{7/3}}{7/3}\)</span> 后不再化简，或者把指数错写成 <span class="arithmatex">\(\frac43+1=\frac53\)</span>。验算方法很简单：对 <span class="arithmatex">\(\frac37x^{7/3}\)</span> 求导，<span class="arithmatex">\(\frac37\cdot\frac73x^{4/3}=x^{4/3}\)</span>，还原成功。</p>
+</li>
+</ul>
+<h5 id="3">【课件例题 3】用线性性质拆开积分<a class="headerlink" href="#3" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Using the linearity of <span class="arithmatex">\(\int\)</span>, evaluate
+(a) <span class="arithmatex">\(\displaystyle\int(3x^{2}+4x-2)\,dx\)</span>, (b) <span class="arithmatex">\(\displaystyle\int\left(\frac{1}{t^{2}}+\sqrt{t}\right)dt\)</span>.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>(a) 逐项积分并合并常数：
+     $<span class="arithmatex">\(\int(3x^{2}+4x-2)\,dx=3\int x^{2}dx+4\int x\,dx-2\int dx\)</span>$
+     $<span class="arithmatex">\(=3\left(\frac{x^{3}}{3}+C_1\right)+4\left(\frac{x^{2}}{2}+C_2\right)-2(x+C_3)=x^{3}+2x^{2}-2x+C\)</span>$</li>
+<li>
+<p>(b) 先改写为幂函数：
+     $<span class="arithmatex">\(\int\left(\frac{1}{t^{2}}+\sqrt{t}\right)dt=\int\left(t^{-2}+t^{1/2}\right)dt=-\frac{1}{t}+\frac{2}{3}t^{3/2}+C\)</span>$</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> 线性性质允许把和差拆成若干简单积分、把常数提到积分号外。(a) 中三个常数 <span class="arithmatex">\(3C_1\)</span>、<span class="arithmatex">\(4C_2\)</span>、<span class="arithmatex">\(-2C_3\)</span> 合并成一个 <span class="arithmatex">\(C\)</span>——这是标准做法，因为任意常数之和仍是任意常数。(b) 的要点是先把 <span class="arithmatex">\(\frac{1}{t^{2}}\)</span> 写成 <span class="arithmatex">\(t^{-2}\)</span>、把 <span class="arithmatex">\(\sqrt{t}\)</span> 写成 <span class="arithmatex">\(t^{1/2}\)</span>，再套幂法则：<span class="arithmatex">\(\frac{t^{-1}}{-1}=-\frac1t\)</span>，<span class="arithmatex">\(\frac{t^{3/2}}{3/2}=\frac23t^{3/2}\)</span>。注意积分变量换成了 <span class="arithmatex">\(t\)</span>，微分符号必须跟着写成 <span class="arithmatex">\(dt\)</span>。</p>
+</li>
+</ul>
+<h4 id="5-generalized-power-rule">5. 广义幂法则 (Generalized Power Rule)<a class="headerlink" href="#5-generalized-power-rule" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>回顾链式法则:</strong> 对幂函数复合，
+  $<span class="arithmatex">\(D_x\big[g(x)\big]^{r}=r\big[g(x)\big]^{r-1}g'(x)\)</span>$</li>
+<li><strong>Theorem D（广义幂法则）:</strong> 设 <span class="arithmatex">\(g\)</span> 可导、<span class="arithmatex">\(r\neq-1\)</span>，则
+  $<span class="arithmatex">\(\int\big[g(x)\big]^{r}g'(x)\,dx=\frac{\big[g(x)\big]^{r+1}}{r+1}+C\)</span>$</li>
+<li><strong>微分写法:</strong> 若 <span class="arithmatex">\(u=g(x)\)</span>，则 <span class="arithmatex">\(du=g'(x)dx\)</span>，于是形式上有
+  $<span class="arithmatex">\(\int\big[g(x)\big]^{r}g'(x)\,dx=\int u^{r}\,du=\frac{u^{r+1}}{r+1}+C=\frac{\big[g(x)\big]^{r+1}}{r+1}+C\)</span>$</li>
+<li><strong>使用要点:</strong> 被积函数中必须<strong>完整地</strong>出现 <span class="arithmatex">\(g'(x)dx\)</span>（可以差一个常数倍，用乘除常数调整）；核心是识别"内层函数 <span class="arithmatex">\(g(x)\)</span> 及其导数"。</li>
+</ul>
+<h4 id="6-the-substitution-rule">6. 换元法则 (The Substitution Rule)<a class="headerlink" href="#6-the-substitution-rule" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Theorem 5.4B（不定积分换元法则）:</strong> 设 <span class="arithmatex">\(g\)</span> 可导，<span class="arithmatex">\(F\)</span> 是 <span class="arithmatex">\(f\)</span> 的反导数，则
+  $<span class="arithmatex">\(\int f\big(g(x)\big)g'(x)\,dx=F\big(g(x)\big)+C\)</span>$
+  <strong>证明:</strong> 由链式法则，
+  $<span class="arithmatex">\(D_x\Big[F\big(g(x)\big)+C\Big]=F'\big(g(x)\big)g'(x)=f\big(g(x)\big)g'(x)\)</span>$
+  故右端确是左端的全体反导数。<span class="arithmatex">\(\blacksquare\)</span></li>
+<li><strong>换元四步 (Four Steps):</strong></li>
+<li>令 <span class="arithmatex">\(u=g(x)\)</span>（通常取"内层函数"或"分母"或"根号里"）；</li>
+<li>求微分 <span class="arithmatex">\(du=g'(x)dx\)</span>；</li>
+<li>把原积分整体改写成关于 <span class="arithmatex">\(u\)</span> 的积分（常数因子用乘除调整，<strong>不能</strong>把含 <span class="arithmatex">\(x\)</span> 的因子留在外面）；</li>
+<li>对 <span class="arithmatex">\(u\)</span> 积分后<strong>回代</strong> <span class="arithmatex">\(u=g(x)\)</span>，并补 <span class="arithmatex">\(+C\)</span>。</li>
+<li><strong>常用特例:</strong> 若 <span class="arithmatex">\(f(u)=\dfrac{1}{u}\)</span>，则
+  $<span class="arithmatex">\(\int\frac{g'(x)}{g(x)}\,dx=\int\frac{du}{u}=\ln|u|+C=\ln|g(x)|+C\)</span>$
+  即"<strong>分子恰是分母的导数 ⇒ 积分等于分母的对数</strong>"，这是识别换元最快的信号。</li>
+</ul>
+<h4 id="lecture-examples-solutions_1">🌟 课件例题与详解 (Lecture Examples &amp; Solutions)<a class="headerlink" href="#lecture-examples-solutions_1" title="Permanent link">¶</a></h4>
+<h5 id="4">【课件例题 4】广义幂法则的两个基本型<a class="headerlink" href="#4" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Evaluate (a) <span class="arithmatex">\(\displaystyle\int(x^{4}+3x)^{30}(4x^{3}+3)\,dx\)</span>, (b) <span class="arithmatex">\(\displaystyle\int\sin^{10}x\cos x\,dx\)</span>.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>(a) 令 <span class="arithmatex">\(g(x)=x^{4}+3x\)</span>，则 <span class="arithmatex">\(g'(x)=4x^{3}+3\)</span>，恰好是括号外的因子：
+     $<span class="arithmatex">\(\int(x^{4}+3x)^{30}(4x^{3}+3)\,dx=\frac{(x^{4}+3x)^{31}}{31}+C\)</span>$</li>
+<li>
+<p>(b) 令 <span class="arithmatex">\(u=\sin x\)</span>，则 <span class="arithmatex">\(du=\cos x\,dx\)</span>：
+     $<span class="arithmatex">\(\int\sin^{10}x\cos x\,dx=\int u^{10}du=\frac{u^{11}}{11}+C=\frac{\sin^{11}x}{11}+C\)</span>$</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> 这两小题是广义幂法则的"标准识别题"：被积函数形如 <span class="arithmatex">\([\text{内层}]^{r}\cdot[\text{内层的导数}]\)</span>。(a) 中外层是 <span class="arithmatex">\(30\)</span> 次幂，内层 <span class="arithmatex">\(x^{4}+3x\)</span> 的导数 <span class="arithmatex">\(4x^{3}+3\)</span> 一字不差地出现在外面，直接套公式。(b) 中 <span class="arithmatex">\(\sin^{10}x\)</span> 是 <span class="arithmatex">\(\sin x\)</span> 的 <span class="arithmatex">\(10\)</span> 次幂，而 <span class="arithmatex">\(\cos x\)</span> 正是 <span class="arithmatex">\(\sin x\)</span> 的导数。判断这类题只需问一句：<strong>括号外那个因子，是不是括号里那个东西的导数？</strong>若是，答案就是把指数加一、再除以新指数。</p>
+</li>
+</ul>
+<h5 id="5">【课件例题 5】换元时的常数调整<a class="headerlink" href="#5" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Evaluate (a) <span class="arithmatex">\(\displaystyle\int(x^{3}+6x)^{5}(6x^{2}+12)\,dx\)</span>, (b) <span class="arithmatex">\(\displaystyle\int\frac{x}{10-x^{2}}\,dx\)</span>.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>(a) 令 <span class="arithmatex">\(u=x^{3}+6x\)</span>，则 <span class="arithmatex">\(du=(3x^{2}+6)dx\)</span>，而
+     $<span class="arithmatex">\((6x^{2}+12)dx=2(3x^{2}+6)dx=2\,du\)</span>$
+     于是
+     $<span class="arithmatex">\(\int(x^{3}+6x)^{5}(6x^{2}+12)\,dx=\int u^{5}\cdot2\,du=2\cdot\frac{u^{6}}{6}+C=\frac{(x^{3}+6x)^{6}}{3}+C\)</span>$</li>
+<li>
+<p>(b) 令 <span class="arithmatex">\(u=10-x^{2}\)</span>，则 <span class="arithmatex">\(du=-2x\,dx\)</span>，即 <span class="arithmatex">\(x\,dx=-\frac12du\)</span>：
+     $<span class="arithmatex">\(\int\frac{x}{10-x^{2}}\,dx=-\frac12\int\frac{1}{u}du=-\frac12\ln|u|+C=-\frac12\ln|10-x^{2}|+C\)</span>$</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> (a) 的关键是"<strong>差一个常数倍</strong>"——括号外的系数是 <span class="arithmatex">\(6\)</span>，而内层导数是 <span class="arithmatex">\(3x^{2}+6\)</span>，两者差因子 <span class="arithmatex">\(2\)</span>。常数可以自由进出积分号，所以先写成 <span class="arithmatex">\(2\int u^{5}du\)</span> 再积分。(b) 是"分子是分母导数的常数倍"型：分母 <span class="arithmatex">\(10-x^{2}\)</span> 的导数是 <span class="arithmatex">\(-2x\)</span>，分子只有 <span class="arithmatex">\(x\)</span>，差因子 <span class="arithmatex">\(-\frac12\)</span>；凑成 <span class="arithmatex">\(-\frac12\int\frac{du}{u}\)</span> 后得对数。注意绝对值不能丢：<span class="arithmatex">\(10-x^{2}\)</span> 可正可负（在 <span class="arithmatex">\(|x|&gt;\sqrt{10}\)</span> 时为负），只有写成 <span class="arithmatex">\(\ln|10-x^{2}|\)</span> 才对所有 <span class="arithmatex">\(x\)</span> 成立。</p>
+</li>
+</ul>
+<h5 id="6">【课件例题 6】假分式先做长除法<a class="headerlink" href="#6" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Find <span class="arithmatex">\(\displaystyle\int\frac{x^{2}-x}{x+1}\,dx\)</span>.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>分子次数 <span class="arithmatex">\(\ge\)</span> 分母次数，先做多项式长除法：
+     $<span class="arithmatex">\(x^{2}-x=(x+1)(x-2)+2\)</span>$
+     即
+     $<span class="arithmatex">\(\frac{x^{2}-x}{x+1}=x-2+\frac{2}{x+1}\)</span>$</li>
+<li>
+<p>逐项积分：
+     $<span class="arithmatex">\(\int\frac{x^{2}-x}{x+1}\,dx=\int\left(x-2+\frac{2}{x+1}\right)dx=\frac{x^{2}}{2}-2x+2\ln|x+1|+C\)</span>$</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> 当被积函数是<strong>假分式</strong>（分子次数不小于分母次数）时，第一步永远是长除法，把它拆成"多项式 + 真分式"。本题 <span class="arithmatex">\(x^{2}-x\)</span> 除以 <span class="arithmatex">\(x+1\)</span> 得商 <span class="arithmatex">\(x-2\)</span>、余 <span class="arithmatex">\(2\)</span>，于是被积函数化为 <span class="arithmatex">\(x-2+\frac{2}{x+1}\)</span>，三项都能直接积分。<strong>不能</strong>对 <span class="arithmatex">\(\frac{x^{2}-x}{x+1}\)</span> 直接套 <span class="arithmatex">\(\ln\)</span> 公式——<span class="arithmatex">\(\ln\)</span> 公式只适用于"分子是分母导数"的情形，这里不满足。</p>
+</li>
+<li><strong>Exercise（自测）:</strong> <span class="arithmatex">\(\displaystyle\int\frac{x^{2}-x}{x^{2}+1}\,dx\)</span>。提示：先写成 <span class="arithmatex">\(1-\frac{x+1}{x^{2}+1}\)</span>，再拆成 <span class="arithmatex">\(1-\frac{x}{x^{2}+1}-\frac{1}{x^{2}+1}\)</span>，答案为
+  $<span class="arithmatex">\(x-\frac{1}{2}\ln(x^{2}+1)-\tan^{-1}x+C\)</span>$</li>
+</ul>
+<h4 id="7">7. 常用反导数补充公式（自学部分）<a class="headerlink" href="#7" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong><span class="arithmatex">\(\dfrac{1}{x}\)</span> 的反导数:</strong> 对 <span class="arithmatex">\(x&gt;0\)</span> 有 <span class="arithmatex">\(D_x(\ln x)=\frac1x\)</span>；对 <span class="arithmatex">\(x&lt;0\)</span>，由链式法则
+  $<span class="arithmatex">\(D_x\big(\ln(-x)\big)=\frac{1}{-x}\cdot(-1)=\frac{1}{x}\)</span>$
+  所以对一切 <span class="arithmatex">\(x\neq0\)</span>，
+  $<span class="arithmatex">\(\int\frac{dx}{x}=\ln|x|+C\)</span>$
+  几何上：<span class="arithmatex">\(y=\ln|x|\)</span> 是偶函数，<span class="arithmatex">\(x=c\)</span> 与 <span class="arithmatex">\(x=-c\)</span> 处的斜率互为相反数，而 <span class="arithmatex">\(\frac{1}{-c}=-\frac1c\)</span>，恰好对应。</li>
+<li><strong>线性内层 <span class="arithmatex">\(ax+b\)</span> 的特例:</strong> 若 <span class="arithmatex">\(F'=f\)</span>，则
+  $<span class="arithmatex">\(\int f(ax+b)\,dx=\frac{1}{a}F(ax+b)+C\qquad(a\neq0)\)</span>$
+  例如
+  $<span class="arithmatex">\(\int\sin 3x\,dx=-\frac{1}{3}\cos 3x+C,\qquad \int e^{-2x}dx=-\frac{1}{2}e^{-2x}+C\)</span>$</li>
+<li><strong>选对换元 (Choosing the Right Substitution):</strong> 同一个函数可能有两种换元思路，选错会绕远路。
+  $<span class="arithmatex">\(\int\frac{dx}{1+3x^{2}}=\frac{1}{\sqrt{3}}\tan^{-1}\big(\sqrt{3}x\big)+C\qquad(\text{令 }u=\sqrt{3}x)\)</span>$
+  $<span class="arithmatex">\(\int\frac{x}{1+3x^{2}}\,dx=\frac{1}{6}\ln(1+3x^{2})+C\qquad(\text{令 }u=1+3x^{2})\)</span>$</li>
+<li><strong><span class="arithmatex">\(\tan x\)</span> 与 <span class="arithmatex">\(\cot x\)</span>:</strong>
+  $<span class="arithmatex">\(\int\tan x\,dx=\int\frac{\sin x}{\cos x}\,dx=-\ln|\cos x|+C=\ln|\sec x|+C\)</span>$
+  $<span class="arithmatex">\(\int\cot x\,dx=\ln|\sin x|+C\)</span>$</li>
+<li><strong><span class="arithmatex">\(\sec x\)</span> 与 <span class="arithmatex">\(\dfrac{1}{1-x^{2}}\)</span>（技巧型）:</strong>
+  $<span class="arithmatex">\(\int\sec x\,dx=\int\frac{\sec x(\sec x+\tan x)}{\sec x+\tan x}\,dx=\ln|\sec x+\tan x|+C\)</span>$
+  $<span class="arithmatex">\(\int\frac{dx}{1-x^{2}}=\frac{1}{2}\int\left(\frac{1}{1+x}+\frac{1}{1-x}\right)dx=\frac{1}{2}\ln\left|\frac{1+x}{1-x}\right|+C\)</span>$</li>
+<li><strong>简单微分公式表 (Simple Differential Formulas):</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>微分形式</th>
+<th>等价写法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(dx=\dfrac{1}{a}d(ax+b)\)</span></td>
+<td>线性内层换元</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(x\,dx=\dfrac{1}{2}d(x^{2})\)</span></td>
+<td>二次内层换元</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\dfrac{dx}{x^{2}}=-d\left(\dfrac{1}{x}\right)\)</span></td>
+<td>负幂</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\dfrac{dx}{\sqrt{x}}=2\,d(\sqrt{x})\)</span></td>
+<td>根式</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\dfrac{dx}{x}=d(\ln x)\)</span></td>
+<td><span class="arithmatex">\(x&gt;0\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(e^{x}dx=d(e^{x})\)</span></td>
+<td>指数</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\sin x\,dx=-d(\cos x)\)</span></td>
+<td>三角</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\cos x\,dx=d(\sin x)\)</span></td>
+<td>三角</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\sec^{2}x\,dx=d(\tan x)\)</span></td>
+<td>三角</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\dfrac{dx}{1+x^{2}}=d(\arctan x)\)</span></td>
+<td>反三角</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>反导数不唯一（同一函数的不同答案）:</strong> 同一个不定积分用不同方法可能得到"看起来不同"的答案，它们只差一个常数。例如
+  $<span class="arithmatex">\(\int\sin x\cos x\,dx=\frac{1}{2}\sin^{2}x+C\quad\text{或}\quad-\frac{1}{4}\cos 2x+C\)</span>$
+  两者相差 <span class="arithmatex">\(\frac14\)</span>（因为 <span class="arithmatex">\(\sin^{2}x=\frac{1-\cos 2x}{2}\)</span>），都属于正确答案。</li>
+</ul>
+<h4 id="lecture-examples-solutions_2">🌟 课件例题与详解 (Lecture Examples &amp; Solutions)<a class="headerlink" href="#lecture-examples-solutions_2" title="Permanent link">¶</a></h4>
+<h5 id="7tan-x">【课件例题 7】<span class="arithmatex">\(\tan x\)</span> 的反导数<a class="headerlink" href="#7tan-x" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Evaluate <span class="arithmatex">\(\displaystyle\int\tan x\,dx\)</span>.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>把 <span class="arithmatex">\(\tan x\)</span> 写成 <span class="arithmatex">\(\dfrac{\sin x}{\cos x}\)</span>：
+     $<span class="arithmatex">\(\int\tan x\,dx=\int\frac{\sin x}{\cos x}\,dx\)</span>$</li>
+<li>令 <span class="arithmatex">\(u=\cos x\)</span>，则 <span class="arithmatex">\(du=-\sin x\,dx\)</span>，即 <span class="arithmatex">\(\sin x\,dx=-du\)</span>：
+     $<span class="arithmatex">\(\int\frac{\sin x}{\cos x}\,dx=-\int\frac{du}{u}=-\ln|u|+C\)</span>$</li>
+<li>
+<p>回代：
+     $<span class="arithmatex">\(-\ln|\cos x|+C=\ln|\sec x|+C\)</span>$</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> 这里的关键观察是"分子恰是分母导数的相反数"：<span class="arithmatex">\((\cos x)'=-\sin x\)</span>，所以分子 <span class="arithmatex">\(\sin x\)</span> 与分母的导数只差一个负号，凑成 <span class="arithmatex">\(-\int\frac{du}{u}\)</span> 后得对数。结果可以写成 <span class="arithmatex">\(-\ln|\cos x|\)</span> 或 <span class="arithmatex">\(\ln|\sec x|\)</span>，两者等价。<strong>常见错误</strong>是漏掉负号写成 <span class="arithmatex">\(\ln|\cos x|\)</span>，可以用求导验算：<span class="arithmatex">\((\ln|\sec x|)'=\sec x\tan x/\sec x=\tan x\)</span>，正确。</p>
+</li>
+</ul>
+<h5 id="8sec-x-dfrac11-x2">【课件例题 8】<span class="arithmatex">\(\sec x\)</span> 与 <span class="arithmatex">\(\dfrac{1}{1-x^{2}}\)</span> 的技巧型积分<a class="headerlink" href="#8sec-x-dfrac11-x2" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Evaluate <span class="arithmatex">\(\displaystyle\int\sec x\,dx\)</span> and <span class="arithmatex">\(\displaystyle\int\frac{dx}{1-x^{2}}\)</span>.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li><span class="arithmatex">\(\sec x\)</span> 的积分靠"<strong>乘以并除以</strong> <span class="arithmatex">\(\sec x+\tan x\)</span>"：
+     $<span class="arithmatex">\(\int\sec x\,dx=\int\frac{\sec^{2}x+\sec x\tan x}{\sec x+\tan x}\,dx\)</span>$
+     分子恰是分母的导数（<span class="arithmatex">\((\sec x+\tan x)'=\sec x\tan x+\sec^{2}x\)</span>），故
+     $<span class="arithmatex">\(\int\sec x\,dx=\ln|\sec x+\tan x|+C\)</span>$</li>
+<li><span class="arithmatex">\(\dfrac{1}{1-x^{2}}\)</span> 先做<strong>部分分式分解</strong>：
+     $<span class="arithmatex">\(\frac{1}{1-x^{2}}=\frac{1}{(1-x)(1+x)}=\frac{1}{2}\left(\frac{1}{1+x}+\frac{1}{1-x}\right)\)</span>$</li>
+<li>
+<p>逐项积分（注意第二项要凑 <span class="arithmatex">\(-d(1-x)\)</span>）：
+     $<span class="arithmatex">\(\int\frac{dx}{1-x^{2}}=\frac{1}{2}\Big[\ln|1+x|-\ln|1-x|\Big]+C=\frac{1}{2}\ln\left|\frac{1+x}{1-x}\right|+C\)</span>$</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> 这两题都不能靠"直接套公式"，而是考技巧。(1) <span class="arithmatex">\(\sec x\)</span> 的积分是微积分里的经典技巧：分子分母同乘 <span class="arithmatex">\(\sec x+\tan x\)</span> 后，分子恰好变成分母的导数，于是积分化为 <span class="arithmatex">\(\int\frac{du}{u}\)</span>。(2) 有理分式先<strong>因式分解 + 部分分式</strong>，拆成两个一次分式之和，再分别用 <span class="arithmatex">\(\ln\)</span> 公式；注意 <span class="arithmatex">\(\frac{1}{1-x}\)</span> 的原函数是 <span class="arithmatex">\(-\ln|1-x|\)</span>（因为 <span class="arithmatex">\((1-x)'=-1\)</span>，需要补负号）。这类"拆项 + 凑微分"是 Chapter 7 积分技巧的雏形。</p>
+</li>
+</ul>
+<h5 id="9">【课件例题 9】反导数不唯一：两种解法得到的答案不同<a class="headerlink" href="#9" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Evaluate <span class="arithmatex">\(\displaystyle\int\sin x\cos x\,dx\)</span> in two ways, and explain why the two answers look different.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li><strong>解法一:</strong> 令 <span class="arithmatex">\(u=\sin x\)</span>，<span class="arithmatex">\(du=\cos x\,dx\)</span>：
+     $<span class="arithmatex">\(\int\sin x\cos x\,dx=\int u\,du=\frac{1}{2}u^{2}+C=\frac{1}{2}\sin^{2}x+C\)</span>$</li>
+<li><strong>解法二:</strong> 用倍角公式 <span class="arithmatex">\(\sin 2x=2\sin x\cos x\)</span>，令 <span class="arithmatex">\(u=2x\)</span>：
+     $<span class="arithmatex">\(\int\sin x\cos x\,dx=\frac{1}{2}\int\sin 2x\,dx=-\frac{1}{4}\cos 2x+C\)</span>$</li>
+<li>
+<p><strong>两者一致:</strong> 因为 <span class="arithmatex">\(\sin^{2}x=\dfrac{1-\cos 2x}{2}\)</span>，所以
+     $<span class="arithmatex">\(\frac{1}{2}\sin^{2}x=\frac{1}{4}-\frac{1}{4}\cos 2x\)</span>$
+     两个答案只差常数 <span class="arithmatex">\(\dfrac14\)</span>，都可写成"<span class="arithmatex">\(\cdots+C\)</span>"的形式。</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> 这题说明"反导数不唯一"不仅体现在 <span class="arithmatex">\(+C\)</span>，也体现在<strong>不同方法可能得到形式完全不同的表达式</strong>。<span class="arithmatex">\(\frac12\sin^{2}x\)</span> 与 <span class="arithmatex">\(-\frac14\cos 2x\)</span> 求导都等于 <span class="arithmatex">\(\sin x\cos x\)</span>，它们相差常数 <span class="arithmatex">\(\frac14\)</span>，被吸收进任意常数 <span class="arithmatex">\(C\)</span> 里。遇到这种情况不要以为自己算错：<strong>判断标准只有一条——求导回去是否等于被积函数</strong>。考试中任选一种写法即可，但同一题内不要混用两种形式。</p>
+</li>
+</ul>
+<h3 id="51-introduction-to-area">5.1 Introduction to Area (面积的引入)<a class="headerlink" href="#51-introduction-to-area" title="Permanent link">¶</a></h3>
+<h4 id="1-area-by-approximation">1. 用逼近法定义面积 (Area by Approximation)<a class="headerlink" href="#1-area-by-approximation" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>已知面积:</strong> 矩形 <span class="arithmatex">\(A=lw\)</span>，平行四边形 <span class="arithmatex">\(A=bh\)</span>，三角形 <span class="arithmatex">\(A=\frac12bh\)</span>；多边形可以分割成三角形求和：<span class="arithmatex">\(A=A_1+A_2+\cdots+A_n\)</span>。</li>
+<li><strong>圆面积的处理（Archimedes 的思想）:</strong> 对单位圆作<strong>内接正多边形</strong> <span class="arithmatex">\(P_1,P_2,P_3,\dots\)</span>（边数 <span class="arithmatex">\(4,8,16,\dots\)</span>），圆面积定义为
+  $<span class="arithmatex">\(A(\text{circle})=\lim_{n\to\infty}A(P_n)\)</span>$</li>
+<li><strong>一般问题:</strong> 边界是<strong>曲线</strong>的区域，面积怎么定义？——用一列内接多边形（或矩形）去逼近，把面积定义为这些近似面积的<strong>极限</strong>。</li>
+</ul>
+<h4 id="2-four-step-procedure">2. 四步法：从内接矩形到精确面积 (Four-Step Procedure)<a class="headerlink" href="#2-four-step-procedure" title="Permanent link">¶</a></h4>
+<p>以 <span class="arithmatex">\(y=f(x)=x^{2}\)</span> 在 <span class="arithmatex">\([0,2]\)</span> 上、由曲线与 <span class="arithmatex">\(x\)</span> 轴围成的区域 <span class="arithmatex">\(R\)</span> 为例。</p>
+<ul>
+<li><strong>Step 1 分割 (Partition):</strong> 把 <span class="arithmatex">\([0,2]\)</span> 分成 <span class="arithmatex">\(n\)</span> 个等长子区间，每个长度
+  $<span class="arithmatex">\(\Delta x=\frac{2}{n},\qquad x_i=i\Delta x=\frac{2i}{n}\quad(i=0,1,\dots,n)\)</span>$
+  即 <span class="arithmatex">\(0=x_0&lt;x_1&lt;\cdots&lt;x_n=2\)</span>。</li>
+<li><strong>Step 2 近似 (Approximation):</strong> 在每个 <span class="arithmatex">\([x_{i-1},x_i]\)</span> 上以<strong>最小值</strong> <span class="arithmatex">\(f(x_{i-1})=x_{i-1}^{2}\)</span> 为高作矩形（内接矩形），第 <span class="arithmatex">\(i\)</span> 个矩形面积为 <span class="arithmatex">\(f(x_{i-1})\Delta x\)</span>。所有矩形之并 <span class="arithmatex">\(R_n\)</span> 称为<strong>内接多边形 (inscribed polygon)</strong>，其面积
+  $<span class="arithmatex">\(A(R_n)=f(x_0)\Delta x+f(x_1)\Delta x+\cdots+f(x_{n-1})\Delta x\)</span>$</li>
+<li><strong>Step 3 求和 (Summation):</strong> 因为 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([0,2]\)</span> 上递增，最小值在左端点取到：
+  $<span class="arithmatex">\(f(x_{i-1})\Delta x=x_{i-1}^{2}\Delta x=\left(\frac{2(i-1)}{n}\right)^{2}\cdot\frac{2}{n}=\frac{8}{n^{3}}(i-1)^{2}\)</span>$
+  于是
+  $<span class="arithmatex">\(A(R_n)=\frac{8}{n^{3}}\Big[0^{2}+1^{2}+2^{2}+\cdots+(n-1)^{2}\Big]=\frac{8}{n^{3}}\cdot\frac{(n-1)n(2n-1)}{6}\)</span>$
+  $<span class="arithmatex">\(=\frac{8}{6}\cdot\frac{2n^{3}-3n^{2}+n}{n^{3}}=\frac{8}{3}-\frac{4}{n}+\frac{4}{3n^{2}}\)</span>$</li>
+<li><strong>Step 4 取极限 (Limit):</strong>
+  $<span class="arithmatex">\(A(R)=\lim_{n\to\infty}A(R_n)=\lim_{n\to\infty}\left(\frac{8}{3}-\frac{4}{n}+\frac{4}{3n^{2}}\right)=\frac{8}{3}\)</span>$
+  数值上：<span class="arithmatex">\(A(R_7)\approx\frac83-0.5442\)</span>，<span class="arithmatex">\(A(R_{14})\approx\frac83-0.2789\)</span>，<span class="arithmatex">\(A(R_{28})\approx\frac83-0.1412\)</span>——随着 <span class="arithmatex">\(n\)</span> 增大，近似值单调逼近 <span class="arithmatex">\(\frac83\)</span>。</li>
+<li><strong>外接多边形 (Circumscribed Polygons):</strong> 若把矩形的高改为每个子区间上的<strong>最大值</strong> <span class="arithmatex">\(f(x_i)=x_i^{2}\)</span>，同样四步可得 <span class="arithmatex">\(A(S_n)=\frac83+\frac{4}{n}+\frac{4}{3n^{2}}\)</span>，极限仍是 <span class="arithmatex">\(\frac83\)</span>。<strong>内接与外接给出同一个极限</strong>，这提示面积与"怎么取点"无关——正是定积分定义的思想来源。</li>
+</ul>
+<h4 id="3-sigma-notation-and-special-sums">3. 求和号与特殊求和公式 (Sigma Notation and Special Sums)<a class="headerlink" href="#3-sigma-notation-and-special-sums" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>定义:</strong>
+  $<span class="arithmatex">\(\sum_{i=1}^{n}a_i=a_1+a_2+\cdots+a_n\)</span>$
+  <span class="arithmatex">\(\Sigma\)</span> 是希腊字母 sigma，表示"求和"；下标 <span class="arithmatex">\(i\)</span> 从 <span class="arithmatex">\(\Sigma\)</span> 下方的数开始，逐次加 <span class="arithmatex">\(1\)</span>，到上方的数结束。</li>
+<li><strong>例子:</strong>
+  $<span class="arithmatex">\(\sum_{i=2}^{4}a_ib_i=a_2b_2+a_3b_3+a_4b_4,\qquad \sum_{j=1}^{5}c=5c,\qquad \sum_{k=0}^{n}2^{k}=2^{0}+2^{1}+\cdots+2^{n}\)</span>$</li>
+<li><strong>Theorem 5.1A（<span class="arithmatex">\(\Sigma\)</span> 的线性性质）:</strong> 设 <span class="arithmatex">\(c\)</span> 为常数，则
+  $<span class="arithmatex">\(\sum_{i=1}^{n}c=nc,\qquad \sum_{i=1}^{n}ca_i=c\sum_{i=1}^{n}a_i,\qquad \sum_{i=1}^{n}(a_i\pm b_i)=\sum_{i=1}^{n}a_i\pm\sum_{i=1}^{n}b_i\)</span>$</li>
+<li><strong>三个特殊求和公式（务必记住）:</strong>
+  $<span class="arithmatex">\(\sum_{i=1}^{n}i=1+2+\cdots+n=\frac{n(n+1)}{2}\)</span>$
+  $<span class="arithmatex">\(\sum_{i=1}^{n}i^{2}=1^{2}+2^{2}+\cdots+n^{2}=\frac{n(n+1)(2n+1)}{6}\)</span>$
+  $<span class="arithmatex">\(\sum_{i=1}^{n}i^{3}=1^{3}+2^{3}+\cdots+n^{3}=\left[\frac{n(n+1)}{2}\right]^{2}\)</span>$</li>
+</ul>
+<h4 id="4-velocity-and-position">4. 速度与位置 (Velocity and Position)<a class="headerlink" href="#4-velocity-and-position" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>问题:</strong> 物体沿 <span class="arithmatex">\(x\)</span> 轴运动，速度 <span class="arithmatex">\(v=f(t)\ge0\)</span>，求 <span class="arithmatex">\(t=a\)</span> 到 <span class="arithmatex">\(t=b\)</span> 之间走过的距离。</li>
+<li><strong>匀速情形:</strong> 速度为常数 <span class="arithmatex">\(k\)</span>、时间间隔 <span class="arithmatex">\(\Delta t\)</span>，距离 <span class="arithmatex">\(=k\Delta t\)</span>。</li>
+<li><strong>变速情形:</strong> 在 <span class="arithmatex">\(t_0=a,t_1,\dots,t_n=b\)</span> 处测速，每个子区间上速度<strong>近似为常数</strong> <span class="arithmatex">\(f(t_i)\)</span>，则距离近似为
+  $<span class="arithmatex">\(f(t_1)\Delta t_1+f(t_2)\Delta t_2+\cdots+f(t_n)\Delta t_n=\sum_{i=1}^{n}f(t_i)\Delta t_i\)</span>$
+  测速越密（<span class="arithmatex">\(\Delta t_i\to0\)</span>）越精确，精确距离定义为
+  $<span class="arithmatex">\(d=\lim_{\text{all }\Delta t_i\to0}\sum_{i=1}^{n}f(t_i)\Delta t_i=\int_{a}^{b}v(t)\,dt\)</span>$
+  这个和式称为 <strong>Riemann 和 (Riemann sum)</strong>。</li>
+<li><strong>注意:</strong> 当 <span class="arithmatex">\(v\)</span> 可取负值时，<span class="arithmatex">\(\int_a^b v\,dt\)</span> 给出的是<strong>位移 (displacement)</strong> 而不是总路程；总路程要用 <span class="arithmatex">\(\int_a^b|v|\,dt\)</span>。</li>
+</ul>
+<h4 id="lecture-examples-solutions_3">🌟 课件例题与详解 (Lecture Examples &amp; Solutions)<a class="headerlink" href="#lecture-examples-solutions_3" title="Permanent link">¶</a></h4>
+<h5 id="10-yx2">【课件例题 10】内接矩形逼近 <span class="arithmatex">\(y=x^{2}\)</span> 下方面积<a class="headerlink" href="#10-yx2" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Find the area <span class="arithmatex">\(A(R)\)</span> of the region <span class="arithmatex">\(R\)</span> bounded by <span class="arithmatex">\(y=x^{2}\)</span>, the <span class="arithmatex">\(x\)</span>-axis, and the line <span class="arithmatex">\(x=2\)</span>, using inscribed rectangles.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>分割：<span class="arithmatex">\(\Delta x=\dfrac{2}{n}\)</span>，<span class="arithmatex">\(x_i=\dfrac{2i}{n}\)</span>。</li>
+<li>近似：第 <span class="arithmatex">\(i\)</span> 个矩形高 <span class="arithmatex">\(f(x_{i-1})=x_{i-1}^{2}\)</span>，面积 <span class="arithmatex">\(\dfrac{8}{n^{3}}(i-1)^{2}\)</span>。</li>
+<li>求和：
+     $<span class="arithmatex">\(A(R_n)=\frac{8}{n^{3}}\sum_{k=0}^{n-1}k^{2}=\frac{8}{n^{3}}\cdot\frac{(n-1)n(2n-1)}{6}=\frac{8}{3}-\frac{4}{n}+\frac{4}{3n^{2}}\)</span>$</li>
+<li>
+<p>取极限：
+     $<span class="arithmatex">\(A(R)=\lim_{n\to\infty}A(R_n)=\frac{8}{3}\)</span>$</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> 这是本章的"母题"，四步走完全程。要特别注意第 3 步的求和技巧：<span class="arithmatex">\(\sum_{k=0}^{n-1}k^{2}\)</span> 用的是前 <span class="arithmatex">\(n-1\)</span> 项平方和公式 <span class="arithmatex">\(\frac{(n-1)n(2n-1)}{6}\)</span>，展开后三项分别除以 <span class="arithmatex">\(n^{3}\)</span>，得 <span class="arithmatex">\(\frac83-\frac4n+\frac{4}{3n^{2}}\)</span>。取极限时后两项都趋于 <span class="arithmatex">\(0\)</span>，只剩 <span class="arithmatex">\(\frac83\)</span>。<strong>常见错误</strong>：把 <span class="arithmatex">\(\sum_{k=1}^{n}k^{2}\)</span> 的公式套成前 <span class="arithmatex">\(n\)</span> 项、或把 <span class="arithmatex">\(f(x_{i-1})\)</span> 误写成 <span class="arithmatex">\(f(x_i)\)</span>（那就变成外接矩形了，极限相同但和式不同）。</p>
+</li>
+</ul>
+<h5 id="11">【课件例题 11】外接矩形得到同一极限<a class="headerlink" href="#11" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Approximate the same region <span class="arithmatex">\(R\)</span> with circumscribed rectangles and show the limit is again <span class="arithmatex">\(\frac{8}{3}\)</span>.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>外接矩形的高取每个子区间上的最大值 <span class="arithmatex">\(f(x_i)=x_i^{2}=\dfrac{4i^{2}}{n^{2}}\)</span>。</li>
+<li>每个矩形面积
+     $<span class="arithmatex">\(f(x_i)\Delta x=\frac{4i^{2}}{n^{2}}\cdot\frac{2}{n}=\frac{8i^{2}}{n^{3}}\)</span>$</li>
+<li>求和：
+     $<span class="arithmatex">\(A(S_n)=\frac{8}{n^{3}}\sum_{i=1}^{n}i^{2}=\frac{8}{n^{3}}\cdot\frac{n(n+1)(2n+1)}{6}=\frac{8}{3}+\frac{4}{n}+\frac{4}{3n^{2}}\)</span>$</li>
+<li>
+<p>取极限：
+     $<span class="arithmatex">\(A(S)=\lim_{n\to\infty}A(S_n)=\frac{8}{3}\)</span>$</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> 内接矩形"从下面逼近"，外接矩形"从上面逼近"，两者的和式只差符号：内接是 <span class="arithmatex">\(\frac83-\frac4n+\cdots\)</span>，外接是 <span class="arithmatex">\(\frac83+\frac4n+\cdots\)</span>，夹逼之下极限都等于 <span class="arithmatex">\(\frac83\)</span>。这个对比说明：<strong>只要分割越来越细，无论用左端点、右端点还是区间内任意点作高，极限都相同</strong>——这就是下一节定积分定义中"极限与取点方式无关"的直观依据。</p>
+</li>
+</ul>
+<h3 id="52-the-definite-integral">5.2 The Definite Integral (定积分)<a class="headerlink" href="#52-the-definite-integral" title="Permanent link">¶</a></h3>
+<h4 id="1-riemann-from-area-to-the-definite-integral">1. 从面积到定积分：Riemann 和 (From Area to the Definite Integral)<a class="headerlink" href="#1-riemann-from-area-to-the-definite-integral" title="Permanent link">¶</a></h4>
+<p>设 <span class="arithmatex">\(f(x)\ge0\)</span>，求曲线 <span class="arithmatex">\(y=f(x)\)</span> 与 <span class="arithmatex">\(x\)</span> 轴在 <span class="arithmatex">\([a,b]\)</span> 上围成的区域 <span class="arithmatex">\(R\)</span> 的面积。</p>
+<ul>
+<li><strong>Step 1 分割:</strong> 任取分割 <span class="arithmatex">\(a=x_0&lt;x_1&lt;\cdots&lt;x_n=b\)</span>，记 <span class="arithmatex">\(\Delta x_i=x_i-x_{i-1}\)</span>（<strong>不必等长</strong>）。</li>
+<li><strong>Step 2 取点:</strong> 在每个子区间上任取<strong>样本点 (sample point)</strong> <span class="arithmatex">\(\bar{x}_i\in[x_{i-1},x_i]\)</span>，以 <span class="arithmatex">\(f(\bar{x}_i)\)</span> 为高作矩形。</li>
+<li><strong>Step 3 求和:</strong> 面积近似为
+  $<span class="arithmatex">\(\sum_{i=1}^{n}f(\bar{x}_i)\Delta x_i=f(\bar{x}_1)\Delta x_1+\cdots+f(\bar{x}_n)\Delta x_n\)</span>$</li>
+<li><strong>Step 4 取极限:</strong>
+  $<span class="arithmatex">\(A(R)=\lim_{\text{all }\Delta x_i\to0}\sum_{i=1}^{n}f(\bar{x}_i)\Delta x_i\)</span>$</li>
+</ul>
+<h4 id="2-definition-of-the-definite-integral">2. 定积分的定义 (Definition of the Definite Integral)<a class="headerlink" href="#2-definition-of-the-definite-integral" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>定义:</strong> 设 <span class="arithmatex">\(f\)</span> 在闭区间 <span class="arithmatex">\([a,b]\)</span> 上有定义。若极限
+  $<span class="arithmatex">\(\lim_{\text{all }\Delta x_i\to0}\sum_{i=1}^{n}f(\bar{x}_i)\Delta x_i\)</span>$
+  <strong>存在</strong>，且<strong>不依赖于</strong>分割的选取与样本点 <span class="arithmatex">\(\bar{x}_i\)</span> 的选取，则称 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上<strong>可积 (integrable)</strong>，并称此极限为 <span class="arithmatex">\(f\)</span> 从 <span class="arithmatex">\(a\)</span> 到 <span class="arithmatex">\(b\)</span> 的<strong>定积分 (definite integral)</strong>：
+  $<span class="arithmatex">\(\int_{a}^{b}f(x)\,dx:=\lim_{\text{all }\Delta x_i\to0}\sum_{i=1}^{n}f(\bar{x}_i)\Delta x_i\)</span>$</li>
+<li><strong>要点:</strong> 定义中"不依赖"三个字最关键——它保证了定积分是<strong>区域本身</strong>的属性，而不是某种近似方案的结果。</li>
+</ul>
+<h4 id="3-notation-geometric-meaning-conventions">3. 记号、几何意义与约定 (Notation, Geometric Meaning, Conventions)<a class="headerlink" href="#3-notation-geometric-meaning-conventions" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>记号解剖:</strong> <span class="arithmatex">\(\displaystyle\int_{a}^{b}f(x)\,dx\)</span> 中，<span class="arithmatex">\(a\)</span> 是<strong>下限 (lower limit)</strong>，<span class="arithmatex">\(b\)</span> 是<strong>上限 (upper limit)</strong>，<span class="arithmatex">\([a,b]\)</span> 是<strong>积分区间</strong>，<span class="arithmatex">\(f(x)\)</span> 是<strong>被积函数</strong>，<span class="arithmatex">\(x\)</span> 是<strong>积分变量</strong>。</li>
+<li><strong>提醒 (Caution):</strong> 这里的"上下限"与函数的<strong>极限 (limit)</strong> 毫无关系，只是积分区间的端点。</li>
+<li><strong>几何意义（有向面积 Signed Area）:</strong> 设 <span class="arithmatex">\(a&lt;b\)</span> 且 <span class="arithmatex">\(f\)</span> 可积，</li>
+<li><span class="arithmatex">\(f(x)\ge0\)</span> 时，<span class="arithmatex">\(\int_a^b f\)</span> 等于曲线下方的<strong>普通面积</strong>；</li>
+<li><span class="arithmatex">\(f(x)\le0\)</span> 时，<span class="arithmatex">\(\int_a^b f\)</span> 等于该面积的<strong>相反数</strong>；</li>
+<li>一般地，<span class="arithmatex">\(\int_a^b f\)</span> 等于 <span class="arithmatex">\(x\)</span> 轴上方面积减去下方面积：
+    $<span class="arithmatex">\(\int_{a}^{b}f(x)\,dx=A_{\text{up}}-A_{\text{down}}\)</span>$</li>
+<li><strong>哑变量 (Dummy Variable):</strong> 积分变量可以任意改名，
+  $<span class="arithmatex">\(\int_{a}^{b}f(x)\,dx=\int_{a}^{b}f(t)\,dt=\int_{a}^{b}f(u)\,du\)</span>$</li>
+<li><strong>约定 (Conventions):</strong>
+  $<span class="arithmatex">\(\int_{a}^{a}f(x)\,dx=0,\qquad \int_{b}^{a}f(x)\,dx=-\int_{a}^{b}f(x)\,dx\quad(a&gt;b)\)</span>$
+  即"区间退化为一点时积分为 <span class="arithmatex">\(0\)</span>"，"交换上下限变号"。</li>
+</ul>
+<h4 id="4-properties-of-the-definite-integral">4. 定积分的基本性质 (Properties of the Definite Integral)<a class="headerlink" href="#4-properties-of-the-definite-integral" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Theorem 5.3D（线性性质 Linearity）:</strong> 设 <span class="arithmatex">\(k\)</span> 为常数，且相关积分都存在，则
+  $<span class="arithmatex">\(\int_{a}^{b}k\,dx=k(b-a),\qquad \int_{a}^{b}kf(x)\,dx=k\int_{a}^{b}f(x)\,dx\)</span>$
+  $<span class="arithmatex">\(\int_{a}^{b}\big[f(x)\pm g(x)\big]dx=\int_{a}^{b}f(x)\,dx\pm\int_{a}^{b}g(x)\,dx\)</span>$</li>
+<li><strong>Theorem B（区间可加性 Interval Additivity）:</strong> 若 <span class="arithmatex">\(f\)</span> 在包含 <span class="arithmatex">\(a,b,c\)</span> 的区间上可积，则
+  $<span class="arithmatex">\(\int_{a}^{c}f(x)\,dx=\int_{a}^{b}f(x)\,dx+\int_{b}^{c}f(x)\,dx\)</span>$
+  <strong>无论 <span class="arithmatex">\(a,b,c\)</span> 的大小顺序如何</strong>都成立。例如
+  $<span class="arithmatex">\(\int_{0}^{2}x^{2}dx=\int_{0}^{1}x^{2}dx+\int_{1}^{2}x^{2}dx,\qquad \int_{0}^{2}x^{2}dx=\int_{0}^{3}x^{2}dx+\int_{3}^{2}x^{2}dx\)</span>$
+  常用变形：<span class="arithmatex">\(\displaystyle\int_{b}^{c}f=\int_{a}^{c}f-\int_{a}^{b}f\)</span>。</li>
+<li><strong>Theorem 5.3B（比较性质 Comparison）:</strong> 若 <span class="arithmatex">\(f,g\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上可积且 <span class="arithmatex">\(f(x)\le g(x)\)</span> 对一切 <span class="arithmatex">\(x\in[a,b]\)</span> 成立，则
+  $<span class="arithmatex">\(\int_{a}^{b}f(x)\,dx\le\int_{a}^{b}g(x)\,dx\)</span>$
+  即"定积分保持不等号"。</li>
+<li><strong>Theorem 5.3C（有界性质 Boundedness）:</strong> 若 <span class="arithmatex">\(m\le f(x)\le M\)</span> 对一切 <span class="arithmatex">\(x\in[a,b]\)</span> 成立，则
+  $<span class="arithmatex">\(m(b-a)\le\int_{a}^{b}f(x)\,dx\le M(b-a)\)</span>$
+  这是"用常数函数夹逼"的比较性质，常用于<strong>估计积分值</strong>或<strong>证明不等式</strong>。</li>
+<li><strong>Theorem 5.5B（对称性质 Symmetry）:</strong> 设 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([-a,a]\)</span> 上可积，</li>
+<li>若 <span class="arithmatex">\(f\)</span> 为<strong>偶函数</strong>，则 <span class="arithmatex">\(\displaystyle\int_{-a}^{a}f(x)\,dx=2\int_{0}^{a}f(x)\,dx\)</span>；</li>
+<li>若 <span class="arithmatex">\(f\)</span> 为<strong>奇函数</strong>，则 <span class="arithmatex">\(\displaystyle\int_{-a}^{a}f(x)\,dx=0\)</span>。
+  直观上：偶函数左右面积相等（相加），奇函数左右面积符号相反（抵消）。</li>
+</ul>
+<h4 id="lecture-examples-solutions_4">🌟 课件例题与详解 (Lecture Examples &amp; Solutions)<a class="headerlink" href="#lecture-examples-solutions_4" title="Permanent link">¶</a></h4>
+<h5 id="12">【课件例题 12】用几何意义算定积分<a class="headerlink" href="#12" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Compute by geometric meaning (a) <span class="arithmatex">\(\displaystyle\int_{0}^{1}\sqrt{1-x^{2}}\,dx\)</span>, (b) <span class="arithmatex">\(\displaystyle\int_{0}^{2\pi}\sin x\,dx\)</span>.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>(a) 令 <span class="arithmatex">\(y=\sqrt{1-x^{2}}\)</span>，则 <span class="arithmatex">\(y\ge0\)</span> 且
+     $<span class="arithmatex">\(y^{2}=1-x^{2}\iff x^{2}+y^{2}=1\)</span>$
+     这是<strong>单位圆的上半圆</strong>。积分区间 <span class="arithmatex">\([0,1]\)</span> 对应<strong>四分之一圆</strong>，面积
+     $<span class="arithmatex">\(\int_{0}^{1}\sqrt{1-x^{2}}\,dx=\frac{1}{4}\pi\cdot1^{2}=\frac{\pi}{4}\)</span>$</li>
+<li>
+<p>(b) <span class="arithmatex">\(y=\sin x\)</span> 在 <span class="arithmatex">\([0,\pi]\)</span> 上为正、在 <span class="arithmatex">\([\pi,2\pi]\)</span> 上为负，两瓣面积相等，故
+     $<span class="arithmatex">\(\int_{0}^{2\pi}\sin x\,dx=0\)</span>$</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> 几何法的思路是"认曲线"。(a) 看到 <span class="arithmatex">\(\sqrt{1-x^{2}}\)</span> 就要想到单位圆——平方后是 <span class="arithmatex">\(x^{2}+y^{2}=1\)</span>，且根号保证 <span class="arithmatex">\(y\ge0\)</span>，所以是上半圆；区间 <span class="arithmatex">\([0,1]\)</span> 只取右半部分，是四分之一圆，面积 <span class="arithmatex">\(\frac{\pi}{4}\)</span>。(b) 正负面积相等的结论要求两瓣<strong>形状全等</strong>：<span class="arithmatex">\(\sin x\)</span> 在 <span class="arithmatex">\([0,\pi]\)</span> 与 <span class="arithmatex">\([\pi,2\pi]\)</span> 上的图像关于 <span class="arithmatex">\(x\)</span> 轴对称，所以积分为 <span class="arithmatex">\(0\)</span>。若区间不对称（如 <span class="arithmatex">\([0,\pi]\)</span>），答案就是 <span class="arithmatex">\(2\)</span> 而不是 <span class="arithmatex">\(0\)</span>。</p>
+</li>
+</ul>
+<h5 id="13int_-12xdx">【课件例题 13】区间可加性：<span class="arithmatex">\(\int_{-1}^{2}|x|\,dx\)</span><a class="headerlink" href="#13int_-12xdx" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Evaluate <span class="arithmatex">\(\displaystyle\int_{-1}^{2}|x|\,dx\)</span>.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>在 <span class="arithmatex">\(x=0\)</span> 处拆开（绝对值在此变号）：
+     $<span class="arithmatex">\(\int_{-1}^{2}|x|\,dx=\int_{-1}^{0}|x|\,dx+\int_{0}^{2}|x|\,dx\)</span>$</li>
+<li>分段去掉绝对值：<span class="arithmatex">\(x\le0\)</span> 时 <span class="arithmatex">\(|x|=-x\)</span>，<span class="arithmatex">\(x\ge0\)</span> 时 <span class="arithmatex">\(|x|=x\)</span>，对应两个三角形：
+     $<span class="arithmatex">\(\int_{-1}^{0}(-x)\,dx=\frac{1}{2}\cdot1\cdot1=\frac{1}{2},\qquad \int_{0}^{2}x\,dx=\frac{1}{2}\cdot2\cdot2=2\)</span>$</li>
+<li>
+<p>相加：
+     $<span class="arithmatex">\(\int_{-1}^{2}|x|\,dx=\frac{1}{2}+2=\frac{5}{2}\)</span>$</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> 含绝对值的被积函数必须<strong>在变号点拆区间</strong>，否则不能直接积分。本题在 <span class="arithmatex">\(x=0\)</span> 拆开：左边是底 <span class="arithmatex">\(1\)</span>、高 <span class="arithmatex">\(1\)</span> 的三角形（面积 <span class="arithmatex">\(\frac12\)</span>），右边是底 <span class="arithmatex">\(2\)</span>、高 <span class="arithmatex">\(2\)</span> 的三角形（面积 <span class="arithmatex">\(2\)</span>），合计 <span class="arithmatex">\(\frac52\)</span>。几何上这也说明"定积分是可加的"：两块区域的面积直接相加。<strong>常见错误</strong>：不分段就把 <span class="arithmatex">\(|x|\)</span> 当成 <span class="arithmatex">\(x\)</span> 积分，会得到 <span class="arithmatex">\(\frac{4-1}{2}=\frac32\)</span>，漏掉了左半边的面积。</p>
+</li>
+</ul>
+<h5 id="14sin-xle-xletan-x">【课件例题 14】比较性质：<span class="arithmatex">\(\sin x\le x\le\tan x\)</span><a class="headerlink" href="#14sin-xle-xletan-x" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Using <span class="arithmatex">\(\sin x\le x\le\tan x\)</span> for <span class="arithmatex">\(0\le x\le1\)</span>, compare <span class="arithmatex">\(\displaystyle\int_{0}^{1}\sin x\,dx\)</span>, <span class="arithmatex">\(\displaystyle\int_{0}^{1}x\,dx\)</span>, and <span class="arithmatex">\(\displaystyle\int_{0}^{1}\tan x\,dx\)</span>.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>已知在 <span class="arithmatex">\([0,1]\)</span> 上 <span class="arithmatex">\(\sin x\le x\le\tan x\)</span>，由比较性质（Theorem 5.3B）：
+     $<span class="arithmatex">\(\int_{0}^{1}\sin x\,dx\le\int_{0}^{1}x\,dx\le\int_{0}^{1}\tan x\,dx\)</span>$</li>
+<li>中间项用几何意义（三角形面积）：
+     $<span class="arithmatex">\(\int_{0}^{1}x\,dx=\frac{1}{2}\cdot1\cdot1=\frac{1}{2}\)</span>$</li>
+<li>
+<p>结论：
+     $<span class="arithmatex">\(\int_{0}^{1}\sin x\,dx\le\frac{1}{2},\qquad \int_{0}^{1}\tan x\,dx\ge\frac{1}{2}\)</span>$</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> 比较性质是"不等式可以直接搬到积分上"的合法性依据，前提是<strong>区间相同</strong>且<strong>逐点成立</strong>。这里不需要真的算出 <span class="arithmatex">\(\int\sin\)</span> 和 <span class="arithmatex">\(\int\tan\)</span> 的值（它们没有初等原函数），只要把中间那个 <span class="arithmatex">\(\int_0^1 x\,dx=\frac12\)</span> 算出来，就同时给出了上下界。这类题在考试中常以"证明某积分大于/小于某数"的形式出现，套路就是：<strong>找一个能积出来的函数夹住它</strong>。</p>
+</li>
+</ul>
+<h5 id="15">【课件例题 15】有界性质估计积分<a class="headerlink" href="#15" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Show that <span class="arithmatex">\(\displaystyle 0\le\int_{0}^{\pi/2}\sin x\,dx\le\frac{\pi}{2}\)</span>.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>在 <span class="arithmatex">\([0,\frac{\pi}{2}]\)</span> 上，<span class="arithmatex">\(0\le\sin x\le1\)</span>，即 <span class="arithmatex">\(m=0\)</span>，<span class="arithmatex">\(M=1\)</span>。</li>
+<li>由有界性质（Theorem 5.3C），取 <span class="arithmatex">\(a=0\)</span>，<span class="arithmatex">\(b=\frac{\pi}{2}\)</span>，<span class="arithmatex">\(b-a=\frac{\pi}{2}\)</span>：
+     $<span class="arithmatex">\(0\cdot\frac{\pi}{2}\le\int_{0}^{\pi/2}\sin x\,dx\le1\cdot\frac{\pi}{2}\)</span>$</li>
+<li>
+<p>即
+     $<span class="arithmatex">\(0\le\int_{0}^{\pi/2}\sin x\,dx\le\frac{\pi}{2}\)</span>$</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> 有界性质把"函数值的上下界"翻译成"积分值的上下界"，缩放因子是区间长度 <span class="arithmatex">\(b-a\)</span>——这一点最容易漏。本题真实值是 <span class="arithmatex">\(\int_0^{\pi/2}\sin x\,dx=1\)</span>，确实夹在 <span class="arithmatex">\(0\)</span> 与 <span class="arithmatex">\(\frac{\pi}{2}\approx1.571\)</span> 之间。若把区间改成 <span class="arithmatex">\([0,\pi]\)</span>，则 <span class="arithmatex">\(b-a=\pi\)</span>，估计式变成 <span class="arithmatex">\(0\le\int_0^{\pi}\sin x\,dx\le\pi\)</span>，而真实值是 <span class="arithmatex">\(2\)</span>，仍然成立——这说明有界性质给出的是<strong>粗估</strong>，不必是最优界。</p>
+</li>
+</ul>
+<h5 id="16">【课件例题 16】对称性质：奇偶函数在对称区间上的积分<a class="headerlink" href="#16" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> Evaluate without the Newton–Leibniz formula: (a) <span class="arithmatex">\(\displaystyle\int_{-100}^{100}\tan^{-1}x\,dx\)</span>, (b) <span class="arithmatex">\(\displaystyle\int_{-\pi}^{\pi}\sin^{3}x\cos^{5}x\,dx\)</span>.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>(a) <span class="arithmatex">\(f(x)=\tan^{-1}x\)</span> 是<strong>奇函数</strong>（<span class="arithmatex">\(\tan^{-1}(-x)=-\tan^{-1}x\)</span>），区间 <span class="arithmatex">\([-100,100]\)</span> 关于原点对称，故
+     $<span class="arithmatex">\(\int_{-100}^{100}\tan^{-1}x\,dx=0\)</span>$</li>
+<li>
+<p>(b) <span class="arithmatex">\(\sin^{3}x\)</span> 是奇函数，<span class="arithmatex">\(\cos^{5}x\)</span> 是偶函数，乘积
+     $<span class="arithmatex">\((-\sin x)^{3}\cos^{5}(-x)=-\sin^{3}x\cos^{5}x\)</span>$
+     仍为<strong>奇函数</strong>，故
+     $<span class="arithmatex">\(\int_{-\pi}^{\pi}\sin^{3}x\cos^{5}x\,dx=0\)</span>$</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> 只要区间关于原点对称，就先检查奇偶性——奇函数积分为 <span class="arithmatex">\(0\)</span>，偶函数积分为"一半区间的两倍"，往往能省掉全部计算。判断复合函数的奇偶性用定义：把 <span class="arithmatex">\(x\)</span> 换成 <span class="arithmatex">\(-x\)</span> 看结果是否变号。(b) 中"奇 × 偶 = 奇"是通用规律（奇函数乘偶函数仍为奇函数），因此不必展开 <span class="arithmatex">\(\sin^{3}x\cos^{5}x\)</span>。<strong>注意</strong>：若区间不对称（如 <span class="arithmatex">\([0,\pi]\)</span>），对称性质完全不适用。</p>
+</li>
+</ul>
+<h5 id="17">【课件例题 17】由速度图像/分段函数求位置<a class="headerlink" href="#17" title="Permanent link">¶</a></h5>
+<p><strong>Problem:</strong> An object at the origin at <span class="arithmatex">\(t=0\)</span> has velocity (m/s)
+$<span class="arithmatex">\(v(t)=\begin{cases}t/20, &amp; 0\le t\le40\\ 2, &amp; 40&lt;t\le60\\ 5-t/20, &amp; t&gt;60\end{cases}\)</span>$
+Sketch the velocity curve, express the position at <span class="arithmatex">\(t=140\)</span> as a definite integral, and evaluate it geometrically.</p>
+<ul>
+<li><strong>Process (解题步骤):</strong></li>
+<li>图像：<span class="arithmatex">\([0,40]\)</span> 上是从 <span class="arithmatex">\((0,0)\)</span> 到 <span class="arithmatex">\((40,2)\)</span> 的直线段；<span class="arithmatex">\([40,60]\)</span> 上是高为 <span class="arithmatex">\(2\)</span> 的水平线段；<span class="arithmatex">\(t&gt;60\)</span> 上是斜率为 <span class="arithmatex">\(-\frac{1}{20}\)</span> 的直线，在 <span class="arithmatex">\(t=100\)</span> 处过 <span class="arithmatex">\(v=0\)</span>，到 <span class="arithmatex">\(t=140\)</span> 时 <span class="arithmatex">\(v=5-7=-2\)</span>。</li>
+<li>位置等于速度的积分，按分段拆开：
+     $<span class="arithmatex">\(s(140)=\int_{0}^{140}v(t)\,dt=\int_{0}^{40}\frac{t}{20}dt+\int_{40}^{60}2\,dt+\int_{60}^{140}\left(5-\frac{t}{20}\right)dt\)</span>$</li>
+<li>逐段用几何面积（梯形/三角形）：
+     $<span class="arithmatex">\(\int_{0}^{40}\frac{t}{20}dt=\frac{1}{2}\cdot40\cdot2=40,\qquad \int_{40}^{60}2\,dt=2\cdot20=40\)</span>$
+     $<span class="arithmatex">\(\int_{60}^{100}\left(5-\frac{t}{20}\right)dt=\frac{1}{2}\cdot40\cdot2=40,\qquad \int_{100}^{140}\left(5-\frac{t}{20}\right)dt=-\frac{1}{2}\cdot40\cdot2=-40\)</span>$</li>
+<li>
+<p>合计：
+     $<span class="arithmatex">\(s(140)=40+40+40-40=80\ \text{m}\)</span>$</p>
+</li>
+<li>
+<p><strong>中文详解:</strong> 这道题把"定积分 = 有向面积"用到底。前三段（<span class="arithmatex">\(0\to40\)</span> 的加速段、<span class="arithmatex">\(40\to60\)</span> 的匀速段、<span class="arithmatex">\(60\to100\)</span> 的减速到静止）面积都为正，共 <span class="arithmatex">\(120\)</span>；<span class="arithmatex">\(100\to140\)</span> 物体反向运动，速度为负，面积记为 <span class="arithmatex">\(-40\)</span>。所以 <span class="arithmatex">\(t=140\)</span> 时<strong>位置</strong>是 <span class="arithmatex">\(80\)</span> m，而<strong>路程</strong>是 <span class="arithmatex">\(120+40=160\)</span> m——这正是"位移"与"路程"的区别：<span class="arithmatex">\(\int v\,dt\)</span> 算位移，<span class="arithmatex">\(\int|v|\,dt\)</span> 才算路程。分段积分时一定要在速度变号处（<span class="arithmatex">\(t=100\)</span>）断开，否则几何面积的正负会算错。</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../lecture09/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Lecture 9 · 中值定理与洛必达">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                Lecture 9 · 中值定理与洛必达
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../midterm-review/" class="md-footer__link md-footer__link--next" aria-label="下一页: 期中复习（L1–L6）">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                期中复习（L1–L6）
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      个人学习笔记，仅供自用
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.tracking", "search.suggest", "search.highlight", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/katex/katex.min.js"></script>
+      
+        <script src="../../javascripts/katex/auto-render.min.js"></script>
+      
+        <script src="../../javascripts/katex-init.js"></script>
+      
+    
+  </body>
+</html>
