@@ -12,7 +12,7 @@
 from pathlib import Path
 import sys
 
-SRC = Path(r"C:\Users\81578\Documents\CollegeFiles")
+SRC = Path(r"C:\Users\81578\iCloudDrive\CollegeFiles")
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 
@@ -28,6 +28,7 @@ NOTES = [
     ("MTH026-Calculus/calculus-lecture7-notes.md", "mth026/lecture07.md"),
     ("MTH026-Calculus/calculus-lecture8-notes.md", "mth026/lecture08.md"),
     ("MTH026-Calculus/calculus-lecture9-notes.md", "mth026/lecture09.md"),
+    ("MTH026-Calculus/calculus-lecture10-notes.md", "mth026/lecture10.md"),
     ("MTH026-Calculus/midterm-review-notes.md", "mth026/midterm-review.md"),
     ("MTH026-Calculus/核心概念解析：从“直观极限”到“严谨定义”的逻辑跨越.md", "mth026/concept-limits.md"),
     ("MTH026-Calculus/mth026-week1-6-practice-questions.md", "mth026/practice-basic-questions.md"),

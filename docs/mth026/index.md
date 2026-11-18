@@ -1,6 +1,6 @@
 <div class="hero">
   <h1>微积分 · Calculus</h1>
-  <p class="lede">MTH026 · 覆盖 Chapter 1–4（函数、极限、导数、导数应用）</p>
+  <p class="lede">MTH026 · 覆盖 Chapter 1–5（函数、极限、导数、导数应用、积分）</p>
 </div>
 
 ## 讲义
@@ -49,6 +49,11 @@
   <a class="lec" href="lecture09/">
     <span class="lec-no">09</span>
     <span class="lec-body"><strong>中值定理与洛必达</strong><em>Ch.4 · 罗尔/中值定理、洛必达法则与不定式</em></span>
+    <span class="lec-arrow">→</span>
+  </a>
+  <a class="lec" href="lecture10/">
+    <span class="lec-no">10</span>
+    <span class="lec-body"><strong>反导数与定积分</strong><em>Ch.5 · 不定积分、幂法则与线性性质、定积分与面积</em></span>
     <span class="lec-arrow">→</span>
   </a>
 </div>
