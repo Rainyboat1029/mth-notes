@@ -31,7 +31,7 @@
   $$\int x^{r}\,dx=\frac{x^{r+1}}{r+1}+C$$
   **证明:** 对右端求导，
   $$D_x\left(\frac{x^{r+1}}{r+1}+C\right)=\frac{1}{r+1}(r+1)x^{r}=x^{r}$$
-  恰为被积函数。$\blacksquare$
+  恰为被积函数。
 * **为什么必须 $r\neq-1$:** 当 $r=-1$ 时公式分母为 $0$；此时 $\int\frac{1}{x}dx=\ln|x|+C$（见本节第 7 部分）。
 * **Theorem B（基本积分公式 Basic Formulas）:**
 

@@ -51,6 +51,11 @@
     <span class="lec-body"><strong>§2.9 维数与秩</strong><em>秩定理、基的维数与坐标</em></span>
     <span class="lec-arrow">→</span>
   </a>
+  <a class="lec" href="lecture10/">
+    <span class="lec-no">10</span>
+    <span class="lec-body"><strong>§3.1 行列式入门</strong><em>余子式展开、三角矩阵、行列式的定义</em></span>
+    <span class="lec-arrow">→</span>
+  </a>
 </div>
 
 ## 复习

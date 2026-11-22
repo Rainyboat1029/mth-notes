@@ -45,11 +45,20 @@ NOTES = [
     ("MTH028-LinearAlgebra/mth028-lecture7-notes.md", "mth028/lecture07.md"),
     ("MTH028-LinearAlgebra/mth028-lecture8-notes.md", "mth028/lecture08.md"),
     ("MTH028-LinearAlgebra/mth028-lecture9-notes.md", "mth028/lecture09.md"),
+    ("MTH028-LinearAlgebra/mth028-lecture10-notes-v2.md", "mth028/lecture10.md"),
     ("MTH028-LinearAlgebra/mth028-midterm-review-notes.md", "mth028/midterm-review.md"),
     ("MTH028-LinearAlgebra/mth028-week1-8-practice-questions.md", "mth028/practice-basic-questions.md"),
     ("MTH028-LinearAlgebra/mth028-week1-8-practice-solutions.md", "mth028/practice-basic-solutions.md"),
     ("MTH028-LinearAlgebra/mth028-week1-8-advanced-questions.md", "mth028/practice-advanced-questions.md"),
     ("MTH028-LinearAlgebra/mth028-week1-8-advanced-solutions.md", "mth028/practice-advanced-solutions.md"),
+]
+
+# ---------- 站内没有的目标：把死链降级成纯文本 ----------
+# 笔记里的「来源」会指向课件 PDF 和作业解析，这两类不上站，留着只会 404。
+# 新增一条就加一行 (原样, 替换成)。
+LINK_FIXES = [
+    ("[Lecture 10 – Section 3.1](<Lecture 10 - Section 3.1.pdf>)", "Lecture 10 – Section 3.1"),
+    ("[Weekly Assignment 9 解析 v2](mth028-assignment9-answer-v2.md)", "Weekly Assignment 9 解析 v2"),
 ]
 
 # ---------- 答题卡：源文件 -> (目标路径, 解析页相对地址) ----------
@@ -114,6 +123,8 @@ def copy_notes() -> int:
         d = DOCS / dst
         d.parent.mkdir(parents=True, exist_ok=True)
         text = s.read_text(encoding="utf-8")
+        for old, new in LINK_FIXES:
+            text = text.replace(old, new)
         if not text.endswith("\n"):
             text += "\n"
         d.write_text(text, encoding="utf-8")

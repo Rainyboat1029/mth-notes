@@ -7,13 +7,13 @@
   <a class="ncard" href="mth026/">
     <span class="ncard-badge">MTH026</span>
     <h3>微积分 Calculus</h3>
-    <p>9 讲讲义（Ch.1–Ch.4）· 期中复习 L1–L6 · 极限的严谨定义 · 两套练习卷与解析</p>
+    <p>10 讲讲义（Ch.1–Ch.5）· 期中复习 L1–L6 · 极限的严谨定义 · 两套练习卷与解析</p>
     <span class="ncard-cta">进入课程 →</span>
   </a>
   <a class="ncard" href="mth028/">
     <span class="ncard-badge">MTH028</span>
     <h3>线性代数 Linear Algebra</h3>
-    <p>9 讲讲义（§1.1–§2.9）· 期中复习 L1–L8 · 两套练习卷与解析</p>
+    <p>10 讲讲义（§1.1–§3.1）· 期中复习 L1–L8 · 两套练习卷与解析</p>
     <span class="ncard-cta">进入课程 →</span>
   </a>
 </div>
