@@ -29,6 +29,7 @@ NOTES = [
     ("MTH026-Calculus/calculus-lecture8-notes.md", "mth026/lecture08.md"),
     ("MTH026-Calculus/calculus-lecture9-notes.md", "mth026/lecture09.md"),
     ("MTH026-Calculus/calculus-lecture10-notes.md", "mth026/lecture10.md"),
+    ("MTH026-Calculus/calculus-lecture11-notes.md", "mth026/lecture11.md"),
     ("MTH026-Calculus/midterm-review-notes.md", "mth026/midterm-review.md"),
     ("MTH026-Calculus/核心概念解析：从“直观极限”到“严谨定义”的逻辑跨越.md", "mth026/concept-limits.md"),
     ("MTH026-Calculus/mth026-week1-6-practice-questions.md", "mth026/practice-basic-questions.md"),
@@ -46,6 +47,7 @@ NOTES = [
     ("MTH028-LinearAlgebra/mth028-lecture8-notes.md", "mth028/lecture08.md"),
     ("MTH028-LinearAlgebra/mth028-lecture9-notes.md", "mth028/lecture09.md"),
     ("MTH028-LinearAlgebra/mth028-lecture10-notes-v2.md", "mth028/lecture10.md"),
+    ("MTH028-LinearAlgebra/mth028-lecture11-notes.md", "mth028/lecture11.md"),
     ("MTH028-LinearAlgebra/mth028-midterm-review-notes.md", "mth028/midterm-review.md"),
     ("MTH028-LinearAlgebra/mth028-week1-8-practice-questions.md", "mth028/practice-basic-questions.md"),
     ("MTH028-LinearAlgebra/mth028-week1-8-practice-solutions.md", "mth028/practice-basic-solutions.md"),
@@ -59,6 +61,12 @@ NOTES = [
 LINK_FIXES = [
     ("[Lecture 10 – Section 3.1](<Lecture 10 - Section 3.1.pdf>)", "Lecture 10 – Section 3.1"),
     ("[Weekly Assignment 9 解析 v2](mth028-assignment9-answer-v2.md)", "Weekly Assignment 9 解析 v2"),
+    ("[Lecture 11 with solutions](<Lecture 11 with solutions.pdf>)", "Lecture 11 with solutions"),
+    ("[Assignment 11 解析](calculus-assignment11-answer.md)", "Assignment 11 解析"),
+    ("[第 11 课课件](<Lecture 11 - Section 3.2.pdf>)", "第 11 课课件"),
+    ("[Weekly Assignment 10 解析](mth028-assignment10-answer.md)", "Weekly Assignment 10 解析"),
+    # 站内已有的笔记：换成能点的站内链接
+    ("[余子式展开](mth028-lecture10-notes-v2.md)", "[余子式展开](../lecture10/)"),
 ]
 
 # ---------- 答题卡：源文件 -> (目标路径, 解析页相对地址) ----------

@@ -104,6 +104,7 @@ nav:
       - "Lecture 8 · 优化与函数作图": mth026/lecture08.md
       - "Lecture 9 · 中值定理与洛必达": mth026/lecture09.md
       - "Lecture 10 · 反导数与定积分": mth026/lecture10.md
+      - "Lecture 11 · 微积分基本定理": mth026/lecture11.md
       - 期中复习（L1–L6）: mth026/midterm-review.md
       - 极限的严谨定义: mth026/concept-limits.md
       - 练习:
@@ -121,6 +122,7 @@ nav:
       - "Lecture 8 · §2.8 子空间": mth028/lecture08.md
       - "Lecture 9 · §2.9 维数与秩": mth028/lecture09.md
       - "Lecture 10 · §3.1 行列式入门": mth028/lecture10.md
+      - "Lecture 11 · §3.2 行列式的性质": mth028/lecture11.md
       - 期中复习（L1–L8）: mth028/midterm-review.md
       - 练习:
           - 基础卷 · Week 1–8: mth028/practice-basic.md

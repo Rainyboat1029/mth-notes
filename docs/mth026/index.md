@@ -56,6 +56,11 @@
     <span class="lec-body"><strong>反导数与定积分</strong><em>Ch.5 · 不定积分、幂法则与线性性质、定积分与面积</em></span>
     <span class="lec-arrow">→</span>
   </a>
+  <a class="lec" href="lecture11/">
+    <span class="lec-no">11</span>
+    <span class="lec-body"><strong>微积分基本定理</strong><em>Ch.5 · 第一/第二基本定理、定积分换元</em></span>
+    <span class="lec-arrow">→</span>
+  </a>
 </div>
 
 ## 复习与专题

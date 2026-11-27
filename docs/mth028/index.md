@@ -56,6 +56,11 @@
     <span class="lec-body"><strong>§3.1 行列式入门</strong><em>余子式展开、三角矩阵、行列式的定义</em></span>
     <span class="lec-arrow">→</span>
   </a>
+  <a class="lec" href="lecture11/">
+    <span class="lec-no">11</span>
+    <span class="lec-body"><strong>§3.2 行列式的性质</strong><em>行变换的影响、乘性与可逆性、平行四边形面积</em></span>
+    <span class="lec-arrow">→</span>
+  </a>
 </div>
 
 ## 复习
